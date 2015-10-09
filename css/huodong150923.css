@@ -169,7 +169,9 @@ footer {
 }
 
 .r_username {
-	width: 194px;
+	width: 154px;
+	margin-right: 40px;
+	overflow: hidden;
 }
 
 .r_up_specail {
