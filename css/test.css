@@ -1,0 +1,98 @@
+img {
+	display: block;
+}
+
+html,body,p,a,ol,ul {
+	margin: 0;
+	padding: 0;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.wrapper {
+  /*position: relative;*/
+}
+
+body {
+	background-color: #ffd006;
+}
+
+.noti {
+	height: 48px;width: auto;border-radius: 100px;background: rgba(0,0,0,0.4);padding: 4px 20px 4px 7px;line-height: 48px;font-size: 25px;color: #fff;font-family: "Microsoft Yahei";position: fixed;margin: 8px	8px 8px 8px;top: 0;	left: 0;
+}
+
+.noti img {
+	width: 48px;height: 48px;border-radius: 100px;float: left;
+}
+
+.noti span {
+	float: left;padding-left: 10px;
+}
+
+.ding {
+	height: 2000px;
+}
+
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*
+animation-name: myfirst;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+*/
+@keyframes shake {
+  0% {
+    transform:rotate(0deg);
+  }
+  2% {
+    transform:rotate(-7deg);
+  }
+  4% {
+    transform:rotate(0deg);
+  }
+  6% {
+    transform:rotate(7deg);
+  }
+  8% {
+  	transform:rotate(0deg);
+  }
+  10% {
+    transform:rotate(0deg);
+  }
+  12% {
+    transform:rotate(-7deg);
+  }
+  14% {
+    transform:rotate(0deg);
+  }
+  16% {
+    transform:rotate(7deg);
+  }
+  18% {
+  	transform:rotate(0deg);
+  }
+  20% {
+    transform:rotate(0deg);
+  }
+  22% {
+    transform:rotate(-7deg);
+  }
+  24% {
+    transform:rotate(0deg);
+  }
+  26% {
+    transform:rotate(7deg);
+  }
+  28% {
+  	transform:rotate(0deg);
+  }
+  100% {
+  	transform:rotate(0deg);
+  }
+}

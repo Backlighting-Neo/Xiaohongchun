@@ -1,0 +1,74 @@
+product_detail.html
+	Start@20151008
+	End@
+	商品详情页
+
+
+zhuye20150929.html
+	Start@20150929
+	End@20151008
+	新版主页
+	api2/index/gtag
+	api2/index/gvideo
+	images/avatar.png
+	images/doyen_text_underline.png
+	images/icon1.png
+	images/icon2.png
+	images/logo.png
+	images/video_screenshot.png
+	css/zhuye150929.css
+	css/owl.theme.css
+	css/owl.carousel.css
+	js/jquery.min.js
+	js/masonry.min.js
+	js/zhuye150929.js
+	js/owl.carousel.min.js
+
+
+huodong150923.html
+	TOP30活动排名展示页
+	images/avatar.png
+	images/crown.png
+	images/down.png
+	images/down_specail.png
+	images/up.png
+	images/up_specail.png
+	images/stay.png
+	images/header01.png
+	images/header02.png
+	images/header03.png
+	images/ol_bg.png
+	images/rules_bg.png
+	images/rules_change.png
+	images/rules_footer.png
+	images/text_bg.png
+	images/text_gap01.png
+	images/text_gap02.png
+	images/text_gap03.png
+	css/huodong150923.html
+	js/ajax.js
+	js/ajax.min.js
+	js/huodong150923.js
+
+userdetail.html  // 做重了
+	新版用户个人页
+	images/logo.png
+	images/personarr.png
+	images/personshare.png
+	images/userinfo_bgimage.png
+	css/userdetail.css
+
+huodong-xuanchuan.html
+	TOP30活动宣传页
+	images/xuanchuan-header01.png
+	images/xuanchuan-header02.png
+	images/xuanchuan-header03.png
+	images/xuanchuan-header04.png
+	images/xuanchuan-header05.png
+	images/huodong150923_share.png
+	images/text_gap01.png
+	images/text_gap02_xuanchuan.png
+	images/text_bg.png
+	images/weibo_share_image_01.png
+	images/weibo_share_image_02.jpg
+

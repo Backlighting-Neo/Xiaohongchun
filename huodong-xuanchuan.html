@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=750">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
+	<title>活动宣传</title>
+	<style type="text/css">
+		.shake { display: inline-block;
+		 -webkit-transform-origin: center center;
+		 -ms-transform-origin: center center;
+		 transform-origin: center center;
+		 }
+		.shake { -webkit-animation-name: shake-base;
+		 -ms-animation-name: shake-base;
+		 animation-name: shake-base;
+		 -webkit-animation-duration: 10s;
+		 -ms-animation-duration: 10s;
+		 animation-duration: 10s;
+		 -webkit-animation-iteration-count: infinite;
+		 -ms-animation-iteration-count: infinite;
+		 animation-iteration-count: infinite;
+		 -webkit-animation-timing-function: ease-in-out;
+		 -ms-animation-timing-function: ease-in-out;
+		 animation-timing-function: ease-in-out;
+		 -webkit-animation-delay: 0s;
+		 -ms-animation-delay: 0s;
+		 animation-delay: 0s;
+		 -webkit-animation-play-state: running;
+		 -ms-animation-play-state: running;
+		 animation-play-state: running;
+		 }
+		.shake.freez.shake-slow { -webkit-animation-name: shake-slow;
+		 -ms-animation-name: shake-slow;
+		 animation-name: shake-slow;
+		 -webkit-animation-duration: 20s;
+		 -ms-animation-duration: 20s;
+		 animation-duration: 20s;
+		 -webkit-animation-iteration-count: infinite;
+		 -ms-animation-iteration-count: infinite;
+		 animation-iteration-count: infinite;
+		 -webkit-animation-timing-function: ease-in-out;
+		 -ms-animation-timing-function: ease-in-out;
+		 animation-timing-function: ease-in-out;
+		 -webkit-animation-delay: 0s;
+		 -ms-animation-delay: 0s;
+		 animation-delay: 0s;
+		 -webkit-animation-play-state: running;
+		 -ms-animation-play-state: running;
+		 animation-play-state: running;
+		 }
+
+
+		@-webkit-keyframes shake-base { 0% { -webkit-transform: translate(0px, 0px) rotate(0deg);
+		 }
+		1% { -webkit-transform: translate(-0.5px, 1.5px) rotate(0.5deg);
+		 }
+		2% { -webkit-transform: translate(-0.5px, 1.5px) rotate(-0.5deg);
+		 }
+		3% { -webkit-transform: translate(-2.5px, -1.5px) rotate(0.5deg);
+		 }
+		4% { -webkit-transform: translate(-2.5px, -2.5px) rotate(-1.5deg);
+		 }
+		5% { -webkit-transform: translate(1.5px, 1.5px) rotate(-1.5deg);
+		 }
+		6% { -webkit-transform: translate(-2.5px, -0.5px) rotate(-0.5deg);
+		 }
+		7% { -webkit-transform: translate(1.5px, -2.5px) rotate(-0.5deg);
+		 }
+		8% { -webkit-transform: translate(0.5px, 1.5px) rotate(0.5deg);
+		 }
+		9% { -webkit-transform: translate(-2.5px, -0.5px) rotate(0.5deg);
+		 }
+		10% { -webkit-transform: translate(-0.5px, -0.5px) rotate(-1.5deg);
+		 }
+		11% { -webkit-transform: translate(-2.5px, -1.5px) rotate(-1.5deg);
+		 }
+		12% { -webkit-transform: translate(-1.5px, -2.5px) rotate(-1.5deg);
+		 }
+		13% { -webkit-transform: translate(0.5px, -0.5px) rotate(-1.5deg);
+		 }
+		14% { -webkit-transform: translate(-0.5px, -1.5px) rotate(-0.5deg);
+		 }
+		15% { -webkit-transform: translate(-2.5px, 1.5px) rotate(0.5deg);
+		 }
+		16% { -webkit-transform: translate(-2.5px, -2.5px) rotate(-0.5deg);
+		 }
+		17% { -webkit-transform: translate(-1.5px, 0.5px) rotate(-1.5deg);
+		 }
+		18% { -webkit-transform: translate(1.5px, -1.5px) rotate(-1.5deg);
+		 }
+		19% { -webkit-transform: translate(0.5px, -0.5px) rotate(-0.5deg);
+		 }
+		20% { -webkit-transform: translate(-0.5px, 0.5px) rotate(0.5deg);
+		 }
+		21% { -webkit-transform: translate(0.5px, -2.5px) rotate(-0.5deg);
+		 }
+		22% { -webkit-transform: translate(0.5px, -2.5px) rotate(-0.5deg);
+		 }
+		23% { -webkit-transform: translate(-1.5px, 1.5px) rotate(-1.5deg);
+		 }
+		24% { -webkit-transform: translate(0.5px, -2.5px) rotate(-0.5deg);
+		 }
+		25% { -webkit-transform: translate(-0.5px, 1.5px) rotate(0.5deg);
+		 }
+		100% { -webkit-transform: translate(-0.5px, 1.5px) rotate(0.5deg);
+		 }
+		 }
+
+
+
+		@keyframes shake-base { 0% { transform: translate(0px, 0px) rotate(0deg);
+		 }
+		1% { transform: translate(-0.5px, 0.5px) rotate(-0.5deg);
+		 }
+		2% { transform: translate(-2.5px, -1.5px) rotate(0.5deg);
+		 }
+		3% { transform: translate(1.5px, 1.5px) rotate(-1.5deg);
+		 }
+		4% { transform: translate(-1.5px, -2.5px) rotate(0.5deg);
+		 }
+		5% { transform: translate(1.5px, 1.5px) rotate(-0.5deg);
+		 }
+		6% { transform: translate(-1.5px, 1.5px) rotate(-1.5deg);
+		 }
+		7% { transform: translate(-1.5px, 0.5px) rotate(0.5deg);
+		 }
+		8% { transform: translate(0.5px, 0.5px) rotate(-0.5deg);
+		 }
+		9% { transform: translate(0.5px, -2.5px) rotate(-0.5deg);
+		 }
+		10% { transform: translate(-2.5px, 0.5px) rotate(-1.5deg);
+		 }
+		11% { transform: translate(1.5px, 0.5px) rotate(-0.5deg);
+		 }
+		12% { transform: translate(-0.5px, -1.5px) rotate(-0.5deg);
+		 }
+		13% { transform: translate(-1.5px, 1.5px) rotate(0.5deg);
+		 }
+		14% { transform: translate(-1.5px, -0.5px) rotate(0.5deg);
+		 }
+		15% { transform: translate(-2.5px, 0.5px) rotate(0.5deg);
+		 }
+		16% { transform: translate(1.5px, -0.5px) rotate(-0.5deg);
+		 }
+		17% { transform: translate(0.5px, -2.5px) rotate(-1.5deg);
+		 }
+		18% { transform: translate(0.5px, -2.5px) rotate(-0.5deg);
+		 }
+		19% { transform: translate(-2.5px, -0.5px) rotate(0.5deg);
+		 }
+		20% { transform: translate(-0.5px, 1.5px) rotate(0.5deg);
+		 }
+		21% { transform: translate(1.5px, 1.5px) rotate(-0.5deg);
+		 }
+		22% { transform: translate(-2.5px, -2.5px) rotate(0.5deg);
+		 }
+		23% { transform: translate(0.5px, -2.5px) rotate(0.5deg);
+		 }
+		24% { transform: translate(-0.5px, -2.5px) rotate(-0.5deg);
+		 }
+		25% { -webkit-transform: translate(-0.5px, 1.5px) rotate(0.5deg);
+		 }
+		100% { -webkit-transform: translate(-0.5px, 1.5px) rotate(0.5deg);
+		 }
+		}
+
+		@-ms-keyframes shake-slow { 0% { -ms-transform: translate(0px, 0px) rotate(0deg);
+		 }
+		2% { -ms-transform: translate(-10px, 5px) rotate(-2.5deg);
+		 }
+		4% { -ms-transform: translate(7px, 7px) rotate(-3.5deg);
+		 }
+		6% { -ms-transform: translate(8px, -7px) rotate(-2.5deg);
+		 }
+		8% { -ms-transform: translate(-8px, 3px) rotate(-0.5deg);
+		 }
+		10% { -ms-transform: translate(3px, -10px) rotate(-1.5deg);
+		 }
+		12% { -ms-transform: translate(-9px, -6px) rotate(2.5deg);
+		 }
+		14% { -ms-transform: translate(-2px, -6px) rotate(-0.5deg);
+		 }
+		16% { -ms-transform: translate(6px, -1px) rotate(0.5deg);
+		 }
+		18% { -ms-transform: translate(5px, -1px) rotate(0.5deg);
+		 }
+		20% { -ms-transform: translate(7px, -5px) rotate(-0.5deg);
+		 }
+		22% { -ms-transform: translate(-8px, 5px) rotate(2.5deg);
+		 }
+		24% { -ms-transform: translate(0px, 4px) rotate(2.5deg);
+		 }
+		25% { -ms-transform: translate(-9px, -2px) rotate(-2.5deg);
+		 }
+		98% { -ms-transform: translate(-9px, -2px) rotate(-2.5deg);
+		 } }
+
+		@keyframes shake-slow { 0% { transform: translate(0px, 0px) rotate(0deg);
+		 }
+		1% { transform: translate(6px, -7px) rotate(2.5deg);
+		 }
+		2% { transform: translate(8px, -8px) rotate(2.5deg);
+		 }
+		3% { transform: translate(1px, -8px) rotate(-3.5deg);
+		 }
+		4% { transform: translate(-3px, 4px) rotate(-0.5deg);
+		 }
+		5% { transform: translate(0px, -3px) rotate(1.5deg);
+		 }
+		6% { transform: translate(-1px, 2px) rotate(0.5deg);
+		 }
+		7% { transform: translate(6px, 6px) rotate(-1.5deg);
+		 }
+		8% { transform: translate(-7px, 4px) rotate(-0.5deg);
+		 }
+		9% { transform: translate(7px, 8px) rotate(-3.5deg);
+		 }
+		10% { transform: translate(-6px, 2px) rotate(1.5deg);
+		 }
+		11% { transform: translate(9px, 5px) rotate(-1.5deg);
+		 }
+		12% { transform: translate(7px, -2px) rotate(0.5deg);
+		 }
+		13% { transform: translate(-7px, -10px) rotate(-0.5deg);
+		 }
+		14% { transform: translate(-10px, -8px) rotate(-1.5deg);
+		 }
+		15% { transform: translate(8px, 4px) rotate(0.5deg);
+		 }
+		16% { transform: translate(0px, 4px) rotate(1.5deg);
+		 }
+		17% { transform: translate(-8px, 6px) rotate(-0.5deg);
+		 }
+		18% { transform: translate(-5px, 7px) rotate(1.5deg);
+		 }
+		19% { transform: translate(-4px, -4px) rotate(-1.5deg);
+		 }
+		20% { transform: translate(9px, 4px) rotate(-1.5deg);
+		 }
+		21% { transform: translate(9px, -5px) rotate(2.5deg);
+		 }
+		22% { transform: translate(-5px, -4px) rotate(-2.5deg);
+		 }
+		23% { transform: translate(7px, -7px) rotate(1.5deg);
+		 }
+		24% { transform: translate(-5px, 8px) rotate(0.5deg);
+		 }
+		25% { transform: translate(9px, 1px) rotate(-1.5deg);
+		 }
+		26% { transform: translate(-9px, -5px) rotate(-3.5deg);
+		 }
+		27% { transform: translate(-2px, 9px) rotate(1.5deg);
+		 }
+		28% { transform: translate(6px, -1px) rotate(1.5deg);
+		 }
+		29% { transform: translate(-6px, 0px) rotate(-0.5deg);
+		 }
+		30% { transform: translate(3px, 1px) rotate(1.5deg);
+		 }
+		31% { transform: translate(5px, -7px) rotate(-0.5deg);
+		 }
+		32% { transform: translate(9px, 2px) rotate(2.5deg);
+		 }
+		33% { transform: translate(6px, 0px) rotate(-2.5deg);
+		 }
+		34% { transform: translate(5px, -4px) rotate(-2.5deg);
+		 }
+		35% { transform: translate(-8px, 5px) rotate(-2.5deg);
+		 }
+		36% { transform: translate(-6px, -2px) rotate(0.5deg);
+		 }
+		37% { transform: translate(-3px, 7px) rotate(-3.5deg);
+		 }
+		38% { transform: translate(-7px, -8px) rotate(-3.5deg);
+		 }
+		39% { transform: translate(-1px, -2px) rotate(2.5deg);
+		 }
+		40% { transform: translate(8px, 6px) rotate(-2.5deg);
+		 }
+		41% { transform: translate(-2px, -9px) rotate(2.5deg);
+		 }
+		42% { transform: translate(8px, -10px) rotate(-0.5deg);
+		 }
+		43% { transform: translate(-6px, 0px) rotate(2.5deg);
+		 }
+		44% { transform: translate(-1px, 9px) rotate(-3.5deg);
+		 }
+		45% { transform: translate(-7px, 8px) rotate(1.5deg);
+		 }
+		46% { transform: translate(-10px, -8px) rotate(0.5deg);
+		 }
+		47% { transform: translate(-8px, 6px) rotate(1.5deg);
+		 }
+		48% { transform: translate(4px, -9px) rotate(2.5deg);
+		 }
+		49% { transform: translate(-4px, 9px) rotate(0.5deg);
+		 }
+		50% { transform: translate(6px, -7px) rotate(2.5deg);
+		}
+		100% { transform: translate(6px, -7px) rotate(2.5deg);
+		}
+		 }
+		  }
+
+		body {
+			background-color: #ffde00;
+			font-size: 28px;
+			font-family: "Microsoft Yahei";
+		}
+
+		img {
+			display: block;
+		}
+
+		html,body,p,a,ol {
+			margin: 0;
+			padding: 0;
+		}
+
+		footer {
+			height: 100px;
+		}
+
+		.clearfix {
+			clear: both;
+		}
+
+		.content {
+			height: 100%;
+		}
+
+		.fullbg {
+			-webkit-background-size: 100%;
+			background-size: 100%;
+			width: 100%;
+		}
+
+		.text {
+			background-image: url(images/text_bg.png);
+			padding: 44px 90px 50px 90px;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+			font-size: 28px;
+			line-height: 46px;
+		}
+
+		.sharewrapper {
+			position: relative;
+		}
+
+		.share {
+			position: absolute;
+			right: 40px;
+			top: 0;
+		}
+
+		.rules {
+			font-size: 18px;
+			color:#9d8a52;
+
+		}
+
+		.rules .content {
+			margin: 0px 58px 0 58px;
+			line-height: 40px;
+			color:#634d1e;
+			font-size: 25px;
+		}
+
+		.rules .announce {
+			margin: 0px 58px 0 58px;
+			line-height: 40px;
+			color:#634d1e;
+			font-size: 25px;
+			width: auto;
+		}
+
+		.rules .announce span{
+			border-bottom: 1px solid #9d8a52;
+		}
+
+		footer {
+			height: 100px;
+		}
+
+		.jiantou {
+		  display: none;
+		  width: 750px;
+		  height: auto;
+		  top: 0;
+		  z-index: 999;
+		  overflow: hidden;
+		  background-color: #f4f4f4;
+		  position: fixed;
+		}
+
+		.imgShow{display:none;width:750px; height:auto; overflow:hidden; margin:0 auto; position:fixed; bottom:0px;z-index:999; background-color:#fff;}
+		.imgOver{width:100%; height:auto; overflow:hidden; text-align:center; color:#626262; font-size:24px; line-height:60px}
+		.imgShow dl{width:20%; height:auto; overflow:hidden; float:left; text-align:center; font-size:22px; line-height:30px; color:#626262;}
+		.imgShow dd{ margin-top:15px;margin-left: 0}
+		.imgShow img{display: inline;}
+		.imgdown{width:90%; height:50px; text-align:center; font-size:30px; line-height:50px; overflow:hidden; border:solid 1px #cdcccc; background-color:#f4f4f4; font-size:30px; padding:10px; margin:0 auto; margin-top:30px; text-align:center; -webkit-border-radius:30px; -moz-border-radius:30px; border-radius:30px; color:#626262;behavior:url(iecss3.htc); z-index:2;position:relative;}
+		.imgdown a{width:100%; height:100%; overflow:hidden; display:block;}
+		.topDown{background:url(/img/h5share/topDown.png); width:100%; height:60px; overflow:hidden; color:#FFF; line-height:60px; font-size:24px; text-align:center}
+	</style>
+
+	<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js"></script>
+	<script type="text/javascript">
+		var bShareOpt = {style: -1, uuid: '592c799f-ae71-4ebd-8b0c-f2ee668d0dd3', mdiv: -1};
+		function shareTo(event, shortName) {
+			bShare.entries = [];
+			bShare.addEntry({
+				title: '小红唇Top30奖励计划',
+				url: window.location,
+				summary: '每月10万+奖金等你来！10月起，每月涨粉前30的原创牛人稿酬多多，涨粉冠军奖2万！小红唇：真人视频分享，时尚好物推荐。',
+				pic: ['./images/weibo_share_01.png',
+							'./images/weibo_share_02.jpg']
+			});
+			bShare.share(event, shortName);
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<img src="images/xuanchuan-header01.png" width="100%" />
+		<div class="sharewrapper">
+			<img src="images/xuanchuan-header02.png" width="100%" />
+			<div class="share">
+				<img src="images/huodong150923_share.png" onclick="shareTo(this,'sinaminiblog')" class="shake shake-slow">
+			</div>
+		</div>
+		<img src="images/xuanchuan-header03.png" width="100%" />
+		<img src="images/xuanchuan-header04.png" width="100%" />
+		<img src="images/xuanchuan-header05.png" width="100%" />
+	</header>
+
+	<div class="content">
+		<div class="text">
+			<p class="userlocation">
+				当月发布视频在6条及以上的原创视频作者，内容符合“真人视频分享，时尚好物推荐”的小红唇主旨。
+			</p>
+		</div>
+		<div>
+			<img src="images/text_gap01.png" width="100%" />
+		</div>
+		<div class="text">
+			<p class="instruction">
+				以每月10日到下月9日为计算周期，按照当月粉丝增长数排名，前30名给予稿酬奖励，金额如榜单所示。第1批稿酬在11月发放。
+			</p>
+		</div>
+		<div>
+			<img src="images/text_gap02_xuanchuan.png" width="100%" />
+		</div>
+		<div class="rules">
+			<div class="content">
+				<ul>
+					<li>鼓励创视频作者多分享、转发小红唇视频，多发布新视频，以增加粉丝。</li>
+					<li>鼓励原创视频作者大胆展现个性，共同营造欢乐、青春、时尚的社区氛围。</li>
+					<li>动态榜单每日更新。每月最终获奖名单下月10日之后的第二个工作日公布。</li>
+					<li>视频内容要求与化妆、护肤、塑身、时尚、发型、美甲、穿搭、配饰等年轻女性生活相关。</li>
+					<li>视频内出现其他平台的水印、LOGO的，小红唇有权取消其作者获奖资格。</li>
+					<li>请不要删除10月之前视频，可能导致当月发布视频统计不足6条，无法获奖的情况。</li>
+					<li>本计划不面向已单独与小红唇约定内容付费协议的视频作者。</li>
+					<li>上表所示稿酬均为税前。当月稿酬，下月20个工作日之内支付。</li>
+					<li>本奖励计划如有修改，下一自然月之前将在小红唇内公告。</li>
+
+
+					<li>鼓励创视频作者多分享、转发小红唇视频，多发布新视频，以增加粉丝。</li>
+					<li>鼓励原创视频作者大胆展现个性，共同营造欢乐、青春、时尚的社区氛围。</li>
+					<li>动态榜单每日更新。每月最终获奖名单下月10日之后的第二个工作日公布。</li>
+					<li>视频内容要求与化妆、护肤、塑身、时尚、发型、美甲、穿搭、配饰等年轻女性生活相关。</li>
+					<li>视频内出现其他平台的水印、LOGO的，小红唇有权取消其作者获奖资格。</li>
+					<li>请不要删除10月之前视频，可能导致当月发布视频统计不足6条，无法获奖的情况。</li>
+					<li>本计划不面向已单独与小红唇约定内容付费协议的视频作者。</li>
+				</ul>
+			</div>
+			<div class="announce">
+				<span>
+				本奖励计划最终解释权归小红唇App所有
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<footer></footer>
+
+</body>
+</html>

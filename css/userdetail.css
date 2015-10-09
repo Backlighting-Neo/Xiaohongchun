@@ -1,0 +1,100 @@
+img {
+	display: block;
+}
+
+html,body,p,a,ol {
+	margin: 0;
+	padding: 0;
+}
+
+.clearfix {
+	clear: both;
+}
+
+header {
+	color: #fff;
+}
+
+body {
+	background-color: #f2f2f2;
+	font-size: 18px;
+	font-family: "Microsoft Yahei";
+}
+
+.top {
+	height: 85px;
+	padding-left: 22px;
+	background-color: #FE4545;
+}
+
+.top .title {
+	width: 175px;
+	float: left;
+	padding-left: 63px;
+	padding-top: 15px;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-size: 58px 58px;
+	background-position: 0 13px;
+}
+
+.t1 {
+	font-size: 24px;
+}
+
+.t2 {
+	font-size: 18px;
+}
+
+.download {
+	height: 85px;
+	margin-right: 22px;
+	font-size: 24px;
+	float: right;
+	line-height: 85px;
+}
+
+.download div {
+	width: 190px;
+	height: 40px;
+	margin: 22px auto 23px auto;
+	line-height: 40px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.userinfo {
+	height: 320px;
+	width: 100%;
+	background-image: url(../images/userinfo_bgimage.png);
+	padding-top: 35px;
+	position: relative;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 120px;
+	box-shadow: 0 0 0 1px #fff;
+  border:5px solid transparent;
+  margin: 0 auto 0 auto;
+}
+
+.personarr {
+	position: absolute;
+	top:53px;
+	left:23px;
+	width: 25px;
+	height: 42px;
+	background-image: url(../images/personarr.png);
+}
+
+.personshare {
+	position: absolute;
+	top:53px;
+	right:23px;
+	width: 39px;
+	height: 39px;
+	background-image: url(../images/personshare.png);
+}

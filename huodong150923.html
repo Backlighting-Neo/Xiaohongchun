@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=750">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
+	<title>Top30</title>
+	<link rel="stylesheet" type="text/css" href="css/huodong150923.css">
+	<script type="text/javascript" src="js/ajax.min.js"></script>
+	<script type="text/javascript" src="js/huodong150923.js"></script>
+</head>
+<body>
+	<header>
+		<img src="images/header01.png" width="100%" />
+		<img src="images/header02.png" width="100%" />
+		<img src="images/header03.png" width="100%" />
+	</header>
+
+	<div class="content">
+		
+		<div class="text">
+			<p class="userlocation">
+				当月发布视频在6条及以上的原创视频作者，内容符合“真人视频分享，时尚好物推荐”的小红唇主旨。
+			</p>
+		</div>
+		<div>
+			<img src="images/text_gap01.png" width="100%" />
+		</div>
+		<div class="text">
+			<p class="instruction">
+				以每月10日到下月9日为计算周期，按照当月粉丝增长数排名，前30名给予稿酬奖励，金额如榜单所示。第1批稿酬在11月发放。
+			</p>
+		</div>
+		<div>
+			<img src="images/text_gap02.png" width="100%" />
+		</div>
+		<div class="ranking">
+
+			<div class="ranking_header">
+				<a class="rh rh1">排名</a>
+				<a class="rh rh2">用户</a>
+				<a class="rh rh3">趋势</a>
+				<a class="rh rh4">粉丝增长</a>
+				<a class="rh rh_last rh5">对应稿酬</a>
+			</div>
+			<div class="clearfix"></div>
+			<div class="ranking_data">
+				<ol class="rankingol" id="rankingol">
+				<!--
+					<li>
+						<div class="rd r_id">
+							1
+						</div>
+						<div class="rd r_avatar">
+							<img src="images/avatar.png" class="avatar">
+						</div>
+						<div class="rd r_username">
+							Username
+						</div>
+						<div class="rd r_up_specail">
+						</div>
+						<div class="rd r_increment">
+							9600
+						</div>
+						<div class="rd r_remeneration">
+							1200
+						</div>
+						<div class="clearfix"></div>
+					</li>
+					<li>
+						<div class="rd r_id">
+							1
+						</div>
+						<div class="rd r_avatar">
+							<img src="images/avatar.png" class="avatar">
+						</div>
+						<div class="rd r_username">
+							Username
+						</div>
+						<div class="rd r_stay">
+						</div>
+						<div class="rd r_increment">
+							9600
+						</div>
+						<div class="rd r_remeneration">
+							1200
+						</div>
+						<div class="clearfix"></div>
+					</li>
+					<li>
+						<div class="rd r_id">
+							1
+						</div>
+						<div class="rd r_avatar">
+							<img src="images/avatar.png" class="avatar">
+						</div>
+						<div class="rd r_username">
+							Username
+						</div>
+						<div class="rd r_down_specail">
+						</div>
+						<div class="rd r_increment">
+							9600
+						</div>
+						<div class="rd r_remeneration">
+							1200
+						</div>
+						<div class="clearfix"></div>
+					</li>
+					<li>
+						<div class="rd r_id">
+							1
+						</div>
+						<div class="rd r_avatar">
+							<img src="images/avatar.png" class="avatar">
+						</div>
+						<div class="rd r_username">
+							Username
+						</div>
+						<div class="rd r_down">
+						</div>
+						<div class="rd r_increment">
+							9600
+						</div>
+						<div class="rd r_remeneration">
+							1200
+						</div>
+						<div class="clearfix"></div>
+					</li>
+					<li>
+						<div class="rd r_id">
+							1
+						</div>
+						<div class="rd r_avatar">
+							<img src="images/avatar.png" class="avatar">
+						</div>
+						<div class="rd r_username">
+							Username
+						</div>
+						<div class="rd r_stay">
+						</div>
+						<div class="rd r_increment">
+							9600
+						</div>
+						<div class="rd r_remeneration">
+							1200
+						</div>
+						<div class="clearfix"></div>
+					</li>
+					<li>
+						<div class="rd r_id">
+							1
+						</div>
+						<div class="rd r_avatar">
+							<img src="images/avatar.png" class="avatar">
+						</div>
+						<div class="rd r_username">
+							Username
+						</div>
+						<div class="rd r_up">
+						</div>
+						<div class="rd r_increment">
+							9600
+						</div>
+						<div class="rd r_remeneration">
+							1200
+						</div>
+						<div class="clearfix"></div>
+					</li>
+				-->
+				</ol>
+			</div>
+		</div>
+		<div>
+			<img src="./images/text_gap03.png">
+		</div>
+		<div class="rules">
+			<div class="content">
+				<ul>
+					<li>鼓励创视频作者多分享、转发小红唇视频，多发布新视频，以增加粉丝。</li>
+					<li>鼓励原创视频作者大胆展现个性，共同营造欢乐、青春、时尚的社区氛围。</li>
+					<li>动态榜单每日更新。每月最终获奖名单下月10日之后的第二个工作日公布。</li>
+					<li>视频内容要求与化妆、护肤、塑身、时尚、发型、美甲、穿搭、配饰等年轻女性生活相关。</li>
+					<li>视频内出现其他平台的水印、LOGO的，小红唇有权取消其作者获奖资格。</li>
+					<li>请不要删除10月之前视频，可能导致当月发布视频统计不足6条，无法获奖的情况。</li>
+					<li>本计划不面向已单独与小红唇约定内容付费协议的视频作者。</li>
+					<li>上表所示稿酬均为税前。当月稿酬，下月20个工作日之内支付。</li>
+					<li>本奖励计划如有修改，下一自然月之前将在小红唇内公告。</li>
+
+
+					<li>鼓励创视频作者多分享、转发小红唇视频，多发布新视频，以增加粉丝。</li>
+					<li>鼓励原创视频作者大胆展现个性，共同营造欢乐、青春、时尚的社区氛围。</li>
+					<li>动态榜单每日更新。每月最终获奖名单下月10日之后的第二个工作日公布。</li>
+					<li>视频内容要求与化妆、护肤、塑身、时尚、发型、美甲、穿搭、配饰等年轻女性生活相关。</li>
+					<li>视频内出现其他平台的水印、LOGO的，小红唇有权取消其作者获奖资格。</li>
+					<li>请不要删除10月之前视频，可能导致当月发布视频统计不足6条，无法获奖的情况。</li>
+					<li>本计划不面向已单独与小红唇约定内容付费协议的视频作者。</li>
+				</ul>
+			</div>
+			<div class="topimage"></div>
+			<div class="middleimage"></div>
+			<div class="bottomimage"></div>
+			<div class="announce">
+				本奖励计划最终解释权归小红唇App所有。
+			</div>
+		</div>
+	</div>
+
+	<footer></footer>
+</body>
+</html>

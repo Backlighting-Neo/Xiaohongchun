@@ -1,0 +1,31 @@
+[
+{
+	"id": "1",
+	"avatar": "images/avatar.png",
+	"username": "小红唇",
+	"updown": "up",
+	"increment": "9600",
+	"remeneration": "12000"
+}, {
+	"id": "2",
+	"avatar": "images/avatar.png",
+	"username": "小红唇",
+	"updown": "stay",
+	"increment": "9600",
+	"remeneration": "12000"
+}, {
+	"id": "3",
+	"avatar": "images/avatar.png",
+	"username": "小红唇",
+	"updown": "down",
+	"increment": "9600",
+	"remeneration": "12000"
+}, {
+	"id": "4",
+	"avatar": "images/avatar.png",
+	"username": "小红唇",
+	"updown": "down",
+	"increment": "9600",
+	"remeneration": "12000"
+}
+]

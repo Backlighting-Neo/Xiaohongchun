@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>Backlighting Test</title>
+    <link rel="stylesheet" type="text/css" href="css/test.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/test.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  </head>
+  <body>
+    
+		<div id="owl-demo" class="owl-carousel owl-theme">
+		  <div class="item"><img src="images/header01.png" alt="The Last of us"></div>
+		  <div class="item"><img src="images/header02.png" alt="GTA V"></div>
+		  <div class="item"><img src="images/header03.png" alt="Mirror Edge"></div>
+		</div>
+
+    <div class="ding"></div>
+    <script type="text/javascript">
+      notification({
+	      icon:'images/avatar.png',
+	      text:'9s 前，用户名 下了新订单',
+	      position:'top-left',
+	      duration: 2000,
+	      callback: function(){}
+      });
+      
+      $("#owl-demo").owlCarousel({
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem:true,
+        autoHeight:true,
+        // transitionStyle : "fade"
+        autoPlay:5000
+      });
+    </script>
+  </body>
+</html>
