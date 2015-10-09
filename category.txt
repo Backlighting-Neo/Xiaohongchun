@@ -1,3 +1,11 @@
+Chanle_share.html
+	Start@20151009
+	End@
+	微信频道分享页
+	css/Chanle_share.css
+	
+
+
 product_detail.html
 	Start@20151008
 	End@

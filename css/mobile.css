@@ -1,0 +1,114 @@
+img {
+	display: block;
+}
+
+html,body,p,a,ol,ul {
+	margin: 0;
+	padding: 0;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+.clearfix {
+	clear: both;
+}
+
+header {
+	color: #fff;
+}
+
+body {
+	font-size: 18px;
+	font-family: "Microsoft Yahei";
+}
+
+.top {
+	height: 85px;
+	padding-left: 22px;
+	background-color: #FE4545;
+}
+
+.top .title {
+	height: 100%;
+	width: 175px;
+	float: left;
+	padding-left: 63px;
+	padding-top: 15px;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-size: 58px 58px;
+	background-position: 0 13px;
+}
+
+.t1 {
+	font-size: 24px;
+}
+
+.t2 {
+	font-size: 18px;
+}
+
+.download {
+	height: 85px;
+	margin-right: 22px;
+	font-size: 24px;
+	float: right;
+	line-height: 85px;
+}
+
+.download div {
+	width: 190px;
+	height: 40px;
+	margin: 22px auto 23px auto;
+	line-height: 40px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.footerdownload {
+	background-color: #f2f2f2;
+	opacity: 0.8;
+	position: fixed;
+	bottom: 0;
+	height: 90px;
+	line-height: 90px;
+	width: 100%;
+	text-align: center;
+	font-size: 27px;
+	color: #fe4545;
+	z-index: 9999;
+}
+
+.footerdownload div {
+	width: 185px;
+	height: 50px;
+	margin: 20px auto 20px auto;
+	line-height: 50px;
+	border: 1px solid #fe4545;
+	border-radius: 5px;
+}
+
+.avatar60 {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  float: left;
+}
+
+.avatar75 {
+  width: 75px;
+  height: 75px;
+  border-radius: 100px;
+  float: left;
+}
+
+.footerholder {
+	height: 90px;
+}
+
+.ding {
+	height: 1000px;
+}
