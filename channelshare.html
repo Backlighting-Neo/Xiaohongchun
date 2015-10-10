@@ -14,67 +14,17 @@
     <script type="text/javascript" src="js/channelshare.js"></script>
   </head>
   <body>
-    <header>
-      <div class="top">
-        <div class="title">
-          <p class="t1">小红唇</p>
-          <p class="t2">你的变美频道</p>
-        </div>
-        <div class="download" id="download"><div>立即下载</div></div>
-      </div>
-      <div class="clearfix"></div>
-    </header>
-		
-    <div class="footerdownload" id="footerdownload">
-      <div>下载小红唇</div>
-    </div>
-
     <div class="content">
+    	<!-- 频道详情 -->
     	<div class="channeldetail"></div>
-			<div class="videolist">
-				<div class="videocard">
-					<div class="cover">
-						<video controls="controls" preload="none" width="570" height="570"  id="player15697" poster="http://i.xiaohongchun.com/2292C7FB8C0578CC">
-							<source type="video/mp4" src="http://v.xiaohongchun.com/0CB086B0667A82D5" />
-						</video>
-
-						<!-- <img src="images/userinfo_bgimage.png" width="570px" height="570px"> -->
-						<div class="play"><div></div></div>
-						<div class="like">0000</div>
-					</div>
-					<div class="userinfo">
-						<img class="avatar75" src="images/avatar.png">
-						<div class="info">
-							<div class="username">{username}</div>
-							<div class="playcount">{playcount}次播放</div>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="description">
-						{Description}
-					</div>
-					<div class="command">
-						<div class="comment">已有{comment}条评论</div>
-						<div class="share">分享</div>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-			</div>
+			<!-- 频道视频列表 -->
+			<div class="videolist"></div>
+			<!-- 热门频道列表 -->
 			<div class="hotchannel">
 				<div class="hot_title">热门频道</div>
-				<ol class="hotchannelol">
-					<li>
-						<img src="images/avatar.png" class="avatar75">
-						<div class="channel">
-							<div class="title">{Channel_title}</div>
-							<div class="subscribe">{SubscribeCount} 订阅</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="clearfix"></div>
-					</li>
-				</ol>
+				<ol class="hotchannelol"></ol>
 			</div>
     </div>
-		<div class="footerholder"></div>
+
   </body>
 </html>
