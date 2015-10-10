@@ -1,16 +1,35 @@
 Chanle_share.html
 	Start@20151009
-	End@
+	End@20151010
 	微信频道分享页
-	css/Chanle_share.css
+	css/channelshare.css
+	css/mobile.css
+	js/channelshare.js
+	js/mobile.js
+	js/mejs/bigplay_red.svg
+	js/mejs/conrols.svg
+	js/mejs/loading.gif
+	api2/index/tags_share_ajax
+	images/comment.png
+	images/djfx.png
+	images/hot.png
+	images/like.png.png
+	images/logo.png
+	images/playcount.png
+	images/share.png
+	images/share_video.png
+	images/share05.png
+	images/share06.png
+	images/share07.png
+	images/share08.png
+	images/share09.png
 	
-
 
 product_detail.html
 	Start@20151008
 	End@
 	商品详情页
-
+	
 
 zhuye20150929.html
 	Start@20150929

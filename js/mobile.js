@@ -590,5 +590,46 @@ var mobile = {
 				$('.imgShow').show();
 			})
 		}
-	}
+	},
+	notification : function(params) {
+	  params = params || {
+	    icon: '',
+	    text: '',
+	    position: 'top-left',
+	    duration: 2000,
+	    callback: function() {}
+	  };
+
+	  var dom_template = '<div style=\"display:none;height: 48px;width: auto;border-radius: 100px;background: rgba(0,0,0,0.4);padding: 4px 20px 4px 7px;line-height: 48px;font-size: 25px;color: #fff;font-family: \'Microsoft Yahei\';position: fixed;margin: 8px	8px 8px 8px;{position}\"><img src="{icon}\" style=\"width: 48px;height: 48px;border-radius: 100px;float: left;\"><span style=\"float: left;padding-left: 10px;\">{text}</span><div style=\"clear: both;\"></div></div>';
+	  params.position = params.position
+	  .replace('-','')
+	  .replace('left','left:0;')
+	  .replace('right','right:0;')
+	  .replace('top','top:0;')
+	  .replace('bottom','bottom:0;');
+	  dom_template = $(this.template(dom_template,params));
+	  $('body').append(dom_template);
+	  dom_template.fadeIn();
+	  setTimeout(function(){
+	  	dom_template.fadeOut(function(){
+	  		dom_template.remove();
+	  		params.callback;
+	  	});
+	  }, params.duration);
+	};
 }
+
+// mobile封装对应方法说明
+// 注意：需要配合mobile.css使用
+// Backlighting
+// 
+// baseurl 值-字符串 返回接口的baseurl部分，可以识别本地调试或生产版本，返回不同的baseurl；
+// binddownload 方法 传入一个jQuery选择器，则对应的DOM可实现点击下载APP
+// template 方法 简单的模板生成，第一个参数传入模板，第二个参数传入要替换的对象，模板中需要替换的位置使用{key}的形式进行替换；
+// limitless 方法 height_th距离下部页面的动作阈值，单位px，callback为回调函数；
+// query 方法 获取指定querystring中某个项的值，#表示获取文件名，即最后一个斜线之后的内容；
+// videoplugin 方法 调用后为页面中的所有<video>加入播放控制控件；
+// renderdom 方法 template方法的二次封装，dom为要append进的父级元素，data为json数据，domtemplate为DOM模板，type可取值：single-只渲染一个模板，loop-按照data.length进行多次模板渲染，pre3-只渲染前三个item，3可改为其他数字，last3-最后三个，同前；
+// adddownloader 方法 在页面中加入上线边栏的APP下载UI；
+// share.bind 方法 传入一个jQuery选择器，则该DOM在点击时可出现分享UI；
+// notification 方法 一个半透明的提示框，参数{icon:图标URL，text:要显示的文本，position:出现位置(top-left,top-right,bottom-left,bottom-right)，duration:显示的时间，超时后消失，callback:消失后的回调函数}；
