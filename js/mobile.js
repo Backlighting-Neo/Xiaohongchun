@@ -616,7 +616,7 @@ var mobile = {
 	  		params.callback;
 	  	});
 	  }, params.duration);
-	};
+	}
 }
 
 // mobile封装对应方法说明

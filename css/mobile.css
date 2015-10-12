@@ -15,16 +15,13 @@ ol, ul {
   clear: both;
 }
 
-header {
-  color: #fff;
-}
-
 body {
   font-size: 18px;
   font-family: "Microsoft Yahei";
 }
 
 .top {
+  color: #fff;
   height: 85px;
   padding-left: 22px;
   background-color: #FE4545;
@@ -213,11 +210,11 @@ body {
   width: 100px;
   height: 100px;
   margin: -50px 0 0 -50px;
-  background: url(../js/mejs/bigplay_red.svg) no-repeat;
+  background: url(../images/bigplay_red.svg) no-repeat;
 }
 
 .no-svg .mejs-overlay-button {
-  background-image: url(../js/mejs/bigplay.png);
+  background-image: url(../images/bigplay.png);
 }
 
 .mejs-overlay:hover .mejs-overlay-button {
@@ -232,7 +229,7 @@ body {
   height: 80px;
   margin: -40px 0 0 -40px;
   background: #333;
-  background: url(../js/mejs/background.png);
+  background: url(../images/background.png);
   background: rgba(0, 0, 0, 0.9);
   background: -webkit-gradient(linear, 0% 0, 0% 100%, from(rgba(50, 50, 50, 0.9)), to(rgba(0, 0, 0, 0.9)));
   background: -webkit-linear-gradient(top, rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9));
@@ -246,7 +243,7 @@ body {
   display: block;
   width: 80px;
   height: 80px;
-  background: transparent url(../js/mejs/loading.gif) 50% 50% no-repeat;
+  background: transparent url(../images/loading.gif) 50% 50% no-repeat;
 }
 
 .mejs-container .mejs-controls {
@@ -256,7 +253,7 @@ body {
   padding: 0;
   bottom: 0;
   left: 0;
-  background: url(../js/mejs/background.png);
+  background: url(../images/background.png);
   background: rgba(0, 0, 0, 0.7);
   background: -webkit-gradient(linear, 0% 0, 0% 100%, from(rgba(50, 50, 50, 0.7)), to(rgba(0, 0, 0, 0.7)));
   background: -webkit-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
@@ -295,11 +292,11 @@ body {
   height: 16px;
   width: 16px;
   border: 0;
-  background: transparent url(../js/mejs/controls.svg) no-repeat;
+  background: transparent url(../images/controls.svg) no-repeat;
 }
 
 .no-svg .mejs-controls .mejs-button button {
-  background-image: url(../js/mejs/controls.png);
+  background-image: url(../images/controls.png);
 }
 
 .mejs-controls .mejs-button button:focus {
@@ -545,7 +542,7 @@ body {
   display: none;
   height: 115px;
   width: 25px;
-  background: url(../js/mejs/background.png);
+  background: url(../images/background.png);
   background: rgba(50, 50, 50, 0.7);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -669,7 +666,7 @@ body {
   right: -51px;
   width: 85px;
   height: 100px;
-  background: url(../js/mejs/background.png);
+  background: url(../images/background.png);
   background: rgba(50, 50, 50, 0.7);
   border: solid 1px transparent;
   padding: 10px 10px 0 10px;
@@ -819,7 +816,7 @@ body {
 
 .mejs-captions-text {
   padding: 3px 5px;
-  background: url(../js/mejs/background.png);
+  background: url(../images/background.png);
   background: rgba(20, 20, 20, 0.5);
   white-space: pre-wrap;
 }
@@ -901,7 +898,7 @@ body {
   right: -10px;
   width: 130px;
   height: 100px;
-  background: url(../js/mejs/background.png);
+  background: url(../images/background.png);
   background: rgba(50, 50, 50, 0.7);
   border: solid 1px transparent;
   padding: 10px;
@@ -949,7 +946,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../js/mejs/background.png);
+  background: url(../images/background.png);
   background: rgba(50, 50, 50, 0.7);
   z-index: 1000;
   overflow: hidden;
@@ -964,7 +961,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  background: url(../js/mejs/background.png);
+  background: url(../images/background.png);
   background: rgba(50, 50, 50, 0.7);
   color: #fff;
   padding: 4px;
@@ -992,7 +989,7 @@ div.mejs-speed-button {
   left: -10px;
   width: 60px;
   height: 100px;
-  background: url(../js/mejs/background.png);
+  background: url(../images/background.png);
   background: rgba(50, 50, 50, 0.7);
   border: solid 1px transparent;
   padding: 0;
@@ -1065,7 +1062,7 @@ div.mejs-speed-button {
 
 .mejs-ted .mejs-controls .mejs-time-rail .mejs-time-total {
   background-color: none;
-  background: url(../js/mejs/controls-ted.png) repeat-x 0 -52px;
+  background: url(../images/controls-ted.png) repeat-x 0 -52px;
   height: 6px
 }
 
@@ -1075,7 +1072,7 @@ div.mejs-speed-button {
 
 .mejs-ted .mejs-controls .mejs-time-rail .mejs-time-loaded {
   background-color: none;
-  background: url(../js/mejs/controls-ted.png) repeat-x 0 -52px;
+  background: url(../images/controls-ted.png) repeat-x 0 -52px;
   width: 0;
   height: 6px
 }
@@ -1084,7 +1081,7 @@ div.mejs-speed-button {
   width: 0;
   height: 6px;
   background-color: none;
-  background: url(../js/mejs/controls-ted.png) repeat-x 0 -59px
+  background: url(../images/controls-ted.png) repeat-x 0 -59px
 }
 
 .mejs-ted .mejs-controls .mejs-time-rail .mejs-time-handle {
@@ -1094,7 +1091,7 @@ div.mejs-speed-button {
   height: 21px;
   top: -7px;
   border: 0;
-  background: url(../js/mejs/controls-ted.png) no-repeat 0 0
+  background: url(../images/controls-ted.png) no-repeat 0 0
 }
 
 .mejs-ted .mejs-controls .mejs-time-rail .mejs-time-float {
@@ -1111,7 +1108,7 @@ div.mejs-speed-button {
 .mejs-ted .mejs-controls .mejs-playpause-button button {
   width: 49px;
   height: 28px;
-  background: url(../js/mejs/controls-ted.png) no-repeat -50px -23px;
+  background: url(../images/controls-ted.png) no-repeat -50px -23px;
   margin: 0;
   padding: 0
 }
@@ -1131,13 +1128,13 @@ div.mejs-speed-button {
 .mejs-ted .mejs-controls .mejs-fullscreen-button button {
   width: 19px;
   height: 17px;
-  background: transparent url(../js/mejs/controls-ted.png) no-repeat 0 -66px;
+  background: transparent url(../images/controls-ted.png) no-repeat 0 -66px;
   margin: 0;
   padding: 0
 }
 
 .mejs-ted .mejs-controls .mejs-unfullscreen button {
-  background: transparent url(../js/mejs/controls-ted.png) no-repeat -21px -66px;
+  background: transparent url(../images/controls-ted.png) no-repeat -21px -66px;
   margin: 0;
   padding: 0
 }
@@ -1150,7 +1147,7 @@ div.mejs-speed-button {
 }
 
 .mejs-ted .mejs-controls .mejs-mute button {
-  background: url(../js/mejs/controls-ted.png) no-repeat -15px 0;
+  background: url(../images/controls-ted.png) no-repeat -15px 0;
   width: 24px;
   height: 22px;
   margin: 0;
@@ -1158,7 +1155,7 @@ div.mejs-speed-button {
 }
 
 .mejs-ted .mejs-controls .mejs-unmute button {
-  background: url(../js/mejs/controls-ted.png) no-repeat -40px 0;
+  background: url(../images/controls-ted.png) no-repeat -40px 0;
   width: 24px;
   height: 22px;
   margin: 0;
@@ -1175,7 +1172,7 @@ div.mejs-speed-button {
 }
 
 .mejs-ted .mejs-controls .mejs-volume-button .mejs-volume-total {
-  background: url(../js/mejs/controls-ted.png) repeat-y -41px -66px;
+  background: url(../images/controls-ted.png) repeat-y -41px -66px;
   left: 8px;
   width: 6px;
   height: 50px
@@ -1184,7 +1181,7 @@ div.mejs-speed-button {
 .mejs-ted .mejs-controls .mejs-volume-button .mejs-volume-current {
   left: 8px;
   width: 6px;
-  background: url(../js/mejs/controls-ted.png) repeat-y -48px -66px;
+  background: url(../images/controls-ted.png) repeat-y -48px -66px;
   height: 50px
 }
 
@@ -1231,7 +1228,7 @@ div.mejs-speed-button {
 .mejs-container.mejs-wmp {}
 
 .mejs-wmp .mejs-controls {
-  background: transparent url(../js/mejs/controls-wmp-bg.png) center 16px no-repeat;
+  background: transparent url(../images/controls-wmp-bg.png) center 16px no-repeat;
   height: 65px
 }
 
@@ -1272,7 +1269,7 @@ div.mejs-speed-button {
   height: 9px;
   top: -3px;
   border: 0;
-  background: url(../js/mejs/controls-wmp.png) no-repeat 0 -80px
+  background: url(../images/controls-wmp.png) no-repeat 0 -80px
 }
 
 .mejs-wmp .mejs-controls .mejs-time-rail .mejs-time-float {
@@ -1290,7 +1287,7 @@ div.mejs-speed-button {
 .mejs-wmp .mejs-controls .mejs-playpause-button button {
   width: 40px;
   height: 40px;
-  background: url(../js/mejs/controls-wmp.png) no-repeat 0 0;
+  background: url(../images/controls-wmp.png) no-repeat 0 0;
   margin: 0;
   padding: 0
 }
@@ -1324,7 +1321,7 @@ div.mejs-speed-button {
 .mejs-wmp .mejs-controls .mejs-volume-button button {
   margin: 0;
   padding: 0;
-  background: url(../js/mejs/controls-wmp.png) no-repeat -42px -17px;
+  background: url(../images/controls-wmp.png) no-repeat -42px -17px;
   width: 20px;
   height: 15px
 }
@@ -1332,7 +1329,7 @@ div.mejs-speed-button {
 .mejs-wmp .mejs-controls .mejs-unmute button {
   margin: 0;
   padding: 0;
-  background: url(../js/mejs/controls-wmp.png) no-repeat -42px 0;
+  background: url(../images/controls-wmp.png) no-repeat -42px 0;
   width: 20px;
   height: 15px
 }
@@ -1352,7 +1349,7 @@ div.mejs-speed-button {
 .mejs-wmp .mejs-controls .mejs-fullscreen-button button {
   margin: 0;
   padding: 0;
-  background: url(../js/mejs/controls-wmp.png) no-repeat -63px 0;
+  background: url(../images/controls-wmp.png) no-repeat -63px 0;
   width: 15px;
   height: 14px
 }
