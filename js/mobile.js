@@ -496,7 +496,7 @@ var mobile = {
 			return svalue ? svalue[1] : svalue;
   	};
 	},
-	videoplugin : function(size) {
+	videoplugin : function(size, callback) {
 		$("video").each(function(v,k){
 			var width=size,height=size;
 			$(k).mediaelementplayer({
@@ -507,6 +507,9 @@ var mobile = {
 				framesPerSecond: 30,
 				alwaysShowControls: false,
 				features: ['playpause','progress','current','duration','tracks','volume','fullscreen'],
+				success: function(e){
+					callback(e);
+				}
 			});
 		});
 	},

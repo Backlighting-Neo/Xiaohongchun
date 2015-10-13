@@ -1,20 +1,345 @@
-header {
-	height: 90px;
+.product-header {
+  height: 90px;
+  margin: 15px 0 15px 0;
 }
 
-.price span:before {
-	content: '¥';
+.product-header #Back {
+  float: left;
+  margin: 15px auto auto 15px;
 }
 
-.price .vip_price:before {
-	content: 'VIP:¥';
+.product-header #Share {
+  float: right;
+  margin: 23px 15px auto auto;
 }
 
-.FreeRefundIn7Days:after {
-	content: '七天退换';
+.product-header .title {
+  width: 270px;
+  margin: 0 auto 0 auto;
+  height: 90px;
+  line-height: 90px;
 }
 
-.QualityAssurance:after {
-	content: '质量保证';
+.product-header #logo {
+  margin-top: 25px;
+  float: left;
 }
 
+.product-header .title2 {
+  float: right;
+  font-size: 33px;
+}
+
+.product-brief-info-card {
+  padding-bottom: 25px;
+}
+
+.product-info {
+  margin-left: 35px;
+  padding-right: 48px;
+}
+
+.product-price {
+  margin: 55px 0 30px 0;
+}
+
+.product-price span {
+  padding-left: 15px;
+}
+
+.product-price .price {
+  font-size: 25px;
+  line-height: 25px;
+  color: #fe4545;
+}
+
+.product-price .nopromotion-price,
+.otherinfo {
+  color: #797979;
+  font-size: 22px;
+  line-height: 25px;
+}
+
+.product-price .nopromotion-price {
+  text-decoration: line-through;
+}
+
+.product-text {
+  color: #313131;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.product-text .title {
+  font-size: 32px;
+  margin: 28px 0 38px 0;
+}
+
+.product-text .desc {
+  font-size: 26px;
+}
+
+.product-text .flag {
+  margin: 28px 0 15px 0;
+}
+
+.product-text .flag img,
+.product-text .flag span {
+  float: left;
+  margin-right: 15px;
+  font-size: 24px;
+  line-height: 24px;
+  color: #797979;
+}
+
+.product-text .flag img {
+  width: 33px;
+  height: 33px;
+  margin-top: -5px;
+}
+
+.product-property div {
+  margin-top: 15px;
+  font-size: 25px;
+  color: #797979;
+}
+
+.product-property .text {
+  margin-right: 40px;
+  line-height: 35px;
+}
+
+.product-property ul {
+  list-style-type: disc;
+  margin-left: 35px;
+}
+
+.product-using-user {
+  background-color: #ededed;
+}
+
+.product-using-user .title {
+  padding: 19px 0 16px 0;
+  margin-left: 35px;
+  font-size: 30px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.product-using-user .rolling {
+  padding: 25px 0 45px 0;
+}
+
+.card {
+  width: 280px;
+  height: auto;
+  overflow: hidden;
+  color: #AFAFAF;
+  margin: 0 18px 0 18px;
+  border-radius: 8px;
+  background-color: #fff;
+  border-bottom: 1px solid #E3E3E3;
+  word-break: break-all;
+}
+
+.card .screenshot {
+  margin: 0 auto 15px auto;
+}
+
+.card .textwrapper {
+  margin: 0 15px 0 15px;
+}
+
+.card .desc {
+  margin: 10px 0 15px;
+  font-size: 23px;
+  line-height: 25px;
+}
+
+.card .user {
+  margin: 10px 25px 15px 25px;
+}
+
+.card .username {
+  padding-left: 10px;
+  line-height: 60px;
+  display: block;
+  float: left;
+  color: #626262;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.product-section {
+  border-bottom: 25px solid #ededed;
+  padding: 20px 0 52px 36px;
+}
+
+.product-section .title {
+  padding-bottom: 16px;
+  font-size: 26px;
+  color: #313131;
+  font-weight: bold;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.product-section .content {
+  margin: 22px 50px 0 0;
+  color: #afafaf;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.product-section-without-title {
+  border-bottom: 25px solid #ededed;
+  padding: 36px;
+}
+
+.product-section-without-title img {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.product-section-pulldown {
+  border-bottom: 25px solid #ededed;
+}
+
+.product-section-pulldown .title {
+  padding: 16px 0;
+  font-size: 26px;
+  line-height: 26px;
+  color: #fe4545;
+  font-weight: bold;
+  text-align: center;
+}
+
+.product-section-pulldown .content {
+  color: #afafaf;
+  padding: 36px;
+  font-size: 25px;
+  line-height: 30px;
+  display: none;
+}
+
+.product-comment-card {
+  margin-bottom: 30px;
+}
+
+.product-comment-card .info {
+  margin-left: 80px;
+}
+
+.product-comment-card .joinindays span {
+  color: #fe4545;
+}
+
+.product-comment-card .joinindays {
+  font-size: 12px;
+}
+
+.product-comment-card .joinindays {
+  font-size: 13px;
+}
+
+.product-comment-card .username {
+  font-size: 18px;
+  color: #626262;
+  padding-top: 13px;
+}
+
+.product-comment-card .comment {
+  margin-top: 10px;
+}
+
+.product-bottom-command {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 105px;
+  overflow: hidden;
+}
+
+.product-bottom-command .addToCart {
+  width: 620px;
+  height: 100%;
+  float: left;
+  background-color: #fe4545;
+  font-size: 38px;
+  line-height: 105px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.3em;
+}
+
+.product-bottom-command .cart {
+  width: 130px;
+  height: 100%;
+  float: left;
+  background-color: #4f4f4f;
+}
+
+.product-bottom-command .cart #Cart {
+  margin: 28px 0 0 40px;
+  padding: 0 0 0 44px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.product-bottom-command-holder {
+  height: 105px;
+}
+
+
+/*Sprite CSS*/
+
+.icon {
+  background: url(../images/product_detail_icon.png) no-repeat;
+  overflow: hidden;
+}
+
+#Back {
+  background-position: -0px -0px;
+  height: 60px;
+  width: 37px;
+}
+
+#Cart {
+  background-position: -37px -0px;
+  height: 48px;
+  width: 59px;
+}
+
+#Share {
+  background-position: -96px -0px;
+  height: 44px;
+  width: 45px;
+}
+
+#logo {
+  background-position: -141px -0px;
+  height: 42px;
+  width: 59px;
+}
+
+#Days7 {
+  background-position: -200px -0px;
+  height: 30px;
+  width: 30px;
+}
+
+#FreePost {
+  background-position: -230px -0px;
+  height: 30px;
+  width: 30px;
+}
+
+#Quality {
+  background-position: -200px -30px;
+  height: 30px;
+  width: 30px;
+}
+
+#PullDown {
+  background-position: -168px -42px;
+  height: 12px;
+  width: 20px;
+  margin-left: 20px;
+}

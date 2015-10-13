@@ -1,64 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=640">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
-	<title>商品详情页面</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/product_detail.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=750">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
+  <title>商品详情页面</title>
+  <link rel="stylesheet" type="text/css" href="css/mobile.css">
+  <link rel="stylesheet" type="text/css" href="css/product_detail.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.theme.product.css">
+  <script type="text/javascript" src="js/mobile.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="js/product_detail.js"></script>
 </head>
 
 <body>
-	<header>
-		<div>
-			<img src="">
-			<span>小红唇种草机</span>
-		</div>
-		<div class="back">
-			
-		</div>
-		<div class="share">
-			分享
-		</div>
-	</header>
-	<div class="content">
+  <!-- ReactElement ProductHeader -->
+  <div class="product-header">
+    <div id="Back" class="icon"></div>
+    <div id="Share" class="icon"></div>
+    <div class="title">
+      <div id="logo" class="icon"></div>
+      <div class="title2">小红唇种草机</div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <!-- ReactElement ProductBriefInfoCard -->
+  <div class="product-brief-info-card">
+    <div class="product-rolling">
+      <div class="product-rolling-item">
+        <video controls="controls" preload="none" width="750" height="750" id="player" poster="http://i.xiaohongchun.com/A70F0EF39F6CAA48" webkit-playsinline>
+          <source type="video/mp4" src="http://v.xiaohongchun.com/688C485F89B9442B" />
+        </video>
+      </div>
+      <div class="product-rolling-item">
+        <img src="http://i.xiaohongchun.com/A70F0EF39F6CAA48" width="750" height="750">
+      </div>
+      <div class="product-rolling-item">
+        <img src="http://i.xiaohongchun.com/A70F0EF39F6CAA48" width="750" height="750">
+      </div>
+    </div>
+    <div class="product-info">
+      <div class="product-price">
+        <span class="price">¥ {Price1}</span>
+        <span class="nopromotion-price">¥ {Price2}</span>
+        <span class="otherinfo">{OtherInfo}</span>
+      </div>
+      <div class="clearfix"></div>
+      <div class="product-text">
+        <div class="title">{ProductTitle}</div>
+        <div class="desc">{ProductDescription}</div>
+        <div class="flag">
+          <img src="images/flag/flag_usa.png">
+          <span>{Country}</span>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="product-property">
+        <div>
+          <span id="FreePost" class="icon"></span>
+          <span class="text">{text}</span>
+          <span id="Quality" class="icon"></span>
+          <span class="text">{text}</span>
+          <span id="Days7" class="icon"></span>
+          <span class="text">{text}</span>
+          <div class="clearfix"></div>
+        </div>
+        
+        <div>
+        	<ul>
+        		<li>{text}</li>
+        		<li>{text}</li>
+        		<li>{text}</li>
+        	</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+	<!-- ReactElement ProductUsingUser -->
+	<div class="product-using-user">
+		<div class="title">看看谁在用</div>
+		<div class="rolling">
 
-		<div class="card">
-			<div class="slider">
-				<div class="slideritem video"></div>
-				<div class="slideritem"></div>
-				<div class="slideritem"></div>
-				<div class="slideritem"></div>
+			<div class="card"><img src="images/video_screenshot.png" ; style="width:280px;height:280px;" class="screenshot" onclick="location.href='/show/{id}'">
+			  <div class="textwrapper">
+			    <div class="desc">{第一个}</div>
+			  </div>
+			  <div class="user" onclick="location.href='/u/{user_id}'"><img src="images/avatar.png" ; class="avatar65 redborder"><span class="username">{nick}</span>
+			    <div class="clearfix"></div>
+			  </div>
 			</div>
 
-			<div class="price">
-				<span class="promotion_price">{promotion_price}</span>
-				<span class="origin_price">{origin_price}</span>
-				<span class="vip_price">{vip_price}</span>
+			<!-- 第二个card -->
+			<div class="card"><img src="images/video_screenshot.png" ; style="width:280px;height:280px;" class="screenshot" onclick="location.href='/show/{id}'">
+			  <div class="textwrapper">
+			    <div class="desc">{第二个}</div>
+			  </div>
+			  <div class="user" onclick="location.href='/u/{user_id}'"><img src="images/avatar.png" ; class="avatar65 redborder"><span class="username">{nick}</span>
+			    <div class="clearfix"></div>
+			  </div>
 			</div>
 
-			<div class="prodect_attr">
-				<span class="FreeRefundIn7Days"></span>
-				<span class="QualityAssurance"></span>
+			<!-- 第三个card -->
+			<div class="card"><img src="images/video_screenshot.png" ; style="width:280px;height:280px;" class="screenshot" onclick="location.href='/show/{id}'">
+			  <div class="textwrapper">
+			    <div class="desc">{第三个}</div>
+			  </div>
+			  <div class="user" onclick="location.href='/u/{user_id}'"><img src="images/avatar.png" ; class="avatar65 redborder"><span class="username">{nick}</span>
+			    <div class="clearfix"></div>
+			  </div>
+			</div>
+
+			<!-- 第四个card -->
+			<div class="card"><img src="images/video_screenshot.png" ; style="width:280px;height:280px;" class="screenshot" onclick="location.href='/show/{id}'">
+			  <div class="textwrapper">
+			    <div class="desc">{第四个}</div>
+			  </div>
+			  <div class="user" onclick="location.href='/u/{user_id}'"><img src="images/avatar.png" ; class="avatar65 redborder"><span class="username">{nick}</span>
+			    <div class="clearfix"></div>
+			  </div>
+			</div>
+
+		</div>
+	</div>
+	<!-- ReactElement ProductSection -->
+	<div class="product-section">
+		<div class="title">看大家怎么说</div>
+		<div class="content">
+			<div class="product-comment-card">
+				<div class="userinfo">
+					<div class="avatar">
+						<img src="images/avatar.png" class="avatar65 redborder">
+					</div>
+					<div class="info">
+						<div class="username">
+							{username}
+						</div>
+						<div class="joinindays">
+							加入小红唇<span>{joinindays}</span>天
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="comment">
+					{Comment_Text}
+				</div>
+			</div>
+			<div class="product-comment-card">
+				<div class="userinfo">
+					<div class="avatar">
+						<img src="images/avatar.png" class="avatar65 redborder">
+					</div>
+					<div class="info">
+						<div class="username">
+							{username}
+						</div>
+						<div class="joinindays">
+							加入小红唇<span>{joinindays}</span>天
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="comment">
+					{Comment_Text}
+				</div>
 			</div>
 		</div>
-
-		<div class="card">
-			<div class="title">
-				<img src="{Flag_Image}" class="flag">
-				<span>{Title}</span>
-			</div>
-			<div class="description">
-				{Description}
-			</div>
+	</div>
+	<!-- ReactElement ProductSectionWithoutTitle -->
+	<div class="product-section-without-title">
+		<img src="images/video_screenshot.png">
+	</div>
+	<!-- ReactElement ProductSection -->
+	<div class="product-section">
+		<div class="title">{标题}</div>
+		<div class="content">{内容}</div>
+	</div>
+	<!-- ReactElement ProductSectionPulldown -->
+	<div class="product-section-pulldown">
+		<div class="title">
+			<span>{标题}</span>
+			<div class="icon ib" id="PullDown"></div>
 		</div>
-		
-		
-
+		<div class="content">{内容}</div>
+	</div>
+	<!-- ReactElement ProductBottomCommand -->
+	<div class="product-bottom-command">
+		<div class="addToCart">
+			加入购物车
+		</div>
+		<div class="cart">
+			<div class="icon ib" id="Cart">2</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!-- ReactElement ProductBottomCommandHolder -->
+	<div class="product-bottom-command-holder">
 	</div>
 </body>
+
 </html>

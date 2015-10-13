@@ -20,6 +20,10 @@ body {
   font-family: "Microsoft Yahei";
 }
 
+.ib {
+  display: inline-block;
+}
+
 .top {
   color: #fff;
   height: 85px;
@@ -91,15 +95,26 @@ body {
 .avatar60 {
   width: 60px;
   height: 60px;
-  border-radius: 100px;
+  border-radius: 100%;
+  float: left;
+}
+
+.avatar65 {
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
   float: left;
 }
 
 .avatar75 {
   width: 75px;
   height: 75px;
-  border-radius: 100px;
+  border-radius: 100%;
   float: left;
+}
+
+.redborder {
+  border: 1px solid red;
 }
 
 .footerholder {
@@ -109,6 +124,7 @@ body {
 .ding {
   height: 1000px;
 }
+
 
 
 /* mejs */
