@@ -1,6 +1,10 @@
 .product-header {
-  height: 90px;
-  margin: 15px 0 15px 0;
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 }
 
 .product-header #Back {
@@ -20,14 +24,13 @@
   line-height: 90px;
 }
 
-.product-header #logo {
-  margin-top: 25px;
-  float: left;
-}
-
 .product-header .title2 {
-  float: right;
+  display: inline;
   font-size: 33px;
+  padding-left: 83px;
+  background: url(../images/logo.png) no-repeat;
+  background-position: 0px -20px;
+  margin-left: -20px;
 }
 
 .product-brief-info-card {
@@ -43,7 +46,7 @@
   margin: 55px 0 30px 0;
 }
 
-.product-price span {
+.product-price>span {
   padding-left: 15px;
 }
 
@@ -51,6 +54,7 @@
   font-size: 25px;
   line-height: 25px;
   color: #fe4545;
+  padding-left: 0;
 }
 
 .product-price .nopromotion-price,
@@ -97,21 +101,37 @@
   margin-top: -5px;
 }
 
-.product-property div {
-  margin-top: 15px;
-  font-size: 25px;
+.product-property {
   color: #797979;
 }
 
+.product-property .property {
+  margin-top: 15px;
+  font-size: 25px;
+}
+
+.product-property .property span {
+  float: left;
+  display: block;
+}
+
 .product-property .text {
-  margin-right: 40px;
+  margin:0 40px 0 10px;
   line-height: 35px;
 }
 
 .product-property ul {
-  list-style-type: disc;
-  margin-left: 35px;
+  list-style-type: none;
+  margin-left: 5px;
+  margin-top: 20px;
 }
+
+.product-property ul li {
+  margin:10px 0;
+  font-size: 18px;
+  font-size: 22px;
+}
+
 
 .product-using-user {
   background-color: #ededed;
@@ -216,7 +236,6 @@
   padding: 36px;
   font-size: 25px;
   line-height: 30px;
-  display: none;
 }
 
 .product-comment-card {
@@ -293,6 +312,7 @@
 .icon {
   background: url(../images/product_detail_icon.png) no-repeat;
   overflow: hidden;
+  display: inline-block;
 }
 
 #Back {
@@ -342,4 +362,5 @@
   height: 12px;
   width: 20px;
   margin-left: 20px;
+  transition: transform 0.2s;
 }
