@@ -1,0 +1,11 @@
+{
+	"fileName":"product_detail-react",
+	"jsbase":"js/",
+	"cssbase":"css/",
+	"imagesbase":"images/",
+	"images":[
+		"images/flag/*.png",
+		"images/avatar.png",
+		"images/bigplay.svg"
+	]
+}

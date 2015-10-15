@@ -37,19 +37,21 @@ var ProductDetail = React.createClass({
 				<ProductUsingUser
 				  item={this.state.usinguser}
 				/>
-				<ProductSection title="看大家怎么说">
-					{this.state.comment.map(function(item, index) {
-						return (
-							<ProductCommentCard key={index}
-								nick={item.nick}
-								face_url={item.face_url}
-								joinindays={item.joinindays}
-								comment={item.comment}
-								user_id={item.user_id}
-							/>
-						);
-					})}
-				</ProductSection>
+				{	// 评论模块20101014删除
+				// <ProductSection title="看大家怎么说">
+				// 	{this.state.comment.map(function(item, index) {
+				// 		return (
+				// 			<ProductCommentCard key={index}
+				// 				nick={item.nick}
+				// 				face_url={item.face_url}
+				// 				joinindays={item.joinindays}
+				// 				comment={item.comment}
+				// 				user_id={item.user_id}
+				// 			/>
+				// 		);
+				// 	})}
+				// </ProductSection>
+				}
 				<ProductSectionWithoutTitle>
 				  <img src="images/video_screenshot.png" />
 				</ProductSectionWithoutTitle>
@@ -86,26 +88,20 @@ var ProductHeader = React.createClass({
     };
   },
 	componentDidMount: function() {
-  	var updateTitle = function(that, text){
-  		return function(){
-  			that.setState({title: text});
-  		}
-  	}
-  	var that = this;
 		mobile.scrolldown(function(height){
 			if(height>660){
-				that.setState({
-					title:that.props.downtitle 
+				this.setState({
+					title:this.props.downtitle 
 				});
 			}
 			else{
-				that.setState({
-					title:that.props.uptitle 
+				this.setState({
+					title:this.props.uptitle 
 				});
 			}
-		});
+		}.bind(this));
 		mobile.share.bind(
-			React.findDOMNode(this.refs.share)
+			this.refs.share.getDOMNode()
 		);
 	},
 	goBack: function() {
@@ -156,7 +152,7 @@ var ProductBriefInfoCard = React.createClass({
 			videoobj = e;
 		});
 
-		$(React.findDOMNode(this.refs.rolling)).owlCarousel({
+		$(this.refs.rolling.getDOMNode()).owlCarousel({
 		  slideSpeed: 300,
 		  paginationSpeed: 400,
 		  singleItem: true,
@@ -183,7 +179,7 @@ var ProductBriefInfoCard = React.createClass({
 			      <div className="title">{this.props.brief.title}</div>
 			      <div className="desc">{this.props.brief.description}</div>
 			      <div className="flag">
-			        <img src={"images/flag/flag_" + this.props.brief.country_code + ".png"} />
+			        <img src={"images/flag_" + this.props.brief.country_code + ".png"} />
 			        <span>{this.props.brief.country_name}</span>
 			        <div className="clearfix"></div>
 			      </div>
@@ -225,28 +221,52 @@ var ProductUsingUserRollingItem = React.createClass({
 	render: function() {
 		return (
 			<div className="card" key={this.props.key}>
-				<img src={this.props.item.cover_url} style={{width:280,height:280}} className="screenshot" />
+			{
+				// <img src={this.props.item.cover_url} style={{width:280,height:280}} className="screenshot" />
+			 
+			  // <div className="user" onClick={goToUserPage(this.props.item.user_id)}>
+			  // 	<img src={this.props.item.face_url} className="avatar65 redborder" />
+			  // 	<span className="username">{this.props.item.nick}</span>
+			  //   <div className="clearfix"></div>
+			  // </div>
+			}
+			<div className="left">
+				<img src={this.props.item.cover_url} />
+			</div>
+
+			<div className="right">
+				<div className="userinfo">
+					<div className="avatar">
+						<img src="images/avatar.png" className="avatar65 redborder" />
+					</div>
+					<div className="info">
+						<div className="username">
+							{this.props.item.nick}
+						</div>
+						<div className="joinindays">
+							加入小红唇<span>{this.props.item.joinindays}</span>天
+						</div>
+					</div>
+					<div className="clearfix"></div>
+				</div>
 			  <div className="textwrapper">
 			    <div className="desc">{this.props.item.desc}</div>
 			  </div>
-			  <div className="user" onClick={goToUserPage(this.props.item.user_id)}>
-			  	<img src={this.props.item.face_url} className="avatar65 redborder" />
-			  	<span className="username">{this.props.item.nick}</span>
-			    <div className="clearfix"></div>
-			  </div>
+			</div>
+
 			</div>
 		);
 	}
 });
 
 var ProductUsingUser = React.createClass({
-	componentDidUpdate: function(){
-		$(React.findDOMNode(this.refs.rolling)).owlCarousel({
-			pagination:false,
-			allowimperfect:true,
-			customWidth:632
-		});
-	},
+	// componentDidUpdate: function(){
+	// 	$(this.refs.rolling.getDOMNode()).owlCarousel({
+	// 		pagination:false,
+	// 		allowimperfect:true,
+	// 		customWidth:632
+	// 	});
+	// },
 	render: function() {
 		return (
 			<div className="product-using-user">
@@ -318,7 +338,7 @@ var ProductSectionPulldown = React.createClass({
 		this.setState({
 			isPullDown: !this.state.isPullDown 
 		});
-		$(React.findDOMNode(this.refs.content)).slideToggle(200);
+		$(this.refs.content.getDOMNode()).slideToggle(200);
 
 	},
 	render: function() {
@@ -405,6 +425,7 @@ var data = {
 			desc:'#陆小丫的美妆教程#不用卧蚕笔也能打造美美的卧蚕哦，产品：ZA大地色系四色眼影（全国专柜··',
 			face_url:'images/avatar.png',
 			nick:'用户名',
+			joinindays:276,
 			user_id:123
 		},
 		{
@@ -412,6 +433,7 @@ var data = {
 			desc:'#陆小丫的美妆教程#不用卧蚕笔也能打造美美的卧蚕哦，产品：ZA大地色系四色眼影（全国专柜··',
 			face_url:'images/avatar.png',
 			nick:'用户名',
+			joinindays:276,
 			user_id:234
 		},
 		{
@@ -419,6 +441,7 @@ var data = {
 			desc:'#陆小丫的美妆教程#不用卧蚕笔也能打造美美的卧蚕哦，产品：ZA大地色系四色眼影（全国专柜··',
 			face_url:'images/avatar.png',
 			nick:'用户名',
+			joinindays:276,
 			user_id:345
 		},
 		{
@@ -426,6 +449,7 @@ var data = {
 			desc:'#陆小丫的美妆教程#不用卧蚕笔也能打造美美的卧蚕哦，产品：ZA大地色系四色眼影（全国专柜··',
 			face_url:'images/avatar.png',
 			nick:'用户名',
+			joinindays:276,
 			user_id:456
 		},
 	],
@@ -434,21 +458,18 @@ var data = {
 			nick:'逆光Neo',
 			user_id:1234,
 			face_url:'images/avatar.png',
-			joinindays:276,
 			comment:'看我怎么说，我怎么知道说什么……呵呵呵'
 		},
 		{
 			nick:'逆光Neo',
 			user_id:1234,
 			face_url:'images/avatar.png',
-			joinindays:276,
 			comment:'看我怎么说，我怎么知道说什么……呵呵呵'
 		},
 		{
 			nick:'逆光Neo',
 			user_id:1234,
 			face_url:'images/avatar.png',
-			joinindays:276,
 			comment:'看我怎么说，我怎么知道说什么……呵呵呵'
 		}
 	],
