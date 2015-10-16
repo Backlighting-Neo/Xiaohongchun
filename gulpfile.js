@@ -7,8 +7,8 @@ var p = require('gulp-load-plugins')({
   	'gulp-minify-css': 'cssmin',
   	'throug2': 'throug2',
   	'gulp-connect': 'connect',
-  	'gulp': 'gulp',
-  	'gulp-rename': 'rename'
+  	'gulp-rename': 'rename',
+  	'gulp-sass': 'sass'
   } 
 });
 var fs = require('fs');
@@ -139,6 +139,12 @@ gulp.task("css",function(){
 	.pipe(gulp.dest(config.css.dest))
 })
 
+gulp.task("scss",function(){
+	return gulp.src([`${src_root}scss/${app}.scss`])
+	.pipe(p.sass().on('error', p.sass.logError))
+	.pipe(gulp.dest(`${src_root}css/`))
+})
+
 gulp.task('build',
 	['images','js-min','css-min','css','js','index'],
 	function(){
@@ -147,8 +153,8 @@ gulp.task('build',
 
 gulp.task('connect-develop', function () {
 	p.connect.server({
-		root: './',
-		port:8080,
+		root: [__dirname],
+		port: 80,
 		livereload: true
 	});
 });
@@ -159,7 +165,6 @@ gulp.task('reload', function () {
 });
  
 gulp.task('watch', function () {
-	console.log(dependlist);
   gulp.watch(dependlist, ['reload']);
 });
 

@@ -1,0 +1,13 @@
+{
+	"fileName":"store_cart",
+	"_fileDescription":"小红唇种草机购物车页面",
+	"_author":"KevinTang",
+	"_starTtime":"2015-10-16",
+	"_endTime":"unknow",
+	"jsbase":"js/",
+	"cssbase":"css/",
+	"imagesbase":"images/",
+	"images":[
+		"iamges/store_cart.png"
+	]
+}

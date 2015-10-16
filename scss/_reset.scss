@@ -1,0 +1,20 @@
+img {
+  display: block;
+}
+
+html, body, p, a, ol, ul, dd {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.ding {
+	height: 1000px;
+}
