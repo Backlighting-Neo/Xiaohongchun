@@ -32,28 +32,7 @@ var getAppName = function(){
 	return(app);
 }
 var app = getAppName();
-var depend = JSON.parse(fs.readFileSync(`${app}.depend.json`,'utf-8'));
-if(depend.fileName != app){
-	console.error(`depend file (${app}.depend.json) not match this app`);
-	process.exit();
-};
-depend.js  = [];
-depend.css = [];
-depend.jsx = [];
-
-
-var html = fs.readFileSync(`${app}.html`,'utf-8');
-var css_re = new RegExp("(<link rel=\"stylesheet\" type=\"text/css\" href=\")(.*?)(\">)",'g');
-var js_re  = new RegExp("(<script type=\"text/javascript\" src=\")(.*?)(\"></script>)",'g');
-var jsx_re = new RegExp("(<script type=\"text/jsx\" src=\")(.*?)(\"></script>)",'g');
-
-var result = '';
-while ((result = css_re.exec(html)) != null)
-  depend.css.push(result[2]);
-while ((result = js_re.exec(html))  != null)
-  depend.js.push(result[2]);
-while ((result = jsx_re.exec(html)) != null)
-	depend.jsx.push(result[2]);
+var depend;
 
 var src_root = './';
 var dest_root = `../publish/${app}/`
@@ -71,11 +50,35 @@ var config = {
 	images:{src:[],dest:''},
 };
 
-(["js","css","images"]).forEach(function(item){
-	depend[item].forEach(function(item2){
-		config[item].src.push(`${src_root}${item2}`);
-		dependlist.push(`${src_root}${item2}`);
-		config[item].dest = `${dest_root}${item}/`;
+gulp.task("scan",function(){
+	depend = JSON.parse(fs.readFileSync(`${app}.depend.json`,'utf-8'));
+	if(depend.fileName != app){
+		console.error(`depend file (${app}.depend.json) not match this app`);
+		process.exit();
+	};
+	depend.js  = [];
+	depend.css = [];
+	depend.jsx = [];
+
+	var html = fs.readFileSync(`${app}.html`,'utf-8');
+	var css_re = new RegExp("(<link rel=\"stylesheet\" type=\"text/css\" href=\")(.*?)(\">)",'g');
+	var js_re  = new RegExp("(<script type=\"text/javascript\" src=\")(.*?)(\"></script>)",'g');
+	var jsx_re = new RegExp("(<script type=\"text/jsx\" src=\")(.*?)(\"></script>)",'g');
+
+	var result = '';
+	while ((result = css_re.exec(html)) != null)
+	  depend.css.push(result[2]);
+	while ((result = js_re.exec(html))  != null)
+	  depend.js.push(result[2]);
+	while ((result = jsx_re.exec(html)) != null)
+		depend.jsx.push(result[2]);
+
+	(["js","css","images"]).forEach(function(item){
+		depend[item].forEach(function(item2){
+			config[item].src.push(`${src_root}${item2}`);
+			dependlist.push(`${src_root}${item2}`);
+			config[item].dest = `${dest_root}${item}/`;
+		})
 	})
 })
 
@@ -146,7 +149,7 @@ gulp.task("scss",function(){
 })
 
 gulp.task('build',
-	['images','js-min','css-min','css','js','index'],
+	['scan','images','js-min','css-min','css','js','index'],
 	function(){
 	console.info("Build OK");
 });

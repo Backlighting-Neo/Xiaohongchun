@@ -178,11 +178,13 @@ var ProductBriefInfoCard = React.createClass({
 			    <div className="product-text">
 			      <div className="title">{this.props.brief.title}</div>
 			      <div className="desc">{this.props.brief.description}</div>
-			      <div className="flag">
-			        <img src={"images/flag_" + this.props.brief.country_code + ".png"} />
-			        <span>{this.props.brief.country_name}</span>
-			        <div className="clearfix"></div>
-			      </div>
+			      {
+			      // <div className="flag">
+			      //   <img src={"images/flag_" + this.props.brief.country_code + ".png"} />
+			      //   <span>{this.props.brief.country_name}</span>
+			      //   <div className="clearfix"></div>
+			      // </div>
+			      }
 			    </div>
 			    <div className="product-property">
 			      <div className="property">
