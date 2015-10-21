@@ -4,7 +4,7 @@
 	"mappings": [
 		{	
 			"src": "./*.scss",
-			"dest": "./../css/"
+			"dest": "../css/"
 		}
 	],
 

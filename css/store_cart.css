@@ -1,8 +1,4 @@
 @charset "UTF-8";
-body {
-  font-size: 25px;
-  font-family: "Microsoft Yahei"; }
-
 img {
   display: block; }
 
@@ -18,6 +14,10 @@ ol, ul {
 
 .ding {
   height: 1000px; }
+
+body {
+  font-size: 25px;
+  font-family: "Microsoft Yahei"; }
 
 .top-holder {
   height: 102px; }
@@ -90,18 +90,21 @@ ol, ul {
         border: 1px solid #bebebe;
         margin-top: 40px; }
         .store-cart-list .item .info .num .minus, .store-cart-list .item .info .num .plus {
-          width: 27px;
-          height: 32px;
+          padding-top: 3px;
+          height: 29px;
           border-radius: 100%;
           border: 1px solid #bebebe;
-          padding-left: 4px;
           font-size: 35px;
           line-height: 25px; }
         .store-cart-list .item .info .num .minus {
+          width: 19px;
+          padding-left: 10px;
           margin: 2px 2px 2px 2px;
           float: left;
           color: #bebebe; }
         .store-cart-list .item .info .num .plus {
+          width: 25px;
+          padding-left: 4px;
           margin: 2px 2px 2px -2px;
           float: right;
           color: #ff4548; }

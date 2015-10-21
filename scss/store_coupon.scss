@@ -1,0 +1,180 @@
+@charset "utf-8";
+@import "common";
+
+$app: store-coupon-;
+
+body {
+	background-color: #f1f1f1;
+}
+
+.#{$app}title {
+	text-align: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 640px;
+	background-color: white;
+
+	.title {
+		color: #4c4c4c;
+		font-size: 34px;
+		@include divcenter(88px);
+	}
+
+	.button {
+		$b: 1px solid #dedede;
+
+		border-top: $b;
+		border-bottom: $b;
+		color: #666666;
+		font-size: 22px;
+		@include divcenter(80px);
+
+		.left{
+			width: 49%;
+			float: left;
+			border-right: $b;
+		}
+
+		.right{
+			width: 49%;
+			float: right;
+		}
+
+		.active {
+			border-bottom: 2px solid #fe4545;
+			color: #fe4545;
+		}
+	}
+}
+
+.#{$app}title-holder {
+	.holder1 {
+		height: 88px;
+	}
+	.holder2 {
+		height: 82px;
+	}
+}
+
+.outer {
+	width: 640px;
+	overflow: hidden;
+}
+
+.wrapper {
+	width: 1280px;
+}
+
+.#{$app}content {
+	padding:15px 0;
+	width: 640px;
+	transition: margin 0.8s;
+	float: left;
+
+	div {
+		width: 600px;
+		margin: 0 auto 15px auto;
+		position: relative;
+	}
+
+	span {
+		position: absolute;
+	}
+
+	%c {
+		.title {
+			top: 38px;
+			left: 22px;
+			color: white;
+			font-size: 25px;
+		}
+
+		.money {
+			top: 108px;
+			left: 22px;
+			color: white;
+			font-size: 39px;
+		}
+
+		.money:before {
+			content: '¥';
+			font-size: 24px;
+			margin-right: 30px;
+		}
+
+		.note {
+			top: 176px;
+			left: 22px;
+			color: white;
+			font-size: 23px;
+		}
+
+		.validity {
+			top: 67px;
+			left: 400px;
+			width: 150px;
+			color: #666666;
+			font-size: 22px;
+			text-align: center;
+		}
+
+		.remind {
+			top: 135px;
+			left: 400px;
+			width: 150px;
+			color: #666666;
+			font-size: 16px;
+			text-align: center;
+		}
+	}
+
+	.coupon-unused {
+		height: 224px;
+		background: url(../images/coupon-unused.png) no-repeat;
+		@extend %c;	
+	}
+
+	.coupon-used {
+		height: 290px;
+		background: url(../images/coupon-used.png) no-repeat;
+		@extend %c;
+
+		.money {
+			top: 168px;
+		}
+
+		.note {
+			top: 226px;
+		}
+
+		.validity {
+			top: 208px;
+			color: white;
+		}
+	}
+
+	.coupon-overtime {
+		height: 224px;
+		background: url(../images/coupon-overtime.png) no-repeat;
+		@extend %c;
+	}
+
+	.nodata {
+		text-align: center;
+
+		img {
+			margin: 0 auto;
+		}
+
+		.img1 {
+			margin-top: 120px;
+			transform: rotate(-4deg);
+		}
+
+		.img2 {
+			margin-top: 20px;
+		}
+	}
+}

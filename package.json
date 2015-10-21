@@ -5,15 +5,17 @@
   "devDependencies": {
     "gulp": "^3.5.6",
     "gulp-babel": "^5.2.1",
+    "gulp-clean": "^0.3.1",
     "gulp-concat": "^2.2.0",
     "gulp-connect": "latest",
+    "gulp-html-replace": "^1.5.4",
     "gulp-load-plugins": "^0.10.0",
     "gulp-minify-css": "latest",
     "gulp-rename": "^1.2.0",
-    "gulp-replace": "0.5.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^2.2.14",
-    "gulp-sass": "latest",
     "through2": "^2.0.0"
   }
 }

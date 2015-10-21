@@ -162,7 +162,7 @@ var ProductBriefInfoCard = React.createClass({
 		});
 	},
 	render: function() {
-		props_list = this.props_list;
+		var props_list = this.props_list;
 		return (
 			<div className="product-brief-info-card">
 			  <div className="product-rolling" ref="rolling">

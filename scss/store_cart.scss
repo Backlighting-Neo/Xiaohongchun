@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "common","reset";
+@import "common";
 
 $app: store-cart-;
 
@@ -98,21 +98,24 @@ $bgcolor: #f1f1f1;
 				margin-top: 40px;
 
 				.minus, .plus {
-					width: 27px;
-					height: 32px;
+					padding-top: 3px;
+					height: 29px;
 					@include circleBorder($b);
-					padding-left: 4px;
 					font-size: 35px;
 					line-height: 25px;
 				}
 
 				.minus {
+					width: 19px;
+					padding-left:10px;
 					margin: 2px 2px 2px 2px;
 					float: left;
 					color: $c;
 				}
 
 				.plus {
+					width: 25px;
+					padding-left:4px;
 					margin: 2px 2px 2px -2px;
 					float: right;
 					color: #ff4548;

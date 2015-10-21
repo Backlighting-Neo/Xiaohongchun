@@ -1,0 +1,136 @@
+@charset "UTF-8";
+img {
+  display: block; }
+
+html, body, p, a, ol, ul, dd {
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style: none; }
+
+.clearfix {
+  clear: both; }
+
+.ding {
+  height: 1000px; }
+
+body {
+  font-size: 25px;
+  font-family: "Microsoft Yahei"; }
+
+body {
+  background-color: #f1f1f1; }
+
+.store-coupon-title {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 640px;
+  background-color: white; }
+  .store-coupon-title .title {
+    color: #4c4c4c;
+    font-size: 34px;
+    height: 88px;
+    line-height: 88px; }
+  .store-coupon-title .button {
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    color: #666666;
+    font-size: 22px;
+    height: 80px;
+    line-height: 80px; }
+    .store-coupon-title .button .left {
+      width: 49%;
+      float: left;
+      border-right: 1px solid #dedede; }
+    .store-coupon-title .button .right {
+      width: 49%;
+      float: right; }
+    .store-coupon-title .button .active {
+      border-bottom: 2px solid #fe4545;
+      color: #fe4545; }
+
+.store-coupon-title-holder .holder1 {
+  height: 88px; }
+.store-coupon-title-holder .holder2 {
+  height: 82px; }
+
+.outer {
+  width: 640px;
+  overflow: hidden; }
+
+.wrapper {
+  width: 1280px; }
+
+.store-coupon-content {
+  padding: 15px 0;
+  width: 640px;
+  transition: margin 0.8s;
+  float: left; }
+  .store-coupon-content div {
+    width: 600px;
+    margin: 0 auto 15px auto;
+    position: relative; }
+  .store-coupon-content span {
+    position: absolute; }
+  .store-coupon-content .coupon-unused .title, .store-coupon-content .coupon-used .title, .store-coupon-content .coupon-overtime .title {
+    top: 38px;
+    left: 22px;
+    color: white;
+    font-size: 25px; }
+  .store-coupon-content .coupon-unused .money, .store-coupon-content .coupon-used .money, .store-coupon-content .coupon-overtime .money {
+    top: 108px;
+    left: 22px;
+    color: white;
+    font-size: 39px; }
+  .store-coupon-content .coupon-unused .money:before, .store-coupon-content .coupon-used .money:before, .store-coupon-content .coupon-overtime .money:before {
+    content: '¥';
+    font-size: 24px;
+    margin-right: 30px; }
+  .store-coupon-content .coupon-unused .note, .store-coupon-content .coupon-used .note, .store-coupon-content .coupon-overtime .note {
+    top: 176px;
+    left: 22px;
+    color: white;
+    font-size: 23px; }
+  .store-coupon-content .coupon-unused .validity, .store-coupon-content .coupon-used .validity, .store-coupon-content .coupon-overtime .validity {
+    top: 67px;
+    left: 400px;
+    width: 150px;
+    color: #666666;
+    font-size: 22px;
+    text-align: center; }
+  .store-coupon-content .coupon-unused .remind, .store-coupon-content .coupon-used .remind, .store-coupon-content .coupon-overtime .remind {
+    top: 135px;
+    left: 400px;
+    width: 150px;
+    color: #666666;
+    font-size: 16px;
+    text-align: center; }
+  .store-coupon-content .coupon-unused {
+    height: 224px;
+    background: url(../images/coupon-unused.png) no-repeat; }
+  .store-coupon-content .coupon-used {
+    height: 290px;
+    background: url(../images/coupon-used.png) no-repeat; }
+    .store-coupon-content .coupon-used .money {
+      top: 168px; }
+    .store-coupon-content .coupon-used .note {
+      top: 226px; }
+    .store-coupon-content .coupon-used .validity {
+      top: 208px;
+      color: white; }
+  .store-coupon-content .coupon-overtime {
+    height: 224px;
+    background: url(../images/coupon-overtime.png) no-repeat; }
+  .store-coupon-content .nodata {
+    text-align: center; }
+    .store-coupon-content .nodata img {
+      margin: 0 auto; }
+    .store-coupon-content .nodata .img1 {
+      margin-top: 120px;
+      transform: rotate(-4deg); }
+    .store-coupon-content .nodata .img2 {
+      margin-top: 20px; }
