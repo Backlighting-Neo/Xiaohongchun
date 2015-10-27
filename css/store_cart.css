@@ -19,6 +19,9 @@ body {
   font-size: 25px;
   font-family: "Microsoft Yahei"; }
 
+.click {
+  cursor: pointer; }
+
 .top-holder {
   height: 102px; }
 
@@ -35,7 +38,8 @@ body {
   border-bottom: 12px solid #f1f1f1;
   text-align: center;
   font-weight: bold;
-  background-color: white; }
+  background-color: white;
+  z-index: 9999; }
 
 .store-cart-list {
   border-bottom: 12px solid #f1f1f1; }
@@ -65,9 +69,26 @@ body {
       float: left;
       border: 1px solid #d7d7d7;
       margin-right: 20px;
+      position: relative;
       height: 152px;
       width: 152px;
       margin-top: 32px; }
+      .store-cart-list .item .image .note {
+        width: 0;
+        height: 0;
+        border-top: 40px solid #fe4545;
+        border-right: 40px solid transparent;
+        position: absolute;
+        left: -3px;
+        top: -3px; }
+        .store-cart-list .item .image .note span {
+          color: white;
+          position: absolute;
+          left: -1px;
+          top: -42px;
+          font-size: 13px;
+          width: 50px;
+          transform: rotate(-45deg); }
     .store-cart-list .item .info {
       float: left;
       margin: 40px 0 0 18px; }
@@ -82,13 +103,19 @@ body {
       .store-cart-list .item .info .bin {
         float: left;
         margin: 14px 0 0 18px; }
+      .store-cart-list .item .info .limit {
+        margin-top: 18px;
+        font-size: 20px;
+        color: #fe4545;
+        width: 126px;
+        text-align: center; }
       .store-cart-list .item .info .num {
         float: left;
         width: 126px;
         height: 38px;
         border-radius: 19px;
         border: 1px solid #bebebe;
-        margin-top: 40px; }
+        margin-top: 2px; }
         .store-cart-list .item .info .num .minus, .store-cart-list .item .info .num .plus {
           padding-top: 3px;
           height: 29px;
@@ -110,11 +137,11 @@ body {
           color: #ff4548; }
         .store-cart-list .item .info .num .now {
           text-align: center;
-          line-height: 37px; }
+          line-height: 40px; }
     .store-cart-list .item .price, .store-cart-list .item .button {
-      margin: 53px 0 0 235px; }
-      .store-cart-list .item .price span.p1, .store-cart-list .item .button span.p1, .store-cart-list .item .price span.p2:before, .store-cart-list .item .button span.p2:before {
-        content: "¥"; }
+      margin: 13px 0 0 235px; }
+      .store-cart-list .item .price span.p1:before, .store-cart-list .item .button span.p1:before, .store-cart-list .item .price span.p2:before, .store-cart-list .item .button span.p2:before {
+        content: '¥'; }
       .store-cart-list .item .price .p1, .store-cart-list .item .button .p1 {
         font-size: 16px;
         line-height: 23px;
@@ -198,11 +225,13 @@ body {
   background-position: -64px 0;
   height: 28px;
   width: 28px; }
+
 .icon_noselect {
   background: url(../images/cart_icon.png) no-repeat;
   background-position: -32px 0;
   height: 32px;
   width: 32px; }
+
 .icon_selected {
   background: url(../images/cart_icon.png) no-repeat;
   background-position: 0 0;

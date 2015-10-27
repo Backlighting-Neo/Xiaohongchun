@@ -32,13 +32,13 @@ body {
 		@include divcenter(80px);
 
 		.left{
-			width: 49%;
+			width: 319px;
 			float: left;
 			border-right: $b;
 		}
 
 		.right{
-			width: 49%;
+			width: 320px;
 			float: right;
 		}
 

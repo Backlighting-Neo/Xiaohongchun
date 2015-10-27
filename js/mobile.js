@@ -496,8 +496,11 @@ var mobile = {
 			return svalue ? svalue[1] : svalue;
   	};
 	},
-	videoplugin : function(size, callback) {
-		$("video").each(function(v,k){
+	videoplugin : function(size, selector, callback) {
+		selector = selector?selector:"video";
+		var videoobj = [];
+		var dom = $(selector);
+		dom.each(function(v,k){
 			var width=size,height=size;
 			$(k).mediaelementplayer({
 				defaultVideoWidth: width,
@@ -508,7 +511,10 @@ var mobile = {
 				alwaysShowControls: false,
 				features: ['playpause','progress','current','duration','tracks','volume','fullscreen'],
 				success: function(e){
-					callback(e);
+					videoobj.push(e);
+					if(v==dom.length-1) {
+						if(callback) callback(videoobj);
+					}					
 				}
 			});
 		});

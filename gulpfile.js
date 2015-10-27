@@ -43,7 +43,7 @@ var getAppName = function() {
 }
 var app = getAppName();
 var depend = {};
-var prestring = "";
+var prestring = "           ";
 
 var src_root = './';
 var dest_root = `../publish/${app}/`
@@ -81,7 +81,7 @@ var config = {
 gulp.task("scan", function() {
 	return new Promise(function(resolve, reject) {
 	  var re   = /(<link.*?href=\\?\"|<script.*?src=\\?\"|<img.*?src=\\?\"|background.*?url\()(.*?)(\\?\".*?>|\).*?;)/g;
-		log(`${prestring}Scaning Dependencies files in your HTML`);
+    log("Scaning Dependencies files in your HTML");
 
 		depend.js     = new Set();
 		depend.css    = new Set();
@@ -89,7 +89,7 @@ gulp.task("scan", function() {
 		depend.jsx    = new Set();
 		depend.images = new Set();
 
-    depend.scss.add(`${src_root}scss/${app}.scss`)
+    // depend.scss.add(`${src_root}scss/${app}.scss`)
 
 	  var rf = function (path) {
 	  	o_path = path.split("/");
@@ -107,6 +107,14 @@ gulp.task("scan", function() {
 	  	});
 	  }	
 
+    var ex = function (path) {
+      return new Promise(function(resolve, reject) {
+        fs.exists(path, function (exists) {
+          resolve(exists);
+        });
+      })
+    }
+
 	  var handle = function(opt){
 	  	var data = opt.data;
 	  	var o_path = opt.o_path;
@@ -120,17 +128,28 @@ gulp.task("scan", function() {
 			  		filename.indexOf("\"")+
 			  		filename.indexOf("+"))>-1)
 			  			return;
-			  	if(o_extname == "css"){
-			  		filename = o_path + "/" + filename;
-			  	}
-			  	
-			  	var extname = filename.split(".");
-			  	extname = extname[extname.length - 1];
-			  	switch(extname) {
-			  		case "js": case "jsx": case "css":
-			  			depend[extname].add(filename);
-			  			next_promise.push(rf(filename).then(handle));
-			  			break;
+          if(o_extname == "css"){
+            filename = o_path + "/" + filename;
+          }
+          filename = filename.replace(/(\w*\/\.\.\/)/g,"/");
+          filename = filename.replace(/^\//,"");
+          var extname = filename.split(".");
+          extname = extname[extname.length - 1];
+          switch(extname) {
+            case "js": case "jsx": case "css":
+              depend[extname].add(filename);
+              next_promise.push(rf(filename).then(handle));
+              if(extname == "css") {
+                var scss_filename = filename.replace(".css",".scss")
+                .replace("css/","scss/");
+
+                next_promise.push(ex(scss_filename).then(function(isexists) {
+                  if(isexists) {
+                    depend['scss'].add(scss_filename);
+                  }
+                }));
+              }
+              break;
 			  		case "png": case "jpg": case "jpeg": case "gif": case "svg":
 			  			depend.images.add(filename);
 			  			break;
@@ -143,17 +162,43 @@ gulp.task("scan", function() {
 		rf(`${app}.html`)
 		.then(handle)
 		.then(function(){
-		  (["js","jsx","css","images"]).forEach(function(item){
+		  (["js","jsx","css","scss","images"]).forEach(function(item){
 		  	depend[item].forEach(function(item2){
 		  		config[item].src.push(`${src_root}${item2}`);
 		  		dependlist.push(`${src_root}${item2}`);
 		  		config[item].dest = `${dest_root}${item}/`;
 		  	})
 		  })
-	  	log(`Scaned${(["js","jsx","css","scss","images"]).map(function(item){return depend[item].size==0?undefined:` ${depend[item].size} ${item}`})} files`);
+      var result_string = '';
+      (["js","jsx","css","scss","images"]).forEach(function(item) {
+        result_string = result_string.concat(depend[item].size==0?"":` ${depend[item].size} ${item},`);
+      })
+      result_string = result_string.slice(0,-1);
+	  	log(`Scaned${result_string} files`);
 			resolve();
 		})
 	});
+})
+
+gulp.task("depend", ["scan"], function() {
+  var rs = {
+    js  :'js  ',
+    css :'css ',
+    jsx :'jsx ',
+    scss:'scss',
+    images:'img '
+  }
+  var r = '\n=============Dependencies Files List=============\n\n';
+  (["js","jsx","css","scss","images"]).forEach(function(item) {
+    if(depend[item].size>0){
+      r += `${prestring}${colors.green(rs[item])}: \t${colors.yellow(`(${depend[item].size} files)`)}\n`;
+      for(item2 of depend[item]) {
+        r += `${prestring}  ${item2}\n`;
+      }
+    }
+  })
+  r += '\n=============Dependencies Files List=============\n';
+  console.log(r);
 })
 
 gulp.task("clean", function() {
@@ -161,7 +206,7 @@ gulp.task("clean", function() {
 		.pipe(p.clean({force: true}));
 })
 
-gulp.task("index",['scan'], function() {
+gulp.task("index",['scan', 'clean'], function() {
   return gulp.src(config.index.src)
     .pipe(p.rename("index.html"))
     .pipe(p.replace(
@@ -174,17 +219,18 @@ gulp.task("index",['scan'], function() {
     .pipe(gulp.dest(config.index.dest))
 });
 
-gulp.task("images",['scan'], function() {
-  return gulp.src(config.images.src, {read: false})
+gulp.task("images",['scan','clean'], function() {
+  return gulp.src(config.images.src)
     .pipe(gulp.dest(config.images.dest));
 })
 
-gulp.task("js-min",['scan'], function() {
+gulp.task("js-min",['scan', 'clean'], function() {
   var jstomin = [];
   config.js.src.forEach(function(item) {
     if (item.indexOf('.min.js') == -1 &&
-      item.indexOf('.jsx') == -1)
-    // 已压缩过的和JSX文件不压缩
+      item.indexOf('.jsx') == -1 &&
+      item.indexOf('build/' == -1)) 
+    // 已压缩过的、JSX文件、build目录中的不压缩
     {
       jstomin.push(item);
       config.js.src.push(item.replace('.js', '').concat('.min.js'));
@@ -195,20 +241,20 @@ gulp.task("js-min",['scan'], function() {
     .pipe(p.rename({
       extname: ".min.js"
     }))
-    .pipe(gulp.dest(src_root + depend.jsbase)));
+    .pipe(gulp.dest(src_root + 'js/')));
 })
 
-gulp.task("js",['scan', 'js-min', 'babel', 'jsx'], function() {
+gulp.task("js",['scan', 'clean', 'js-min', 'babel', 'jsx'], function() {
   return gulp.src(config.js.src)
     .pipe(gulp.dest(config.js.dest))
 })
 
-gulp.task("jsx",['scan'], function() {
+gulp.task("jsx",['scan', 'clean'], function() {
   return gulp.src(config.jsx.src)
     .pipe(gulp.dest(config.js.dest))
 })
 
-gulp.task("babel",['scan'], function() {
+gulp.task("babel",['scan', 'clean'], function() {
   return gulp.src(config.jsx.src)
     .pipe(p.babel())
     .pipe(p.rename({
@@ -217,13 +263,12 @@ gulp.task("babel",['scan'], function() {
     .pipe(gulp.dest(config.js.dest))
 })
 
-gulp.task("scss",['scan'], function() {
+gulp.task("scss",['scan', 'clean'], function() {
   return gulp.src(config.scss.src)
-    .pipe(sass())
-    .pipe(gulp.dest(config.css.dest))
+    .pipe(gulp.dest(config.scss.dest))
 })
 
-gulp.task("css-min",['scan'], function() {
+gulp.task("css-min",['scan', 'clean'], function() {
   var csstomin = [];
   config.css.src.forEach(function(item) {
     if (item.indexOf('.min.css') == -1) {
@@ -236,15 +281,15 @@ gulp.task("css-min",['scan'], function() {
     .pipe(p.rename({
       extname: ".min.css"
     }))
-    .pipe(gulp.dest(src_root + depend.cssbase));
+    .pipe(gulp.dest(src_root + 'css/'));
 })
 
-gulp.task("css",['scan','css-min'], function() {
+gulp.task("css",['scan','clean','css-min','scss','scss-complie'], function() {
   return gulp.src(config.css.src)
     .pipe(gulp.dest(config.css.dest))
 })
 
-gulp.task("scss",['scan'], function() {
+gulp.task("scss-complie", function() {
   return gulp.src([`${src_root}scss/${app}.scss`])
     .pipe(p.sass().on('error', p.sass.logError))
     .pipe(gulp.dest(`${src_root}css/`))
@@ -258,17 +303,26 @@ gulp.task('connect-develop', ['scan'], function() {
   });
 });
 
-gulp.task('reload', function() {
-  gulp.src(`./${app}.html`)
-    .pipe(p.connect.reload());
+gulp.task('watch', ['scan'], function() {
+  gulp.watch(dependlist, function(event) {
+    var path = event.path;
+    var extname = path.split(".");
+    extname = extname[extname.length - 1];
+    if(extname == "scss") {
+      gulp.run('scss-complie');
+    } 
+    else {
+      gulp.src(path).pipe(p.connect.reload());
+    }   
+  });
 });
 
-gulp.task('watch', ['scan'], function() {
-  gulp.watch(dependlist, ['reload']);
-});
+gulp.task('scsswatch', ['scan'], function() {
+  gulp.watch(config.scss.src, ['scss-complie']);
+})
 
 gulp.task('build', ['clean', 'images', 'css', 'js', 'index'],function() {
-  log(`${prestring}Build OK`);
+  log("Build OK");
 });
 
-gulp.task('default', ['connect-develop', 'watch']);
+gulp.task('default', ['connect-develop', 'watch', 'scsswatch']);

@@ -1,0 +1,65 @@
+// 本json格式是为Mock.js生成用的
+// 语法规则：http://mockjs.com/#数据模板定义 DTD
+// 测试地址：http://mockjs.com/editor.html
+{
+	"code": "0",
+	"data": {
+		"product_name": "@word(10,15)",
+		// 商品名
+		"price": "@float(1,1000,2,2)",
+		// 售价
+		"ex_price": "@float(1,1000,2,2)",
+		// 原价
+		"note": "@string(8,16)",
+		// 优惠信息，例如："买一送一"
+		"desc": "@paragraph(100,200)",
+		// 商品描述
+		"features_1": [
+		// 特性，在下方icon显示
+			"FreePost",  // 满88包邮
+			"Quality",	 // 品质保证
+			"Days7",		 // 七天无理由退还
+		],
+		"features_2|3": [
+		// 其他特性，在icon下方的ul>li中显示
+			"@string(8,16)"
+		],
+		"rolling|2-4": [
+		// 页面最上方轮播的内容
+			{
+				"type|1": ["video", "image"],
+				// 类型，视频或者图片，一个商品最多只能有一个视频
+				"cover_url": "@image('750x750', '#00405d', '750x750')",
+				// 图片地址，如果type为视频则为poster的地址
+				"video_url": "http://v.xiaohongchun.com/688C485F89B9442B"
+				// 视频地址，若type为image，不需要video_url
+			}
+		],
+		"usingusers|2-4": [
+		// 看看谁在用，评论模块
+			{
+				"cover_img": "@image('170x170', '#ffcc33', '170x170')",
+				// 图片地址
+				"face_img": "@image('65x65', '#02adea', '65x65')",
+				// 头像地址
+				"username": "@word(3,15)",
+				// 用户名
+				"joindays": "@integer(0,300)",
+				// 注册天数
+				"comment": "@paragraph(50,150)"
+				// 评论内容
+			}
+		],
+		"big_img": "@image('678x678', '#fecbaa', '678x678')",
+		// 下方大图地址
+		"text|1-3": [
+		// 文字模块，例如小贴士等
+			{
+				"title": "@word(3,15)",
+				// 标题
+				"content": "@paragraph(50,150)"
+				// 内容
+			}
+		]
+	}
+}

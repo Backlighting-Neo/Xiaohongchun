@@ -9,7 +9,8 @@
   background-color: #fff;
   top: 0;
   left: 0;
-  z-index: 9999
+  z-index: 9999;
+  -webkit-transform: translateZ(0);
 }
 
 .product-header #Back {
@@ -30,11 +31,12 @@
 }
 
 .product-header .title2 {
-  display: inline;
   font-size: 33px;
+  height: 90px;
   padding-left: 83px;
-  background: url(../images/logo.png) 0 -20px no-repeat;
-  margin-left: -20px
+  background: url(../images/logo.png) 0 0px no-repeat;
+  margin-left: -22px;
+  overflow: hidden;
 }
 
 .product-property .property span {
@@ -88,7 +90,8 @@
 }
 
 .product-text .desc {
-  font-size: 26px
+  font-size: 26px;
+  margin-bottom: 15px;
 }
 
 .product-text .flag {
@@ -156,13 +159,31 @@
 }
 
 .product-using-user .joinindays {
-  font-size: 18px
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .product-using-user .username {
   font-size: 22px;
   color: #626262;
   padding-top: 13px
+}
+
+.MaskPlayer {
+  background-color: rgba(0,0,0,0.8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  transition: background 0.8s;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.MaskPlayerInner {
+  transition: opacity 0.8s ease 0.4s;
 }
 
 .card {
@@ -326,13 +347,19 @@
 
 .product-bottom-command .cart #Cart {
   margin: 28px 0 0 40px;
-  padding: 0 0 0 44px;
+  padding: 0 0 0 29px;
+  text-align: center;
   color: #fff;
-  font-size: 15px
+  font-size: 15px;
+  line-height: 18px;
 }
 
 .product-bottom-command-holder {
   height: 105px
+}
+
+.click {
+  cursor: pointer;
 }
 
 #Days7,
@@ -348,43 +375,43 @@
 }
 
 #Back {
-  background-position: 0 0;
-  height: 60px;
-  width: 37px
+  background-position: -20px 0;
+  height: 42px;
+  width: 27px
 }
 
 #Cart {
-  background-position: -37px 0;
+  background-position: -153px 0;
   height: 48px;
-  width: 15px
+  width: 20px
 }
 
 #Share {
-  background-position: -96px 0;
+  background-position: -108px 0;
   height: 44px;
   width: 45px
 }
 
 #logo {
-  background-position: -141px 0;
+  background-position: -202px 0;
   height: 42px;
   width: 59px
 }
 
 #Days7 {
-  background-position: -200px 0
+  background-position: -77px 0
 }
 
 #FreePost {
-  background-position: -230px 0
+  background-position: -47px 0
 }
 
 #Quality {
-  background-position: -200px -30px
+  background-position: -77px 0
 }
 
 #PullDown {
-  background-position: -168px -42px;
+  background-position: 0 0;
   height: 12px;
   width: 20px;
   margin-left: 20px;

@@ -1,71 +1,76 @@
 var ProductDetail = React.createClass({
 	getInitialState: function() {
     return {
-			pagetitle:'小红唇种草机',
-			rolling:[],
-			brief:{
-				price1: '',
-				price2: '',
-				otherinfo: '',
-				title: '',
-				description: '',
-				country_code: '',
-				country_name: '',
-				props:[],
-				info:[]
-			},
-			usinguser:[],
-			comment:[],
-			cart_num:0
-    };
-  },
+			"brief": {},
+			"rolling": [],
+			"usingusers": [],
+			"big_img": "",
+			"text": []
+		}
+	},
 	componentDidMount: function() {
 		// TODO ajax
-  	this.setState(data);
+		// setTimeout(function() {
+		// 	this.setState(json.data);
+		// }.bind(this),1000);
+
+		this.setState(json.data);
 	},
 	render: function() {
 		return (
 			<div className="ProductDetail">
 				<ProductHeader
-				  uptitle={this.state.pagetitle}
-				  downtitle={this.state.brief.title}
+				  uptitle={this.props.pagetitle}
+				  downtitle={this.state.brief.product_name}
 				/>
 				<ProductBriefInfoCard 
 					item={this.state.rolling}
 					brief={this.state.brief}
 				/>
 				<ProductUsingUser
-				  item={this.state.usinguser}
+				  item={this.state.usingusers}
 				/>
-				{	// 评论模块20101014删除
-				// <ProductSection title="看大家怎么说">
-				// 	{this.state.comment.map(function(item, index) {
-				// 		return (
-				// 			<ProductCommentCard key={index}
-				// 				nick={item.nick}
-				// 				face_url={item.face_url}
-				// 				joinindays={item.joinindays}
-				// 				comment={item.comment}
-				// 				user_id={item.user_id}
-				// 			/>
-				// 		);
-				// 	})}
-				// </ProductSection>
-				}
 				<ProductSectionWithoutTitle>
-				  <img src="images/video_screenshot.png" />
+				  <img src={this.state.big_img} />
 				</ProductSectionWithoutTitle>
-				<ProductSection title="小贴士">
-					巴拉巴拉
-				</ProductSection>
-				<ProductSection title="使用指南">
-					巴拉巴拉
-				</ProductSection>
+				{
+					this.state.text.map(function(item, index) {
+						return(
+						<ProductSection key={index} title={item.title}>{item.content}</ProductSection>)
+					})
+				}
 				<ProductSectionPulldown title="种草设补充说明">
-				  呀呀呀
+				  Q：小红唇商城的商品是正品吗？
+				  <br />
+				  A：小红唇商城和秒杀中的商品都是从海外直采或者与国内正规进口品牌商合作，敬请放心。
+				  <br /><br />
+				  Q：为什么我买的东西降价/涨价了？
+				  <br />
+				  A：海外商品不同时期的价格本身会进行调整，所以小红唇商城的价格也会作出相应改变。
+				  <br /><br />
+				  Q：想买的商品已抢光还会再上架吗？
+				  <br />
+				  A：小红唇商城的商品均以限时限量折扣的形式进行出售，大部分售完的商品会在再次海外直采后根据主题场次排期 对于热销商品商城会适时安排重出江湖。 
+				  <br /><br />
+				  Q：如何查看已买到商品的信息和使用方法？
+				  <br />
+				  A：只要进入商品所在的订单中点击要查询的商品，就可以在商品详情页查看该商品信息和使用方法。
+				  <br /><br />
+				  Q：从商城购买的商品有多新鲜？
+				  <br />
+				  A：商城有经验丰富的买手， 确保为小主们选购的商品都是当年最新批次。
+				  <br /><br />
+				  Q：为什么收到的商品和订购时的图片不一样？
+				  <br />
+				  A：由于部分商品包装更换较为频繁，所以您收到的货品可能和订购时图片不符，请您不用担心。
+				  <br /><br />
 				</ProductSectionPulldown>
 				<ProductSectionPulldown title="消费者告知书">
-				  呀呀呀
+				  尊敬的客户：<br /><br />
+					在您选购境外商品前，麻烦仔细阅读此文，同意本文所告知内容后再进行下单购买：<br /><br />
+					1. 您在本（公司）App里购买的境外商品为产地直销商品，仅限个人自用不得进行再销售，商品本身可能无中文标签，您可以查看商品详情页里的使用指南或者联系小红唇客服。<br /><br />
+					2. 您购买的境外商品适用的品质、健康、标识等项目的使用标准符合原产国使用标准，但是可能与我国标准有所不同，所以在使用过程中由此可能产生的危害或损失以及其他风险，将由您个人承担。<br /><br />
+					3. 您在本（公司）App里购买保税区发货的境外商品时，自动视为由小红唇代您向海关进行申报和代缴税款。<br /><br />
 				</ProductSectionPulldown>
 				<ProductBottomCommand cart_num={this.state.cart_num} />
 				{productBottomCommandHolder}
@@ -132,7 +137,7 @@ var ProductBriefInfoCard = React.createClass({
 			if(item.type == 'video'){
 				return (
 				<div className="product-rolling-item" key={index}>
-				  <video controls="controls" preload="none" width="750" height="750" id="player" poster={item.cover_url} webkit-playsinline>
+				  <video className="RollingVideo" controls="controls" preload="none" width="750" height="750" id="player" poster={item.cover_url} webkit-playsinline>
 				    <source type="video/mp4" src={item.video_url} />
 				  </video>
 				</div>);
@@ -140,7 +145,7 @@ var ProductBriefInfoCard = React.createClass({
 			else if(item.type == 'image'){
 				return (
 				<div className="product-rolling-item" key={index}>
-				  <img src={item.image_url} width="750" height="750" />
+				  <img src={item.cover_url} width="750" height="750" />
 				</div>);
 			}
 		}));
@@ -148,7 +153,7 @@ var ProductBriefInfoCard = React.createClass({
 	componentDidUpdate: function() {
 		var videoobj;
 
-		mobile.videoplugin(750,function(e){
+		mobile.videoplugin(750,".RollingVideo",function(e){
 			videoobj = e;
 		});
 
@@ -157,7 +162,10 @@ var ProductBriefInfoCard = React.createClass({
 		  paginationSpeed: 400,
 		  singleItem: true,
 		  afterMove: function() {
-		  	if(videoobj) videoobj.pause();	// 切换页面后暂停视频
+		  	if(videoobj)
+			  	videoobj.forEach(function(item, index){
+			  		item.pause();
+			  	});
 		  }
 		});
 	},
@@ -170,14 +178,14 @@ var ProductBriefInfoCard = React.createClass({
 			  </div>
 			  <div className="product-info">
 			    <div className="product-price">
-			      <span className="price">¥ {this.props.brief.price1}</span>
-			      <span className="nopromotion-price">¥ {this.props.brief.price2}</span>
-			      <span className="otherinfo">{this.props.brief.otherinfo}</span>
+			      <span className="price">¥ {this.props.brief.price}</span>
+			      <span className="nopromotion-price">¥ {this.props.brief.ex_price}</span>
+			      <span className="otherinfo">{this.props.brief.note}</span>
 			    </div>
 			    <div className="clearfix"></div>
 			    <div className="product-text">
-			      <div className="title">{this.props.brief.title}</div>
-			      <div className="desc">{this.props.brief.description}</div>
+			      <div className="title">{this.props.brief.product_name}</div>
+			      <div className="desc">{this.props.brief.desc}</div>
 			      {
 			      // <div className="flag">
 			      //   <img src={"images/flag_" + this.props.brief.country_code + ".png"} />
@@ -188,22 +196,22 @@ var ProductBriefInfoCard = React.createClass({
 			    </div>
 			    <div className="product-property">
 			      <div className="property">
-			        {this.props.brief.props.map(function(item, index){
+			        {this.props.brief.features_1?this.props.brief.features_1.map(function(item, index){
 			        	return(
 			        		<span key={index}>
 			        			<span id={item} className="icon"></span>
 			        			<span className="text">{props_list[item]}</span>
 			        		</span>
 			        	)
-			        })}
+			        }):''}
 			        <div className="clearfix"></div>
 			      </div>
 			      
 			      <div>
 			      	<ul>
-		      			{this.props.brief.info.map(function(item, index){
+		      			{this.props.brief.features_2?this.props.brief.features_2.map(function(item, index){
 				        	return(<li key={index}>· {item}</li>);
-			        	})}
+			        	}):''}
 			      	</ul>
 			      </div>
 			    </div>
@@ -215,44 +223,35 @@ var ProductBriefInfoCard = React.createClass({
 
 var ProductUsingUserRollingItem = React.createClass({
 	goToUserPage: function(user_id){
-		return function(){
+		return function() {
 			location.href = './u/'+user_id;
 			user_id = null;
 		}
 	},
 	render: function() {
 		return (
-			<div className="card" key={this.props.key}>
-			{
-				// <img src={this.props.item.cover_url} style={{width:280,height:280}} className="screenshot" />
-			 
-			  // <div className="user" onClick={goToUserPage(this.props.item.user_id)}>
-			  // 	<img src={this.props.item.face_url} className="avatar65 redborder" />
-			  // 	<span className="username">{this.props.item.nick}</span>
-			  //   <div className="clearfix"></div>
-			  // </div>
-			}
+			<div className="card">
 			<div className="left">
-				<img src={this.props.item.cover_url} />
+				<img src={this.props.item.cover_url} onClick={this.props.changeHandler(this.props.item.video_url, this.props.item.cover_url)} />
 			</div>
 
 			<div className="right">
 				<div className="userinfo">
 					<div className="avatar">
-						<img src="images/avatar.png" className="avatar65 redborder" />
+						<img src={this.props.item.face_img} className="avatar65 redborder" onClick={goToUserPage(this.props.item.user_id)}/>
 					</div>
 					<div className="info">
 						<div className="username">
-							{this.props.item.nick}
+							{this.props.item.username}
 						</div>
 						<div className="joinindays">
-							加入小红唇<span>{this.props.item.joinindays}</span>天
+							加入小红唇<span> {this.props.item.joindays} </span>天
 						</div>
 					</div>
 					<div className="clearfix"></div>
 				</div>
 			  <div className="textwrapper">
-			    <div className="desc">{this.props.item.desc}</div>
+			    <div className="desc">{this.props.item.comment}</div>
 			  </div>
 			</div>
 
@@ -262,21 +261,79 @@ var ProductUsingUserRollingItem = React.createClass({
 });
 
 var ProductUsingUser = React.createClass({
-	// componentDidUpdate: function(){
-	// 	$(this.refs.rolling.getDOMNode()).owlCarousel({
-	// 		pagination:false,
-	// 		allowimperfect:true,
-	// 		customWidth:632
-	// 	});
-	// },
+	getInitialState: function() {
+		return({
+			mask_style_display: 'none',
+			mask_style_background: 'rgba(0,0,0,0)',
+			mask_style_opacity: '0',
+			mask_style_transition1: 'background 0.8s',
+			mask_style_transition2: 'opacity 0.8s ease 0.2s',
+			video_url: "",
+			cover_url: ""
+		})
+	},
+	componentWillReceiveProps: function(nextProps) {
+	  this.setState({
+	    video_url: nextProps.item[0].video_url,
+	    cover_url: nextProps.item[0].cover_url
+	  });
+	},
+	componentDidUpdate: function(){
+		// var that = this;
+		// mobile.videoplugin(700,$(this.refs.inlinevideo.getDOMNode()),function(e){
+		// 	that.videoobj = e[0];
+		// });
+	},
 	render: function() {
+		var that = this;
+		var changeVideo = function(video_url, cover_url) {
+			return function(){
+				if(video_url != that.state.video_url)
+					that.refs.inlinevideo.getDOMNode().load();
+				that.setState({
+					mask_style_display: '',
+					mask_style_transition1: 'background 0.8s',
+					mask_style_transition2: 'opacity 0.8s ease 0.2s',
+				  video_url: video_url,
+				  cover_url: cover_url
+				});
+				setTimeout(function(){
+					that.setState({
+						mask_style_background: 'rgba(0,0,0,0.8)',
+						mask_style_opacity: '1'
+					});
+					that.refs.inlinevideo.getDOMNode().play();
+				},0);
+			}
+		};
+		var closeMask = function() {
+			that.setState({
+			  mask_style_background: 'rgba(0,0,0,0)',
+			  mask_style_transition1: 'background 0.8s ease 0.2s',
+				mask_style_transition2: 'opacity 0.8s',
+				mask_style_opacity: '0'
+			});
+			that.refs.inlinevideo.getDOMNode().pause();
+			setTimeout(function(){
+				that.setState({
+					mask_style_display: 'none',
+				});
+			},800);
+		};
 		return (
 			<div className="product-using-user">
 				<div className="title">看看谁在用</div>
 				<div className="rolling" ref="rolling">
-					{this.props.item.map(function(item,index){
-						return <ProductUsingUserRollingItem item={item} key={index} />
-					})}
+					{this.props.item?this.props.item.map(function(item,index){
+						return <ProductUsingUserRollingItem item={item} changeHandler={changeVideo} key={index} />
+					}):''}
+				</div>
+				<div className="MaskPlayer" ref="MaskPlayer" style={{display:this.state.mask_style_display,background:this.state.mask_style_background,transition:this.state.mask_style_transition1}} onClick={closeMask}>
+					<div className="MaskPlayerInner" ref="MaskPlayerInner" style={{opacity: this.state.mask_style_opacity,transition:this.state.mask_style_transition2}}>
+						<video preload="none" ref="inlinevideo" controls="controls" width="700" height="700" id="inline-video" poster={this.state.cover_url}>
+						  <source type="video/mp4" src={this.state.video_url} />
+						</video>
+					</div>
 				</div>
 			</div>
 		);
@@ -324,7 +381,7 @@ var ProductSectionWithoutTitle = React.createClass({
 	render: function() {
 		return (
 			<div className="product-section-without-title">
-				<img src="images/video_screenshot.png" />
+				{this.props.children}
 			</div>
 		);
 	}
@@ -336,17 +393,24 @@ var ProductSectionPulldown = React.createClass({
 			isPullDown : false
 		}
 	},
+	componentDidMount: function() {
+		// this.refs.test.getDOMNode().onclick = this.pullDownClick;
+	},
 	pullDownClick: function() {
 		this.setState({
 			isPullDown: !this.state.isPullDown 
 		});
-		$(this.refs.content.getDOMNode()).slideToggle(200);
-
+		if(this.state.isPullDown){
+			this.refs.content.getDOMNode().setAttribute('style','display:none');
+		}
+		else {
+			this.refs.content.getDOMNode().setAttribute('style','');
+		}
 	},
 	render: function() {
 		return (
 			<div className="product-section-pulldown">
-				<div className="title" onClick={this.pullDownClick}>
+				<div className="title click" ref="test" onClick={this.pullDownClick} >
 					<span>{this.props.title}</span>
 					<div className={'icon ib ' + (this.state.isPullDown?'flip':'')} id="PullDown"></div>
 				</div>
@@ -366,8 +430,8 @@ var ProductBottomCommand = React.createClass({
 	render: function() {
 		return (
 			<div className="product-bottom-command">
-				<div className="addToCart" onClick={this.addToCart}>加入购物车</div>
-				<div className="cart" onClick={this.cart}>
+				<div className="addToCart click" onClick={this.addToCart}>加入购物车</div>
+				<div className="cart click" onClick={this.cart}>
 					<div className="icon ib" id="Cart">{this.props.cart_num}</div>
 				</div>
 				<div className="clearfix"></div>
@@ -380,102 +444,4 @@ var productBottomCommandHolder =
 	<div className="product-bottom-command-holder"></div>;
 
 
-
-var data = {
-	pagetitle:'小红唇种草机',
-	rolling:[
-		{
-			type:'video',
-			cover_url:'http://i.xiaohongchun.com/A70F0EF39F6CAA48',
-			video_url:'http://v.xiaohongchun.com/688C485F89B9442B'
-		},
-		{
-			type:'image',
-			image_url:'http://i.xiaohongchun.com/F9DC889CE20AC2E0'
-		},
-		{
-			type:'image',
-			image_url:'http://i.xiaohongchun.com/4483C36292BF2AE6'
-		},
-		{
-			type:'image',
-			image_url:'http://i.xiaohongchun.com/9B78D899E3F52114'
-		}
-	],
-	brief:{
-		price1:'000.00',
-		price2:'0000.00',
-		otherinfo: '我也不知道在这写点什么',
-		title: '商品标题',
-		description: '啦啦啦，在这写点什么呢，呀呀呀',
-		country_code: 'usa',
-		country_name: '美国',
-		props:[
-			'FreePost',
-			'Quality',
-			'Days7',
-		],
-		info:[
-			'这是第一条',
-			'这是第二条',
-			'这是第三条'
-		]
-	},
-	usinguser:[
-		{
-			cover_url:'http://i.xiaohongchun.com/F6EA05CDE1655CE9',
-			desc:'#陆小丫的美妆教程#不用卧蚕笔也能打造美美的卧蚕哦，产品：ZA大地色系四色眼影（全国专柜··',
-			face_url:'images/avatar.png',
-			nick:'用户名',
-			joinindays:276,
-			user_id:123
-		},
-		{
-			cover_url:'http://i.xiaohongchun.com/4F1CE61C911FA3DC',
-			desc:'#陆小丫的美妆教程#不用卧蚕笔也能打造美美的卧蚕哦，产品：ZA大地色系四色眼影（全国专柜··',
-			face_url:'images/avatar.png',
-			nick:'用户名',
-			joinindays:276,
-			user_id:234
-		},
-		{
-			cover_url:'http://i.xiaohongchun.com/F17259DD197146EE',
-			desc:'#陆小丫的美妆教程#不用卧蚕笔也能打造美美的卧蚕哦，产品：ZA大地色系四色眼影（全国专柜··',
-			face_url:'images/avatar.png',
-			nick:'用户名',
-			joinindays:276,
-			user_id:345
-		},
-		{
-			cover_url:'http://i.xiaohongchun.com/F9DC889CE20AC2E0',
-			desc:'#陆小丫的美妆教程#不用卧蚕笔也能打造美美的卧蚕哦，产品：ZA大地色系四色眼影（全国专柜··',
-			face_url:'images/avatar.png',
-			nick:'用户名',
-			joinindays:276,
-			user_id:456
-		},
-	],
-	comment: [
-		{
-			nick:'逆光Neo',
-			user_id:1234,
-			face_url:'images/avatar.png',
-			comment:'看我怎么说，我怎么知道说什么……呵呵呵'
-		},
-		{
-			nick:'逆光Neo',
-			user_id:1234,
-			face_url:'images/avatar.png',
-			comment:'看我怎么说，我怎么知道说什么……呵呵呵'
-		},
-		{
-			nick:'逆光Neo',
-			user_id:1234,
-			face_url:'images/avatar.png',
-			comment:'看我怎么说，我怎么知道说什么……呵呵呵'
-		}
-	],
-	cart_num:9
-}
-
-React.render(<ProductDetail />, document.body);
+React.render(<ProductDetail pagetitle="小红唇种草机" />, document.body);

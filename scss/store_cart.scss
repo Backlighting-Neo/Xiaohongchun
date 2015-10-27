@@ -5,6 +5,8 @@ $app: store-cart-;
 
 $bgcolor: #f1f1f1;
 
+// 外框颜色 bgcolor: #fe4545;
+
 .top-holder{
 	height: 90px + 12px;
 }
@@ -20,6 +22,7 @@ $bgcolor: #f1f1f1;
 	text-align: center;
 	font-weight: bold;
 	background-color: white;
+	z-index:9999;
 }
 
 .#{$app}list {
@@ -61,8 +64,29 @@ $bgcolor: #f1f1f1;
 			float: left;
 			border: 1px solid #d7d7d7;
 			margin-right: 20px;
+			position: relative;
 			@include square(152px);
-			@include contentCenterM(218px, 154px)
+			@include contentCenterM(218px, 154px);
+
+			.note {
+				width: 0;
+				height: 0;
+				border-top: 40px solid #fe4545;
+				border-right: 40px solid transparent;
+				position: absolute;
+				left: -3px;
+				top: -3px;
+
+				span {
+					color: white;
+					position: absolute;
+					left: -1px;
+					top: -42px;
+					font-size: 13px;
+					width: 50px;
+					transform: rotate(-45deg);
+				}
+			}
 		}
 		.info{
 			float: left;
@@ -86,6 +110,14 @@ $bgcolor: #f1f1f1;
 				margin: 14px 0 0 18px;
 			}
 
+			.limit {
+				margin-top: 18px;
+				font-size: 20px;
+				color: #fe4545;
+				width: 126px;
+				text-align: center;
+			}
+
 			.num {
 				$c:#bebebe;
 				$b:1px solid $c;
@@ -95,7 +127,7 @@ $bgcolor: #f1f1f1;
 				height: 38px;
 				border-radius: 19px;
 				border: $b;
-				margin-top: 40px;
+				margin-top: 2px;
 
 				.minus, .plus {
 					padding-top: 3px;
@@ -123,14 +155,14 @@ $bgcolor: #f1f1f1;
 
 				.now {
 					text-align: center;
-			    line-height: 37px;
+			    line-height: 40px;
 				}
 			}
 		}
 		.price{
-			margin:53px 0 0 235px;
+			margin:13px 0 0 235px;
 
-			span.p1,span.p2:before {
+			span.p1:before, span.p2:before {
 				content: '¥'
 			}
 

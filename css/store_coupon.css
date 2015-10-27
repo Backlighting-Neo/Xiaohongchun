@@ -43,11 +43,11 @@ body {
     height: 80px;
     line-height: 80px; }
     .store-coupon-title .button .left {
-      width: 49%;
+      width: 319px;
       float: left;
       border-right: 1px solid #dedede; }
     .store-coupon-title .button .right {
-      width: 49%;
+      width: 320px;
       float: right; }
     .store-coupon-title .button .active {
       border-bottom: 2px solid #fe4545;
@@ -55,6 +55,7 @@ body {
 
 .store-coupon-title-holder .holder1 {
   height: 88px; }
+
 .store-coupon-title-holder .holder2 {
   height: 82px; }
 
