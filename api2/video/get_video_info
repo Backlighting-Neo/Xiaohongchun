@@ -1,0 +1,85 @@
+{
+  "code": "0",
+  "data": {
+    "id": "16416",
+    "user_id": "96770",
+    "full_path": "http:\/\/v.xiaohongchun.com\/3D27D8D9456EBD95",
+    "full_path_m3u8": "http:\/\/v.xiaohongchun.com\/3D27D8D9456EBD95.m3u8",
+    "vdesc": "",
+    "cover_url": "http:\/\/i.xiaohongchun.com\/2768CF4763FDF90A",
+    "date_add": "1433253990",
+    "is_recommend": "0",
+    "category_id": "2",
+    "video_local": "(127.0653943,37.5157906)",
+    "duration": "25.00",
+    "segment_finshed": "1",
+    "nick": "\u5fae\u7b11\u7684\u9633\u514985\u540e",
+    "desc": "",
+    "icon_url": "http:\/\/i.xiaohongchun.com\/17FB54F44E662AD3",
+    "is_short": 0,
+    "play_full_path": "http:\/\/v.xiaohongchun.com\/3D27D8D9456EBD95.m3u8",
+    "play_count": "56",
+    "likes": 10,
+    "last_user": [{
+      "uid": "299",
+      "nick": "\u96ea\u767d\u4e48\u4e48",
+      "icon": "http:\/\/i.xiaohongchun.com\/@\/icon\/B168.JPG"
+    }],
+    "comments": "6",
+    "comments_detail": [{
+      "id": "137105",
+      "video_id": "16416",
+      "user_id": "881",
+      "is_delete": "0",
+      "content": "\u652f\u6301\u652f\u6301 (\u2267\u25bd\u2266)y",
+      "date_add": "1433272082",
+      "path": null,
+      "user_icon": "http:\/\/i.xiaohongchun.com\/@\/icon\/B750.JPG",
+      "user_name": "\u6234\u73ab\u5a55mj"
+    }, {
+      "id": "136731",
+      "video_id": "16416",
+      "user_id": "1043",
+      "is_delete": "0",
+      "content": "\u6253\u5361",
+      "date_add": "1433261282",
+      "path": null,
+      "user_icon": "http:\/\/i.xiaohongchun.com\/078E3943BB25B8E7",
+      "user_name": "\u871c\u7cd6\u679c\u679c"
+    }, {
+      "id": "136130",
+      "video_id": "16416",
+      "user_id": "202",
+      "is_delete": "0",
+      "content": "\u597d\u3002\u3002\u3002\u3002\u3002",
+      "date_add": "1433254322",
+      "path": null,
+      "user_icon": "http:\/\/i.xiaohongchun.com\/@\/icon\/B71.JPG",
+      "user_name": "flower99_99"
+    }],
+    "tags": [],
+    "is_attention": 0,
+    "is_collection": 0,
+    "recommend_videos": [{
+      "id": "17572",
+      "cover_url": "http:\/\/i.xiaohongchun.com\/31403AACEB492879",
+      "plays": "10"
+    }, {
+      "id": "16411",
+      "cover_url": "http:\/\/i.xiaohongchun.com\/3BA0F40DA68E906F",
+      "plays": "150"
+    }, {
+      "id": "45486",
+      "cover_url": "http:\/\/v.xiaohongchun.com\/55FE96BDB236FF14-cover1.jpg",
+      "plays": "78743"
+    }, {
+      "id": "60605",
+      "cover_url": "http:\/\/v.xiaohongchun.com\/FEFBE9E62FDD236A-cover1.jpg",
+      "plays": "50410"
+    }, {
+      "id": "62028",
+      "cover_url": "http:\/\/i.xiaohongchun.com\/C759176828951F69",
+      "plays": "115602"
+    }]
+  }
+}

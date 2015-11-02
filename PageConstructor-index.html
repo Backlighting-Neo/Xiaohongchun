@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript" src="js/vue.min.js"></script>
+  <script type="text/javascript" src="js/mobile.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/PageConstructor.css">
+</head>
+
+<body>
+  <div class="PageConstructor-header">小红唇 活动页面编辑器</div>
+  <div class="content text-center">
+    <div class="selecttemplate">
+    	<h2>请选择一个模板开始编辑:</h2>
+    	<h2></h2>
+      
+    </div>
+  </div>
+
+  <script>
+		var template = "<button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='PageConstructor.html?t={t}'\">{c}</button>";
+  	$.getJSON('template/config.json', function(json) {
+  		var result = json.data.map(function(item) {
+  			return(template.replace('{t}',item.filename).replace('{c}',item.cname));
+  		})
+  		$('.selecttemplate').append(result);
+  	});
+  </script>
+</body>
+
+</html>

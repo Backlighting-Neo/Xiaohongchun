@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小红唇 活动页面编辑器</title>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+  <script type="text/javascript" src="js/mobile.js"></script>
+	<script type="text/javascript" src="js/PageConstructor.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/umeditor.config.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/umeditor.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/PageConstructor.css">
+	<link rel="stylesheet" type="text/css" href="css/eventCommon.css">
+	<link rel="stylesheet" type="text/css" href="css/umeditor.css">
+</head>
+<body>
+	<div class="PageConstructor-header">小红唇 活动页面编辑器</div>
+	<div class="content">
+		<div class="PageConstructor-detail">
+			<form class="form-inline">
+			  <div class="form-group">
+			    <label for="exampleInputName2">活动标识(英文)</label>
+			    <input type="text" class="form-control" id="event_id" placeholder="eventId">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail2">页面标题(中文)</label>
+			    <input type="text" class="form-control" id="event_name" placeholder="eventName">
+			  </div>
+				<!-- 
+			  <div class="form-group">
+			    <label for="exampleInputEmail2">模板ID</label>
+			    <input type="text" class="form-control" id="event_id" placeholder="eventTemplateId">
+			  </div>
+			  
+			  <div class="form-group">
+				  <button type="button" class="btn btn-primary">打开</button>
+			  </div>
+			   -->
+			  <div class="form-group">
+				  <button type="button" class="btn btn-success" id="generateH5">生成H5</button>
+			  </div>
+			  <div class="form-group">
+				  <button type="button" class="btn btn-primary" id="upload">上传</button>
+			  </div>
+			  <!-- 
+			  <div class="form-group">
+				  <button type="button" class="btn btn-warning" id="upload">匹配焦点图</button>
+			  </div>
+				 -->
+			</form>
+		</div>
+	
+		<div class="PageConstructor-preview" id="v">
+			<!-- 这里是预览区 -->
+		</div>
+
+		<div class="PageConstructor-upload" id="u" style="display:none">
+			<!-- 这里是上传区 -->
+			<div class="uploading">正在上传请稍候</div>
+		</div>
+
+		<div class="PageConstructor-editzone" id="e" >
+			<!-- 这里是编辑区 -->
+			<div id="editzone">
+
+			</div>
+
+			<div class="umeditor" id="umeditor" style="display: none">
+				<script type="text/plain" id="Editor" style="width:460px;height:300px;"></script>
+				<div class="text-center">
+					<button type="button" id="html_edit_ok" class="btn btn-success">保存返回</button>
+					<button type="button" id="html_edit_cancle" class="btn btn-danger">不保存返回</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="PageConstructor-uploadsuccess" id="s" style="display:none">
+			<div class="info">H5页面上传完成</div>
+			<div class="url" id="h5_url">http://static.xiaohongchun.com/event/*.html</div>
+			<div class="button"><button type="button" class="btn btn-success btn-lg" id="h5_access">马上访问</button></div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+
+</body>
+</html>

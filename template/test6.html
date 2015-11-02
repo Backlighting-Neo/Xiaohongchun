@@ -1,0 +1,174 @@
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+
+.xhch-hd {
+  background: #f3f3f3;
+  width: 640px;
+  margin: 0 auto;
+}
+
+.hd-title {
+  padding: 45px 0;
+  background: url({{title_image_src.value}}) center no-repeat #282828;
+}
+
+.hdtpl {
+  margin-top: 10px;
+}
+
+.hdjsq {
+  padding: 10px 30px 30px 0;
+  text-align: right;
+  font-family: "微软雅黑";
+  font-size: 1.0em;
+  font-weight: normal;
+  color: #282828;
+}
+
+.xhchico {
+  padding: 10px 30px;
+  position: absolute;
+  z-index: 999;
+  top: 280px;
+}
+
+.circle02 {
+  width: 90px;
+  height: 90px;
+  background-color: #fff;
+  border: 5px #efefef solid;
+  border-radius: 100px;
+}
+
+.tplh1 {
+  font-size: 1.4em;
+  font-weight: normal;
+  color: #6e6e6e;
+  line-height: 120%;
+  padding: 15px 0;
+  margin-left: 150px;
+}
+
+.tplh2 {
+  font-size: 1.5em;
+  font-weight: normal;
+  color: #282828;
+  line-height: 160%;
+  padding: 10px 30px;
+}
+
+.tplh2 p {
+  text-indent: 2em;
+  margin: 10px 0;
+}
+
+.tplh2 ul {
+  width: 560px;
+  overflow: hidden;
+}
+
+.tplh2 ul li {
+  width: 280px;
+  float: left
+}
+
+.tplh3 {
+  text-indent: 2em;
+  font-size: 1.5em;
+  font-weight: normal;
+  color: #282828;
+  line-height: 160%;
+  padding: 10px 30px;
+}
+
+.tplh3 p {
+  margin: 0;
+}
+
+.red {
+  color: red;
+}
+
+a {
+  color: #fe4545;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #fe4545;
+  text-decoration: none;
+}
+</style>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<div class="xhch-hd" id="template1">
+  <div class="hd-title"></div>
+  <div class="hdtpl">
+    <div>
+      <img src="{{header_image_src.value}}" />
+    </div>
+    <div class="xhchico">
+      <div>
+        <img src="http://i.xiaohongchun.com/99F792344177FC5F" class="circle02" />
+      </div>
+    </div>
+    <div class="tplh1">{{pagetitle_text_text.value}}</div>
+    <div class="tplh2">
+      <video loop="loop" preload="none" width="480" height="480" id="player66074" poster="{{content_video_src.poster}}" >
+        <source type="video/mp4" src="{{content_video_src.video}}">
+      </video>
+      {{{content1_html_html.value}}}
+    </div>
+    <div><img src="http://i.xiaohongchun.com/6D2FF9F5B544BF26" width="640" height="40" alt="" /></div>
+    <div class="tplh3">
+      {{{content2_html_html.value}}}
+    </div>
+  </div>
+  <div class="hdjsq">{{copyright_text_text.value}}</div>
+</div>
+
+<script>
+  var viewport = 640;
+  var data = {
+    title_image_src: {
+      value: 'http://i.xiaohongchun.com/C410625D39AC8466',
+      cname: '标题图图片链接',
+      type: 'image'
+    },
+    header_image_src: {
+      value: 'http://i.xiaohongchun.com/4yuefajiang.jpg',
+      cname: 'Banner图片链接',
+      type: 'image'
+    },
+    content_video_src: {
+      value: '16416',
+      cname: '内容中的视频 ( ID号 )',
+      type: 'video',
+      poster: 'http://i.xiaohongchun.com/4072B1AECF4AE97E',
+      video: 'http://v.xiaohongchun.com/EE9FA63A889DA55D'
+    },
+    pagetitle_text_text: {
+      value: '小红唇',
+      cname: '页面标题',
+      type: 'text'
+    },
+    content1_html_html: {
+      value: '<p> 掰着手指头等放假的美妞们看过来~ 整个4月，好多小甜心、小饼干被五花大绑，啊不对前呼后拥地来到小红唇成为我们亲爱的小唇蜜，每（zhi）天（neng）坐（kan）拥（kan）无数美侣的唇唇BOSS心花怒放大放血啦\(≧▽≦)/</p><p>BOSS说了，每个月，只要是入了咱小红唇的门，不管是撒娇卖萌、高冷扮美，还是吐槽搞怪、分享生活，只要你的视频能给美妞们带来美、带来乐、带来美好新生活——I WANT YOU TO BE HAPPY！买买买！送送送！霸道总裁有木有(｡・`ω´･) 唇唇的“4月最佳频道榜”手捧大奖来到你身边啦 ≖‿≖✧</p><p class=\"red\">圣呀圣火令<b style=\"font-size:2em;\">奖</b></p><p>奖品：奥尔滨套装组合套／人</p><p></p><ul><li>饭饭twinkle</li><li>化妆师-蕊尼</li><li>陆小丫LYY</li><li>木木夕mona_小红毛阿梦</li><li>飞天妇女猪yoyo</li></ul><p></p><p class=\"red\">飘呀凌波微步<b style=\"font-size:2em;\">奖</b></p><p>奖品：女：suqqu眼影盘盒／人</p>   <p>奖品：男：剃须刀个／人</p> <p> </p><ul> <li>混血你的脸</li> <li>大力蒋</li> <li>TOPsuper小虎</li> <li>我本惊华</li> <li>Vivian_兰</li> <li>阳过儿钢琴音乐频道</li> <li>Korea超人队长</li> <li>Jessica</li> </ul> <p></p> <p class=\"red\">排山倒海海海海<b style=\"font-size:2em;\">奖</b></p><p>奖品：女：恋爱魔镜睫毛膏 支／人</p>    <p>奖品：男：滴眼液 支／人</p><p></p><ul><li>小五</li><li>Catherine(教你变女神)</li><li>花兮久美子校长</li><li>山姆姑娘-?</li><li>小Q穷得只剩膘</li><li>万能的叉踢</li><li>貓貓以貓以貓貓゛≈</li><li>日系造型师-高小稳（男）</li><li>苹果Angel</li><li>Crane_丑丑</li><li>我是大肥</li><li>Lexi</li><li>MENGAO萌糕</li><li>蛋蛋来了蛋蛋</li><li>吴文婧呀</li><li>啊库娜马塔塔</li><li>布布要当女人瘦子学霸</li><li>TheDiamonds_InTheSky</li><li>音容</li><li>我会发光</li><li>猪你的鼻子有2个孔</li><li>眼泪~◇倾尽</li><li>登登</li><li>猫妮海瑟薇</li><li>小岩</li><li>卡丝菇凉曼小姐</li><li>玲波媚步</li><li>洪之源Danny</li><li>一张破船票</li><li>基质的菊长大人</li><li>爱手工的小番茄</li><li>顾彬</li><li>小I王I画3d</li><li>小艺教学</li><li>蜡笔的小新-</li><li>小帆</li><li>文武贝MUSIC</li><li>KindlyKhan</li><li>彩铅小画家-叶铧</li><li>大神狗哥长颈鹿老虎ha池ACE</li><li>新东方烹饪白菜主厨一把手吕布</li></ul><p></p>',
+      cname: '第一段文字',
+      type: 'html'
+    },
+    content2_html_html: {
+      value: '<p>求小主主动勾搭唇唇，唇唇也会私信联系获奖小主的，就是这么宠你么么哒~</p><p>心动的美妞们，唇唇期待见证你更多的美好(●\"◡\"●)ﾉ</p>',
+      cname: '第二段文字',
+      type: 'html'
+    },
+    copyright_text_text: {
+      value: '最终解释权归小红唇所有',
+      cname: '权利声明文字',
+      type: 'text'
+    }
+  }
+</script>

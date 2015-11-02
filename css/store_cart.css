@@ -36,18 +36,54 @@ body {
   height: 90px;
   line-height: 90px;
   border-bottom: 12px solid #f1f1f1;
+  font-size: 30px;
   text-align: center;
   font-weight: bold;
   background-color: white;
-  z-index: 9999; }
+  z-index: 9999;
+  -webkit-transform: translateZ(0); }
 
 .store-cart-list {
   border-bottom: 12px solid #f1f1f1; }
+  .store-cart-list .title .b2, .store-cart-list .item .button .b2 {
+    font-size: 18px;
+    line-height: 20px;
+    color: #fe4445;
+    margin-left: 48px;
+    padding: 6px 4px 4px 6px;
+    border: 1px solid #fe4445;
+    border-radius: 8px; }
   .store-cart-list .title {
     padding-left: 30px;
-    height: 60px;
     line-height: 60px;
     border-bottom: 1px solid #bebebe; }
+    .store-cart-list .title .b2 {
+      float: right;
+      margin: -15px 10px 10px 0; }
+    .store-cart-list .title .coupon {
+      float: left;
+      margin-right: 10px;
+      padding-top: 18.5px; }
+    .store-cart-list .title .coupon div {
+      width: 47px;
+      height: 23px;
+      font-size: 16px;
+      line-height: 23px;
+      color: #fe4545;
+      text-align: center;
+      background-image: url(../images/cart_icon_coupon.png); }
+    .store-cart-list .title .square {
+      float: left;
+      margin-right: 10px;
+      padding-top: 19.5px; }
+    .store-cart-list .title .square div {
+      width: 45px;
+      height: 21px;
+      font-size: 16px;
+      line-height: 21px;
+      background-color: #fe4545;
+      color: white;
+      text-align: center; }
     .store-cart-list .title .icon {
       float: left;
       padding-top: 10px; }
@@ -65,6 +101,10 @@ body {
     .store-cart-list .item .isselect {
       float: left;
       margin: 86px 20px 100px 20px; }
+    .store-cart-list .item .disable {
+      width: 72px;
+      height: 218px;
+      float: left; }
     .store-cart-list .item .image {
       float: left;
       border: 1px solid #d7d7d7;
@@ -84,8 +124,8 @@ body {
         .store-cart-list .item .image .note span {
           color: white;
           position: absolute;
-          left: -1px;
-          top: -42px;
+          left: -2.5px;
+          top: -43.5px;
           font-size: 13px;
           width: 50px;
           transform: rotate(-45deg); }
@@ -102,7 +142,7 @@ body {
         color: #bebebe; }
       .store-cart-list .item .info .bin {
         float: left;
-        margin: 14px 0 0 18px; }
+        margin: 14px 0 0 16px; }
       .store-cart-list .item .info .limit {
         margin-top: 18px;
         font-size: 20px;
@@ -118,53 +158,54 @@ body {
         margin-top: 2px; }
         .store-cart-list .item .info .num .minus, .store-cart-list .item .info .num .plus {
           padding-top: 3px;
-          height: 29px;
+          height: 26px;
           border-radius: 100%;
           border: 1px solid #bebebe;
           font-size: 35px;
-          line-height: 25px; }
+          line-height: 24px; }
         .store-cart-list .item .info .num .minus {
           width: 19px;
           padding-left: 10px;
-          margin: 2px 2px 2px 2px;
+          margin: 3px 2px 2px 4px;
           float: left;
           color: #bebebe; }
         .store-cart-list .item .info .num .plus {
           width: 25px;
           padding-left: 4px;
-          margin: 2px 2px 2px -2px;
+          margin: 3px 4px 2px -2px;
           float: right;
           color: #ff4548; }
         .store-cart-list .item .info .num .now {
           text-align: center;
           line-height: 40px; }
-    .store-cart-list .item .price, .store-cart-list .item .button {
-      margin: 13px 0 0 235px; }
-      .store-cart-list .item .price span.p1:before, .store-cart-list .item .button span.p1:before, .store-cart-list .item .price span.p2:before, .store-cart-list .item .button span.p2:before {
+    .store-cart-list .item .price {
+      margin-top: 5px;
+      float: right; }
+      .store-cart-list .item .price span.p1:before, .store-cart-list .item .price span.p2:before {
         content: '¥'; }
-      .store-cart-list .item .price .p1, .store-cart-list .item .button .p1 {
+      .store-cart-list .item .price .p0 {
+        padding: 2px 5px;
+        color: white;
+        font-size: 17px;
+        background-color: #fe4545;
+        margin-right: 10px; }
+      .store-cart-list .item .price .p1 {
         font-size: 16px;
         line-height: 23px;
         text-decoration: line-through;
         color: #797979; }
-      .store-cart-list .item .price .p2, .store-cart-list .item .button .p2 {
+      .store-cart-list .item .price .p2 {
         font-style: 23px;
         line-height: 23px;
         color: #ff4546;
         padding-left: 15px; }
-    .store-cart-list .item .button .b1 {
-      font-size: 18px;
-      line-height: 18px;
-      color: #797979;
-      padding-left: 72px; }
-    .store-cart-list .item .button .b2 {
-      font-size: 18px;
-      line-height: 18px;
-      color: #fe4445;
-      margin-left: 48px;
-      padding: 4px;
-      border: 1px solid #fe4445;
-      border-radius: 2px; }
+    .store-cart-list .item .button {
+      margin: 55px 0 0 235px; }
+      .store-cart-list .item .button .b1 {
+        font-size: 18px;
+        line-height: 18px;
+        color: #797979;
+        padding-left: 72px; }
   .store-cart-list .empty {
     color: #4a4a4a;
     font-size: 22px;
@@ -208,32 +249,87 @@ body {
       .store-cart-bottom .command .orderinfo .selectall {
         float: left;
         font-size: 16px;
-        padding-top: 35px;
         margin: 37px 0 0 20px; }
-      .store-cart-bottom .command .orderinfo .price, .store-cart-bottom .command .orderinfo .store-cart-list .item .button, .store-cart-list .item .store-cart-bottom .command .orderinfo .button {
+        .store-cart-bottom .command .orderinfo .selectall .icon_noselect {
+          margin-bottom: 3px; }
+      .store-cart-bottom .command .orderinfo .price {
         float: right;
         margin: 35px 23px 0 0;
         text-align: right; }
-        .store-cart-bottom .command .orderinfo .price .amount, .store-cart-bottom .command .orderinfo .store-cart-list .item .button .amount, .store-cart-list .item .store-cart-bottom .command .orderinfo .button .amount {
+        .store-cart-bottom .command .orderinfo .price .amount {
           font-size: 1.2em;
           color: #fd4545; }
-        .store-cart-bottom .command .orderinfo .price div:last-child, .store-cart-bottom .command .orderinfo .store-cart-list .item .button div:last-child, .store-cart-list .item .store-cart-bottom .command .orderinfo .button div:last-child {
+        .store-cart-bottom .command .orderinfo .price div:last-child {
           font-size: 0.7em; }
 
 .icon_bin {
-  background: url(../images/cart_icon.png) no-repeat;
-  background-position: -64px 0;
-  height: 28px;
-  width: 28px; }
+  width: 22px;
+  height: 21px;
+  border-radius: 0 0 2px 2px;
+  border-left: 1px solid #666666;
+  border-right: 1px solid #666666;
+  border-bottom: 1px solid #666666;
+  position: relative;
+  margin-top: 6px;
+  margin-left: 3px;
+  box-shadow: inset 0 0 0 2.5px #fff, inset 4px 0 0 2px #fff, inset 5px 0 0 2px #666, inset 13px 0 0 2px #fff, inset 14px 0 0 2px #666; }
+
+.icon_bin:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -3px;
+  width: 28px;
+  height: 1px;
+  background-color: #666;
+  margin-left: -3px; }
+
+.icon_bin:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: 6px;
+  width: 8px;
+  height: 2px;
+  border-radius: 4px 4px 0 0;
+  border-left: 1px solid #666666;
+  border-right: 1px solid #666666;
+  border-top: 1px solid #666666;
+  border-bottom: 1px solid #fff; }
 
 .icon_noselect {
-  background: url(../images/cart_icon.png) no-repeat;
-  background-position: -32px 0;
-  height: 32px;
-  width: 32px; }
+  width: 30px;
+  height: 30px;
+  border: 1px solid #c3c3c3;
+  border-radius: 100%; }
 
 .icon_selected {
-  background: url(../images/cart_icon.png) no-repeat;
-  background-position: 0 0;
+  width: 32px;
   height: 32px;
-  width: 32px; }
+  background-color: #fe4545;
+  border-radius: 100%;
+  position: relative; }
+
+.icon_selected:before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  border-radius: 10px;
+  top: 19px;
+  left: 6px;
+  background-color: white;
+  transform: rotate(45deg); }
+
+.icon_selected:after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  border-radius: 10px;
+  top: 22px;
+  left: 12.5px;
+  background-color: white;
+  transform-origin: 0 50%;
+  transform: rotate(-45deg); }
