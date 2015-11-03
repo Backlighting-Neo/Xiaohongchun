@@ -1,0 +1,102 @@
+@charset "utf-8";
+@import "common";
+
+$app: hb_geted-;
+
+.#{$app}part1 {
+	background: url(../images/hb_geted_p1.png) no-repeat;
+	height: 891px;
+	text-align: center;
+
+	img {
+		display: inline;
+		vertical-align: bottom;
+		margin-top: 696px;
+	}
+}
+
+.#{$app}part2 {
+	background: url(../images/hb_geted_p2.png) no-repeat;
+	min-height: 200px;
+	text-align: center;
+
+	.geted {
+		padding-top: 23px;
+		text-align: center;
+		font-size: 23px;
+		line-height: 35px;
+		color: white;
+	}
+
+	.gotoapp {
+		width: 410px;
+		height: 77px;
+		line-height: 77px;
+		background-color: #fcdb59;
+		border: 3px solid white;
+		border-radius: 10px;
+		color: white;
+		font-size: 33px;
+		text-align: center;
+		margin: 65px  auto;
+	}
+
+	.friends {
+		.title {
+			font-size: 34px;
+			color: white;
+			margin-bottom: 40px;
+		}
+
+		.item {
+			margin-bottom: 35px;
+
+			.left{
+				float: left;
+				margin-left: 22px;
+			}
+
+			.right {
+				float: right;
+				margin-right: 33px;
+				height: 96px;
+				line-height: 96px;
+				font-size: 28px;
+				color: white;
+			}
+
+			.avatar {
+				float: left;
+			}
+
+			.username {
+				float: left;
+				color: white;
+				text-align: left;
+				margin-left: 18px;
+				padding-top: 15px;
+
+				.name {
+					font-size: 23px;
+				}
+
+				.slogan {
+					font-size: 26px;
+				}
+			}
+		}
+
+		.rules {
+			padding-bottom: 50px;
+			text-align: center;
+
+			img {
+				display: inline;
+			}
+		}
+	}
+}
+
+.circle96 {
+	@include circle(96px);
+}

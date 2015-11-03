@@ -1,0 +1,92 @@
+img {
+  display: block; }
+
+html, body, p, a, ol, ul, dd {
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style: none; }
+
+.clearfix {
+  clear: both; }
+
+.ding {
+  height: 1000px; }
+
+body {
+  font-size: 25px;
+  font-family: "Microsoft Yahei"; }
+
+.click {
+  cursor: pointer; }
+
+.hb_geted-part1 {
+  background: url(../images/hb_geted_p1.png) no-repeat;
+  height: 891px;
+  text-align: center; }
+  .hb_geted-part1 img {
+    display: inline;
+    vertical-align: bottom;
+    margin-top: 696px; }
+
+.hb_geted-part2 {
+  background: url(../images/hb_geted_p2.png) no-repeat;
+  min-height: 200px;
+  text-align: center; }
+  .hb_geted-part2 .geted {
+    padding-top: 23px;
+    text-align: center;
+    font-size: 23px;
+    line-height: 35px;
+    color: white; }
+  .hb_geted-part2 .gotoapp {
+    width: 410px;
+    height: 77px;
+    line-height: 77px;
+    background-color: #fcdb59;
+    border: 3px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: 33px;
+    text-align: center;
+    margin: 65px  auto; }
+  .hb_geted-part2 .friends .title {
+    font-size: 34px;
+    color: white;
+    margin-bottom: 40px; }
+  .hb_geted-part2 .friends .item {
+    margin-bottom: 35px; }
+    .hb_geted-part2 .friends .item .left {
+      float: left;
+      margin-left: 22px; }
+    .hb_geted-part2 .friends .item .right {
+      float: right;
+      margin-right: 33px;
+      height: 96px;
+      line-height: 96px;
+      font-size: 28px;
+      color: white; }
+    .hb_geted-part2 .friends .item .avatar {
+      float: left; }
+    .hb_geted-part2 .friends .item .username {
+      float: left;
+      color: white;
+      text-align: left;
+      margin-left: 18px;
+      padding-top: 15px; }
+      .hb_geted-part2 .friends .item .username .name {
+        font-size: 23px; }
+      .hb_geted-part2 .friends .item .username .slogan {
+        font-size: 26px; }
+  .hb_geted-part2 .friends .rules {
+    padding-bottom: 50px;
+    text-align: center; }
+    .hb_geted-part2 .friends .rules img {
+      display: inline; }
+
+.circle96 {
+  width: 96px;
+  height: 96px;
+  border-radius: 100%;
+  float: left; }

@@ -41,6 +41,13 @@ body {
 	width: $size;
 }
 
+@mixin circle($size) {
+	width: $size;
+	height: $size;
+	border-radius: 100%;
+	float: left;
+}
+
 @mixin sprite($image, $x, $y, $w, $h) {
 	background: $image no-repeat;
 	background-position: $x $y;

@@ -1260,6 +1260,7 @@
 	<img src="http://static.xiaohongchun.com/event/images/events_tucao__05.png" alt="" />
 	<img src="http://static.xiaohongchun.com/event/images/events_tucao__06.png" alt="" />
 	<img src="http://static.xiaohongchun.com/event/images/events_tucao__07.png" alt="" />
+	<img src="http://static.xiaohongchun.com/event/images/events_tucao__13.png" alt="" />
 	<div class="video" style="padding-left:80px;">
 		<video loop="loop" preload="none" width="480" height="480" id="player1" poster="{{content_video_src.poster}}" >
 		  <source type="video/mp4" src="{{content_video_src.video}}">
@@ -1267,21 +1268,11 @@
 	</div>
 	<img src="http://static.xiaohongchun.com/event/images/events_tucao__08.png" alt="" />
 	<img src="http://static.xiaohongchun.com/event/images/events_tucao__09.png" alt="" />
-	<img src="http://static.xiaohongchun.com/event/images/events_tucao__10.png" alt="" />
-	<img src="http://static.xiaohongchun.com/event/images/events_tucao__11.png" alt="" />
+	<img src="http://static.xiaohongchun.com/event/images/events_tucao__14.png" alt="" style="margin-top: 60px" />
+	<img src="http://static.xiaohongchun.com/event/images/events_tucao__11.png" alt="" onclick="location.href='{{content_part_href.value}}'" />
 	<img src="http://static.xiaohongchun.com/event/images/events_tucao__12.png" alt="" />
 </body>
-<script type="text/javascript">
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?c431a03831df8d00747aa6a0c0d5c17d";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-  var img=new Image();
-  img.src="http://static.xiaohongchun.com/params?share=1&content={分享时显示的文字}&tick=" + Date.now(); 
-</script>
+
 <script>
 	var viewport = 640;
 	var data = {
@@ -1293,6 +1284,16 @@
 		  video: 'http://v.xiaohongchun.com/EE9FA63A889DA55D',
 		  selector: '#player1',
 		  size: 480
+		},
+		content_part_href: {
+			value: 'http://www.xiaohongchun.com',
+			cname: '马上参与按钮跳转链接',
+			type: 'text'
+		},
+		share: {
+			value: '分享时要显示的内容',
+			cname: '分享时要显示的内容',
+			type: 'text'
 		}
 	}
 </script>
