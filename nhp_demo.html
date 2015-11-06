@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Xiaohongchun New Homepage Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.3.1.7.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/nhp_demo.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="nhp-search" id="search">
+      
+    </div>
+    <div class="swiper-container" id="content">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="http://i.xiaohongchun.com/209C44D099FC2022">
+            <div class="title">
+              视频标题1
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="http://i.xiaohongchun.com/932F9BC599DBB5D6">
+            <div class="title">
+              视频标题2
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="http://i.xiaohongchun.com/A6EAB2B30FC508FA">
+            <div class="title">
+              视频标题3
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="http://i.xiaohongchun.com/E94E40873DB18C1F">
+            <div class="title">
+              视频标题4
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="http://i.xiaohongchun.com/8403444034F56A9A">
+            <div class="title">
+              视频标题5
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="http://i.xiaohongchun.com/8639B577D34078E3">
+            <div class="title">
+              视频标题6
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="http://i.xiaohongchun.com/F74915E1F8E15D1E">
+            <div class="title">
+              视频标题7
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="http://i.xiaohongchun.com/1825884367435770">
+            <div class="title">
+              视频标题8
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="http://i.xiaohongchun.com/7DE621D709ED49AD">
+            <div class="title">
+              视频标题9
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="http://i.xiaohongchun.com/23DD3770AC8F8E53">
+            <div class="title">
+              视频标题10
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="http://i.xiaohongchun.com/D1E5AD281AC0145B">
+            <div class="title">
+              视频标题11
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="http://i.xiaohongchun.com/D1E5AD281AC0145B">
+            <div class="title">
+              视频标题12
+            </div>
+          </div>
+          
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.3.1.7.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 2,
+        slidesPerColumn: 3,
+        paginationClickable: true,
+        spaceBetween: 30,
+        spaceBetween : 20,
+        slidesPerGroup: 6
+    });
+
+    // 自动隐藏地址栏
+    window.onload=function(){  
+      setTimeout(function() {  
+        window.scrollTo(0, 1)  
+      }, 0);  
+    };  
+
+    $("#content").swipe( {
+      swipeUp:function(event, direction, distance, duration) {
+        $('#search').show();
+        
+      },
+      swipeDown:function(event, direction, distance, duration) {
+      },
+      threshold:100,
+      allowPageScroll:"none"
+    });
+
+    </script>
+</body>
+</html>

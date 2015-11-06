@@ -3,12 +3,14 @@
 
 $app: hb-;
 
-.#{$app}part1 {
-	background: url(../images/hb_get_p1.png) no-repeat;
-	height: 840px;
+.#{$app}content {
+	background-image: url(../images/hb_background.jpg);
+	min-height: 500px;
+	width: 640px;
+	text-align: center;
+	position: relative;
 
 	.input_phone_num {
-		text-align: center;
 		padding-top: 720px;
 
 		input {
@@ -21,15 +23,37 @@ $app: hb-;
 			color: #d0d0d0;
 		}
 	}
-}
 
-.#{$app}part2 {
-	background: url(../images/hb_get_p2.png) no-repeat;
-	height: 90px;
-}
+	.get_button {
+		width: 420px;
+		height: 88px;
+		line-height: 100px;
+		border-radius: 7px;
+		background-color: #fcdb59;
+		border-bottom: 5px solid #881b05;
+		border-right: 5px solid #881b05;
+		border-top: 0px;
+		border-left: 0px;
+		margin: 37px auto 0 auto;
 
-.#{$app}part3 {
-	background: url(../images/hb_get_p3.png) no-repeat;
-	height: 664px;
-}
+		img {
+			margin: auto auto;
+			display: inline;
+		}
+	}
 
+	.rules {
+		margin-top: 109px;
+		padding-bottom: 100px;
+
+		img {
+			margin: 0 auto;
+		}
+	}
+
+	.title {
+		position: absolute;
+		top: 440px;
+		left: 226px;
+	}
+}

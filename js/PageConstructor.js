@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var current_item = '';
   var upload_token = '';
-  var token_url = 'http://192.168.2.9:1337';
+  var token_url = 'http://192.168.2.200:1337';
   var videolist = [];
   var v = $('#v'),
     u = $('#u'),

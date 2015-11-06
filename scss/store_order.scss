@@ -1,0 +1,107 @@
+@charset "utf-8";
+@import "common";
+
+$app: store-order-;
+
+$bgcolor: #f1f1f1;
+
+.#{$app}header {
+	@include fixed(top);
+	@include divcenter(88px);
+	@include gap(1px);
+	width: 100%;
+	background-color: #fff;
+	color: #666666;
+	font-size: 30px;
+	text-align: center;
+
+	.back {
+		float: left;
+	}
+
+	.title {
+		margin-left: -52px;
+		width: 100%;
+	}
+}
+
+.top-holder {
+	height: 89px;
+}
+
+.#{$app}address {
+	@include gap(16px);
+	@include divcenter(170px);
+
+	.add {
+		background: url(../images/add_address.png) no-repeat;
+		padding-left: 52px;
+		margin-left:208px;
+	}
+
+	.more {
+		float: right;
+		margin-right: 20px;
+		@include divcenter(170px);
+
+		img {
+			display: inline;
+		}
+	}
+}
+
+.#{$app}goods {
+	padding-left: 20px;
+
+	.item {
+		padding:28px 0;
+		position: relative;
+		@include gap(1px);
+
+		.goods_image {
+			float: left;
+			width: 154px;
+			height: 154px;
+			border: 1px solid #d8d8d8;
+		}
+
+		.info {
+			float: left;
+		}
+
+		.title {
+			color: #4c4c4c;
+			font-size: 25px;
+			margin:21px 0 0 24px;
+		}
+
+		.price {
+			position: absolute;
+			right: 40px;
+			bottom: 30px;
+
+			.p {
+				color: #fe4545;
+				font-size: 23px;
+				padding-right: 10px;
+
+				&:before {
+					content: '¥';
+					font-size: 18px;
+					padding-right: 6px;
+				}
+			}
+
+			.n {
+				color: #989898;
+				font-size: 21px;
+
+				&:before {
+					content: 'x';
+					font-size: 13px;
+					padding-right: 5px;
+				}
+			}
+		}
+	}
+}

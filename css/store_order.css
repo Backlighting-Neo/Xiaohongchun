@@ -1,0 +1,98 @@
+@charset "UTF-8";
+img {
+  display: block; }
+
+html, body, p, a, ol, ul, dd {
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style: none; }
+
+.clearfix {
+  clear: both; }
+
+.ding {
+  height: 1000px; }
+
+body {
+  font-size: 25px;
+  font-family: "Microsoft Yahei"; }
+
+.click {
+  cursor: pointer; }
+
+.store-order-header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 88px;
+  line-height: 88px;
+  border-bottom: 1px solid #f1f1f1;
+  width: 100%;
+  background-color: #fff;
+  color: #666666;
+  font-size: 30px;
+  text-align: center; }
+  .store-order-header .back {
+    float: left; }
+  .store-order-header .title {
+    margin-left: -52px;
+    width: 100%; }
+
+.top-holder {
+  height: 89px; }
+
+.store-order-address {
+  border-bottom: 16px solid #f1f1f1;
+  height: 170px;
+  line-height: 170px; }
+  .store-order-address .add {
+    background: url(../images/add_address.png) no-repeat;
+    padding-left: 52px;
+    margin-left: 208px; }
+  .store-order-address .more {
+    float: right;
+    margin-right: 20px;
+    height: 170px;
+    line-height: 170px; }
+    .store-order-address .more img {
+      display: inline; }
+
+.store-order-goods {
+  padding-left: 20px; }
+  .store-order-goods .item {
+    padding: 28px 0;
+    position: relative;
+    border-bottom: 1px solid #f1f1f1; }
+    .store-order-goods .item .goods_image {
+      float: left;
+      width: 154px;
+      height: 154px;
+      border: 1px solid #d8d8d8; }
+    .store-order-goods .item .info {
+      float: left; }
+    .store-order-goods .item .title {
+      color: #4c4c4c;
+      font-size: 25px;
+      margin: 21px 0 0 24px; }
+    .store-order-goods .item .price {
+      position: absolute;
+      right: 40px;
+      bottom: 30px; }
+      .store-order-goods .item .price .p {
+        color: #fe4545;
+        font-size: 23px;
+        padding-right: 10px; }
+        .store-order-goods .item .price .p:before {
+          content: '¥';
+          font-size: 18px;
+          padding-right: 6px; }
+      .store-order-goods .item .price .n {
+        color: #989898;
+        font-size: 21px; }
+        .store-order-goods .item .price .n:before {
+          content: 'x';
+          font-size: 13px;
+          padding-right: 5px; }

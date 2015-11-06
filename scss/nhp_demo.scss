@@ -1,0 +1,75 @@
+@charset "utf-8";
+@import "common";
+
+$app: nhp-;
+
+body, html {
+	height: 100%;
+}
+
+body {
+	background:url('../images/glass_background.jpg') round;
+}
+
+.#{$app}search {
+	height: 15%;
+	background-color: yellow;
+	transition: height 0.8s;
+	display: none;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+}
+.swiper-container {
+  width: 90%;
+  height: 90%;
+  padding: 5% 5%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: height 0.8s;
+}
+
+.swiper-wrapper {
+	height: 90%;	
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: 33%;
+  width: 80px;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+  	width: 100%;
+  }
+
+  .title {
+  	position: absolute;
+  	bottom: 0;
+  	left: 0;
+  	width: 90%;
+  	height: 16%;
+  	background-color: rgba(0,0,0,0.5);
+  	text-align: left;
+		color: white;
+		padding-left: 10%;
+		padding-top: 4%;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: rgba(255,255,255,0.8);
+}

@@ -21,13 +21,15 @@ body {
 .click {
   cursor: pointer; }
 
-.hb-part1 {
-  background: url(../images/hb_get_p1.png) no-repeat;
-  height: 840px; }
-  .hb-part1 .input_phone_num {
-    text-align: center;
+.hb-content {
+  background-image: url(../images/hb_background.jpg);
+  min-height: 500px;
+  width: 640px;
+  text-align: center;
+  position: relative; }
+  .hb-content .input_phone_num {
     padding-top: 720px; }
-    .hb-part1 .input_phone_num input {
+    .hb-content .input_phone_num input {
       width: 415px;
       height: 80px;
       border: 3px solid #fcdb5a;
@@ -35,11 +37,26 @@ body {
       text-align: center;
       font-size: 28px;
       color: #d0d0d0; }
-
-.hb-part2 {
-  background: url(../images/hb_get_p2.png) no-repeat;
-  height: 90px; }
-
-.hb-part3 {
-  background: url(../images/hb_get_p3.png) no-repeat;
-  height: 664px; }
+  .hb-content .get_button {
+    width: 420px;
+    height: 88px;
+    line-height: 100px;
+    border-radius: 7px;
+    background-color: #fcdb59;
+    border-bottom: 5px solid #881b05;
+    border-right: 5px solid #881b05;
+    border-top: 0px;
+    border-left: 0px;
+    margin: 37px auto 0 auto; }
+    .hb-content .get_button img {
+      margin: auto auto;
+      display: inline; }
+  .hb-content .rules {
+    margin-top: 109px;
+    padding-bottom: 100px; }
+    .hb-content .rules img {
+      margin: 0 auto; }
+  .hb-content .title {
+    position: absolute;
+    top: 440px;
+    left: 226px; }
