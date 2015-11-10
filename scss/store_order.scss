@@ -25,19 +25,9 @@ $bgcolor: #f1f1f1;
 	}
 }
 
-.top-holder {
-	height: 89px;
-}
-
 .#{$app}address {
 	@include gap(16px);
 	@include divcenter(170px);
-
-	.add {
-		background: url(../images/add_address.png) no-repeat;
-		padding-left: 52px;
-		margin-left:208px;
-	}
 
 	.more {
 		float: right;
@@ -48,15 +38,49 @@ $bgcolor: #f1f1f1;
 			display: inline;
 		}
 	}
+
+	.noaddress {
+		.add {
+			background: url(../images/add_address.png) no-repeat;
+			padding-left: 52px;
+			margin-left:208px;
+		}
+	}
+
+	.hasaddress {
+		font-size: 24px;
+		line-height:40px;
+
+		.location {
+			float: left;
+			margin: 52px 0 0 28px;
+		}
+
+		.address {
+			float: left;
+			margin-top: 15px;
+			padding-left: 30px;
+			width: 475px;
+
+			.add{
+				line-height: 30px;
+			}
+		}
+	}
 }
 
 .#{$app}goods {
 	padding-left: 20px;
+	@include gap(1px);
 
 	.item {
 		padding:28px 0;
 		position: relative;
 		@include gap(1px);
+
+		&:last-child {
+			@include gap(0);
+		}
 
 		.goods_image {
 			float: left;
@@ -86,7 +110,7 @@ $bgcolor: #f1f1f1;
 				padding-right: 10px;
 
 				&:before {
-					content: '¥';
+					@include rmb;
 					font-size: 18px;
 					padding-right: 6px;
 				}
@@ -104,4 +128,173 @@ $bgcolor: #f1f1f1;
 			}
 		}
 	}
+}
+
+.#{$app}price {
+	@include gap(16px);
+	padding-left: 20px;
+
+	.item {
+		@include divcenter(50px);
+
+		.title {
+			float: left;
+			font-size: 22px;
+			color: #666666;
+		}
+
+		%content {
+			float: right;
+			margin-right: 20px;
+			font-size: 19px;
+		}
+
+		.content1 {
+			@extend %content;
+			color: #fe4545;
+			
+			&:before {
+				@include rmb;
+				padding-right: 5px;
+			}
+		}
+
+		.content2 {
+			@extend %content;
+			color: #666;
+
+			&:before {
+				content: '+';
+				padding-right: 15px;
+			}
+		}
+
+		.content3 {
+			@extend %content;
+			@include divcenter(40px);
+			position: relative;
+			color: #666;
+			font-size: 23px;
+			border: 1px solid #bfbfbf;
+			padding: 0 52px 0 20px;
+			border-radius: 20px;
+
+			.select {
+				@include divcenter(32px);
+				position: absolute;
+				width: 32px;
+				margin: 2px 2px;
+				right: 0;
+				top: 0;
+				border:2px solid #bfbfbf;
+				border-radius: 100%;
+				text-align: center;
+
+				img {
+					display: inline;
+				}
+			}
+		}
+	}
+
+	.gap {
+		@include gap(1px);
+	}
+
+	.total {
+		@include divcenter(50px);
+
+		.content {
+			float: right;
+			margin-right: 20px;
+
+			.num {
+				color: #666666;
+				font-size: 23px;
+				padding-right: 10px;
+			}
+
+			.tot {
+				color: #666666;
+				font-size: 28px;
+				padding-right: 5px;
+			}
+
+			.prc {
+				color: #fe4545;
+				font-size: 22px;
+
+				&:before {
+					@include rmb;
+					padding-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+.#{$app}pay {
+	@include divcenter(72px);
+	@include gap(16px);
+	padding-left: 20px;
+
+	.title {
+		float: left;
+	}
+
+	.method {
+		float: right;
+		padding-right: 20px;
+		margin-top: 9px;
+	}
+}
+
+.#{$app}bottom {
+	position: fixed;
+	height: 96px;
+	padding-left: 20px;
+	background-color: white;
+	@include fixed(bottom);
+	@include divcenter(96px);
+
+	.place {
+		float: right;
+		width: 250px;
+		background-color: #fe4545;
+		text-align: center;
+		font-size: 34px;
+		color: #666666;
+	}
+
+	.info {
+		@include divcenter(96px);
+		float: left;
+		width: 390px;
+		font-size: 27px;
+
+		.ApaidTitle {
+			color: #666666;
+		}
+
+		.Apaid {
+			color: #fe4545;
+
+			&:before {
+				@include rmb;
+				padding-right: 5px;
+			}
+		}
+
+		.Method {
+			color: #666666;
+		}
+	}
+}
+
+.top-holder {
+	height: 89px;
+}
+
+.bottom-holder {
+	height: 96px;
 }

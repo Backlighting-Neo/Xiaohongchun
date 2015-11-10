@@ -1,0 +1,84 @@
+@charset "utf-8";
+@import "common";
+
+.content {
+	background-image: url(images/AwardsTop30_03.png);
+	background-repeat: repeat-y;
+	padding: 0 86px;
+
+	li {
+		@include divcenter(118px);
+		border-bottom: 1px solid #e74f75;
+		width: 578px;
+
+		&:nth-child(n+31) {
+			display: none;
+		}
+
+		&:nth-child(-n+3) .video {
+			font-size: 30px;
+		}
+
+		&:nth-child(-n+3) .follower {
+			font-size: 30px;
+		}
+
+		&:nth-child(-n+3) .awards {
+			font-size: 30px;
+		}
+	
+		%fll {
+			float: left;
+			font-size: 22px;
+			color: black;
+			text-align: center;
+		}
+
+		.rank {
+			@extend %fll;
+			width: 91px;
+			font-size: 32px;
+			color: #e44e73;
+			font-weight: 900;
+		}
+
+		.user{
+			@extend %fll;
+			width: 140px;
+
+			.avatar {
+				height: 58px;
+				padding-top: 10px;
+
+				img {
+					display: inline;
+					@include circle(68px);
+					float: none;
+				}
+			} 
+
+			.username {
+				@include divcenter(30px);
+				overflow: hidden;
+				padding-top: 15px;
+				font-weight: 900;
+			}
+		}
+
+		.video{
+			@extend %fll;
+			width: 83px;
+		}
+
+		.follower{
+			@extend %fll;
+			width: 143px;
+		}
+
+		.awards{
+			@extend %fll;
+			width: 120px;
+		}
+
+	}
+}

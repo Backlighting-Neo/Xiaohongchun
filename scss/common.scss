@@ -68,3 +68,6 @@ body {
 	border:$border;
 }
 
+@mixin rmb(){
+	content: '¥';
+}

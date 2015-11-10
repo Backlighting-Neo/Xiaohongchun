@@ -1,0 +1,74 @@
+img {
+  display: block; }
+
+html, body, p, a, ol, ul, dd {
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style: none; }
+
+.clearfix {
+  clear: both; }
+
+.ding {
+  height: 1000px; }
+
+body {
+  font-size: 25px;
+  font-family: "Microsoft Yahei"; }
+
+.click {
+  cursor: pointer; }
+
+.content {
+  background-image: url(images/AwardsTop30_03.png);
+  background-repeat: repeat-y;
+  padding: 0 86px; }
+  .content li {
+    height: 118px;
+    line-height: 118px;
+    border-bottom: 1px solid #e74f75;
+    width: 578px; }
+    .content li:nth-child(n+31) {
+      display: none; }
+    .content li:nth-child(-n+3) .video {
+      font-size: 30px; }
+    .content li:nth-child(-n+3) .follower {
+      font-size: 30px; }
+    .content li:nth-child(-n+3) .awards {
+      font-size: 30px; }
+    .content li .rank, .content li .user, .content li .video, .content li .follower, .content li .awards {
+      float: left;
+      font-size: 22px;
+      color: black;
+      text-align: center; }
+    .content li .rank {
+      width: 91px;
+      font-size: 32px;
+      color: #e44e73;
+      font-weight: 900; }
+    .content li .user {
+      width: 140px; }
+      .content li .user .avatar {
+        height: 58px;
+        padding-top: 10px; }
+        .content li .user .avatar img {
+          display: inline;
+          width: 68px;
+          height: 68px;
+          border-radius: 100%;
+          float: left;
+          float: none; }
+      .content li .user .username {
+        height: 30px;
+        line-height: 30px;
+        overflow: hidden;
+        padding-top: 15px;
+        font-weight: 900; }
+    .content li .video {
+      width: 83px; }
+    .content li .follower {
+      width: 143px; }
+    .content li .awards {
+      width: 120px; }

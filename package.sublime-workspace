@@ -1,0 +1,380 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fonts",
+				"font-size"
+			],
+			[
+				"store",
+				"store_order.css"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"jque",
+				"jquery.min.js"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"bac",
+				"glass_background"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"class",
+				"class=〔attribute〕"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"borderr",
+				"border-radius"
+			],
+			[
+				"min",
+				"min-height"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 185.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"sshtml",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 439.0
+	},
+	"console":
+	{
+		"height": 232.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/work/server/mock.js",
+		"/E/work/source/scss/store_order.scss",
+		"/E/work/source/store_order.html",
+		"/E/work/source/scss/common.scss",
+		"/E/work/source/scss/store_cart.scss",
+		"/F/Pro2/html/index_html/index.html",
+		"/F/Pro2/html/index_html/denglu.html",
+		"/E/work/source/js/channelshare.js",
+		"/E/work/source/js/mobile.js",
+		"/E/work/source/download_direct.html",
+		"/E/work/source/js/zhuye150929.js",
+		"/E/work/source/js/product_detail.js",
+		"/E/work/source/app_empty.html",
+		"/E/work/source/css/store_order.css",
+		"/E/work/source/css/zhuye150929.css",
+		"/E/work/source/scss/nhp_demo.scss",
+		"/E/work/source/nhp_demo.html",
+		"/E/work/source/js/jquery.touchSwipe.min.js",
+		"/E/work/source/tucao_fix.html",
+		"/E/work/source/iphone_test.html",
+		"/E/work/source/nhp_demo_origin.html",
+		"/E/work/source/template/events_tucao.html",
+		"/E/work/source/test1.html",
+		"/E/work/emergency/tucao_fix.html",
+		"/E/work/emergency/那些年买错的坑货.html",
+		"/E/work/source/js/hammer.min.js",
+		"/C/Users/xhc/AppData/Roaming/Sublime Text 3/Packages/HTMLPrettify/HTMLPrettify.sublime-settings",
+		"/E/work/source/css/shake.css",
+		"/E/work/source/scss/PageConstructor.scss",
+		"/E/work/source/css/nhp_demo.css",
+		"/E/work/source/scss/hongbao_geted.scss",
+		"/E/work/source/hongbao_get.html",
+		"/E/work/source/hongbao_geted.html",
+		"/E/work/source/zhuye20150929.html",
+		"/C/Users/xhc/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/xhc/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/E/work/source/scss/hongbao_get.scss",
+		"/E/work/source/js/PageConstructor.js",
+		"/E/work/source/product_detail.html",
+		"/E/work/source/css/product_detail.css",
+		"/C/Users/xhc/.ssh/github_rsa.pub"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"content: '¥';",
+			"6",
+			"span",
+			"content",
+			"span",
+			"/",
+			"http://www.baidu.com",
+			"VM568:2 ",
+			"swiperight",
+			"Swiperight",
+			"ipedown",
+			"<div class=\"videodescription\">这是一个韩式小清新妆容～ 最近我都是化这个妆～</div>",
+			"10px;",
+			"\\"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 48.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "package.sublime-project",
+	"replace":
+	{
+		"height": 76.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"common",
+				"scss\\common.scss"
+			],
+			[
+				"commonscss",
+				"scss\\common.scss"
+			],
+			[
+				"storeorder",
+				"store_order.html"
+			],
+			[
+				"storecartscss",
+				"scss\\store_cart.scss"
+			],
+			[
+				".js",
+				"js\\channelshare.js"
+			],
+			[
+				"zhuyejs",
+				"js\\zhuye150929.js"
+			],
+			[
+				"prodetailjs",
+				"js\\product_detail.js"
+			],
+			[
+				"mobilejs",
+				"js\\mobile.js"
+			],
+			[
+				"storescss",
+				"scss\\store_cart.scss"
+			],
+			[
+				"app",
+				"app_empty.html"
+			],
+			[
+				"appem",
+				"app_empty.html"
+			],
+			[
+				"tucao",
+				"tucao_fix.html"
+			],
+			[
+				"nhp",
+				"nhp_demo.html"
+			],
+			[
+				"hammerjs",
+				"js\\hammer.min.js"
+			],
+			[
+				"zhuyecss",
+				"css\\zhuye150929.css"
+			],
+			[
+				"scss",
+				"scss\\PageConstructor.scss"
+			],
+			[
+				"appemhtml",
+				"app_empty.html"
+			],
+			[
+				"getedscss",
+				"scss\\hongbao_geted.scss"
+			],
+			[
+				"geted",
+				"hongbao_geted.html"
+			],
+			[
+				"hongbaoget",
+				"hongbao_get.html"
+			],
+			[
+				"hongbaoscss",
+				"scss\\hongbao_get.scss"
+			],
+			[
+				"hongbao",
+				"hongbao_get.html"
+			],
+			[
+				"pageconjs",
+				"js\\PageConstructor.js"
+			],
+			[
+				"pro",
+				"css\\product_detail.css"
+			],
+			[
+				"prod",
+				"product_detail.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
