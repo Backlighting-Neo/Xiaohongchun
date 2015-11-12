@@ -4,6 +4,8 @@
 var json_template = {
   "code": "0",
   "data": {
+  	"product_status": "@integer(0,2)",
+  	// 商品状态 0-可买， 1-无货， 2-补货
   	"cart_num": "@integer(0,99)",
   	"brief":{
 	    "product_name": "@cname - @cname",

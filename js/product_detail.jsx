@@ -9,12 +9,14 @@ var ProductDetail = React.createClass({
 		}
 	},
 	componentDidMount: function() {
-		// TODO ajax
-		// setTimeout(function() {
-		// 	this.setState(json.data);
-		// }.bind(this),1000);
-
-		this.setState(json.data);
+		var baseurl = 'http://192.168.2.200:1338'
+		var that = this;
+		$.getJSON(baseurl + '/api2/store/product_detail')
+		.then(function(json){
+			that.setState(json.data);
+		}).fail(function() {
+			alert('数据异常');
+		})
 	},
 	render: function() {
 		return (
@@ -72,7 +74,7 @@ var ProductDetail = React.createClass({
 					2. 您购买的境外商品适用的品质、健康、标识等项目的使用标准符合原产国使用标准，但是可能与我国标准有所不同，所以在使用过程中由此可能产生的危害或损失以及其他风险，将由您个人承担。<br /><br />
 					3. 您在本（公司）App里购买保税区发货的境外商品时，自动视为由小红唇代您向海关进行申报和代缴税款。<br /><br />
 				</ProductSectionPulldown>
-				<ProductBottomCommand cart_num={this.state.cart_num} />
+				<ProductBottomCommand cart_num={this.state.cart_num} status={this.state.product_status} />
 				{productBottomCommandHolder}
 			</div>
 		);
@@ -430,9 +432,15 @@ var ProductBottomCommand = React.createClass({
 	render: function() {
 		return (
 			<div className="product-bottom-command">
+				<div className="goToPay">
+					<div className="PayPanel">
+						<div className="title">成功加入购物车</div>
+						<div className="btn click">去支付</div>
+					</div>
+				</div>
 				<div className="addToCart click" onClick={this.addToCart}>加入购物车</div>
-				<div className="cart click" onClick={this.cart}>
-					<div className="icon ib" id="Cart">{this.props.cart_num}</div>
+				<div className={'cart'+this.props.status+' click'} onClick={this.cart}>
+					<div className="Cart" id="Cart">{this.props.cart_num}</div>
 				</div>
 				<div className="clearfix"></div>
 			</div>

@@ -320,16 +320,16 @@
 
 .product-bottom-command {
   position: fixed;
+  width: 100%;
   left: 0;
   bottom: 0;
   height: 105px;
-  overflow: hidden
 }
 
 .product-bottom-command .addToCart {
   width: 620px;
   height: 100%;
-  float: left;
+  float: right;
   background-color: #fe4545;
   font-size: 38px;
   line-height: 105px;
@@ -338,20 +338,73 @@
   letter-spacing: .3em
 }
 
-.product-bottom-command .cart {
+.product-bottom-command .goToPay {
+  position: relative;
+}
+
+.product-bottom-command .goToPay .PayPanel {
+  position: absolute;
+  top: -136px;
+  left: 20px;
+  width: 225px;
+  height: 133px;
+  background: url(../images/PayPanel.png) round;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+}
+
+.product-bottom-command .goToPay .PayPanel .title {
+  margin-top: 10px;
+}
+
+.product-bottom-command .goToPay .PayPanel .btn {
+  width: 196px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #fe4545;
+  margin-left: 16px;
+  margin-top: 12px;
+}
+
+.product-bottom-command .cart0 {
   width: 130px;
   height: 100%;
   float: left;
   background-color: #4f4f4f
 }
 
-.product-bottom-command .cart #Cart {
+.product-bottom-command .cart1 {
+  width: 130px;
+  height: 100%;
+  float: left;
+  background-color: white;
+}
+
+.product-bottom-command .cart0 .Cart {
+  /*有货*/
+  background: url(../images/store-cart-yes.png) round;
+  width: 32px;
+  height: 59px;
   margin: 28px 0 0 40px;
-  padding: 0 0 0 29px;
+  padding: 0 0 0 40px;
   text-align: center;
   color: #fff;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.product-bottom-command .cart1 .Cart {
+  /*无货*/
+  background: url(../images/store-cart-no.png) round;
+  width: 32px;
+  height: 59px;
+  margin: 28px 0 0 40px;
+  padding: 0 0 0 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 .product-bottom-command-holder {
@@ -378,12 +431,6 @@
   background-position: -20px 0;
   height: 42px;
   width: 27px
-}
-
-#Cart {
-  background-position: -153px 0;
-  height: 48px;
-  width: 20px
 }
 
 #Share {

@@ -262,6 +262,55 @@ body {
         .store-cart-bottom .command .orderinfo .price div:last-child {
           font-size: 0.7em; }
 
+.store-cart-empty {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100%; }
+  .store-cart-empty .cart {
+    padding-top: 160px; }
+    .store-cart-empty .cart .icon {
+      width: 373px;
+      height: 373px;
+      border-radius: 100%;
+      background-color: white;
+      margin: 0 auto;
+      line-height: 100%; }
+      .store-cart-empty .cart .icon img {
+        padding: 100px 0 0 104px; }
+  .store-cart-empty .info {
+    font-size: 28px;
+    color: #4c4c4c;
+    margin-top: 40px;
+    text-align: center; }
+    .store-cart-empty .info img {
+      display: inline;
+      margin-top: 25px; }
+  .store-cart-empty .btn {
+    width: 263px;
+    height: 68px;
+    line-height: 68px;
+    background-color: #fe4545;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 28px;
+    margin: 55px 0 0 189px; }
+
+.store-cart-getcoupon {
+  width: 100%;
+  height: 92px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-image: url(../images/cart_empty_getcoupon.png); }
+  .store-cart-getcoupon .getcoupon {
+    width: 155px;
+    height: 60px;
+    margin: 17px auto auto 455px; }
+
+body, html {
+  height: 100%; }
+
 .icon_bin {
   width: 22px;
   height: 21px;
@@ -272,7 +321,7 @@ body {
   position: relative;
   margin-top: 6px;
   margin-left: 3px;
-  box-shadow: inset 0 0 0 2.5px #fff, inset 4px 0 0 2px #fff, inset 5px 0 0 2px #666, inset 13px 0 0 2px #fff, inset 14px 0 0 2px #666; }
+  box-shadow: inset 0 0 0 2.5px #fff, inset 4px 0 0 2px #fff,inset 5px 0 0 2px #666, inset 13px 0 0 2px #fff, inset 14px 0 0 2px #666; }
 
 .icon_bin:after {
   content: "";

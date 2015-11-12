@@ -334,6 +334,71 @@ $bgi: url(../images/cart_icon.png);
 	}
 }
 
+.#{$app}empty {
+	background-color: #f2f2f2;
+	width: 100%;
+	height: 100%;
+
+	.cart {
+		padding-top: 160px;
+
+		.icon	{
+			width: 373px;
+			height: 373px;
+			border-radius: 100%;
+			background-color: white;
+			margin: 0 auto;
+			line-height: 100%;
+
+			img {
+				padding: 100px 0 0 104px;
+			}
+		}
+	}
+
+	.info {
+		font-size: 28px;
+		color: #4c4c4c;
+		margin-top: 40px;
+		text-align: center;
+
+		img {
+			display: inline;
+			margin-top: 25px;
+		}
+	}
+
+	.btn {
+		width: 263px;
+		@include divcenter(68px);
+		background-color: #fe4545;
+		color: white;
+		text-align: center;
+		border-radius: 6px;
+		font-size: 28px;
+		margin: 55px 0 0 189px;
+	}
+}
+
+.#{$app}getcoupon {
+	width: 100%;
+	height: 92px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-image: url(../images/cart_empty_getcoupon.png);
+
+	.getcoupon {
+		width: 155px;
+		height: 60px;
+		margin: 17px auto auto 455px;
+	}
+}
+
+body, html {
+	height: 100%;
+}
+
 .icon_bin {
   width: 22px;
   height: 21px;

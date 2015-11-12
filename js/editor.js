@@ -8,7 +8,7 @@
   }
   $(window).on('resize', resize(true));
 
-  var navLinks = ['help', 'about', 'account']
+  var navLinks = ['help', 'about', 'list']
   $.each(navLinks, function(_, className) {
     $('div.header')
       .on('click', 'a.' + className, function() {
@@ -35,8 +35,8 @@
     case '#about':
       $('a.about').click()
       break
-    case '#account':
-      $('a.account').click()
+    case '#list':
+      $('a.list').click()
       break
   }
 
@@ -357,10 +357,21 @@
   $.getJSON(MockServer + '/mock/', function(json) {
     var result = '';
     for (var i = json.data.length - 1; i >= 0; i--) {
-      result = result + '<li><a href="' + MockServer + json.data[i].url + '">' + json.data[i].url + '</a> [' + json.data[i].name + ']</li>';
+      result = result + '<li><a href="' + MockServer + json.data[i].url + '">' + json.data[i].url + '</a> [' + json.data[i].name + '] <a class="loadscript" data-url="' + json.data[i].url + '" data-name="' + json.data[i].name + '">载入</a></li>';
     };
     $('#apiinserver').append(result);
+    $('.loadscript').click(function(event) {
+      var url = (event.currentTarget.attributes["data-url"].nodeValue);
+      var name = (event.currentTarget.attributes["data-name"].nodeValue);
+      $.get(MockServer + '/mock' + url, function(data) {
+        tplEditor.setValue(data);
+        $('#api_name').val(name);
+        $('#api_url').val(url);
+        $('a.about').click();
+      })
+    });
   });
+
 
   $('#confirm-upload').click(function() {
     var u_tpl  = (tplEditor.getValue());

@@ -145,7 +145,7 @@ body {
 
 .viewport .sidebar .help,
 .viewport .sidebar .about,
-.viewport .sidebar .account {
+.viewport .sidebar .list {
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -165,7 +165,7 @@ body {
     transition: all 0.2s ease-out;
 }
 
-.viewport textarea {
+/*.viewport textarea {
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -176,7 +176,7 @@ body {
     border: 0px;
     padding: 0px;
     opacity: 0.8;
-}
+}*/
 
 .viewport .badge {
     position: absolute;
@@ -197,8 +197,8 @@ body {
 
 .viewport .badge-info {
     position: absolute;
-    right: 15px;
-    bottom: 15px;
+    right: 30px;
+    bottom: 30px;
     padding: 3px 7px;
     font-size: 20px;
     line-height: 1.5;
@@ -230,7 +230,7 @@ body {
 
 .viewport-help > .sidebar > .help,
 .viewport-about > .sidebar > .about,
-.viewport-account > .sidebar > .account {
+.viewport-list > .sidebar > .list {
     display: block;
 }
 
@@ -279,6 +279,10 @@ body {
   margin-top: 40px;
   font-size: 18px;
   color: black;
+}
+
+.loadscript {
+    cursor: pointer;
 }
 
 /*.pre {
