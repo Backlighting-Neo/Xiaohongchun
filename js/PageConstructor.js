@@ -167,7 +167,7 @@ $(document).ready(function() {
       for (var i = videolist.length - 1; i >= 0; i--) {
         html = html + '<script>mobile.videoplugin('+(videolist[i].size+'')+',\''+videolist[i].selector+'\');</script>';
       };
-      html = html + '<script type=\"text/javascript\">var _hmt = _hmt || [];(function() {  var hm = document.createElement(\"script\");  hm.src = \"//hm.baidu.com/hm.js?c431a03831df8d00747aa6a0c0d5c17d\";  var s = document.getElementsByTagName(\"script\")[0];  s.parentNode.insertBefore(hm, s);})();var img=new Image();img.src=\"http://static.xiaohongchun.com/params?share=1&content='+data.share.value+'&tick=\" + Date.now(); </script>';
+      html = html + '<script type=\"text/javascript\">var _hmt = _hmt || [];(function() {  var hm = document.createElement(\"script\");  hm.src = \"//hm.baidu.com/hm.js?c431a03831df8d00747aa6a0c0d5c17d\";  var s = document.getElementsByTagName(\"script\")[0];  s.parentNode.insertBefore(hm, s);})();var img=new Image();img.src=\"http://static.xiaohongchun.com/params?share=1&img='+encodeURIComponent(data.shareimage.value)+'&content='+encodeURIComponent(data.share.value)+'&tick=\" + Date.now(); </script>';
       var result = '<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width='+(viewport?viewport:750+'')+'\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"description\" content=\"小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品\"><title>' + event_name + '</title></head><body>' + html + '</body></html>';
       downloadFile(event_name + '.html', result);
     } else {

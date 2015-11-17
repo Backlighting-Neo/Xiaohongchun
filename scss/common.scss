@@ -71,3 +71,9 @@ body {
 @mixin rmb(){
 	content: '¥';
 }
+
+@mixin rmb2() {
+	&:before {
+		content: '¥';
+	}
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- 在页面的Hash部分加入要显示那一部分的问题，可选值有："question 常见问题","order 订单","logistics 物流","refund 退款","carriage 运费","coupon 优惠券" -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=640">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
+  <title>不要取Title</title>
+	<link rel="stylesheet" type="text/css" href="css/store-question.css">
+	<script type="text/javascript" src="js/store-question.js"></script>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+</head>
+
+<body>
+	
+	<div id="sub">
+		<div v-for="item in data">
+			<div class="store-question-message message-question">
+				<div class="avatar"></div>
+				<div class="message">{{item.question}}</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="store-question-message message-answer">
+				<div class="avatar"></div>
+				<div class="message">{{{item.answer}}}</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="main">
+		<div class="store-help-title">热门问题</div>
+		<div class="store-help-hot">
+			<ul id="hotlist">
+				<li v-for="item in data" onclick="show('{{item.command}}')">{{item.cname}}</li>
+			</ul>
+		</div>
+		<div class="store-help-title">问题类型</div>
+		<div class="store-help-module">
+			<div class="item" id="question">
+				<div class="title">常见问题</div>
+				<div class="description">收货时间、商品质量</div>
+			</div>
+			<div class="item" id="order">
+				<div class="title">订单修改</div>
+				<div class="description">订单的取消修改等</div>
+			</div>
+			<div class="item" id="logistics">
+				<div class="title">物流配送</div>
+				<div class="description">发货时间、区域等</div>
+			</div>
+			<div class="item" id="refund">
+				<div class="title">退货退款</div>
+				<div class="description">申请退货退款条件等</div>
+			</div>
+			<div class="item" id="carriage">
+				<div class="title">运费计算</div>
+				<div class="description">计算方式等</div>
+			</div>
+			<div class="item" id="coupon">
+				<div class="title">优惠券</div>
+				<div class="description">暂无优惠券</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="store-help-bottomholder"></div>
+	<div class="store-help-contact">
+		<div class="button" onclick="location.href='http://www.xiaohongchun.com/index/params?contact'">给小红唇发私信</div>
+	</div>
+</body>
+
+</html>

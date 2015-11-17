@@ -1,0 +1,164 @@
+img {
+  display: block; }
+
+html, body, p, a, ol, ul, dd {
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style: none; }
+
+.clearfix {
+  clear: both; }
+
+.ding {
+  height: 1000px; }
+
+body {
+  font-size: 25px;
+  font-family: "Microsoft Yahei"; }
+
+.click {
+  cursor: pointer; }
+
+body {
+  background-color: #f1f1f1; }
+
+#sub {
+  padding-top: 20px;
+  display: none; }
+
+.store-question-message {
+  margin-bottom: 40px;
+  position: relative; }
+  .store-question-message .avatar {
+    position: absolute;
+    bottom: 0;
+    height: 66px;
+    width: 66px;
+    margin: 0 20px 0 20px; }
+  .store-question-message .message {
+    position: relative;
+    padding: 15px;
+    background-color: white;
+    color: #666666;
+    font-size: 27px;
+    line-height: 30px;
+    border-radius: 5px;
+    max-width: 460px;
+    word-break: break-all; }
+    .store-question-message .message:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 19px;
+      height: 16px;
+      border-bottom: 16px solid white;
+      border-top: 0;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent; }
+
+.message-question .avatar {
+  left: 0;
+  float: left;
+  background-image: url(../images/avatar_question.png); }
+
+.message-question .message {
+  float: left;
+  margin-left: 100px; }
+  .message-question .message:before {
+    left: -9px; }
+
+.message-answer .avatar {
+  right: 0;
+  float: right;
+  background-image: url(../images/avatar_answer.png); }
+
+.message-answer .message {
+  float: right;
+  margin-right: 100px; }
+  .message-answer .message:before {
+    right: -9px; }
+
+.store-help-contact {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 110px;
+  background-color: #f1f1f1; }
+  .store-help-contact .button {
+    width: 416px;
+    height: 66px;
+    line-height: 66px;
+    background-color: white;
+    border: 2px solid #fe4545;
+    border-radius: 5px;
+    margin: 20px 0 0 110px;
+    text-align: center;
+    font-size: 30px;
+    color: #666666; }
+
+.store-help-title {
+  height: 80px;
+  padding-left: 30px;
+  height: 80px;
+  line-height: 80px;
+  color: #666666;
+  font-size: 26px;
+  background-color: #f1f1f1; }
+
+.store-help-hot li {
+  border-bottom: 2px solid #f1f1f1;
+  height: 70px;
+  line-height: 70px;
+  cursor: pointer;
+  background-color: #fff; }
+  .store-help-hot li:before {
+    content: ' ';
+    background-color: #fe4545;
+    display: inline-block;
+    border-radius: 100%;
+    width: 11px;
+    height: 11px;
+    margin: 0 22px 0 26px; }
+
+.store-help-module .item {
+  float: left;
+  width: 212px;
+  height: 200px;
+  background-color: #fff;
+  border-right: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #666666;
+  text-align: center;
+  cursor: pointer; }
+  .store-help-module .item .title {
+    font-size: 21px;
+    margin-top: 100px; }
+  .store-help-module .item .description {
+    font-size: 15px;
+    margin-top: 10px; }
+
+.store-help-module #question {
+  background-image: url(../images/store-help-question.png); }
+
+.store-help-module #order {
+  background-image: url(../images/store-help-order.png); }
+
+.store-help-module #logistics {
+  background-image: url(../images/store-help-logistics.png); }
+
+.store-help-module #refund {
+  background-image: url(../images/store-help-refund.png); }
+
+.store-help-module #carriage {
+  background-image: url(../images/store-help-carriage.png); }
+
+.store-help-module #coupon {
+  background-image: url(../images/store-help-coupon.png); }
+
+.store-help-bottomholder {
+  height: 110px; }

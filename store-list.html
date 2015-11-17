@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=640">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
+  <title>商品列表</title>
+	<link rel="stylesheet" type="text/css" href="css/store-list.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/store-list.js"></script>
+  
+	
+</head>
+
+<body>
+	<div class="store-list-title">
+    小红唇种草机
+  </div>
+  <div class="placeholder1"></div>
+
+  <div class="store-list-banner">
+  	<img src="{{banner[0].g_image}}" onclick="location.href='goods.html?pid={{banner[0].g_id}}'" />
+  </div>
+
+  <div class="store-list-item">
+  	<div class="item" v-for="item in data">
+  		<div class="product_image">
+  			<img src="{{item.g_image}}" onclick="location.href='goods.html?pid={{item.g_id}}'" />
+  		</div>
+  		<div class="product_title">{{item.g_name}}</div>
+  		<div class="product_desc">{{item.g_title}}</div>
+  		<div class="product_price">
+  			<span class="price_onsell">{{item.g_price_shop}}</span>
+  			<span class="price_origin">{{item.g_price_market}}</span>
+  		</div>
+  	</div>
+  	<div class="clearfix"></div>
+  </div>
+</body>
+
+</html>

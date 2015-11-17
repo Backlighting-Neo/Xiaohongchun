@@ -1,0 +1,171 @@
+@charset "utf-8";
+@import "common";
+
+$app: store-question-;
+$app2: store-help-;
+
+$bgcolor: #f1f1f1;
+
+body {
+	background-color: #f1f1f1;
+}
+
+#sub {
+	padding-top: 20px;
+	display: none;
+}
+
+.#{$app}message {
+	margin-bottom: 40px;
+	position: relative;
+
+	.avatar {
+		position: absolute;
+		bottom: 0;
+		height: 66px;
+		width: 66px;
+		margin: 0 20px 0 20px;
+	}
+
+	.message {
+		position: relative;
+		padding: 15px;
+		background-color: white;
+		color: #666666;
+		font-size: 27px;
+		line-height: 30px;
+		border-radius: 5px;
+		max-width: 460px;
+		word-break: break-all;
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 19px;
+			height: 16px;
+			border-bottom: 16px solid white;
+			border-top: 0;
+			border-left: 9px solid transparent;
+			border-right: 9px solid transparent;
+		}
+	}
+}
+
+.message-question {
+	.avatar {
+		left: 0;
+		float: left;
+		background-image: url(../images/avatar_question.png);
+	}
+
+	.message {
+		float: left;
+		margin-left: 100px;
+
+		&:before {
+			left: -9px;
+		}
+	}
+}
+
+.message-answer {
+	.avatar {
+		right: 0;
+		float: right;
+		background-image: url(../images/avatar_answer.png);
+	}
+
+	.message {
+		float: right;
+		margin-right: 100px;
+
+		&:before {
+			right: -9px;
+		}
+	}
+}
+
+.#{$app2}contact {
+	@include fixed(bottom);
+	height: 110px;
+	background-color: #f1f1f1;
+
+	.button {
+		width: 416px;
+		@include divcenter(66px);
+		background-color: white;
+		border: 2px solid #fe4545;
+		border-radius: 5px;
+		margin:20px 0 0 110px;
+		text-align: center;
+		font-size: 30px;
+		color: #666666;
+	}
+}
+
+.#{$app2}title {
+	height: 80px;
+	padding-left: 30px;
+	@include divcenter(80px);
+	color: #666666;
+	font-size: 26px;
+	background-color: $bgcolor;
+}
+
+.#{$app2}hot {
+
+	li {
+		@include gap(2px);
+		@include divcenter(70px);
+		cursor: pointer;
+		background-color: #fff;
+
+		&:before {
+			content:' ';
+			background-color: #fe4545;
+			display: inline-block;
+			border-radius: 100%;
+			width: 11px;
+			height: 11px;
+			margin:0 22px 0 26px;
+		}
+	}
+}
+
+.#{$app2}module {
+
+	.item {
+		float: left;
+		width: 212px;
+		height: 200px;
+		background-color: #fff;
+		border-right: 1px solid $bgcolor;
+		border-bottom: 1px solid $bgcolor;
+		background-repeat: no-repeat;
+		background-position: center center;
+		color: #666666;
+		text-align: center;
+		cursor: pointer;
+
+		.title {
+			font-size: 21px;
+			margin-top: 100px;
+		}
+
+		.description {
+			font-size: 15px;
+			margin-top: 10px;
+		}
+	}
+
+	@each $item in question,order,logistics,refund,carriage,coupon {
+		##{$item} {
+			background-image: url(../images/store-help-#{$item}.png);
+		}
+	}
+}
+
+.#{$app2}bottomholder {
+	height: 110px;
+}

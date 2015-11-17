@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1 , user-scalable=0">
+
+		<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+		<link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+		<style type="text/css">
+			body{
+				margin:0;
+				padding:0;
+				overflow-y:hidden;
+				background-color: white;
+			}
+			img{
+				width:100%;
+				vertical-align: bottom;
+			}
+			.owl-controls{
+				position: absolute;
+				bottom: 0;
+				text-align: center;
+				width: 100%;
+			}
+			.owl-theme .owl-controls .owl-page span {
+				width: 6px;
+				height: 6px;
+				margin: 4px 2px;
+				opacity:1;
+				background: transparent;
+				border: 1px solid white;
+			}
+			.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span{
+				background: white;
+			}
+			.owl2 {
+				padding: 25px 0 25px 0;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="owl">
+			{@each focus as item,index}
+			<div>
+				<a href="xhc://xiaohongchun/params?bannerId=${item.id}&sort=${index}&$${item.args}">
+					<img class="focus" src="${item.pic_url}">
+				</a>
+			</div>
+			{@/each}
+		</div>
+		<div class="owl2">
+			{@each fix as item,index}
+			<div class="item">
+				<a href="xhc://xiaohongchun/params?bannerId=${item.id}&sort=${index}&$${item.args}">
+					<img src="${item.pic_url}">
+				</a>
+			</div>
+			{@/each}
+		</div>
+		<script type="text/javascript">
+			var focus = $(".focus");
+			var screenwidth = focus[0].width;
+			for (var i = focus.length - 1; i >= 0; i--) {
+				focus[i].height = screenwidth * 0.4;
+			};
+
+			var button = $(".item");
+			var buttonsize = screenwidth * 0.224;
+			var buttonml   = screenwidth * 0.04;
+			for (var i = button.length - 1; i >= 0; i--) {
+				$(button[i]).height(buttonsize);
+				$(button[i]).width(buttonsize);
+				$(button[i]).css('margin-left', buttonml);
+				$(button[i]).css('float', 'left');
+			};
+
+			if(button.length == 1){
+				$(button[0]).css('float', 'none');
+				$(button[0]).css('margin', '0 auto');
+			}
+			if(button.length == 2){
+				$(button[0]).css('margin-left', screenwidth * 0.15);
+				$(button[1]).css('margin-left', screenwidth * 0.15);
+			}
+			if(button.length == 3){
+				$(button[0]).css('margin-left', screenwidth * 0.082);
+				$(button[1]).css('margin-left', screenwidth * 0.082);
+				$(button[2]).css('margin-left', screenwidth * 0.082);
+			}
+
+			$(".owl").owlCarousel({singleItem:true});
+			if(button.length > 3){
+				$(".owl2").owlCarousel({
+					pagination:false,
+					allowimperfect:true,	// 允许一行内显示一个不完整的item
+					customWidth:(buttonsize+buttonml)// 两倍的card宽度
+				});
+			}
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "//hm.baidu.com/hm.js?c431a03831df8d00747aa6a0c0d5c17d";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</body>
+</html> 

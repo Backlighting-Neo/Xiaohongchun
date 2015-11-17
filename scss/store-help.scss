@@ -1,0 +1,84 @@
+@charset "utf-8";
+@import "common";
+
+$app: store-help-;
+
+$bgcolor: #f1f1f1;
+
+.#{$app}contact {
+	@include fixed(bottom);
+	height: 110px;
+	background-color: #f1f1f1;
+
+	.button {
+		width: 416px;
+		@include divcenter(66px);
+		background-color: white;
+		border: 2px solid #fe4545;
+		border-radius: 5px;
+		margin:20px 0 0 110px;
+		text-align: center;
+		font-size: 30px;
+		color: #666666;
+	}
+}
+
+.#{$app}title {
+	height: 80px;
+	padding-left: 30px;
+	@include divcenter(80px);
+	color: #666666;
+	font-size: 26px;
+	background-color: $bgcolor;
+}
+
+.#{$app}hot {
+
+	li {
+		@include gap(2px);
+		@include divcenter(70px);
+		cursor: pointer;
+
+		&:before {
+			content:' ';
+			background-color: #fe4545;
+			display: inline-block;
+			border-radius: 100%;
+			width: 11px;
+			height: 11px;
+			margin:0 22px 0 26px;
+		}
+	}
+}
+
+.#{$app}module {
+
+	.item {
+		float: left;
+		width: 212px;
+		height: 200px;
+		border-right: 1px solid $bgcolor;
+		border-bottom: 1px solid $bgcolor;
+		background-repeat: no-repeat;
+		background-position: center center;
+		color: #666666;
+		text-align: center;
+		cursor: pointer;
+
+		.title {
+			font-size: 21px;
+			margin-top: 100px;
+		}
+
+		.description {
+			font-size: 15px;
+			margin-top: 10px;
+		}
+	}
+
+	@each $item in question,order,logistics,refund,carriage,coupon {
+		.#{$item} {
+			background-image: url(../images/store-help-#{$item}.png);
+		}
+	}
+}
