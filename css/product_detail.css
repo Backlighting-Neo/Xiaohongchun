@@ -411,6 +411,17 @@
   height: 105px
 }
 
+.product-download-app {
+  color: white;
+  background-color: #fe4545;
+  margin: 10px 15px;
+  height: 78px;
+  line-height: 78px;
+  font-size: 28px;
+  text-align: center;
+  border-radius: 5px;
+}
+
 .click {
   cursor: pointer;
 }
@@ -429,7 +440,7 @@
 
 #Back {
   background-position: -20px 0;
-  height: 42px;
+  height: 45px;
   width: 27px
 }
 

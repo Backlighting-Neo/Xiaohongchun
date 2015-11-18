@@ -5,18 +5,98 @@ var ProductDetail = React.createClass({
 			"rolling": [],
 			"usingusers": [],
 			"big_img": "",
-			"text": []
+			"text": [],
+			"text_card": []
 		}
 	},
-	componentDidMount: function() {
-		var baseurl = 'http://192.168.2.200:1338'
-		var that = this;
-		$.getJSON(baseurl + '/api2/store/product_detail')
-		.then(function(json){
-			that.setState(json.data);
-		}).fail(function() {
-			alert('数据异常');
+	dataconverse: function(detail, setting, video) {
+		var json = {};
+		var timestamp = Math.round(new Date().getTime()/1000);
+		json.text_card = [];
+		json.text_card.push({
+			title: '种草社补充说明',
+			content: setting.remark
+		});
+		json.text_card.push({
+			title: '消费者告知书',
+			content: setting.instructionm
+		});
+		json.usingusers = [];
+		video.forEach(function(item) {
+			json.usingusers.push({
+				vid: item.id,
+				cover_url: item.cover_url,
+				video_url: '',
+				face_img: item.icon_url,
+				user_id: 0,
+				username: item.nick,
+				joindays: (function(){
+					var days = 0;
+					days = (timestamp - item.date_add) / 24 / 3600;
+					days = Math.round(days);
+					return days;
+				})(),
+				comment: item.vdesc
+			})
 		})
+		json.text = [];
+		json.text.push({
+			title: '使用指南',
+			content: detail.g_desc.usermenual,
+		});
+		json.text.push({
+			title: '小贴士',
+			content: detail.g_desc.tips
+		});
+		json.brief = {
+			product_name: detail.g_title + " - " + detail.g_name,
+			price: detail.g_price_shop,
+			ex_price: detail.g_price_market,
+			note: '',
+			desc: detail.g_desc.content,
+			features_1: setting.tags,
+			features_2: setting.txts
+		};
+		json.rolling = [];
+		json.big_img = '';
+		detail.g_gallery.forEach(function(item) {
+			switch(item.gg_type){
+				case 2:
+					json.rolling.push({
+						type: 'image',
+						cover_url: item.gg_image
+					})
+					break;
+				case 4:
+					json.rolling.push({
+						type: 'video',
+						cover_url: item.gg_image,
+						video_url: item.gg_video
+					});
+					break;
+				case 3:
+					json.big_img = item.gg_image;
+			}
+		})
+		
+		return json;
+	},
+	componentDidMount: function() {
+		var pid = mobile.query('pid');
+		if (!$.isNumeric(pid)) {
+			alert('pid错误');
+			return;
+		}
+		var that = this;
+
+		var ajax = {};
+		ajax.detail = $.getJSON(baseurl + '/goods/' + pid);
+		ajax.setting = $.getJSON(baseurl + '/setting/goods');
+		ajax.video = $.getJSON(baseurl + '/goods/' + pid + '/videos');
+		$.when(ajax.detail, ajax.setting, ajax.video).done(function(detail, setting, video) {
+			that.setState(that.dataconverse(detail[0].data, setting[0].data, video[0].data));
+		});
+
 	},
 	render: function() {
 		return (
@@ -32,61 +112,32 @@ var ProductDetail = React.createClass({
 				<ProductUsingUser
 				  item={this.state.usingusers}
 				/>
-				<ProductSectionWithoutTitle>
-				  <img src={this.state.big_img} />
-				</ProductSectionWithoutTitle>
+				{
+					this.state.big_img?(<ProductSectionWithoutTitle><img src={this.state.big_img} /></ProductSectionWithoutTitle>):undefined
+						
+				}
 				{
 					this.state.text.map(function(item, index) {
 						return(
 						<ProductSection key={index} title={item.title}>{item.content}</ProductSection>)
 					})
 				}
-				<ProductSectionPulldown title="种草设补充说明">
-				  Q：小红唇商城的商品是正品吗？
-				  <br />
-				  A：小红唇商城和秒杀中的商品都是从海外直采或者与国内正规进口品牌商合作，敬请放心。
-				  <br /><br />
-				  Q：为什么我买的东西降价/涨价了？
-				  <br />
-				  A：海外商品不同时期的价格本身会进行调整，所以小红唇商城的价格也会作出相应改变。
-				  <br /><br />
-				  Q：想买的商品已抢光还会再上架吗？
-				  <br />
-				  A：小红唇商城的商品均以限时限量折扣的形式进行出售，大部分售完的商品会在再次海外直采后根据主题场次排期 对于热销商品商城会适时安排重出江湖。 
-				  <br /><br />
-				  Q：如何查看已买到商品的信息和使用方法？
-				  <br />
-				  A：只要进入商品所在的订单中点击要查询的商品，就可以在商品详情页查看该商品信息和使用方法。
-				  <br /><br />
-				  Q：从商城购买的商品有多新鲜？
-				  <br />
-				  A：商城有经验丰富的买手， 确保为小主们选购的商品都是当年最新批次。
-				  <br /><br />
-				  Q：为什么收到的商品和订购时的图片不一样？
-				  <br />
-				  A：由于部分商品包装更换较为频繁，所以您收到的货品可能和订购时图片不符，请您不用担心。
-				  <br /><br />
-				</ProductSectionPulldown>
-				<ProductSectionPulldown title="消费者告知书">
-				  尊敬的客户：<br /><br />
-					在您选购境外商品前，麻烦仔细阅读此文，同意本文所告知内容后再进行下单购买：<br /><br />
-					1. 您在本（公司）App里购买的境外商品为产地直销商品，仅限个人自用不得进行再销售，商品本身可能无中文标签，您可以查看商品详情页里的使用指南或者联系小红唇客服。<br /><br />
-					2. 您购买的境外商品适用的品质、健康、标识等项目的使用标准符合原产国使用标准，但是可能与我国标准有所不同，所以在使用过程中由此可能产生的危害或损失以及其他风险，将由您个人承担。<br /><br />
-					3. 您在本（公司）App里购买保税区发货的境外商品时，自动视为由小红唇代您向海关进行申报和代缴税款。<br /><br />
-				</ProductSectionPulldown>
-				<ProductBottomCommand cart_num={this.state.cart_num} status={this.state.product_status} />
-				{productBottomCommandHolder}
+				{
+					this.state.text_card.map(function(item, index){
+						return(<ProductSectionPulldown key={index} title={item.title}>{item.content}</ProductSectionPulldown>)
+					})
+				}
+				
+				{
+				// <ProductBottomCommand cart_num={this.state.cart_num} status={this.state.product_status} />
+				// {productBottomCommandHolder}
+				}
+
+				{productDownloadApp}
 			</div>
 		);
 	}
 });
-
-var goToUserPage =  function(user_id){
-	return function(){
-		location.href = './u/'+user_id;
-		user_id = null;
-	}
-};
 
 var ProductHeader = React.createClass({
 	getInitialState: function() {
@@ -201,8 +252,8 @@ var ProductBriefInfoCard = React.createClass({
 			        {this.props.brief.features_1?this.props.brief.features_1.map(function(item, index){
 			        	return(
 			        		<span key={index}>
-			        			<span id={item} className="icon"></span>
-			        			<span className="text">{props_list[item]}</span>
+			        			<span className="icon"><img src={item.icon} /></span>
+			        			<span className="text">{item.text}</span>
 			        		</span>
 			        	)
 			        }):''}
@@ -226,21 +277,34 @@ var ProductBriefInfoCard = React.createClass({
 var ProductUsingUserRollingItem = React.createClass({
 	goToUserPage: function(user_id){
 		return function() {
-			location.href = './u/'+user_id;
+			location.href = 'http://www.xiaohongchun.com/u/'+user_id;
 			user_id = null;
+		}
+	},
+	goToVideoPage: function(video_id) {
+		return function() {
+			location.href = './video/video.html?vid='+video_id;
+			video_id = null;
 		}
 	},
 	render: function() {
 		return (
 			<div className="card">
 			<div className="left">
-				<img src={this.props.item.cover_url} onClick={this.props.changeHandler(this.props.item.video_url, this.props.item.cover_url)} />
+				{
+				  // TODO 页内播放视频预留
+				  //<img src={this.props.item.cover_url} onClick={this.props.changeHandler(this.props.item.video_url, this.props.item.cover_url)} />
+				}
+				<img src={this.props.item.cover_url} onClick={this.goToVideoPage(this.props.item.vid)} />
 			</div>
 
 			<div className="right">
 				<div className="userinfo">
 					<div className="avatar">
-						<img src={this.props.item.face_img} className="avatar65 redborder" onClick={goToUserPage(this.props.item.user_id)}/>
+						{
+						//<img src={this.props.item.face_img} className="avatar65 redborder" onClick={goToUserPage(this.props.item.user_id)}/>
+						}
+						<img src={this.props.item.face_img} className="avatar65 redborder"/>
 					</div>
 					<div className="info">
 						<div className="username">
@@ -450,6 +514,9 @@ var ProductBottomCommand = React.createClass({
 
 var productBottomCommandHolder = 
 	<div className="product-bottom-command-holder"></div>;
+
+var productDownloadApp = 
+	<div className="product-download-app">下载小红唇APP</div>
 
 
 React.render(<ProductDetail pagetitle="小红唇种草机" />, document.body);

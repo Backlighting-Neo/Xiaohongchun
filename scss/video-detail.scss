@@ -1,0 +1,177 @@
+@charset "utf-8";
+@import "common";
+
+$app: video-detail-;
+
+$bgcolor: #d6d6d6;
+
+%pagepadding {
+	margin: 0 22px;
+}
+
+.#{$app}userinfo {
+	@extend %pagepadding;
+	@include divcenter(100px);
+
+	.userinfo{
+		float: left;
+
+		img {
+			@include circle(75px);
+			@include contentCenter(100px, 75px);
+		}
+
+		span {
+			float: left;
+			font-size: 28px;
+			color: #626262;
+			margin-left: 12px;
+		}
+	}
+
+	.playcount {
+		float: right;
+		color: #bdbdbd;
+		font-size: 21px;
+		height: 21px;
+		line-height: 21px;
+		margin-top: 60px;
+
+		&:before {
+			content: '';
+			display: block;
+			float: left;
+			margin: 1px 10px 0 0;
+			@include square(20px);
+			background-image: url(../images/playcount.png);
+		}
+	}
+}
+
+.#{$app}video {
+	@extend %pagepadding;
+	position: relative;
+
+	.like {
+		position: absolute;
+		right: -25px;
+		bottom: 50px;
+		width: 98px;
+		height: 48px;
+		background-color: rgba(255,255,255,0.5);
+		border-radius: 100px;
+		color: #000;
+		line-height: 48px;
+		font-size: 25px;
+		padding-left: 80px;
+		background-image: url(../images/like.png);
+		background-repeat: no-repeat;
+		background-position: 15px 5px;
+	}
+}
+
+.#{$app}desc {
+	@extend %pagepadding;
+	font-size: 21px;
+	color: #626262;
+	margin-top: 16px;
+	line-height: 30px;
+
+	.tags {
+		color: #fe4545;
+		padding: 0 5px;
+		font-weight: bold;
+		font-size: 23px;
+	}
+}
+
+.#{$app}product {
+	@extend %pagepadding;
+
+	.title {
+		@include divcenter(60px);
+		@include gap(1px);
+		margin-top: 25px;
+		font-size: 30px;
+		font-weight: bold;
+	}
+
+	.item {
+		height: 215px;
+
+		img {
+			float: left;
+			@include square(164px);
+			margin: 20px 0 0 24px;
+		}
+
+		&:last-child {
+			.info {
+				border-bottom: 0 solid;
+			}
+		}
+
+		.info {
+			@include gap(1px);
+			width: 366px;
+			height: 196px;
+			float: right;
+			position: relative;
+
+			.name {
+				font-size: 25px;
+				margin-top: 47px;
+			}
+
+			.price {
+				position: absolute;
+				font-size: 18px;
+				color: #333333;
+				bottom: 35px;
+				left:5px;
+				@include rmb2;
+			}
+
+			.button {
+				position: absolute;
+				right: 9px;
+				bottom: 20px;
+				font-size: 20px;
+				width: 122px;
+				@include divcenter(45px);
+				border-radius: 5px;
+				background-color: #fe4545;
+				color: white;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.#{$app}tab {
+	@extend %pagepadding;
+
+	.tab {
+		font-size: 30px;
+		color: #626262;
+		font-size: 29px;
+		text-align: center;
+		@include gap(1px);
+
+		.item {
+			padding: 15px 0;
+			width: 50%;
+			float: left;
+		}
+
+		.active {
+			border-bottom: 2px solid #fe4545;
+		}
+
+		.tab-recommand-content {
+			.video-item {
+				
+			}
+		}
+	}
+}

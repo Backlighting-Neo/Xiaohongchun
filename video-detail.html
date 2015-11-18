@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=640">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
+  <title>小红唇</title>
+	<link rel="stylesheet" type="text/css" href="css/video-detail.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<script type="text/javascript" src="js/store-debug.js"></script>
+	<!-- 记得上线前调下debugjs的文件位置 -->
+	<script type="text/javascript" src="js/mobile.js"></script>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/video-detail.js"></script>
+</head>
+
+<body>
+
+	<div class="video-detail-userinfo">
+		<div class="userinfo">
+			<img src="{{icon_url}}">
+			<span>{{nick}}</span>
+		</div>
+		<div class="playcount">播放: {{play_count}}</div>
+		<div class="clearfix"></div>
+	</div>
+
+	<div class="video-detail-video">
+		<video controls="controls" preload="none" width="596" height="596"   id="player{{id}}"   poster="{{cover_url}}">
+			<source type="video/mp4" src="{{full_path}}"/>
+		</video>
+		<div class="like">{{likes}}</div>
+	</div>
+
+	<div class="video-detail-desc">{{{vdesc}}}</div>
+
+	<div class="video-detail-product">
+		<div class="title">用的是这款</div>
+		<div class="item" v-for="item in goods">
+			<img src="{{item.g_image}}" />
+			<div class="info">
+				<div class="name">{{item.g_title + ' - ' + item.g_name}}</div>
+				<div class="price">{{item.g_price_shop}}</div>
+				<div class="button" onclick="location.href='./store/goods.html?pid={{item.g_id}}'">查看详情</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+	<div class="video-detail-tab">
+		<div class="tab">
+			<div id="tab-recommand" class="item active">推荐视频</div>
+			<div id="tab-comment" class="item">评论</div>
+			<div class="clearfix"></div>
+			<div class="tab-recommand-content">
+				<div class="video-item">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="ding"></div>
+</body>
+
+</html>

@@ -1,9 +1,7 @@
 (function() {
 	var start = function() {
-		var baseurl = 'http://test1.xiaohongchun.com/';
-
-		var ajax_banner = $.ajax(baseurl+'goods/banner');
-		var ajax_list   = $.ajax(baseurl+'goods');
+		var ajax_banner = $.getJSON(baseurl+'/goods/banner');
+		var ajax_list   = $.getJSON(baseurl+'/goods');
 
 		$.when(ajax_banner, ajax_list).done(function(data_banner, data_list) {
 			var pagedata = {
