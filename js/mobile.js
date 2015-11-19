@@ -638,6 +638,16 @@ var mobile = {
 				callback(document.body.scrollTop)
 			},200);
 		}
+	},
+	avoidEmptyRequest: function(){
+		var img = $('img');
+		var video = $('video');
+		for (var i = img.length - 1; i >= 0; i--) {
+			$(img[i]).attr('src',$(img[i]).attr('data-src'));
+		};
+		for (var i = video.length - 1; i >= 0; i--) {
+			$(video[i]).attr('poster',$(video[i]).attr('data-poster'));
+		};
 	}
 }
 
@@ -656,3 +666,4 @@ var mobile = {
 // share.bind 方法 传入一个jQuery选择器，则该DOM在点击时可出现分享UI；
 // notification 方法 一个半透明的提示框，参数{icon:图标URL，text:要显示的文本，position:出现位置(top-left,top-right,bottom-left,bottom-right)，duration:显示的时间，超时后消失，callback:消失后的回调函数}；
 // scrolldown 方法 当页面被拉下一定距离后出发callback
+// avoidEmptyRequest 方法 避免因Vue造成的一次图片空访问，在Vue绑定结束后调用这个方法

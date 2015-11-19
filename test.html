@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+
+		body {
+			background-color: #000;
+		}
+
+		.icon_playcount {
+			position: relative;
+			height: 20px;
+			width: 20px;
+			border: 1px solid #fe4d4d;
+			border-radius: 3px;
+		}
+
+		.icon_playcount:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 6px;
+			top: 3px;
+			border-left: 11px solid #fe4545;
+			border-top: 7px solid transparent;
+			border-bottom: 7px solid transparent;
+			border-right: 0;
+		}
+
+		.icon_playbtn {
+			position: relative;
+			width: 58px;
+			height: 58px;
+			border: 1px solid rgba(255,255,255,0.8);
+			border-radius: 100%;
+		}
+
+		.icon_playbtn:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 20px;
+			top: 14px;
+			border-left: 26px solid rgba(255,255,255,0.8);
+			border-top: 16px solid transparent;
+			border-bottom: 16px solid transparent;
+			border-right: 0;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="icon_playcount"></div>
+	<div class="icon_playbtn"></div>
+</body>
+</html>

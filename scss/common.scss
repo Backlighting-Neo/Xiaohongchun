@@ -78,3 +78,34 @@ body {
 		margin-right: 5px;
 	}
 }
+
+@mixin triangle($direction, $width, $height, $color) {
+	@if $direction == up {
+		$border_bottom: bottom;
+		$border_side1 : left;
+		$border_side2 : right;
+		$border_none  : top;
+	}
+	@if $direction == down {
+		$border_bottom: top;
+		$border_side1 : left;
+		$border_side2 : right;
+		$border_none  : bottom;
+	}
+	@if $direction == right {
+		$border_bottom: left;
+		$border_side1 : top;
+		$border_side2 : bottom;
+		$border_none  : right;
+	}
+	@if $direction == left {
+		$border_bottom: right;
+		$border_side1 : top;
+		$border_side2 : bottom;
+		$border_none  : left;
+	}
+	border-#{$border_bottom}: $width solid $color;
+	border-#{$border_side1}: $height/2 solid transparent;
+	border-#{$border_side2}: $height/2 solid transparent;
+	border-#{$border_none}:0;
+}

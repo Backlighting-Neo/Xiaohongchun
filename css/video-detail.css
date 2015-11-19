@@ -48,14 +48,8 @@ body {
     height: 21px;
     line-height: 21px;
     margin-top: 60px; }
-    .video-detail-userinfo .playcount:before {
-      content: '';
-      display: block;
-      float: left;
-      margin: 1px 10px 0 0;
-      height: 20px;
-      width: 20px;
-      background-image: url(../images/playcount.png); }
+    .video-detail-userinfo .playcount span {
+      margin-left: 5px; }
 
 .video-detail-video {
   position: relative; }
@@ -135,14 +129,132 @@ body {
       text-align: center; }
 
 .video-detail-tab .tab {
-  font-size: 30px;
-  color: #626262;
   font-size: 29px;
   text-align: center;
   border-bottom: 1px solid #d6d6d6; }
   .video-detail-tab .tab .item {
     padding: 15px 0;
     width: 50%;
-    float: left; }
+    float: left;
+    color: #a9a9a9; }
+    .video-detail-tab .tab .item span {
+      margin-left: 10px;
+      font-size: 20px; }
   .video-detail-tab .tab .active {
-    border-bottom: 2px solid #fe4545; }
+    border-bottom: 2px solid #fe4545;
+    color: #626262; }
+
+.video-detail-tab .tab-recommand-content .video-item {
+  position: relative;
+  height: 202px; }
+  .video-detail-tab .tab-recommand-content .video-item .poster {
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    top: 24px;
+    left: 7px; }
+  .video-detail-tab .tab-recommand-content .video-item .icon_playbtn {
+    position: absolute;
+    top: 85px;
+    left: 67px; }
+  .video-detail-tab .tab-recommand-content .video-item .video-info {
+    position: absolute;
+    left: 220px;
+    top: 0px;
+    width: 376px;
+    height: 201px;
+    border-bottom: 1px solid #d6d6d6; }
+    .video-detail-tab .tab-recommand-content .video-item .video-info .video-title {
+      font-size: 27px;
+      color: #626262;
+      margin-top: 33px; }
+    .video-detail-tab .tab-recommand-content .video-item .video-info .video-desc {
+      line-height: 25px;
+      margin-top: 13px;
+      font-size: 21px;
+      color: #626262;
+      overflow: hidden; }
+    .video-detail-tab .tab-recommand-content .video-item .video-info .has {
+      height: 50px; }
+    .video-detail-tab .tab-recommand-content .video-item .video-info .hasnt {
+      height: 100px; }
+    .video-detail-tab .tab-recommand-content .video-item .video-info .video-playcount {
+      position: absolute;
+      bottom: 20px;
+      left: 6px; }
+      .video-detail-tab .tab-recommand-content .video-item .video-info .video-playcount .icon_playcount {
+        display: inline-block; }
+      .video-detail-tab .tab-recommand-content .video-item .video-info .video-playcount span {
+        margin-left: 10px;
+        color: #a9a9a9;
+        font-size: 21px; }
+    .video-detail-tab .tab-recommand-content .video-item .video-info .video-like {
+      position: absolute;
+      left: 197px;
+      bottom: 20px;
+      color: #a9a9a9;
+      font-size: 21px; }
+      .video-detail-tab .tab-recommand-content .video-item .video-info .video-like:before {
+        content: '';
+        display: inline-block;
+        margin-right: 10px;
+        width: 20px;
+        height: 17px;
+        background: url(../images/like.png) round; }
+  .video-detail-tab .tab-recommand-content .video-item:last-child .video-info {
+    border-bottom: 0; }
+
+.video-detail-tab .tab-comment-content .comment-item {
+  height: 95px;
+  margin: 20px 0;
+  padding-left: 20px; }
+  .video-detail-tab .tab-comment-content .comment-item .comments {
+    float: right;
+    height: 94px;
+    width: 480px;
+    border-bottom: 1px solid #d6d6d6; }
+    .video-detail-tab .tab-comment-content .comment-item .comments .comments-title {
+      margin: 0 10px 0 5px;
+      font-size: 28px; }
+    .video-detail-tab .tab-comment-content .comment-item .comments .comments-content {
+      margin: 5px 10px 0 10px;
+      font-size: 24px;
+      max-height: 52px;
+      overflow: hidden;
+      color: #aaa; }
+
+.icon_playcount {
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #fe4d4d;
+  border-radius: 3px; }
+  .icon_playcount:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 6px;
+    top: 3px;
+    border-left: 11px solid #fe4545;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 0; }
+
+.icon_playbtn {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border-radius: 100%;
+  float: left;
+  border: 1px solid rgba(255, 255, 255, 0.8); }
+  .icon_playbtn:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 14px;
+    border-left: 26px solid rgba(255, 255, 255, 0.8);
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-right: 0; }

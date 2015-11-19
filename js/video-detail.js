@@ -4,6 +4,15 @@
 		mobile.binddownload(['download', 'footerdownload']);
 
 		var vid = mobile.query('vid');
+
+		if(!$.isNumeric(vid)){
+			document.open();
+			document.clear();
+			document.close();
+			alert('vid错误');
+			return;
+		}
+
 		var baseurl = 'http://www.xiaohongchun.com'
 		var ajax = {};
 		ajax.detail = $.ajax({
@@ -21,7 +30,7 @@
 		});
 
 		// 记着把这行删了
-		vid = 16376;
+		// vid = 16376;
 
 		ajax.goods = $.getJSON(window.baseurl + '/goods/video/' + vid);
 
@@ -43,14 +52,23 @@
 				el: 'body',
 				data: data
 			})
-
+			detail_vue.$log();
+			mobile.avoidEmptyRequest();
 			mobile.videoplugin();
 		});
 
-		$('#tab-recommand, #tab-comment').click(function() {
-			console.log(this.id);
-
-		})
+		$('#tab-recommand').click(function() {
+			$('#tab-recommand').addClass('active');
+			$('#tab-comment').removeClass('active');
+			$('.tab-recommand-content').show();
+			$('.tab-comment-content').hide();
+		});
+		$('#tab-comment').click(function() {
+			$('#tab-recommand').removeClass('active');
+			$('#tab-comment').addClass('active');
+			$('.tab-recommand-content').hide();
+			$('.tab-comment-content').show();
+		});
 	};
 
 	window.onload = start;

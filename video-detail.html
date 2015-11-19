@@ -22,15 +22,15 @@
 
 	<div class="video-detail-userinfo">
 		<div class="userinfo">
-			<img src="{{icon_url}}">
+			<img data-src="{{icon_url}}">
 			<span>{{nick}}</span>
 		</div>
-		<div class="playcount">播放: {{play_count}}</div>
+		<div class="playcount"><div class="icon_playcount"></div><span>播放: {{play_count}}</span></div>
 		<div class="clearfix"></div>
 	</div>
 
 	<div class="video-detail-video">
-		<video controls="controls" preload="none" width="596" height="596"   id="player{{id}}"   poster="{{cover_url}}">
+		<video controls="controls" preload="none" width="596" height="596"   id="player{{id}}"   data-poster="{{cover_url}}">
 			<source type="video/mp4" src="{{full_path}}"/>
 		</video>
 		<div class="like">{{likes}}</div>
@@ -38,10 +38,10 @@
 
 	<div class="video-detail-desc">{{{vdesc}}}</div>
 
-	<div class="video-detail-product">
+	<div class="video-detail-product" style="display: {{goods.length==0?'none':''}}" >
 		<div class="title">用的是这款</div>
 		<div class="item" v-for="item in goods">
-			<img src="{{item.g_image}}" />
+			<img data-src="{{item.g_image}}" />
 			<div class="info">
 				<div class="name">{{item.g_title + ' - ' + item.g_name}}</div>
 				<div class="price">{{item.g_price_shop}}</div>
@@ -54,18 +54,35 @@
 	<div class="video-detail-tab">
 		<div class="tab">
 			<div id="tab-recommand" class="item active">推荐视频</div>
-			<div id="tab-comment" class="item">评论</div>
+			<div id="tab-comment" class="item">评论<span>{{comments}}</span></div>
 			<div class="clearfix"></div>
-			<div class="tab-recommand-content">
-				<div class="video-item">
-					
+		</div>
+		<div class="tab-recommand-content">
+			<div class="video-item" v-for="item in recommend_videos">
+				<img class="poster" data-src="{{item.cover_url}}">
+				<div class="icon_playbtn"></div>
+				<div class="video-info">
+					<div class="video-title">{{item.title}}</div>
+					<div class="video-desc {{item.title?'has':'hasnt'}}">{{{item.vdesc}}}</div>
+					<div class="video-playcount">
+						<div class="icon_playcount"></div>
+						<span>{{item.plays}}次播放</span>
+					</div>
+					<div class="video-like">{{item.likes}}个赞</div>
 				</div>
 			</div>
 		</div>
+		<div class="tab-comment-content" style="display: none">
+			<div class="comment-item" v-for="item in comments_detail">
+				<img class="avatar75" data-src="{{item.user_icon}}">
+				<div class="comments">
+					<div class="comments-title">{{item.user_name}}</div>
+					<div class="comments-content">{{item.content}}</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
 	</div>
-
-
-	<div class="ding"></div>
 </body>
 
 </html>
