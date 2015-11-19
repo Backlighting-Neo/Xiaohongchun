@@ -44,7 +44,6 @@ body {
   height: 91px; }
 
 .store-list-banner {
-  display: none;
   height: 367px;
   padding: 0 20px 0 20px; }
   .store-list-banner img {
@@ -52,7 +51,6 @@ body {
     height: 100%; }
 
 .store-list-item {
-  display: none;
   padding: 0 14px 20px 14px; }
   .store-list-item .item {
     float: left;
@@ -83,11 +81,13 @@ body {
       font-size: 20px;
       margin-left: 8px; }
       .store-list-item .item .product_price .price_onsell:before {
-        content: '¥'; }
+        content: '¥';
+        margin-right: 5px; }
     .store-list-item .item .product_price .price_origin {
       color: #c6c6c6;
       font-size: 15px;
       margin-left: 8px;
       text-decoration: line-through; }
       .store-list-item .item .product_price .price_origin:before {
-        content: '¥'; }
+        content: '¥';
+        margin-right: 5px; }

@@ -40,14 +40,18 @@ var ProductDetail = React.createClass({
 			})
 		})
 		json.text = [];
-		json.text.push({
-			title: '使用指南',
-			content: detail.g_desc.usermenual,
-		});
-		json.text.push({
-			title: '小贴士',
-			content: detail.g_desc.tips
-		});
+		if(detail.g_desc.usermenual){
+			json.text.push({
+				title: '使用指南',
+				content: detail.g_desc.usermenual,
+			});
+		};
+		if(detail.g_desc.tips){
+			json.text.push({
+				title: '小贴士',
+				content: detail.g_desc.tips
+			});
+		};
 		json.brief = {
 			product_name: detail.g_title + " - " + detail.g_name,
 			price: detail.g_price_shop,
@@ -95,6 +99,7 @@ var ProductDetail = React.createClass({
 		ajax.video = $.getJSON(baseurl + '/goods/' + pid + '/videos');
 		$.when(ajax.detail, ajax.setting, ajax.video).done(function(detail, setting, video) {
 			that.setState(that.dataconverse(detail[0].data, setting[0].data, video[0].data));
+			document.title = detail[0].data.g_title + " - " + detail[0].data.g_name;
 		});
 
 	},
@@ -283,7 +288,7 @@ var ProductUsingUserRollingItem = React.createClass({
 	},
 	goToVideoPage: function(video_id) {
 		return function() {
-			location.href = './video/video.html?vid='+video_id;
+			location.href = '../video/video.html?vid='+video_id;
 			video_id = null;
 		}
 	},

@@ -85,8 +85,8 @@ body {
   line-height: 60px;
   border-bottom: 1px solid #d6d6d6;
   margin-top: 25px;
-  font-size: 30px;
-  font-weight: bold; }
+  font-size: 29px;
+  color: #626262; }
 
 .video-detail-product .item {
   height: 215px; }

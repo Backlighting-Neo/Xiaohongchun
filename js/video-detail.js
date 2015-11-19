@@ -51,7 +51,7 @@
 			var detail_vue = new Vue({
 				el: 'body',
 				data: data
-			})
+			});
 			detail_vue.$log();
 			mobile.avoidEmptyRequest();
 			mobile.videoplugin();

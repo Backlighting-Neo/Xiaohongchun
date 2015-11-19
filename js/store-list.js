@@ -13,8 +13,8 @@
 				el: 'body',
 				data: pagedata
 			})
+			mobile.avoidEmptyRequest();
 
-			$('.store-list-banner, .store-list-item').show();
 		})
 	}
 

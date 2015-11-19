@@ -27,7 +27,6 @@ body {
 }
 
 .#{$app}banner {
-	display: none;
 	height: 367px;
 	padding: 0 20px 0 20px;
 
@@ -38,7 +37,6 @@ body {
 }
 
 .#{$app}item {
-	display: none;
 	padding: 0 14px 20px 14px;
 
 	.item {

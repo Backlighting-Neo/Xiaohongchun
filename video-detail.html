@@ -22,7 +22,7 @@
 
 	<div class="video-detail-userinfo">
 		<div class="userinfo">
-			<img data-src="{{icon_url}}">
+			<img data-src="{{icon_url}}" onclick="location.href='http://www.xiaohongchun.com/u/{{user_id}}'">
 			<span>{{nick}}</span>
 		</div>
 		<div class="playcount"><div class="icon_playcount"></div><span>播放: {{play_count}}</span></div>
@@ -45,7 +45,7 @@
 			<div class="info">
 				<div class="name">{{item.g_title + ' - ' + item.g_name}}</div>
 				<div class="price">{{item.g_price_shop}}</div>
-				<div class="button" onclick="location.href='./store/goods.html?pid={{item.g_id}}'">查看详情</div>
+				<div class="button" onclick="location.href='../store/goods.html?pid={{item.g_id}}'">查看详情</div>
 			</div>
 			<div class="clearfix"></div>
 		</div>
