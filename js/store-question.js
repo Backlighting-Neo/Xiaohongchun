@@ -134,23 +134,28 @@
 		data: [
 			{
 				cname: '小红唇的商品是正品吗？',
-				command: 'question'
+				command: 'question',
+				ht: 0
 			},
 			{
 				cname: '我的订单怎么没了？',
-				command: 'question'
+				command: 'question',
+				ht: 352
 			},
 			{
 				cname: '如何取消订单？',
-				command: 'order'
+				command: 'order',
+				ht: 62
 			},
 			{
 				cname: '订单支付成功后什么时候发货？',
-				command: 'logistics'
+				command: 'logistics',
+				ht: 0
 			},
 			{
 				cname: '如何退货？',
-				command: 'refund'
+				command: 'refund',
+				ht: 0
 			}
 		]
 	};
@@ -195,10 +200,11 @@
 			}
 		})
 
-		window.show = function(catgory){
+		window.show = function(catgory, ht){
 			showQuestion(catgory);
 			document.getElementById('main').style.display = 'none';
 			document.getElementById('sub').style.display = 'block';
+			document.body.scrollTop = ht;
 		}
 	};
 	window.onload = start;

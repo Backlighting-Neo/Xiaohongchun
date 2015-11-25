@@ -55,7 +55,8 @@ body {
   .store-list-item .item {
     float: left;
     width: 292px;
-    height: 440px;
+    height: 465px;
+    padding-bottom: 10px;
     background-color: white;
     border: 1px solid #dedede;
     margin: 20px 6px 0 6px; }
@@ -72,7 +73,6 @@ body {
     .store-list-item .item .product_desc {
       color: #9a9a9a;
       font-size: 16px;
-      height: 40px;
       overflow: hidden;
       line-height: 28px;
       margin: 15px 15px 15px 8px; }

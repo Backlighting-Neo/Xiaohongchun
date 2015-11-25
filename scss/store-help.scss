@@ -61,17 +61,17 @@ $bgcolor: #f1f1f1;
 		border-bottom: 1px solid $bgcolor;
 		background-repeat: no-repeat;
 		background-position: center center;
-		color: #666666;
+		color: #000;
 		text-align: center;
 		cursor: pointer;
 
 		.title {
-			font-size: 21px;
+			font-size: 24px;
 			margin-top: 100px;
 		}
 
 		.description {
-			font-size: 15px;
+			font-size: 18px;
 			margin-top: 10px;
 		}
 	}

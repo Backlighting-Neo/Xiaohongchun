@@ -59,7 +59,7 @@
 		</div>
 		<div class="tab-recommand-content">
 			<div class="video-item" v-for="item in recommend_videos">
-				<img class="poster" data-src="{{item.cover_url}}">
+				<img class="poster" data-src="{{item.cover_url}}" onclick="location.href='?vid={{item.id}}'">
 				<div class="icon_playbtn"></div>
 				<div class="video-info">
 					<div class="video-title">{{item.title}}</div>

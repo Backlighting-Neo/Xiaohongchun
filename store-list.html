@@ -9,6 +9,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
   <title>商品列表 - 小红唇</title>
+  <link rel="stylesheet" type="text/css" href="css/mobile.css">
 	<link rel="stylesheet" type="text/css" href="css/store-list.css">
   <script type="text/javascript" src="js/store-debug.js"></script>
   <script type="text/javascript" src="js/mobile.js"></script>
@@ -20,10 +21,10 @@
 
 <body>
 	<div class="store-list-title">
-    小红唇种草机
+    小红唇商城
   </div>
   <div class="placeholder1"></div>
-
+  <div class="top"><div class="title"><p class="t1">小红唇</p><p class="t2">你的变美频道</p></div><div class="download" id="download"><div>立即下载</div></div></div>
   <div class="store-list-banner">
   	<img data-src="{{banner[0].g_image}}" onclick="location.href='goods.html?pid={{banner[0].g_id}}'" />
   </div>
@@ -33,8 +34,8 @@
   		<div class="product_image">
   			<img data-src="{{item.g_image}}" onclick="location.href='goods.html?pid={{item.g_id}}'" />
   		</div>
-  		<div class="product_title">{{item.g_name}}</div>
-  		<div class="product_desc">{{item.g_title}}</div>
+  		<div class="product_title">{{item.g_title}}</div>
+  		<div class="product_desc">{{item.g_name}}</div>
   		<div class="product_price">
   			<span class="price_onsell">{{item.g_price_shop}}</span>
   			<span class="price_origin">{{item.g_price_market}}</span>

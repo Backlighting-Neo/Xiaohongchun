@@ -13,14 +13,18 @@ var ProductDetail = React.createClass({
 		var json = {};
 		var timestamp = Math.round(new Date().getTime()/1000);
 		json.text_card = [];
-		json.text_card.push({
-			title: '种草社补充说明',
-			content: setting.remark
-		});
-		json.text_card.push({
-			title: '消费者告知书',
-			content: setting.instructionm
-		});
+		if(setting.remark){
+			json.text_card.push({
+				title: '商城补充说明',
+				content: setting.remark.replace(/\\n/g,'<br>')
+			});
+		}
+		if(setting.instructionm){
+			json.text_card.push({
+				title: '消费者告知书',
+				content: setting.instructionm.replace(/\\n/g,'<br>')
+			});
+		}
 		json.usingusers = [];
 		video.forEach(function(item) {
 			json.usingusers.push({
@@ -53,7 +57,7 @@ var ProductDetail = React.createClass({
 			});
 		};
 		json.brief = {
-			product_name: detail.g_title + " - " + detail.g_name,
+			product_name: "【"+detail.g_title + "】" + detail.g_name,
 			price: detail.g_price_shop,
 			ex_price: detail.g_price_market,
 			note: '',
@@ -88,7 +92,7 @@ var ProductDetail = React.createClass({
 	componentDidMount: function() {
 		var pid = mobile.query('pid');
 		if (!$.isNumeric(pid)) {
-			alert('pid错误');
+			location.href = 'list.html';
 			return;
 		}
 		var that = this;
@@ -98,10 +102,17 @@ var ProductDetail = React.createClass({
 		ajax.setting = $.getJSON(baseurl + '/setting/goods');
 		ajax.video = $.getJSON(baseurl + '/goods/' + pid + '/videos');
 		$.when(ajax.detail, ajax.setting, ajax.video).done(function(detail, setting, video) {
-			that.setState(that.dataconverse(detail[0].data, setting[0].data, video[0].data));
-			document.title = detail[0].data.g_title + " - " + detail[0].data.g_name;
+			if(detail[0].code == 5001){
+				location.href = 'list.html';
+				return;
+			}
+			else{
+				that.setState(that.dataconverse(detail[0].data, setting[0].data, video[0].data));
+				document.title = detail[0].data.g_title + " - " + detail[0].data.g_name;
+			}
 		});
 
+		mobile.binddownload(['download','footerdownloader']);
 	},
 	render: function() {
 		return (
@@ -110,13 +121,15 @@ var ProductDetail = React.createClass({
 				  uptitle={this.props.pagetitle}
 				  downtitle={this.state.brief.product_name}
 				/>
+				<div className="topHolder2"></div>
+				<div className="top"><div className="title"><p className="t1">小红唇</p><p className="t2">你的变美频道</p></div><div className="download" id="download"><div>立即下载</div></div></div>
 				<ProductBriefInfoCard 
 					item={this.state.rolling}
 					brief={this.state.brief}
 				/>
-				<ProductUsingUser
-				  item={this.state.usingusers}
-				/>
+				{
+					this.state.usingusers.length>0?<ProductUsingUser item={this.state.usingusers}/>:''
+				}
 				{
 					this.state.big_img?(<ProductSectionWithoutTitle><img src={this.state.big_img} /></ProductSectionWithoutTitle>):undefined
 						
@@ -129,7 +142,7 @@ var ProductDetail = React.createClass({
 				}
 				{
 					this.state.text_card.map(function(item, index){
-						return(<ProductSectionPulldown key={index} title={item.title}>{item.content}</ProductSectionPulldown>)
+						return(<ProductSectionPulldown key={index} title={item.title} content={item.content}></ProductSectionPulldown>)
 					})
 				}
 				
@@ -156,11 +169,15 @@ var ProductHeader = React.createClass({
 				this.setState({
 					title:this.props.downtitle 
 				});
+				this.refs.title.getDOMNode().style['padding-left'] = 0;
+				this.refs.title.getDOMNode().style['background-image'] = 'none';
 			}
 			else{
 				this.setState({
 					title:this.props.uptitle 
 				});
+				this.refs.title.getDOMNode().style['padding-left'] = '';
+				this.refs.title.getDOMNode().style['background-image'] = '';
 			}
 		}.bind(this));
 		mobile.share.bind(
@@ -173,7 +190,9 @@ var ProductHeader = React.createClass({
 	render: function() {
 		return (
 			<div className="product-header">
-			  <div id="Back" className="icon" onClick={this.goBack}></div>
+				<div className="BigBack" onClick={this.goBack}>
+					<div id="Back" className="icon"></div>
+				</div>
 			  <div id="Share" className="icon" ref="share"></div>
 			  <div className="title">
 			    <div className="title2" ref="title">{this.state.title}</div>
@@ -257,7 +276,7 @@ var ProductBriefInfoCard = React.createClass({
 			        {this.props.brief.features_1?this.props.brief.features_1.map(function(item, index){
 			        	return(
 			        		<span key={index}>
-			        			<span className="icon"><img src={item.icon} /></span>
+			        			<span><img className="features_icon" src={item.icon} /></span>
 			        			<span className="text">{item.text}</span>
 			        		</span>
 			        	)
@@ -485,7 +504,7 @@ var ProductSectionPulldown = React.createClass({
 					<span>{this.props.title}</span>
 					<div className={'icon ib ' + (this.state.isPullDown?'flip':'')} id="PullDown"></div>
 				</div>
-				<div className="content" ref="content" style={{display:'none'}}>{this.props.children}</div>
+				<div className="content" ref="content" style={{display:'none'}} dangerouslySetInnerHTML={{__html:this.props.content}}></div>
 			</div>
 		);
 	}
@@ -521,7 +540,7 @@ var productBottomCommandHolder =
 	<div className="product-bottom-command-holder"></div>;
 
 var productDownloadApp = 
-	<div className="product-download-app">下载小红唇APP</div>
+	<div className="product-download-app" id="footerdownloader">下载小红唇APP</div>
 
 
-React.render(<ProductDetail pagetitle="小红唇种草机" />, document.body);
+React.render(<ProductDetail pagetitle="小红唇商城" />, document.body);

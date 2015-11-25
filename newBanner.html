@@ -25,9 +25,9 @@
 				width: 100%;
 			}
 			.owl-theme .owl-controls .owl-page span {
-				width: 6px;
-				height: 6px;
-				margin: 4px 2px;
+				width: 12px;
+				height: 12px;
+				margin: 8px 4px;
 				opacity:1;
 				background: transparent;
 				border: 1px solid white;
@@ -38,27 +38,65 @@
 			.owl2 {
 				padding: 25px 0 25px 0;
 			}
+/*			.owl img {
+				width: 750px;
+				height: 300px;
+			}
+			.owl2 img {
+				height: 168px;
+				width: 168px;
+			}
+			.owl2 .item {
+				height: 168px;
+				width: 168px;
+			}*/
 
 		</style>
 	</head>
 	<body>
 		<div class="owl">
-			{@each focus as item,index}
+			
 			<div>
-				<a href="xhc://xiaohongchun/params?bannerId=${item.id}&sort=${index}&$${item.args}">
-					<img class="focus" src="${item.pic_url}">
+				<a href="xhc://xiaohongchun/params?bannerId=43&sort=0&channelId=577">
+					<img class="focus" src="http://i.xiaohongchun.com/70E63DC16EB336F1">
 				</a>
 			</div>
-			{@/each}
+			
+			<div>
+				<a href="xhc://xiaohongchun/params?bannerId=52&sort=1&html=http%3A%2F%2Fi.xiaohongchun.com%2FE0BB">
+					<img class="focus" src="http://i.xiaohongchun.com/2689CD9C7EA4FF56">
+				</a>
+			</div>
+			
+			<div>
+				<a href="xhc://xiaohongchun/params?bannerId=54&sort=2&html=www.163.com">
+					<img class="focus" src="http://i.xiaohongchun.com/72070BF2CB3E5881">
+				</a>
+			</div>
+			
 		</div>
 		<div class="owl2">
-			{@each fix as item,index}
+			
 			<div class="item">
-				<a href="xhc://xiaohongchun/params?bannerId=${item.id}&sort=${index}&$${item.args}">
-					<img src="${item.pic_url}">
+				<a href="xhc://xiaohongchun/params?bannerId=56&sort=0&html=null">
+					<img src="http://i.xiaohongchun.com/3C0900D69656E174">
 				</a>
 			</div>
-			{@/each}
+			<div class="item">
+				<a href="xhc://xiaohongchun/params?bannerId=56&sort=0&html=null">
+					<img src="http://i.xiaohongchun.com/3C0900D69656E174">
+				</a>
+			</div>
+			<div class="item">
+				<a href="xhc://xiaohongchun/params?bannerId=56&sort=0&html=null">
+					<img src="http://i.xiaohongchun.com/3C0900D69656E174">
+				</a>
+			</div>
+			<div class="item">
+				<a href="xhc://xiaohongchun/params?bannerId=56&sort=0&html=null">
+					<img src="http://i.xiaohongchun.com/3C0900D69656E174">
+				</a>
+			</div>
 		</div>
 		<script type="text/javascript">
 			var focus = $(".focus");
@@ -96,7 +134,7 @@
 				$(".owl2").owlCarousel({
 					pagination:false,
 					allowimperfect:true,	// 允许一行内显示一个不完整的item
-					customWidth:(buttonsize+buttonml)// 两倍的card宽度
+					customWidth:(buttonsize+buttonml)*2// 两倍的card宽度
 				});
 			}
 			var _hmt = _hmt || [];

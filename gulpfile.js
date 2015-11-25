@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var moment = require('moment');
 
 var p = require('gulp-load-plugins')({
   scope: ['devDependencies'],
@@ -39,7 +40,7 @@ var getAppName = function() {
     error("please use --app xxx argument");
     process.exit();
   }
-  return (app);
+  return (app.replace('.html',''));
 }
 var app = getAppName();
 var depend = {};
@@ -213,6 +214,8 @@ gulp.task("index",['scan', 'clean'], function() {
   		'<script type="text/javascript" src="build/JSXTransformer.js"></script>',
   		'<!-- \n 要使用未编译的JSX，请包含下面的js文件 \n <script type="text/javascript" src="build/JSXTransformer.js"></script> \n -->'
   	))
+    .pipe(p.replace('.js">',`.js?v=${moment().unix()}">`))
+    .pipe(p.replace('.css">',`.css?v=${moment().unix()}">`))
   	.pipe(p.replace('build/','js/'))
   	.pipe(p.replace('text/jsx','text/javascript'))
   	.pipe(p.replace('.jsx','.js'))

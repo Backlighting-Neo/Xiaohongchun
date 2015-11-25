@@ -1,1 +1,1 @@
-var baseurl = 'http://test1.xiaohongchun.com';
+var baseurl = 'http://napi.xiaohongchun.com';

@@ -37,6 +37,8 @@
   background: url(../images/logo.png) 0 0px no-repeat;
   margin-left: -22px;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .product-property .property span {
@@ -81,7 +83,6 @@
 
 .product-text {
   color: #313131;
-  border-bottom: 1px solid #d3d3d3
 }
 
 .product-text .title {
@@ -90,8 +91,9 @@
 }
 
 .product-text .desc {
-  font-size: 26px;
+  font-size: 24px;
   margin-bottom: 15px;
+  color: #666;
 }
 
 .product-text .flag {
@@ -144,10 +146,10 @@
 }
 
 .product-using-user .title {
-  padding: 19px 0 16px;
+  padding: 19px 0 0 0;
   margin-left: 35px;
   font-size: 30px;
-  border-bottom: 1px solid #d3d3d3
+  color: #4c4c4c;
 }
 
 .product-using-user .rolling {
@@ -226,8 +228,8 @@
 
 .card .desc {
   margin: 20px 0 15px;
-  font-size: 23px;
-  line-height: 25px
+  font-size: 26px;
+  line-height: 30px
 }
 
 .card .user {
@@ -280,8 +282,7 @@
   padding: 16px 0;
   font-size: 26px;
   line-height: 26px;
-  color: #fe4545;
-  font-weight: 700;
+  color: #4c4c4c;
   text-align: center
 }
 
@@ -474,4 +475,19 @@
   width: 20px;
   margin-left: 20px;
   transition: transform .2s
+}
+
+.features_icon {
+  width: 29px;
+  height: 29px;
+}
+
+.BigBack {
+  float: left;
+  height: 90px;
+  width: 100px;
+}
+
+.topHolder2 {
+  height: 90px;
 }

@@ -14,6 +14,7 @@
 				data: pagedata
 			})
 			mobile.avoidEmptyRequest();
+			mobile.binddownload(['download']);
 
 		})
 	}
