@@ -98,6 +98,15 @@ gulp.task("scan", function() {
 	  	o_path = o_path.join("/");
 	  	var extname = path.split(".");
 	  	extname = extname[extname.length - 1];
+      if(path.indexOf('http')>-1){
+        return new Promise(function(resolve, reject) {
+          resolve({
+            data:'', 
+            o_path:'',
+            extname:extname
+          });
+        })
+      }
 	  	return new Promise(function(resolve, reject) {
 	  		fs.readFile(path, 'utf-8', function(err, data) {
 	  			err ? reject(err) : resolve({

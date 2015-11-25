@@ -648,6 +648,53 @@ var mobile = {
 		for (var i = video.length - 1; i >= 0; i--) {
 			$(video[i]).attr('poster',$(video[i]).attr('data-poster'));
 		};
+	},
+	isInitWeChat: false,
+	initWeChat: function(){
+		var appid = 'wx3d7f899c6405a785';
+		var ajax_wechat = $.getJSON(baseurl_test + '/oauth/weixin/jsapi?url=' + encodeURIComponent(location.href));
+		ajax_wechat.done(function(json) {
+			wx.config({
+        debug: false,
+        appId: appid,
+        timestamp: json.data.timestamp,
+        nonceStr: json.data.noncestr,
+        signature: json.data.signature,
+        jsApiList: ['checkJsApi','onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone','hideMenuItems','showMenuItems','hideAllNonBaseMenuItem','showAllNonBaseMenuItem','translateVoice','startRecord','stopRecord','onVoiceRecordEnd','playVoice','onVoicePlayEnd','pauseVoice','stopVoice','uploadVoice','downloadVoice','chooseImage','previewImage','uploadImage','downloadImage','getNetworkType','openLocation','getLocation','hideOptionMenu','showOptionMenu','closeWindow','scanQRCode','chooseWXPay','openProductSpecificView','addCard','chooseCard','openCard']
+      });
+		})
+		// 向微信接口注入权限
+	},
+	bindWeChatShare: function(share_params) {
+		(!this.isInitWeChat)?this.initWeChat():undefined;
+		wx.ready(function(){
+			wx.onMenuShareTimeline({
+		    title: share_params.title, // 分享标题
+		    link: share_params.link, // 分享链接
+		    imgUrl: share_params.imgUrl, // 分享图标
+		    success: share_params.success?share_params.success:(function(){}),
+		    cancel: share_params.cancel?share_params.cancel:(function(){})
+			});
+			wx.onMenuShareAppMessage({
+		    title: share_params.title, // 分享标题
+		    desc: share_params.desc, // 分享描述
+		    link: share_params.link, // 分享链接
+		    imgUrl: share_params.imgUrl, // 分享图标
+		    type: share_params.type?share_params.type:'link', // 分享类型,music、video或link，不填默认为link
+		    dataUrl: share_params.dataUrl?share_params.dataUrl:'link', // 如果type是music或video，则要提供数据链接，默认为空
+		    success: share_params.success?share_params.success:(function(){}),
+		    cancel: share_params.cancel?share_params.cancel:(function(){})
+			});
+			wx.onMenuShareQQ({
+		    title: share_params.title, // 分享标题
+		    desc: share_params.desc, // 分享描述
+		    link: share_params.link, // 分享链接
+		    imgUrl: share_params.imgUrl, // 分享图标
+		    dataUrl: share_params.dataUrl?share_params.dataUrl:'link', // 如果type是music或video，则要提供数据链接，默认为空
+		    success: share_params.success?share_params.success:(function(){}),
+		    cancel: share_params.cancel?share_params.cancel:(function(){})
+			});
+		});
 	}
 }
 

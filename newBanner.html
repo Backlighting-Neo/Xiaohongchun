@@ -36,7 +36,7 @@
 				background: white;
 			}
 			.owl2 {
-				padding: 25px 0 25px 0;
+				padding: 15px 0 0 0;
 			}
 /*			.owl img {
 				width: 750px;
@@ -100,9 +100,10 @@
 		</div>
 		<script type="text/javascript">
 			var focus = $(".focus");
-			var screenwidth = focus[0].width;
+			var screenwidth = (navigator.userAgent.indexOf('iPhone')>-1)?screen.width:focus[0].width;
+			// $('body').height(screenwidth*0.69);
 			for (var i = focus.length - 1; i >= 0; i--) {
-				focus[i].height = screenwidth * 0.4;
+				// focus[i].height = screenwidth * 0.4;
 			};
 
 			var button = $(".item");

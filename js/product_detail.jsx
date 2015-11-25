@@ -87,6 +87,17 @@ var ProductDetail = React.createClass({
 			}
 		})
 		
+		mobile.bindWeChatShare({
+			title: detail.g_name,
+			desc: detail.g_desc.content,
+			link: location.href,
+			imgUrl: detail.g_image,
+			type: 'link'
+			// dataUrl: '',
+			// success: function () {},
+			// cancel: function () {}
+		});
+
 		return json;
 	},
 	componentDidMount: function() {

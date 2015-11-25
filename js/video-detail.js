@@ -52,9 +52,20 @@
 				el: 'body',
 				data: data
 			});
-			detail_vue.$log();
 			mobile.avoidEmptyRequest();
 			mobile.videoplugin();
+
+			mobile.bindWeChatShare({
+				title: '来自 '+detail.nick+' 的视频 - 小红唇',
+				desc: detail.vdesc,
+				link: location.href,
+				imgUrl: detail.cover_url,
+				type: 'link'
+				// dataUrl: '',
+				// success: function () {},
+				// cancel: function () {}
+			});
+
 		});
 
 		$('#tab-recommand').click(function() {
@@ -69,6 +80,7 @@
 			$('.tab-recommand-content').hide();
 			$('.tab-comment-content').show();
 		});
+
 	};
 
 	window.onload = start;
