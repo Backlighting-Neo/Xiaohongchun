@@ -5,10 +5,10 @@ $(document).ready(function() {
 	// 下载按钮绑定
 	mobile.binddownload(['download', 'footerdownload','.comment']);
 
-	var tagsid = mobile.query('#');  //获取最后一个斜线后的tid
+	var tagsid = mobile.query('tag_id');  //获取最后一个斜线后的tid
 
-	$.getJSON(mobile.baseurl + '/api2/index/tags_share_ajax',
-		{tags_id:tagsid},function(json) {
+	$.getJSON(mobile.baseurl + '/index/tags_share_ajax',
+		{tid:tagsid},function(json) {
 
 			// 载入频道详情
 			mobile.renderdom('.channeldetail',json.data.tags,'single',
@@ -24,7 +24,8 @@ $(document).ready(function() {
 			)
 
 			// 载入视频列表
-			mobile.renderdom('.videolist',json.data.videos,'pre3',
+			var type = navigator.userAgent.indexOf('Mac')>-1?'pre6':'pre3';
+			mobile.renderdom('.videolist',json.data.videos,type,
 				'<div class=\"videocard\"><div class=\"cover\"><video controls=\"controls\" preload=\"none\" width=\"570\" height=\"570\"  id=\"player{id}\" poster=\"{cover_url}\"><source type=\"video/mp4\" src=\"{full_path}\" /></video><div class=\"like\">{likes}</div></div><div class=\"userinfo\"><img class=\"avatar75\" src=\"{icon_url}\"><div class=\"info\"><div class=\"username\">{nick}</div><div class=\"playcount\">{play_count}次播放</div></div><div class=\"clearfix\"></div></div><div class=\"description\">{desc}</div><div class=\"command\"><div class=\"comment\">已有{comment_count}条评论</div><div class=\"share\">分享</div><div class=\"clearfix\"></div></div></div>'
 			)
 

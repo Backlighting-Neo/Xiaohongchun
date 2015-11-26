@@ -247,26 +247,6 @@ var mobile = {
 	})(),
   binddownload: function(bind_item){
     var X = function(a) {
-      this._options = a || {
-        isappinstalled: false,
-        refer: "",
-        tid: 5,
-        access: "indexh5",
-        android_version: browerversion.type=='Android'?browerversion.version:''
-      };
-      this._log_url = "/index/index/log_download";
-      this._ios_durl = "https://itunes.apple.com/cn/app/id931449079";
-      this._android_durl = "http://i.xiaohongchun.com/xhc_release_1.0.apk";
-      this._app_isInstalled = false;
-      this._ios_app = "QQ41C537CB://";
-      this._android_app = "xhc://xiaohongchun/params";
-      this._hosts = "http://www.xiaohongchun.com";
-      this._browsers = {
-        isAndroid: browerversion.type=='Android',
-        isIos: browerversion.type=='iPhone',
-        isIpad: browerversion.type=='iPad',
-        weixin: browerversion.type=='weixin'
-      };
       this.init = function() {
         var b = {
           isAndroid: navigator.userAgent.match(/android/ig),
@@ -277,10 +257,6 @@ var mobile = {
         this._browsers = b || this._browsers
       };
       this.init();
-      if (this._options.isappinstalled == 1) {
-        $("#downBut").attr("src", "/img/h5share/downBut.png");
-        $("#download_img1").attr("src", "/img/h5share/open.png")
-      }
     };
     X.prototype.download = function() {
       this.logs();
