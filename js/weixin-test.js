@@ -1,4 +1,25 @@
 (function() {
+  var debug = mobile.query('debug');
+  debug = debug ? debug : 1;
+  // 调试指令
+  document.write('<style>body {font-size: 35px; padding: 20px; word-break: break-all;} .key {color: blue; margin-right:30px; font-weight: bold;}</style>');
+  document.write('<div id="content"></div>');
+  document.title = '小红唇微信接口测试';
+  var log = function(key, value) {
+    var type = 'document'; // document
+    value = value ? value : '';
+    if (debug > 0) {
+      switch (type) {
+        case 'console':
+          console.log("%c" + key + "    %c" + value, "color: blue; font-size: x-large", "color: #000; font-size: x-large");
+          break;
+        case 'document':
+          $('#content').append('<span class="key">' + key + '</span><span>' + value + '</span><br><br>');
+          break;
+      }
+    }
+  }
+
   var start = function() {
     var appid = 'wx3d7f899c6405a785';
     // AppId
@@ -10,30 +31,10 @@
     var code = mobile.query('code');
     code = code ? code : 'debugCode';
     // 临时凭票
-    var debug = mobile.query('debug');
-    debug = debug ? debug : 1;
-    // 调试指令
     var state = '';
     // 状态码
     var prepayid = 'u802345jgfjsdfgsdg888';
     // 微信预订单编号
-
-    document.write('<style>body {font-size: 35px; padding: 20px; word-break: break-all;} .key {color: blue; margin-right:30px; font-weight: bold;}</style>');
-    document.write('<div id="content"></div>')
-    var log = function(key, value) {
-      var type = 'document'; // document
-      value = value ? value : '';
-      if (debug > 0) {
-        switch (type) {
-          case 'console':
-            console.log("%c" + key + "    %c" + value, "color: blue; font-size: x-large", "color: #000; font-size: x-large");
-            break;
-          case 'document':
-            $('#content').append('<span class="key">' + key + '</span><span>' + value + '</span><br><br>');
-            break;
-        }
-      }
-    }
 
     var url = {};
     url.getAccessToken = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + appid + '&redirect_uri=' + encodeURIComponent(redirect_url) + '&response_type=code&scope=' + scope + '&state=' + state + '#wechat_redirect';
@@ -135,5 +136,70 @@
     document.title = '小红唇微信接口测试';
   };
 
-  window.onload = start;
+  var getUserToken = function(success, fail) {
+    var _promise = function() {
+      var appid = 'wx3d7f899c6405a785';
+      var redirect_url = "http://static.xiaohongchun.com/store/test.html";
+      var scope = 'snsapi_userinfo';
+      var state = '';
+      var weChatUrl = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + appid + '&redirect_uri=' + encodeURIComponent(redirect_url) + '&response_type=code&scope=' + scope + '&state=' + state + '#wechat_redirect';
+
+      var loginPromise = $.Deferred();
+      var code = mobile.query('code');
+      code = code?code:'';
+      var token_interface = 'http://test1.xiaohongchun.com/oauth/weixin/'
+
+      if(typeof window.sessionStorage == 'undefined') {
+        loginPromise.reject('noSupport');
+      }
+      else if(code.length < 32){
+        loginPromise.reject('redirect:'+weChatUrl);
+      }
+      else if(sessionStorage.userToken) {
+        loginPromise.resolve(sessionStorage.userToken)
+      }
+      else {
+        var url = token_interface + code;
+        var token_ajax = $.getJSON(url);
+        token_ajax.done(function(json){
+          if (json.code == 0) {
+            if(json.data.token && json.data.token.length>0) {
+              sessionStorage.setItem('userToken', json.token);
+              loginPromise.resolve(json.data);
+            }
+            else {
+              loginPromise.reject('noToken');
+            }
+          }
+          else if(json.code == 7001) {
+            loginPromise.reject('codeError');
+          }
+          else {
+            loginPromise.reject('tokenGetError');
+          }
+        })
+      }
+
+      return loginPromise.promise();
+    }
+    _promise().done(function(auth) {
+      success(auth.token);
+    }).fail(function(err) {
+      if(err.indexOf('redirect')>-1) {
+        location.href = err.replace('redirect:','');
+      }
+      else {
+        fail(err);
+      }
+    })
+  }
+
+  window.onload = function() {
+    getUserToken(function(token) {
+      log('token',token);
+    }, function(err) { 
+      log('error',error)
+    })
+  }
+
 })();

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <style type="text/css">
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    background-color: #f2f2f2;
+  }
+  
+  img {
+    width: 100%;
+    vertical-align: bottom;
+  }
+  
+  .owl-controls {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .owl-theme .owl-controls .owl-page.active span,
+  .owl-theme .owl-controls.clickable .owl-page:hover span {
+    background: white;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="owl">
+    <div>
+      <a href="xhc://xiaohongchun/params?bannerId=43&sort=0&channelId=577">
+        <img class="focus" src="http://i.xiaohongchun.com/70E63DC16EB336F1">
+      </a>
+    </div>
+    <div>
+      <a href="xhc://xiaohongchun/params?bannerId=52&sort=1&html=http%3A%2F%2Fi.xiaohongchun.com%2FE0BB">
+        <img class="focus" src="http://i.xiaohongchun.com/2689CD9C7EA4FF56">
+      </a>
+    </div>
+    <div>
+      <a href="xhc://xiaohongchun/params?bannerId=61&sort=2&product=0">
+        <img class="focus" src="http://i.xiaohongchun.com/C051273C2D952B05">
+      </a>
+    </div>
+    <div>
+      <a href="xhc://xiaohongchun/params?bannerId=63&sort=3&video=16440">
+        <img class="focus" src="http://i.xiaohongchun.com/4D26D3C2BB390FAC">
+      </a>
+    </div>
+  </div>
+  <div class="owl2">
+    <div class="item">
+      <a href="xhc://xiaohongchun/params?bannerId=72&sort=0&goods=0">
+        <img src="http://i.xiaohongchun.com/964A632055F2C285">
+      </a>
+    </div>
+    <div class="item">
+      <a href="xhc://xiaohongchun/params?bannerId=73&sort=1&product=0">
+        <img src="http://i.xiaohongchun.com/6EA5FEDA88EBF602">
+      </a>
+    </div>
+    <div class="item">
+      <a href="xhc://xiaohongchun/params?bannerId=74&sort=2&html=http%3A%2F%2Fwww.xiaohongchun.com%2Fapi2%2Findex%2Fget_rank_url">
+        <img src="http://i.xiaohongchun.com/4CA6E127E3BFB041">
+      </a>
+    </div>
+    <div class="item">
+      <a href="xhc://xiaohongchun/params?bannerId=75&sort=3&html=http%3A%2F%2Fi.xiaohongchun.com%2F55AA">
+        <img src="http://i.xiaohongchun.com/7012553FCACD8392">
+      </a>
+    </div>
+    <div class="item">
+      <a href="xhc://xiaohongchun/params?bannerId=76&sort=4&goods=0">
+        <img src="http://i.xiaohongchun.com/7235BCEF4C2644A9">
+      </a>
+    </div>
+    <div class="item">
+      <a href="xhc://xiaohongchun/params?bannerId=77&sort=5&html=http%3A%2F%2Fwww.xiaohongchun.com%2Fapi2%2Findex%2Fget_rank_url">
+        <img src="http://i.xiaohongchun.com/481F2F370E29DA84">
+      </a>
+    </div>
+    <div class="item">
+      <a href="xhc://xiaohongchun/params?bannerId=78&sort=6&html=http%3A%2F%2Fi.xiaohongchun.com%2F55AA">
+        <img src="http://i.xiaohongchun.com/D79B466E9301E1C6">
+      </a>
+    </div>
+    <div class="item">
+      <a href="xhc://xiaohongchun/params?bannerId=79&sort=7&product=0">
+        <img src="http://i.xiaohongchun.com/485DD040F02729B7">
+      </a>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var focus = $(".focus");
+    var button = $(".item");
+    var owl2 = $('.owl2');
+
+    // 焦点图滚动
+    $(".owl").owlCarousel({
+      autoPlay: false,
+      singleItem: true
+    });
+
+    var ios = function() {
+      var screenwidth = focus[0].width;
+      // iOS上取屏幕宽度，别问我为什么不用screen.width，我改了两周了
+
+      var conPx = function(size) {
+        return Math.round(size/750*screenwidth);
+      }
+
+      document.write('<style>.owl-theme .owl-controls .owl-page span {width: '+conPx(12)+'px;height: '+conPx(12)+'px;margin: '+conPx(8)+'px '+conPx(4)+'px;opacity: 1;background: transparent;border: 1px solid white;}</style>');
+
+      $('meta').attr('content', 'width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0')
+      var paddingtop = Math.round(0.0133 * screenwidth);
+      var paddingleft = Math.round(0.023 * screenwidth);
+      owl2.width(screenwidth-10).css('padding',paddingtop + 'px '+paddingleft+'px 0 '+paddingleft+'px');
+      if (button.length > 3) {
+        owl2.owlCarousel({
+          items: 4,
+          responsive: false,
+          pagination: false
+        });
+      }
+      else if (button.length == 1) {
+        $(button[0]).css('margin', '0 auto');
+      }
+      else if (button.length == 2) {
+        $(button[0]).css('margin-left', screenwidth * 0.15);
+        $(button[1]).css('margin-left', screenwidth * 0.15);
+      }
+      else if (button.length == 3) {
+        $(button[0]).css('margin-left', screenwidth * 0.082);
+        $(button[1]).css('margin-left', screenwidth * 0.082);
+        $(button[2]).css('margin-left', screenwidth * 0.082);
+      }
+
+      for (var i = focus.length - 1; i >= 0; i--) {
+        focus[i].height = screenwidth * 0.4;
+      };
+
+      var buttonsize = screenwidth * 0.224;
+      var buttonml = screenwidth * 0.02;
+
+      for (var i = button.length - 1; i >= 0; i--) {
+        $(button[i]).height(buttonsize);
+        $(button[i]).width(buttonsize);
+      };
+    }
+
+    var android = function() {
+      document.write('<style>.owl-theme .owl-controls .owl-page span {width: 12px;height: 12px;margin: 8px 4px;opacity: 1;background: transparent;border: 1px solid white;}</style>');
+      $('meta').attr('content','width=750');
+      
+      focus.height(300);
+      owl2.css('margin','20px 5px 0 5px').width(740);
+      button.width(168).height(168);
+
+      if (button.length > 3) {
+        owl2.owlCarousel({
+          items: 4,
+          responsive: false,
+          pagination: false
+        });
+      }
+      else if (button.length == 1) {
+        $(button[0]).css('margin', '0 auto');
+      }
+      else if (button.length == 2) {
+        $(button[0]).css('margin-left', screenwidth * 0.15);
+        $(button[1]).css('margin-left', screenwidth * 0.15);
+      }
+      else if (button.length == 3) {
+        $(button[0]).css('margin-left', screenwidth * 0.082);
+        $(button[1]).css('margin-left', screenwidth * 0.082);
+        $(button[2]).css('margin-left', screenwidth * 0.082);
+      }
+    }
+    
+    if(navigator.userAgent.indexOf('Android') > -1) {
+      // 安卓设备处理，按照viewport进行
+      android();
+    }
+    else {
+      // 其他设备按照iOS处理，按照device-width做处理
+      ios();
+    }
+
+
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?c431a03831df8d00747aa6a0c0d5c17d";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+</body>
+
+</html>
