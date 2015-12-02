@@ -1,10 +1,15 @@
 $(function(){
 	var item = $('.item');
 	var owl  = $('.owl');
-	var popup = $('#mask');
+	var mask = $('#mask');
+	var popup = $('.popup');
+	var success = $('.success');
 	var button = $('#gettingButtonLong,#gettingButtonShort');
 	var button2 = $('#gettedButtonLong,#gettedButtonShort');
 	var getbtn = $('#gettingButton');
+	var telNo = function() {
+		return ($('#telno').val());
+	};
 	
 	var randomColor = function (){
 		var border_color = ['764c4e', 'ff656c', 'fbc400'];
@@ -29,16 +34,18 @@ $(function(){
 			button.show();
 			button2.hide();
 			button.on('click', function() {
-				popup.css('display','')
+				mask.css('display','')
 				setTimeout(function() {
-					popup.css('opacity','1');
+					mask.css('opacity','1');
 				},0);
 			})
 		},
-		getted: function() {
+		getted: function(telNo) {
 			button2.show();
 			button.hide();
 			button.off('click');
+			$('.telNo').html(telNo);
+			$('.getsuccess').show();
 		}
 	}
 
@@ -47,11 +54,19 @@ $(function(){
 	// render.getted();
 
 	getbtn.click(function() {
-		popup.on('click',popup,function() {
-			popup.css('opacity','0')
-			setTimeout(function() {
-				popup.css('display','none');
-			},400);
-		})
+		if(!/^[1][358][0-9]{9}$/.test(telNo())){
+			alert('输入的手机号格式不对哦~');
+			$('#telno').val('');
+			return;
+		}
+		// TODO ajax 向手机号中注入红包，并将openID和TelNo绑定
+		popup.hide();
+		success.show(function() {
+			mask.on('click', function() {
+				mask.off('click');
+				mask.css('display','none').css('opacity','0');;
+			})
+			render.getted(telNo());
+		});
 	})
 })

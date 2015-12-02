@@ -457,8 +457,7 @@ var mobile = {
   limitless: function(height_th, callback) {
     window.onscroll = function() {
       if (document.body.scrollHeight - document.body.scrollTop - window.innerHeight < height_th) {
-        console.log(document.body.scrollHeight - document.body.scrollTop - window.innerHeight);
-        callback();
+        mobile.throttle(callback, 100, this)
       }
     };
   },

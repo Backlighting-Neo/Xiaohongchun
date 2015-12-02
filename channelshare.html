@@ -1,30 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=640">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
-    <title>channelshare</title>
-    <link rel="stylesheet" type="text/css" href="css/mobile.css">
-    <link rel="stylesheet" type="text/css" href="css/channelshare.css">
-    <script type="text/javascript" src="js/mobile.js"></script>
-    <script type="text/javascript" src="js/channelshare.js"></script>
-  </head>
-  <body>
-    <div class="content">
-    	<!-- 频道详情 -->
-    	<div class="channeldetail"></div>
-			<!-- 频道视频列表 -->
-			<div class="videolist"></div>
-			<!-- 热门频道列表 -->
-			<div class="hotchannel">
-				<div class="hot_title">热门频道</div>
-				<ol class="hotchannelol"></ol>
-			</div>
-    </div>
 
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=640">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
+  <title>小红唇</title>
+  <link rel="stylesheet" type="text/css" href="css/mobile.css">
+  <link rel="stylesheet" type="text/css" href="css/channelshare.css">
+  <script type="text/javascript" src="js/vue.min.js"></script>
+  <script type="text/javascript" src="js/mobile.js"></script>
+  <script type="text/javascript" src="js/channelshare.js"></script>
+</head>
+
+<body>
+  <div class="content" style="display: none">
+    <!-- 频道详情 -->
+    <div class="channeldetail">
+      <div class="text">
+        <div class="title">{{tags.name}}</div>
+        <div class="desc">{{tags.id}}创建 {{tags.c_cnts}}人订阅</div>
+      </div>
+      <div class="share"><img src="images/share.png">
+        <div>分享</div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <!-- 频道视频列表 -->
+    <div class="videolist">
+      <div class="videocard" v-for="item in videos">
+        <div class="cover">
+          <video webkit-playsinline="true" controls="controls" preload="none" width="570" height="570" id="player{{item.id}}" poster="{{item.cover_url}}">
+            <source type="video/mp4" src="{{item.full_path}}" />
+          </video>
+          <div class="like">{{item.likes}}</div>
+        </div>
+        <div class="userinfo"><img class="avatar75" data-src="{{item.icon_url}}">
+          <div class="info">
+            <div class="username">{{item.nick}}</div>
+            <div class="playcount">{{item.play_count}}次播放</div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="description">{{item.desc}}</div>
+        <div class="command">
+          <div class="comment">已有{{item.comment_count}}条评论</div>
+          <div class="share">分享</div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 热门频道列表 -->
+    <div class="hotchannel">
+      <div class="hot_title">热门频道</div>
+      <ol class="hotchannelol">
+        <li v-for="item in re_tags">
+          <img data-src="{{item.face_url}}" class="avatar75">
+          <div class="channel">
+            <div class="title" onclick="location.href='http://www.xiaohongchun.com/share_tags/{{item.id}}'">{{item.name}}</div>
+            <div class="subscribe">{{item.c_cnts}} 订阅</div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</body>
+
 </html>

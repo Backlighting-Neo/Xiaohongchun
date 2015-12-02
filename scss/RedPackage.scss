@@ -15,6 +15,7 @@ body {
 	height: 522px;
 	background-image: url(../images/RedPackage_Background_03.jpg);
 	position: relative;
+	overflow: hidden;
 
 	%ButtonShort {
 		position: absolute;
@@ -33,6 +34,23 @@ body {
 		@extend %ButtonShort;
 		background-image: url(../images/gettedButtonShort.png);
 	}
+
+	.getsuccess {
+		display: none;
+		color: #a48383;
+		font-size: 18px;
+		line-height: 25px;
+		text-align: center;
+		margin: 395px auto 0 auto;
+
+		.telNo {
+			margin: 0 5px;
+		}
+
+		.editTelNo {
+			margin: 0 5px;
+		}
+	}
 }
 
 .section3 {
@@ -45,13 +63,22 @@ body {
 	background-color: #3f1517;
 	position: relative;
 
-	#gettingButtonLong {
+	%ButtonLong {
 		position: absolute;
 		left: 96px;
 		bottom: 40px;
 		width: 450px;
 		height: 102px;
+	}
+
+	#gettingButtonLong {
+		@extend %ButtonLong;
 		background-image: url(../images/gettingButton_Long.png);
+	}
+
+	#gettedButtonLong {
+		@extend %ButtonLong;
+		background-image: url(../images/gettedButtonLong.png);
 	}
 }
 
@@ -193,5 +220,21 @@ body {
 				color: #bbb;
 			}
 		}
+
+		.gettingButton {
+			width: 450px;
+			height: 100px;
+			position: absolute;
+			left: 50px;
+			top: 550px;
+		}
+	}
+
+	.success {
+		width: 640px;
+		height: 775px;
+		margin-top: 50px;
+		display: none;
+		background-image: url(../images/RedPackage_Success.png);
 	}
 }
