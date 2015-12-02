@@ -626,8 +626,9 @@ var mobile = {
 		};
 	},
 	isInitWeChat: false,
+	weChatAppId: 'wx3d7f899c6405a785',
 	initWeChat: function(){
-		var appid = 'wx3d7f899c6405a785';
+		var appid = this.weChatAppId;
 		var ajax_wechat = $.getJSON(baseurl_test + '/oauth/weixin/jsapi?url=' + encodeURIComponent(location.href));
 		ajax_wechat.done(function(json) {
 			wx.config({
@@ -672,6 +673,7 @@ var mobile = {
 			});
 		});
 	}
+
 }
 
 // mobile封装对应方法说明
@@ -690,3 +692,6 @@ var mobile = {
 // notification 方法 一个半透明的提示框，参数{icon:图标URL，text:要显示的文本，position:出现位置(top-left,top-right,bottom-left,bottom-right)，duration:显示的时间，超时后消失，callback:消失后的回调函数}；
 // scrolldown 方法 当页面被拉下一定距离后出发callback
 // avoidEmptyRequest 方法 避免因Vue造成的一次图片空访问，在Vue绑定结束后调用这个方法
+// isInitWeChat 属性 微信JSSDK权限是否被初始化
+// initWeChat 方法 向微信JSSDK注入权限
+// bindWeChatShare 方法 注入微信二次分享内容 参数详见 http://mp.weixin.qq.com/wiki/7/1c97470084b73f8e224fe6d9bab1625b.html#.E8.8E.B7.E5.8F.96.E2.80.9C.E5.88.86.E4.BA.AB.E5.88.B0.E6.9C.8B.E5.8F.8B.E5.9C.88.E2.80.9D.E6.8C.89.E9.92.AE.E7.82.B9.E5.87.BB.E7.8A.B6.E6.80.81.E5.8F.8A.E8.87.AA.E5.AE.9A.E4.B9.89.E5.88.86.E4.BA.AB.E5.86.85.E5.AE.B9.E6.8E.A5.E5.8F.A3

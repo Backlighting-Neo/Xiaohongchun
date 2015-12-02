@@ -1,3 +1,4 @@
+@charset "UTF-8";
 img {
   display: block; }
 
@@ -33,13 +34,16 @@ body {
   height: 522px;
   background-image: url(../images/RedPackage_Background_03.jpg);
   position: relative; }
-  .section2 .gettingButtonShort {
+  .section2 #gettingButtonShort, .section2 #gettedButtonShort {
     position: absolute;
     width: 342px;
     height: 102px;
     left: 153px;
-    bottom: 130px;
+    bottom: 130px; }
+  .section2 #gettingButtonShort {
     background-image: url(../images/gettingButton_Short.png); }
+  .section2 #gettedButtonShort {
+    background-image: url(../images/gettedButtonShort.png); }
 
 .section3 {
   height: 631px;
@@ -49,7 +53,7 @@ body {
   height: 306px;
   background-color: #3f1517;
   position: relative; }
-  .section4 .gettingButtonLong {
+  .section4 #gettingButtonLong {
     position: absolute;
     left: 96px;
     bottom: 40px;
@@ -77,12 +81,93 @@ body {
     height: 560px;
     left: -328px;
     overflow: hidden; }
+  .owl_outer .item_first {
+    width: 410px;
+    height: 550px; }
   .owl_outer .item {
     width: 400px;
     height: 540px;
     border: 5px solid #ff656c;
     border-radius: 34px;
-    background-color: white; }
-  .owl_outer .item_first {
-    width: 410px;
-    height: 550px; }
+    background-color: white;
+    position: relative; }
+    .owl_outer .item:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 19px;
+      top: 19px;
+      left: 26px;
+      background-image: url(../images/RedPackage_quoteIcon.png); }
+    .owl_outer .item:after {
+      content: '';
+      display: block;
+      position: absolute;
+      transform: rotate(180deg);
+      width: 20px;
+      height: 19px;
+      top: 109px;
+      right: 26px;
+      background-image: url(../images/RedPackage_quoteIcon.png); }
+    .owl_outer .item .description {
+      margin: 50px auto 0 auto;
+      width: 270px;
+      height: 80px;
+      line-height: 28px;
+      font-size: 22px;
+      color: #717171;
+      overflow: hidden; }
+    .owl_outer .item .goodsImage {
+      width: 240px;
+      height: 240px;
+      margin: 20px auto; }
+    .owl_outer .item .title {
+      width: 260px;
+      height: 50px;
+      margin: 10px auto;
+      color: #3a3a3a;
+      font-size: 18px;
+      line-height: 25px;
+      overflow: hidden; }
+    .owl_outer .item .price {
+      width: 150px;
+      margin: 0 auto; }
+      .owl_outer .item .price:before {
+        content: '用券价：';
+        display: inline;
+        color: #717171;
+        font-size: 19px; }
+      .owl_outer .item .price span {
+        color: #fe4545;
+        font-size: 17px; }
+        .owl_outer .item .price span:before {
+          content: '¥';
+          margin-right: 5px; }
+
+.mask {
+  background-color: rgba(0, 0, 0, 0.42);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 1s; }
+  .mask .popup {
+    width: 640px;
+    height: 833px;
+    margin-top: 50px;
+    position: relative;
+    background-image: url(../images/RedPackage_PopUp.png); }
+    .mask .popup .inputPhoneNum {
+      position: absolute;
+      top: 420px;
+      left: 93px; }
+      .mask .popup .inputPhoneNum input {
+        width: 436px;
+        height: 88px;
+        border: 6px solid #6b4143;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 35px;
+        color: #bbb; }

@@ -160,24 +160,26 @@
       }
       else {
         var url = token_interface + code;
-        var token_ajax = $.getJSON(url);
-        token_ajax.done(function(json){
-          if (json.code == 0) {
-            if(json.data.token && json.data.token.length>0) {
-              sessionStorage.setItem('userToken', json.token);
-              loginPromise.resolve(json.data);
-            }
-            else {
-              loginPromise.reject('noToken');
-            }
-          }
-          else if(json.code == 7001) {
-            loginPromise.reject('codeError');
-          }
-          else {
-            loginPromise.reject('tokenGetError');
-          }
-        })
+        // var token_ajax = $.getJSON(url);
+        // token_ajax.done(function(json){
+        //   if (json.code == 0) {
+        //     if(json.data.token && json.data.token.length>0) {
+        //       sessionStorage.setItem('userToken', json.token);
+        //       loginPromise.resolve(json.data);
+        //     }
+        //     else {
+        //       loginPromise.reject('noToken');
+        //     }
+        //   }
+        //   else if(json.code == 7001) {
+        //     loginPromise.reject('codeError');
+        //   }
+        //   else {
+        //     loginPromise.reject('tokenGetError');
+        //   }
+        // })
+        log('code',code);
+        loginPromise.resolve(code);
       }
 
       return loginPromise.promise();
@@ -196,9 +198,9 @@
 
   window.onload = function() {
     getUserToken(function(token) {
-      log('token',token);
+      // log('token',token);
     }, function(err) { 
-      log('error',error)
+      // log('error',error)
     })
   }
 

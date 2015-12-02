@@ -121,7 +121,7 @@
       document.write('<style>.owl-theme .owl-controls .owl-page span {width: '+conPx(12)+'px;height: '+conPx(12)+'px;margin: '+conPx(8)+'px '+conPx(4)+'px;opacity: 1;background: transparent;border: 1px solid white;}</style>');
 
       $('meta').attr('content', 'width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0')
-      var paddingtop = Math.round(0.0133 * screenwidth);
+      var paddingtop = Math.round(0.05 * screenwidth);
       var paddingleft = Math.round(0.023 * screenwidth);
       owl2.width(screenwidth-10).css('padding',paddingtop + 'px '+paddingleft+'px 0 '+paddingleft+'px');
       if (button.length > 3) {
@@ -162,7 +162,7 @@
       $('meta').attr('content','width=750');
       
       focus.height(300);
-      owl2.css('margin','20px 5px 0 5px').width(740);
+      owl2.css('margin','40px 5px 0 5px').width(740);
       button.width(168).height(168);
 
       if (button.length > 3) {
