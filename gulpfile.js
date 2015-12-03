@@ -223,6 +223,7 @@ gulp.task("index",['scan', 'clean'], function() {
   		'<script type="text/javascript" src="build/JSXTransformer.js"></script>',
   		'<!-- \n 要使用未编译的JSX，请包含下面的js文件 \n <script type="text/javascript" src="build/JSXTransformer.js"></script> \n -->'
   	))
+    .pipe(p.replace('src="lib/','src="../lib/'))
     .pipe(p.replace('.js">',`.js?v=${moment().unix()}">`))
     .pipe(p.replace('.css">',`.css?v=${moment().unix()}">`))
   	.pipe(p.replace('build/','js/'))

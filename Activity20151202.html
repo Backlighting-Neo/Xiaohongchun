@@ -8,7 +8,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no">
   <meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
-  <title>Everybody 看过来</title>
+  <title>小红唇「唇蜜直播间」周六开播</title>
 	<style type="text/css">
 		body {
 			margin: 0;
@@ -31,6 +31,21 @@
 	<img src="images/Activity20151202_06.jpg">
 	<img src="images/Activity20151202_06.jpg">
 	<img src="images/Activity20151202_08.jpg">
+
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="lib/mobile.js"></script>
+	<script type="text/javascript">
+		var smallimage = 'images/weChatIon_Activity20151202.jpg';
+		var content = '周六20:00，造型师子超做客「唇蜜直播间」，微信添加 xhchhh 参与活动';
+		mobile.appendBaiduAnalysis();
+		mobile.appendAppShare(smallimage,content);
+		mobile.weChat.bindWeChatShare({
+			title: document.title,
+			desc: content,
+			link: location.href,
+			imgUrl: smallimage
+		})
+	</script>
 </body>
 
 </html>
