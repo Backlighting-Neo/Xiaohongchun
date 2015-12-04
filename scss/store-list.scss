@@ -91,3 +91,7 @@ body {
 		}
 	}
 }
+
+.loading {
+	@include loading(0.4,1000px auto);
+}

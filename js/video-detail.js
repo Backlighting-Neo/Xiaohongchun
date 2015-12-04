@@ -1,8 +1,5 @@
 (function() {
 	var start = function() {
-		mobile.adddownloader();
-		mobile.binddownload(['download', 'footerdownload']);
-
 		var vid = mobile.query('vid');
 
 		if(!$.isNumeric(vid)){
@@ -54,8 +51,13 @@
 			});
 			mobile.avoidEmptyRequest();
 			mobile.videoplugin();
+			mobile.adddownloader();
+			mobile.binddownload(['download', 'footerdownload']);
 
-			mobile.bindWeChatShare({
+			$('.loading').remove();
+			$('.content').show();
+
+			mobile.weChat.bindWeChatShare({
 				title: '来自 '+detail.nick+' 的视频 - 小红唇',
 				desc: detail.vdesc,
 				link: location.href,

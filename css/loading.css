@@ -1,4 +1,3 @@
-@charset "UTF-8";
 img {
   display: block; }
 
@@ -21,77 +20,6 @@ body {
 
 .click {
   cursor: pointer; }
-
-body {
-  background-color: #f1f1f1;
-  width: 640px; }
-
-.store-list-title {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  height: 90px;
-  line-height: 90px;
-  border-bottom: 1px solid #f1f1f1;
-  font-size: 30px;
-  text-align: center;
-  font-weight: bold;
-  background-color: white;
-  z-index: 9999;
-  -webkit-transform: translateZ(0); }
-
-.placeholder1 {
-  height: 91px; }
-
-.store-list-banner {
-  height: 367px;
-  padding: 0 20px 0 20px; }
-  .store-list-banner img {
-    width: 100%;
-    height: 100%; }
-
-.store-list-item {
-  padding: 0 14px 20px 14px; }
-  .store-list-item .item {
-    float: left;
-    width: 292px;
-    height: 465px;
-    padding-bottom: 10px;
-    background-color: white;
-    border: 1px solid #dedede;
-    margin: 20px 6px 0 6px; }
-    .store-list-item .item .product_image {
-      width: 292px;
-      height: 292px; }
-      .store-list-item .item .product_image img {
-        width: 100%;
-        height: 100%; }
-    .store-list-item .item .product_title {
-      font-size: 21px;
-      color: #666666;
-      margin: 15px 0 0 8px; }
-    .store-list-item .item .product_desc {
-      color: #9a9a9a;
-      font-size: 16px;
-      overflow: hidden;
-      line-height: 28px;
-      margin: 15px 15px 15px 8px; }
-    .store-list-item .item .product_price .price_onsell {
-      color: #fe4545;
-      font-size: 20px;
-      margin-left: 8px; }
-      .store-list-item .item .product_price .price_onsell:before {
-        content: '¥';
-        margin-right: 5px; }
-    .store-list-item .item .product_price .price_origin {
-      color: #c6c6c6;
-      font-size: 15px;
-      margin-left: 8px;
-      text-decoration: line-through; }
-      .store-list-item .item .product_price .price_origin:before {
-        content: '¥';
-        margin-right: 5px; }
 
 .loading {
   position: relative;

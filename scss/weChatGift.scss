@@ -1,0 +1,27 @@
+@import "common";
+
+body {
+	width: 750px;
+	background-color: #6e0006;
+}
+
+%Button {
+	width: 490px;
+	height: 118px;
+	border-radius: 5px;
+}
+
+.getButton1 {
+	@extend %Button;
+	background-color: #ffd74c;
+	border:4px dotted #6e0006;
+	margin: 0 auto;
+}
+
+.getButton2 {
+	@extend %Button;
+	background-color: #ff0041;
+	border:4px dotted #ffffff;
+	margin: 0 auto;
+}
+

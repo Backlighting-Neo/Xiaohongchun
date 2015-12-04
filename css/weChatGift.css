@@ -1,0 +1,41 @@
+img {
+  display: block; }
+
+html, body, p, a, ol, ul, dd {
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style: none; }
+
+.clearfix {
+  clear: both; }
+
+.ding {
+  height: 1000px; }
+
+body {
+  font-size: 25px;
+  font-family: "Microsoft Yahei"; }
+
+.click {
+  cursor: pointer; }
+
+body {
+  width: 750px;
+  background-color: #6e0006; }
+
+.getButton1, .getButton2 {
+  width: 490px;
+  height: 118px;
+  border-radius: 5px; }
+
+.getButton1 {
+  background-color: #ffd74c;
+  border: 4px dotted #6e0006;
+  margin: 0 auto; }
+
+.getButton2 {
+  background-color: #ff0041;
+  border: 4px dotted #ffffff;
+  margin: 0 auto; }

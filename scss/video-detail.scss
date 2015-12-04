@@ -318,3 +318,7 @@ $bgcolor: #d6d6d6;
 		@include triangle(right, 26px, 32px, rgba(255,255,255,0.8))
 	}
 }
+
+.loading {
+	@include loading(0.4,1000px auto);
+}

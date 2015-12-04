@@ -6,7 +6,8 @@ var ProductDetail = React.createClass({
 			"usingusers": [],
 			"big_img": "",
 			"text": [],
-			"text_card": []
+			"text_card": [],
+			"isdisplay": 'none'
 		}
 	},
 	dataconverse: function(detail, setting, video) {
@@ -87,15 +88,12 @@ var ProductDetail = React.createClass({
 			}
 		})
 		
-		mobile.bindWeChatShare({
+		mobile.weChat.bindWeChatShare({
 			title: detail.g_name,
 			desc: detail.g_desc.content,
 			link: location.href,
 			imgUrl: detail.g_image,
 			type: 'link'
-			// dataUrl: '',
-			// success: function () {},
-			// cancel: function () {}
 		});
 
 		return json;
@@ -120,6 +118,10 @@ var ProductDetail = React.createClass({
 			else{
 				that.setState(that.dataconverse(detail[0].data, setting[0].data, video[0].data));
 				document.title = detail[0].data.g_title + " - " + detail[0].data.g_name;
+				$('.loading').remove();
+				that.setState({
+					isdisplay: '' 
+				});
 			}
 		});
 
@@ -127,7 +129,7 @@ var ProductDetail = React.createClass({
 	},
 	render: function() {
 		return (
-			<div className="ProductDetail">
+			<div ref="content" className="ProductDetail" style={{display:this.state.isdisplay}}>
 				<ProductHeader
 				  uptitle={this.props.pagetitle}
 				  downtitle={this.state.brief.product_name}

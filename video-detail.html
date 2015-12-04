@@ -9,81 +9,87 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
   <title>小红唇</title>
-	<link rel="stylesheet" type="text/css" href="css/video-detail.css">
-	<link rel="stylesheet" type="text/css" href="css/mobile.css">
-	<script type="text/javascript" src="js/store-debug.js"></script>
-	<!-- 记得上线前调下debugjs的文件位置 -->
-	<script type="text/javascript" src="lib/mobile.js"></script>
-	<script type="text/javascript" src="js/vue.min.js"></script>
-	<script type="text/javascript" src="js/video-detail.js"></script>
-	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/video-detail.css">
+  <link rel="stylesheet" type="text/css" href="css/mobile.css">
 </head>
 
 <body>
-
-	<div class="video-detail-userinfo">
-		<div class="userinfo">
-			<img data-src="{{icon_url}}" onclick="location.href='http://www.xiaohongchun.com/u/{{user_id}}'">
-			<span>{{nick}}</span>
-		</div>
-		<div class="playcount"><div class="icon_playcount"></div><span>播放: {{play_count}}</span></div>
-		<div class="clearfix"></div>
-	</div>
-
-	<div class="video-detail-video">
-		<video controls="controls" preload="none" width="596" height="596"   id="player{{id}}"   data-poster="{{cover_url}}">
-			<source type="video/mp4" src="{{full_path}}"/>
-		</video>
-		<div class="like">{{likes}}</div>
-	</div>
-
-	<div class="video-detail-desc">{{{vdesc}}}</div>
-
-	<div class="video-detail-product" style="display: {{goods.length==0?'none':''}}" >
-		<div class="title">用的是这款</div>
-		<div class="item" v-for="item in goods">
-			<img data-src="{{item.g_image}}" />
-			<div class="info">
-				<div class="name">{{item.g_title + ' - ' + item.g_name}}</div>
-				<div class="price">{{item.g_price_shop}}</div>
-				<div class="button" onclick="location.href='../store/goods.html?pid={{item.g_id}}'">查看详情</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-
-	<div class="video-detail-tab">
-		<div class="tab">
-			<div id="tab-recommand" class="item active">推荐视频</div>
-			<div id="tab-comment" class="item">评论<span>{{comments}}</span></div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="tab-recommand-content">
-			<div class="video-item" v-for="item in recommend_videos">
-				<img class="poster" data-src="{{item.cover_url}}" onclick="location.href='?vid={{item.id}}'">
-				<div class="icon_playbtn"></div>
-				<div class="video-info">
-					<div class="video-title">{{item.title}}</div>
-					<div class="video-desc {{item.title?'has':'hasnt'}}">{{{item.vdesc}}}</div>
-					<div class="video-playcount">
-						<div class="icon_playcount"></div>
-						<span>{{item.plays}}次播放</span>
-					</div>
-					<div class="video-like">{{item.likes}}个赞</div>
-				</div>
-			</div>
-		</div>
-		<div class="tab-comment-content" style="display: none">
-			<div class="comment-item" v-for="item in comments_detail">
-				<img class="avatar75" data-src="{{item.user_icon}}">
-				<div class="comments">
-					<div class="comments-title">{{item.user_name}}</div>
-					<div class="comments-content">{{item.content}}</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
+  <div class="loading">
+    <div class="title">小红唇</div>
+    <div class="subtitle">你的变美频道</div>
+    <div class="sharp1"></div>
+    <div class="sharp2"></div>
+    <div class="sharp3"></div>
+    <div class="sharp4"></div>
+  </div>
+  <div class="content" style="display: none">
+    <div class="video-detail-userinfo">
+      <div class="userinfo">
+        <img data-src="{{icon_url}}" onclick="location.href='http://www.xiaohongchun.com/u/{{user_id}}'">
+        <span>{{nick}}</span>
+      </div>
+      <div class="playcount">
+        <div class="icon_playcount"></div><span>播放: {{play_count}}</span></div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="video-detail-video">
+      <video controls="controls" preload="none" width="596" height="596" id="player{{id}}" data-poster="{{cover_url}}">
+        <source type="video/mp4" src="{{full_path}}" />
+      </video>
+      <div class="like">{{likes}}</div>
+    </div>
+    <div class="video-detail-desc">{{{vdesc}}}</div>
+    <div class="video-detail-product" style="display: {{goods.length==0?'none':''}}">
+      <div class="title">用的是这款</div>
+      <div class="item" v-for="item in goods">
+        <img data-src="{{item.g_image}}" />
+        <div class="info">
+          <div class="name">{{item.g_title + ' - ' + item.g_name}}</div>
+          <div class="price">{{item.g_price_shop}}</div>
+          <div class="button" onclick="location.href='../store/goods.html?pid={{item.g_id}}'">查看详情</div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="video-detail-tab">
+      <div class="tab">
+        <div id="tab-recommand" class="item active">推荐视频</div>
+        <div id="tab-comment" class="item">评论<span>{{comments}}</span></div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="tab-recommand-content">
+        <div class="video-item" v-for="item in recommend_videos">
+          <img class="poster" data-src="{{item.cover_url}}" onclick="location.href='?vid={{item.id}}'">
+          <div class="icon_playbtn"></div>
+          <div class="video-info">
+            <div class="video-title">{{item.title}}</div>
+            <div class="video-desc {{item.title?'has':'hasnt'}}">{{{item.vdesc}}}</div>
+            <div class="video-playcount">
+              <div class="icon_playcount"></div>
+              <span>{{item.plays}}次播放</span>
+            </div>
+            <div class="video-like">{{item.likes}}个赞</div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-comment-content" style="display: none">
+        <div class="comment-item" v-for="item in comments_detail">
+          <img class="avatar75" data-src="{{item.user_icon}}">
+          <div class="comments">
+            <div class="comments-title">{{item.user_name}}</div>
+            <div class="comments-content">{{item.content}}</div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="js/store-debug.js"></script>
+  <script type="text/javascript" src="lib/mobile.js"></script>
+  <script type="text/javascript" src="js/vue.min.js"></script>
+  <script type="text/javascript" src="js/video-detail.js"></script>
+  <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 </body>
 
 </html>

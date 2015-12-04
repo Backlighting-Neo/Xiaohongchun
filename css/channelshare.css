@@ -1,168 +1,257 @@
+img {
+  display: block; }
+
+html, body, p, a, ol, ul, dd {
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style: none; }
+
+.clearfix {
+  clear: both; }
+
+.ding {
+  height: 1000px; }
+
+body {
+  font-size: 25px;
+  font-family: "Microsoft Yahei"; }
+
+.click {
+  cursor: pointer; }
+
 .channeldetail {
   margin-left: 35px;
-	padding: 0 10px 0 10px;
-	white-space: nowrap;
-	overflow: hidden;
-}
-
-.channeldetail .text {
-	float: left;
-}
-
-.channeldetail .title {
-	color: #626262;
-	font-size: 30px;
-}
-
-.channeldetail .desc {
-	color: #a9a9a9;
-}
-
-.channeldetail .share {
-	float: right;
-	margin:15px 30px 0 0;
-	color: #a9a9a9;
-}
-
-.channeldetail .share img {
-	float: left;
-}
-
-.channeldetail .share div {
-	float: left;
-	line-height: 29px;
-	margin-left: 10px;
-}
-
-.videocard {
-	margin-top: 25px;
-	padding: 0 35px 0 35px;
-	border-bottom: 4px solid #ededed;
-}
+  padding: 0 10px 0 10px;
+  white-space: nowrap;
+  overflow: hidden; }
+  .channeldetail .text {
+    float: left; }
+  .channeldetail .title {
+    color: #626262;
+    font-size: 30px; }
+  .channeldetail .desc {
+    color: #a9a9a9; }
+  .channeldetail .share {
+    float: right;
+    margin: 15px 30px 0 0;
+    color: #a9a9a9; }
+    .channeldetail .share img {
+      float: left; }
+    .channeldetail .share div {
+      float: left;
+      line-height: 29px;
+      margin-left: 10px; }
 
 .cover {
-	position: relative;
-	margin-bottom: 18px;
-}
+  position: relative;
+  margin-bottom: 18px; }
 
 .play {
-	width: 88px;
-	height: 88px;
-	border-radius: 100px;
-	border: 2px solid #fe4545;
-	position: absolute;
-	top: 244px;
-	left: 244px;
-	opacity: 0.9;
-}
-
-.play div {
-	width: 0;
-	height: 0;
-	margin: 18px auto auto 30px;
-	border-top: 26px solid transparent;
-	border-left: 40px solid #fe4545;
-	border-bottom: 26px solid transparent;
-}
+  width: 88px;
+  height: 88px;
+  border-radius: 100px;
+  border: 2px solid #fe4545;
+  position: absolute;
+  top: 244px;
+  left: 244px;
+  opacity: 0.9; }
+  .play div {
+    width: 0;
+    height: 0;
+    margin: 18px auto auto 30px;
+    border-top: 26px solid transparent;
+    border-left: 40px solid #fe4545;
+    border-bottom: 26px solid transparent; }
 
 .like {
-	position: absolute;
-	right: -25px;
-	bottom: 25px;
-	width: 98px;
-	height: 48px;
-	background-color: rgba(255,255,255,0.5);
-	border-radius: 100px;
-	color: #000;
-	line-height: 48px;
-	font-size: 25px;
-	padding-left: 80px;
-	background-image: url(../images/like.png);
-	background-repeat: no-repeat;
-	background-position: 15px 5px;
-}
+  position: absolute;
+  right: -25px;
+  bottom: 25px;
+  width: 98px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 100px;
+  color: #000;
+  line-height: 48px;
+  font-size: 25px;
+  padding-left: 80px;
+  background-image: url(../images/like.png);
+  background-repeat: no-repeat;
+  background-position: 15px 5px; }
 
 .userinfo .info {
-	float: left;
-	margin-left: 10px;
-}
+  float: left;
+  margin-left: 10px; }
 
 .userinfo .username {
-	font-size: 28px;
-}
+  font-size: 28px; }
 
 .userinfo .playcount {
-	color: #a9a9a9;
-	height: 20px;
-	line-height: 20px;
-	padding-left: 30px;
-	margin-top: 10px;
-	background: url(../images/playcount.png) no-repeat;
-}
+  color: #a9a9a9;
+  height: 20px;
+  line-height: 20px;
+  padding-left: 30px;
+  margin-top: 10px;
+  background: url(../images/playcount.png) no-repeat; }
 
-.videocard .description {
-	font-size: 22px;
-	color: #777;
-	margin: 10px 0 50px 0;
-}
+.videocard {
+  margin-top: 25px;
+  padding: 0 35px;
+  border-bottom: 4px solid #ededed; }
+  .videocard .description {
+    font-size: 22px;
+    color: #777;
+    margin: 10px 0 50px 0; }
 
 .command {
-	color: #afafaf;
-	font-size: 20px;
-	margin-bottom: 20px;
-}
+  color: #afafaf;
+  font-size: 20px;
+  margin-bottom: 20px; }
+  .command .comment {
+    float: left;
+    height: 33px;
+    line-height: 33px;
+    padding-left: 50px;
+    background: url(../images/comment.png) no-repeat; }
+  .command .share {
+    float: right;
+    height: 33px;
+    line-height: 33px;
+    padding: 0 20px 0 28px;
+    background: url(../images/share_video.png) no-repeat;
+    background-position: 0 7px; }
 
-.command .comment {
-	float: left;
-	height: 33px;
-	line-height: 33px;
-	padding-left: 50px;
-	background: url(../images/comment.png) no-repeat;
-}
-
-.command .share {
-	float: right;
-	height: 33px;
-	line-height: 33px;
-	padding: 0 20px 0 28px;
-	background: url(../images/share_video.png) no-repeat;
-	background-position: 0 7px;
-}
-
-.hotchannel .hot_title {
-	height: 63px;
-	line-height: 63px;
-	color: #626262;
-	font-size: 30px;
-	background: url(../images/hot.png) no-repeat;
-	background-position: 365px 22px;
-	background-color: #ededed;
-	padding-left: 230px;
-}
+.hot_title {
+  height: 63px;
+  line-height: 63px;
+  color: #626262;
+  font-size: 30px;
+  background: url(../images/hot.png) no-repeat;
+  background-position: 365px 22px;
+  background-color: #ededed;
+  padding-left: 230px; }
 
 .hotchannelol {
-	margin-left: 20px;
-	color: #777;
-}
+  margin-left: 20px;
+  color: #777; }
+  .hotchannelol img {
+    margin-top: 18px; }
+  .hotchannelol .channel {
+    float: right;
+    width: 510px;
+    height: 110px;
+    line-height: 110px;
+    border-bottom: 1px solid #dfdfdf;
+    font-size: 24px; }
+  .hotchannelol .title {
+    float: left; }
+  .hotchannelol .subscribe {
+    float: right;
+    padding-right: 32px; }
 
-.hotchannelol img {
-	margin-top: 18px;
-}
+.loading {
+  position: relative;
+  margin: 1000px auto;
+  zoom: 0.4;
+  width: 500px; }
 
-.hotchannelol .channel {
-	float: right;
-	width: 510px;
-	height: 110px;
-	line-height: 110px;
-	border-bottom: 1px solid #dfdfdf;
-	font-size: 24px;
-}
+@keyframes rotate2 {
+  5% {
+    transform: rotate(37deg); }
+  50% {
+    transform: rotate(397deg); }
+  100% {
+    transform: rotate(397deg); } }
 
-.hotchannelol .title {
-	float: left;
-}
+@-webkit-keyframes rotate2 {
+  5% {
+    -webkit-transform: rotate(37deg); }
+  50% {
+    -webkit-transform: rotate(397deg); }
+  100% {
+    -webkit-transform: rotate(397deg); } }
 
-.hotchannelol .subscribe {
-	float: right; 
-	padding-right: 32px;
-}
+@keyframes rotate3 {
+  5% {
+    transform: rotate(100deg); }
+  50% {
+    transform: rotate(460deg); }
+  100% {
+    transform: rotate(460deg); } }
+
+@-webkit-keyframes rotate3 {
+  5% {
+    -webkit-transform: rotate(100deg); }
+  50% {
+    -webkit-transform: rotate(460deg); }
+  100% {
+    -webkit-transform: rotate(460deg); } }
+
+@keyframes rotate4 {
+  5% {
+    transform: rotate(140deg); }
+  50% {
+    transform: rotate(500deg); }
+  100% {
+    transform: rotate(500deg); } }
+
+@-webkit-keyframes rotate4 {
+  5% {
+    -webkit-transform: rotate(140deg); }
+  50% {
+    -webkit-transform: rotate(500deg); }
+  100% {
+    -webkit-transform: rotate(500deg); } }
+  .loading .sharp1, .loading .sharp2, .loading .sharp3, .loading .sharp4 {
+    position: absolute;
+    width: 450px;
+    height: 320px;
+    border-top-left-radius: 140px 160px;
+    border-bottom-left-radius: 140px 160px;
+    border-top-right-radius: 310px 160px;
+    border-bottom-right-radius: 310px 160px;
+    opacity: 0.8; }
+  .loading .sharp1 {
+    background-color: #fd204c;
+    z-index: 4; }
+  .loading .sharp2 {
+    background-color: #ff67bc;
+    z-index: 3;
+    transform: rotate(37deg);
+    -webkit-transform: rotate(37deg);
+    animation: rotate2 5s 0.2s infinite ease-out;
+    -webkit-animation: rotate2 5s 0.2s infinite ease-out; }
+  .loading .sharp3 {
+    background-color: #fdab7c;
+    z-index: 2;
+    transform: rotate(100deg);
+    -webkit-transform: rotate(100deg);
+    animation: rotate3 5s 0.6375s infinite ease-out;
+    -webkit-animation: rotate3 5s 0.6375s infinite ease-out; }
+  .loading .sharp4 {
+    background-color: #feacc3;
+    z-index: 1;
+    transform: rotate(140deg);
+    -webkit-transform: rotate(140deg);
+    animation: rotate4 5s 0.9152s infinite ease-out;
+    -webkit-animation: rotate4 5s 0.9152s infinite ease-out; }
+  .loading .title, .loading .subtitle {
+    position: absolute;
+    color: white;
+    z-index: 10;
+    opacity: 0.85;
+    font-weight: bold; }
+  .loading .title {
+    width: 280px;
+    height: 90px;
+    top: 80px;
+    left: 50px;
+    text-align: center;
+    font-size: 80px; }
+  .loading .subtitle {
+    position: absolute;
+    font-size: 33px;
+    left: 90px;
+    top: 180px; }

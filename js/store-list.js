@@ -18,17 +18,16 @@
 			})
 			mobile.avoidEmptyRequest();
 			mobile.binddownload(['download']);
+			$('.loading').remove();
+			$('.content').show();
 		})
 
-		mobile.bindWeChatShare({
+		mobile.weChat.bindWeChatShare({
 			title: '小红唇商城-美妆达人视频同款',
 			desc: '只选人气NO.1的口碑产品！正品低价，全球采买！',
 			link: location.href,
 			imgUrl: 'http://static.xiaohongchun.com/store/images/share_icon.png',
 			type: 'link'
-			// dataUrl: '',
-			// success: function () {},
-			// cancel: function () {}
 		});
 
 		if(!(window.inapp && window.inapp==1)){
