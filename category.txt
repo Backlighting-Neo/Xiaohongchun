@@ -12,7 +12,7 @@ Chanle_share.html
 	css/channelshare.css
 	css/mobile.css
 	js/channelshare.js
-	js/mobile.js
+	lib/mobile.js
 	js/mejs/bigplay_red.svg
 	js/mejs/conrols.svg
 	js/mejs/loading.gif
