@@ -1,3 +1,4 @@
+@charset "UTF-8";
 img {
   display: block; }
 
@@ -22,20 +23,254 @@ body {
   cursor: pointer; }
 
 body {
-  width: 750px;
-  background-color: #6e0006; }
+  width: 640px;
+  background-color: white; }
 
 .getButton1, .getButton2 {
-  width: 490px;
-  height: 118px;
+  width: 418px;
+  height: 100px;
   border-radius: 5px; }
+  .getButton1 img, .getButton2 img {
+    margin: 30px auto; }
 
 .getButton1 {
   background-color: #ffd74c;
   border: 4px dotted #6e0006;
-  margin: 0 auto; }
+  margin: 60px auto 0 auto; }
+
+.result {
+  margin: 20px auto;
+  color: #a48383;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #fff; }
+  .result .telNo {
+    margin: 0 5px; }
+  .result .editTelNo {
+    margin: 0 5px; }
 
 .getButton2 {
   background-color: #ff0041;
   border: 4px dotted #ffffff;
-  margin: 0 auto; }
+  margin: 660px auto 60px auto; }
+
+.rules {
+  width: 560px;
+  height: 358px;
+  margin: 60px auto;
+  background: url(../images/weChatGift_rules.png) round; }
+
+.owl_outer {
+  position: absolute;
+  top: 1079px;
+  overflow: hidden;
+  width: 100%;
+  height: 600px; }
+  .owl_outer .owl {
+    position: absolute;
+    width: 1500px;
+    height: 560px;
+    left: -328px;
+    overflow: hidden; }
+  .owl_outer .item_first {
+    width: 410px;
+    height: 550px; }
+  .owl_outer .item {
+    width: 400px;
+    height: 540px;
+    border: 5px solid #ff656c;
+    border-radius: 34px;
+    background-color: white;
+    position: relative; }
+    .owl_outer .item:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 19px;
+      top: 19px;
+      left: 26px;
+      background-image: url(../images/RedPackage_quoteIcon.png); }
+    .owl_outer .item:after {
+      content: '';
+      display: block;
+      position: absolute;
+      transform: rotate(180deg);
+      width: 20px;
+      height: 19px;
+      top: 109px;
+      right: 26px;
+      background-image: url(../images/RedPackage_quoteIcon.png); }
+    .owl_outer .item .description {
+      margin: 50px auto 0 auto;
+      width: 270px;
+      height: 80px;
+      line-height: 28px;
+      font-size: 22px;
+      color: #717171;
+      overflow: hidden; }
+    .owl_outer .item .goodsImage {
+      width: 240px;
+      height: 240px;
+      margin: 20px auto; }
+    .owl_outer .item .title {
+      width: 260px;
+      height: 50px;
+      margin: 10px auto;
+      color: #3a3a3a;
+      font-size: 18px;
+      line-height: 25px;
+      overflow: hidden; }
+    .owl_outer .item .price {
+      width: 150px;
+      margin: 0 auto; }
+      .owl_outer .item .price:before {
+        content: '用券价：';
+        display: inline;
+        color: #717171;
+        font-size: 19px; }
+      .owl_outer .item .price span {
+        color: #fe4545;
+        font-size: 17px; }
+        .owl_outer .item .price span:before {
+          content: '¥';
+          margin-right: 5px; }
+
+.mask {
+  background-color: rgba(0, 0, 0, 0.42);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 1s; }
+  .mask .popup {
+    margin: 400px auto 0 auto;
+    width: 513px;
+    height: 458px;
+    background: url(../images/weChatGift_Popup.png); }
+    .mask .popup .phoneNo {
+      width: 410px;
+      height: 94px;
+      line-height: 94px;
+      font-size: 33px;
+      background-color: white;
+      border-radius: 5px;
+      border: 4px dotted #6e0006;
+      text-align: center;
+      margin: 80px 0 0 50px; }
+    .mask .popup .getGift {
+      width: 410px;
+      height: 94px;
+      background-color: #ffd74c;
+      border: 4px dotted #6e0006;
+      margin: 20px 0 0 50px;
+      border-radius: 5px; }
+      .mask .popup .getGift img {
+        margin: 25px 0 0 108px; }
+
+.loading {
+  position: relative;
+  margin: 1000px auto;
+  zoom: 0.4;
+  width: 500px; }
+
+@keyframes rotate2 {
+  5% {
+    transform: rotate(37deg); }
+  50% {
+    transform: rotate(397deg); }
+  100% {
+    transform: rotate(397deg); } }
+
+@-webkit-keyframes rotate2 {
+  5% {
+    -webkit-transform: rotate(37deg); }
+  50% {
+    -webkit-transform: rotate(397deg); }
+  100% {
+    -webkit-transform: rotate(397deg); } }
+
+@keyframes rotate3 {
+  5% {
+    transform: rotate(100deg); }
+  50% {
+    transform: rotate(460deg); }
+  100% {
+    transform: rotate(460deg); } }
+
+@-webkit-keyframes rotate3 {
+  5% {
+    -webkit-transform: rotate(100deg); }
+  50% {
+    -webkit-transform: rotate(460deg); }
+  100% {
+    -webkit-transform: rotate(460deg); } }
+
+@keyframes rotate4 {
+  5% {
+    transform: rotate(140deg); }
+  50% {
+    transform: rotate(500deg); }
+  100% {
+    transform: rotate(500deg); } }
+
+@-webkit-keyframes rotate4 {
+  5% {
+    -webkit-transform: rotate(140deg); }
+  50% {
+    -webkit-transform: rotate(500deg); }
+  100% {
+    -webkit-transform: rotate(500deg); } }
+  .loading .sharp1, .loading .sharp2, .loading .sharp3, .loading .sharp4 {
+    position: absolute;
+    width: 450px;
+    height: 320px;
+    border-top-left-radius: 140px 160px;
+    border-bottom-left-radius: 140px 160px;
+    border-top-right-radius: 310px 160px;
+    border-bottom-right-radius: 310px 160px;
+    opacity: 0.8; }
+  .loading .sharp1 {
+    background-color: #fd204c;
+    z-index: 4; }
+  .loading .sharp2 {
+    background-color: #ff67bc;
+    z-index: 3;
+    transform: rotate(37deg);
+    -webkit-transform: rotate(37deg);
+    animation: rotate2 5s 0.2s infinite ease-out;
+    -webkit-animation: rotate2 5s 0.2s infinite ease-out; }
+  .loading .sharp3 {
+    background-color: #fdab7c;
+    z-index: 2;
+    transform: rotate(100deg);
+    -webkit-transform: rotate(100deg);
+    animation: rotate3 5s 0.6375s infinite ease-out;
+    -webkit-animation: rotate3 5s 0.6375s infinite ease-out; }
+  .loading .sharp4 {
+    background-color: #feacc3;
+    z-index: 1;
+    transform: rotate(140deg);
+    -webkit-transform: rotate(140deg);
+    animation: rotate4 5s 0.9152s infinite ease-out;
+    -webkit-animation: rotate4 5s 0.9152s infinite ease-out; }
+  .loading .title, .loading .subtitle {
+    position: absolute;
+    color: white;
+    z-index: 10;
+    opacity: 0.85;
+    font-weight: bold; }
+  .loading .title {
+    width: 280px;
+    height: 90px;
+    top: 80px;
+    left: 50px;
+    text-align: center;
+    font-size: 80px; }
+  .loading .subtitle {
+    position: absolute;
+    font-size: 33px;
+    left: 90px;
+    top: 180px; }

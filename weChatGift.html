@@ -3,21 +3,69 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=750">
+  <meta name="viewport" content="width=640, user-scalable=0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no">
   <meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
   <title>小红唇红包</title>
   <link rel="stylesheet" type="text/css" href="css/weChatGift.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
 
 </head>
 
 <body>
-  <div class="getButton1"></div>
-	<div class="getButton2"></div>
+  <div class="loading">
+    <div class="title">小红唇</div>
+    <div class="subtitle">你的变美频道</div>
+    <div class="sharp1"></div>
+    <div class="sharp2"></div>
+    <div class="sharp3"></div>
+    <div class="sharp4"></div>
+  </div>
+
+  <div class="content" style="display: none">
+    <img src="images/weChatGift_backGround_1.jpg" width="640px">
+    <img id="img" src="images/weChatGift_backGround_2.jpg" width="640px">
+
+    <div class="getButton1">
+      <img id="img_gB1" src="images/weChatGift_RedText.png"> 
+    </div>
+
+    <div class="result" style="display: none">
+      红包已放至账户<span class="telNo">12345678901</span><span class="editTelNo">修改</span><br>登录APP即可使用
+    </div>
+
+    <div class="owl_outer">
+      <div class="owl">
+        <div class="item">
+          <div class="description">韩国女性最爱的一款气垫BB雪花秀,雪花秀雪花秀秀秀秀秀雪花秀。</div>
+          <img class="goodsImage" src="images/avatar.png">
+          <div class="title">雪雪花秀雪花秀顶级雪花秀，雪花，保湿雪花秀亮白雪花秀</div>
+          <div class="price"><span>99</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="getButton2">
+      <img id="img_gB2" src="images/weChatGift_WhiteText.png">
+    </div>
+
+    <div class="rules"></div>
+
+    <div class="mask" style="display: none">
+      <div class="popup">
+        <input class="phoneNo" id="telno" placeholder="输入手机号"></input>
+        <div class="getGift">
+          <img src="images/weChatGift_RedText.png">
+        </div>
+      </div>
+    </div>
+  </div>
 
 	<script type="text/javascript" src="lib/mobile.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/weChatGift.js"></script>
 </body>
 
