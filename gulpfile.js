@@ -257,8 +257,9 @@ gulp.task("js-min",['scan', 'clean'], function() {
     .pipe(gulp.dest(src_root + 'js/')));
 })
 
-gulp.task("js",['scan', 'clean', 'js-min', 'babel', 'jsx'], function() {
+gulp.task("js",['scan', 'clean', 'babel', 'jsx'], function() {
   return gulp.src(config.js.src)
+    .pipe(p.uglify())
     .pipe(gulp.dest(config.js.dest))
 })
 
@@ -297,7 +298,7 @@ gulp.task("css-min",['scan', 'clean'], function() {
     .pipe(gulp.dest(src_root + 'css/'));
 })
 
-gulp.task("css",['scan','clean','css-min','scss','scss-complie'], function() {
+gulp.task("css",['scan','clean','scss','scss-complie'], function() {
   return gulp.src(config.css.src)
     .pipe(gulp.dest(config.css.dest))
 })

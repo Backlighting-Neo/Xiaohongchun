@@ -1,5 +1,4 @@
-(function() {
-	var start = function() {
+$(document).ready(function() {
 		var vid = mobile.query('vid');
 
 		if(!$.isNumeric(vid)){
@@ -51,6 +50,7 @@
 			});
 			mobile.avoidEmptyRequest();
 			mobile.videoplugin();
+
 			mobile.adddownloader();
 			mobile.binddownload(['download', 'footerdownload']);
 
@@ -82,8 +82,4 @@
 			$('.tab-recommand-content').hide();
 			$('.tab-comment-content').show();
 		});
-
-	};
-
-	window.onload = start;
-})()
+});

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=640">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
+  <title>吐槽大王驾到！</title>
+
+</head>
+
+<body>
+
+	<img src="images/TucaoAwards_01.jpg" alt="" />
+	<img src="images/TucaoAwards_02.jpg" alt="" />
+	<img src="images/TucaoAwards_03.jpg" alt="" />
+	<img src="images/TucaoAwards_04.jpg" alt="" />
+	<img src="images/TucaoAwards_05.jpg" alt="" />
+	<img src="images/TucaoAwards_06.jpg" alt="" />
+	<img src="images/TucaoAwards_07.jpg" alt="" />
+	<img src="images/TucaoAwards_08.jpg" alt="" />
+
+	<script type="text/javascript" src="lib/mobile.js"></script>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript">
+    var smallimage = 'images/weChatIcon_tuCaoAwards.jpg';
+    var content = '＃那些年买错的坑货＃吐槽大会圆满结束，同志们快来领奖金呀！';
+    mobile.domClick();
+    mobile.appendBaiduAnalysis();
+    mobile.appendAppShare(smallimage,content);
+    mobile.weChat.bindWeChatShare({
+      title: document.title,
+      desc: content,
+      link: location.href,
+      imgUrl: smallimage
+    })
+	</script>
+</body>
+
+</html>

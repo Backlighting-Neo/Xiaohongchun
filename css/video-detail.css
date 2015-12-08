@@ -105,10 +105,12 @@ body {
     position: relative; }
     .video-detail-product .item .info .name {
       font-size: 25px;
-      margin-top: 47px; }
+      margin-top: 47px;
+      height: 66px;
+      overflow: hidden; }
     .video-detail-product .item .info .price {
       position: absolute;
-      font-size: 18px;
+      font-size: 25px;
       color: #333333;
       bottom: 35px;
       left: 5px; }

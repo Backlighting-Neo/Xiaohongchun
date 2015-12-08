@@ -44,7 +44,7 @@
       <div class="item" v-for="item in goods">
         <img data-src="{{item.g_image}}" />
         <div class="info">
-          <div class="name">{{item.g_title + ' - ' + item.g_name}}</div>
+          <div class="name">{{item.g_name}}</div>
           <div class="price">{{item.g_price_shop}}</div>
           <div class="button" onclick="location.href='../store/goods.html?pid={{item.g_id}}'">查看详情</div>
         </div>

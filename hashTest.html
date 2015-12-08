@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=640">
+	<title>前端测试</title>
+	<style type="text/css">
+		a {
+			line-height: 50px;
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+
+	<script type="text/javascript" src="lib/mobile.js"></script>
+	<script type="text/javascript">
+		document.write('<style>body {font-size: 35px; padding: 20px; word-break: break-all;} .key {color: blue; margin-right:30px; font-weight: bold;}</style>');
+		document.write('<div id="content"></div>');
+		debug = 1;
+		var log = function(key, value) {
+		  var type = 'document'; // document
+		  value = value ? value : '';
+		  if (debug > 0) {
+		    switch (type) {
+		      case 'console':
+		        console.log("%c" + key + "    %c" + value, "color: blue; font-size: x-large", "color: #000; font-size: x-large");
+		        break;
+		      case 'document':
+		        $('#content').append('<span class="key">' + key + '</span><span>' + value + '</span><br><br>');
+		        break;
+		    }
+		  }
+		}
+
+		log('StartTime', new Date());
+		log('href', location.href);
+		log('hash', location.hash);
+
+		window.onhashchange = function() {
+			log('hashChange', new Date());
+			log('newHash', location.hash);
+		}
+	</script>
+</body>
+</html>

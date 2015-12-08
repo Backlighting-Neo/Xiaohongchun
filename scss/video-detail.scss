@@ -116,11 +116,13 @@ $bgcolor: #d6d6d6;
 			.name {
 				font-size: 25px;
 				margin-top: 47px;
+				height: 66px;
+				overflow: hidden;
 			}
 
 			.price {
 				position: absolute;
-				font-size: 18px;
+				font-size: 25px;
 				color: #333333;
 				bottom: 35px;
 				left:5px;
