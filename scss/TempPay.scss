@@ -1,0 +1,44 @@
+@charset "utf-8";
+@import "common";
+
+$bgcolor: #f1f1f1;
+
+body {
+	background-color: white;
+	width: 640px;
+}
+
+.title {
+	@include fixed(top);
+	@include divcenter(90px);
+	@include gap(1px);
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+	background-color: #f1f1f1;
+	z-index:9999;
+	-webkit-transform: translateZ(0);
+}
+
+.price {
+	color: #fe4545;
+	font-size: 35px;
+	text-align: center;
+}
+
+.goods_title {
+	font-size: 30px;
+	margin: 10px 20px;
+}
+
+.pay {
+	width: 500px;
+	height: 90px;
+	line-height: 90px;
+	background-color: #46bf1a;
+	border-radius: 10px;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+	margin: 50px auto;
+}

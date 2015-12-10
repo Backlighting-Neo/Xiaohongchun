@@ -10,6 +10,7 @@ $(function(){
 	var telNo = function() {
 		return ($('#telno').val());
 	};
+	var inapp = mobile.inApp();
 	
 	var randomColor = function (){
 		var border_color = ['764c4e', 'ff656c', 'fbc400'];
@@ -34,10 +35,15 @@ $(function(){
 			button.show();
 			button2.hide();
 			button.on('click', function() {
-				mask.css('display','')
-				setTimeout(function() {
-					mask.css('opacity','1');
-				},0);
+				if(inapp){
+					$('body').appned('<iframe src="" height=0 ></iframe>')
+				}
+				else {
+					mask.css('display','')
+					setTimeout(function() {
+						mask.css('opacity','1');
+					},0);
+				}
 			})
 		},
 		getted: function(telNo) {

@@ -63,9 +63,6 @@ $(document).ready(function() {
 				link: location.href,
 				imgUrl: detail.cover_url,
 				type: 'link'
-				// dataUrl: '',
-				// success: function () {},
-				// cancel: function () {}
 			});
 
 		});

@@ -1,0 +1,6 @@
+APP内打开Html页面领红包：
+
+1、打开Html页面
+2、截获Html页面中的请求：
+	http://www.xiaohongchun.com/index/params?getCoupon={CouponID}
+3、请修改WebView的URL，在后边加#code={0/1}&errmsg={String}
