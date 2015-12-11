@@ -18,6 +18,8 @@
   img {
     width: 100%;
     vertical-align: bottom;
+    box-shadow: 0 5px 5px #ededed;
+    -webkit-box-shadow: 0 5px 5px #ededed;
   }
   
   .owl-controls {
@@ -153,12 +155,13 @@
         focus[i].height = screenwidth * 0.4;
       };
 
-      var buttonsize = screenwidth * 0.224;
+      var button_width  = screenwidth * 0.224;
+      var button_height = screenwidth * 0.2373;
       var buttonml = screenwidth * 0.02;
 
       for (var i = button.length - 1; i >= 0; i--) {
-        $(button[i]).height(buttonsize);
-        $(button[i]).width(buttonsize);
+        $(button[i]).height(button_height);
+        $(button[i]).width(button_width);
       };
     }
 
@@ -168,7 +171,7 @@
       
       focus.height(300);
       owl2.css('margin','40px 5px 0 5px').width(740);
-      button.width(168).height(168);
+      button.width(168).height(178);
 
       if (button.length > 3) {
         owl2.owlCarousel({

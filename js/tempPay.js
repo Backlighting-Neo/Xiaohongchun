@@ -79,12 +79,12 @@ $(function() {
     })
   }
 
-  // mobile.weChat.bindWeChatShare({
-  //   title: '小红唇商城购买',
-  //   desc: data.title,
-  //   link: location.href,
-  //   imgUrl: data.img
-  // })
+  mobile.weChat.bindWeChatShare({
+    title: '小红唇商城购买',
+    desc: data.title,
+    link: location.href,
+    imgUrl: data.img
+  })
 
   if (typeof WeixinJSBridge == "undefined") {
     if (document.addEventListener) {

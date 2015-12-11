@@ -10,6 +10,11 @@ $(function(){
 	var telNo = function() {
 		return ($('#telno').val());
 	};
+
+	if(mobile.query('debug')=='1'){
+		window.inapp = 0;
+	}
+
 	var inapp = mobile.inApp();
 	
 	var randomColor = function (){
@@ -36,7 +41,8 @@ $(function(){
 			button2.hide();
 			button.on('click', function() {
 				if(inapp){
-					$('body').appned('<iframe src="" height=0 ></iframe>')
+					// TODO 修改截获地址
+					$('body').append('<script src="http://www.xiaohongchun.com/index/params?getCoupon={CouponID}"></script>');
 				}
 				else {
 					mask.css('display','')
@@ -50,14 +56,60 @@ $(function(){
 			button2.show();
 			button.hide();
 			button.off('click');
-			$('.telNo').html(telNo);
+			if(inapp) {
+				$('.getsuccess').html('红包已放至您当前登录账户');
+			}
+			else {
+				$('.telNo').html(telNo);
+			}
 			$('.getsuccess').show();
 		}
 	}
 
 	// TODO ajax here 判断是否已领过 传入code
-	render.unget();
+	
 	// render.getted();
+
+  var appgeted = function() {
+		var hashQuery = function(item){
+			var svalue = location.hash.match(new RegExp("[\#\&]" + item + "=([^\&]*)(\&?)","i"));
+			return svalue ? svalue[1] : svalue;
+		}
+		console.log(hashQuery('code'));
+		if(hashQuery('code')==''){
+			return;
+		}
+		if(hashQuery('code')==0){
+			popup.hide();
+			mask.show();
+			setTimeout(function() {
+				mask.css('opacity','1');
+			},0);
+			success.show(function() {
+				mask.on('click', function() {
+					mask.off('click');
+					mask.css('display','none').css('opacity','0');;
+				})
+				render.getted();
+			});
+		}
+		else {
+			if(hashQuery('errmsg')==''){
+				alert('领取失败');
+			}
+			else {
+				alert(hashQuery('errmsg'));
+			}
+		}
+  }
+
+	if(inapp){
+		window.onhashchange = appgeted;
+		appgeted();
+	}
+	else {
+		render.unget();
+	}
 
 	getbtn.click(function() {
 		if(!/^[1][358][0-9]{9}$/.test(telNo())){

@@ -218,7 +218,7 @@ gulp.task("clean", function() {
 
 gulp.task("index",['scan', 'clean'], function() {
   return gulp.src(config.index.src)
-    .pipe(p.rename("index.html"))
+    // .pipe(p.rename("index.html"))
     .pipe(p.replace(
   		'<script type="text/javascript" src="build/JSXTransformer.js"></script>',
   		'<!-- \n 要使用未编译的JSX，请包含下面的js文件 \n <script type="text/javascript" src="build/JSXTransformer.js"></script> \n -->'

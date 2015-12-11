@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=750">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
+  <title>用到空瓶才是真爱</title>
+	<style type="text/css">
+		body {
+			width: 750px;
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			display: block;
+			margin:0;
+			padding: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<img src="images/Activity20151210_EmptyBottle_02.jpg" />
+	<img src="images/Activity20151210_EmptyBottle_03.jpg" />
+	<img src="images/Activity20151210_EmptyBottle_04.jpg" />
+	<img src="images/Activity20151210_EmptyBottle_05.jpg" />
+	<img src="images/Activity20151210_EmptyBottle_06.jpg" />
+	<img src="images/Activity20151210_EmptyBottle_07.jpg" />
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="lib/mobile.js"></script>
+	<script type="text/javascript">
+		var smallimage = 'images/weChatIcon_Activity20151210_emptyBottle.jpg';
+		var content = '一大波用到空瓶的绝世好物袭来，种草不能停！';
+		mobile.appendBaiduAnalysis();
+		mobile.appendAppShare(smallimage,content);
+		mobile.weChat.bindWeChatShare({
+			title: document.title,
+			desc: content,
+			link: location.href,
+			imgUrl: smallimage
+		})
+	</script>
+</body>
+
+</html>
