@@ -1,10 +1,13 @@
-APP内打开Html页面领红包：
+APP内打开Html页面领红包
 
 1、在WebView中打开Html页面
 	http://static.xiaohongchun.com/store/gift118.html?couponId={券号}
+
 2、请截获我发起的http请求：
 	http://www.xiaohongchun.com/index/params?getCoupon={CouponID}
+
 3、请在APP内发起领红包的请求
-4、领取红包成功或失败后，请修改WebView的URL，在后边加#code={0/1}&errmsg={String}
+
+4、领取红包成功或失败后，请修改WebView的URL，在后边加#code={0/?}&errmsg={String}
 	code == 0 领取成功，不需要传errmsg
 	code != 0 领取失败，页面将弹窗提示errmsg中的内容

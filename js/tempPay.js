@@ -1,17 +1,18 @@
 $(function() {
-  $('body').append('<style>body {font-size: 35px; padding: 20px; word-break: break-all;} .key {color: blue; margin-right:30px; font-weight: bold;}</style>');
-  $('body').append('<div id="content"></div>');
-
   var appid = 'wx3d7f899c6405a785';
   var redirect_url = "http://static.xiaohongchun.com/store/TempPay.html";
   var scope = 'snsapi_base';
   var code = mobile.query('code');
   code = code?code:'';
   var state = location.search.replace('?','');
-
+  var alipay = mobile.query('is_success');
   var url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + appid + '&redirect_uri=' + encodeURIComponent(redirect_url) + '&response_type=code&scope=' + scope + '&state=' + state + '#wechat_redirect';
 
-  if (code.length < 32) {
+  if(alipay && alipay=='T'){
+    $('.pay').html('支付成功');
+  }
+
+  if ((code.length < 32) && (navigator.userAgent.indexOf('MicroMessenger') > -1)) {
     location.href = url;
     return;
   }
@@ -29,7 +30,15 @@ $(function() {
     }
   }
 
-  var option = mobile.query('state');
+  if(navigator.userAgent.indexOf('MicroMessenger') > -1) {
+    var option = mobile.query('state');
+  }
+  else if(alipay && alipay=='T') {
+    var option = mobile.query('total_fee');
+  }
+  else {
+    var option = location.search.replace('?','');
+  }
 
   if(option!='49' && option!='99'){
     option = '49';
@@ -42,43 +51,76 @@ $(function() {
     $('.goods_title').html(data.title);
   }
 
-  var onBridgeReady = function() {
+  if(alipay && alipay=='T') {return}
+
+  if(navigator.userAgent.indexOf('MicroMessenger') > -1) {
+    $('.pay').html('请在浏览器中打开');
+    // var onBridgeReady = function() {
+    //   $('.pay').click(function() {
+    //     $('.pay').html('请稍候……');
+    //     var pay_ajax = $.getJSON('http://test1.xiaohongchun.com/wxpay/'+code+'/'+data.price*100);
+    //     $.when(pay_ajax).done(function(json) {
+    //       if(json.code>0){
+    //         alert(json.msg);
+    //         return;
+    //       }
+    //       WeixinJSBridge.invoke(
+    //         'getBrandWCPayRequest', {
+    //           "appId": appid,
+    //           "timeStamp": json.data.timestamp+'',
+    //           "nonceStr": json.data.noncestr,
+    //           "package": "prepay_id=" + json.data.prepayid,
+    //           "signType": "MD5",
+    //           "paySign": json.data.sign
+    //         },
+    //         function(res) {
+    //           if (res.err_msg == "get_brand_wcpay_request:ok") {
+    //             $('.pay').html('支付成功');
+    //             $('.pay').off('click');
+    //           } 
+    //           else {
+    //             $('.pay').html('支付失败，点击刷新');
+    //             $('.pay').off('click');
+    //             $('.pay').on('click', function() {
+    //               location.href = 'http://static.xiaohongchun.com/store/TempPay.html?'+option
+    //             })
+    //           }
+    //         }
+    //       );
+    //     })
+    //   })
+    // }
+  }
+  else {
+    $('.pay').html('支付宝支付');
+    // TODO 支付宝
     $('.pay').click(function() {
       $('.pay').html('请稍候……');
-      var pay_ajax = $.getJSON('http://test1.xiaohongchun.com/wxpay/'+code+'/'+data.price*100);
-      $.when(pay_ajax).done(function(json) {
-        if(json.code>0){
-          alert(json.msg);
-          return;
-        }
-        WeixinJSBridge.invoke(
-          'getBrandWCPayRequest', {
-            "appId": appid,
-            "timeStamp": json.data.timestamp+'',
-            "nonceStr": json.data.noncestr,
-            "package": "prepay_id=" + json.data.prepayid,
-            "signType": "MD5",
-            "paySign": json.data.sign
-          },
-          function(res) {
-            if (res.err_msg == "get_brand_wcpay_request:ok") {
-              $('.pay').html('支付成功');
-              $('.pay').off('click');
-            } 
-            else {
-              $('.pay').html('支付失败，点击刷新');
-              $('.pay').off('click');
-              $('.pay').on('click', function() {
-                location.href = 'http://static.xiaohongchun.com/store/TempPay.html?'+option
-              })
-            }
-          }
-        );
+      var surl = 'http://'+location.hostname+location.pathname;
+      var alipay_option = $.getJSON('http://test1.xiaohongchun.com/alipay/'+data.price+'?return_url='+surl+'&title='+data.title);
 
+      alipay_option.done(function(json) {
+        var alipay_gateway = 'https://mapi.alipay.com/gateway.do';
+        delete json.code;
+        var propertys = Object.getOwnPropertyNames(json);
+        for (var i = propertys.length - 1; i >= 0; i--) {
+          console.log(propertys[i] + '    ' + json[propertys[i]]);
+          if(propertys[i] == 'body'){
+            propertys[i] = propertys[i] + '=' + encodeURIComponent(json[propertys[i]]);
+          }
+          else {
+            propertys[i] = propertys[i] + '=' + json[propertys[i]];
+          }
+        };
+        var alipay_url = alipay_gateway + '?' + (propertys.join('&'));
+        // console.log(alipay_url);
+
+        location.href = alipay_url;
       })
-    })
+    });
   }
 
+  // 支付宝也可以读到以下的信息
   mobile.weChat.bindWeChatShare({
     title: '小红唇商城购买',
     desc: data.title,

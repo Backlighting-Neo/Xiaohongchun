@@ -10,12 +10,11 @@ $(function(){
 	var telNo = function() {
 		return ($('#telno').val());
 	};
-
-	if(mobile.query('debug')=='1'){
-		window.inapp = 0;
+	var couponId = mobile.query('couponId');
+	if(couponId == '' || !$.isNumeric(couponId)){
+		location.href = 'http://www.xiaohongchun.com';
 	}
-
-	var inapp = mobile.inApp();
+	var inapp = mobile.query('debug')=='1'?true:mobile.inApp();
 	
 	var randomColor = function (){
 		var border_color = ['764c4e', 'ff656c', 'fbc400'];
