@@ -92,6 +92,13 @@ body {
 	}
 }
 
+.#{$app}info {
+	text-align: center;
+	font-size: 25px;
+	padding: 15px 0;
+
+}
+
 .loading {
 	@include loading(0.4,1000px auto);
 }

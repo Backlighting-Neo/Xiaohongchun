@@ -93,6 +93,11 @@ body {
         content: '¥';
         margin-right: 5px; }
 
+.store-list-info {
+  text-align: center;
+  font-size: 25px;
+  padding: 15px 0; }
+
 .loading {
   position: relative;
   margin: 1000px auto;
