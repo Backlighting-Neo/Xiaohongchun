@@ -1,8 +1,7 @@
-(function() {
     var start = function() {
         var appid = 'wx3d7f899c6405a785';
         // AppId
-
+        var fileName = mobile.query('file');
         var ajax_banner = $.getJSON(baseurl+'/goods/banner');
         var ajax_list   = $.getJSON(baseurl+'/goods');
 
@@ -13,14 +12,16 @@
                 banner: data_banner[0].data,
                 data:   data_list[0].data
             };
+            //console.log(data_banner[0].data);
             lastid = data_list[0].data[data_list[0].data.length-1].g_id;
 
             var vue_page = new Vue({
                 el: 'body',
                 data: pagedata
-            })
+            });
+            vue_page.$log();
             mobile.avoidEmptyRequest();
-            mobile.binddownload(['download']);
+            mobile.binddownload(['.download']);
             $('.loading').remove();
             $('.content').show();
 
@@ -63,5 +64,6 @@
         }
     }
 
-    window.onload = start;
-})()
+    $(function(){
+        start();
+    });
