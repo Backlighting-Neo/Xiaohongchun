@@ -147,12 +147,8 @@ body {
       overflow: hidden; }
     .owl_outer .item .price {
       width: 150px;
-      margin: 0 auto; }
-      .owl_outer .item .price:before {
-        content: '用券价：';
-        display: inline;
-        color: #717171;
-        font-size: 19px; }
+      margin: 0 auto;
+      text-align: center; }
       .owl_outer .item .price span {
         color: #fe4545;
         font-size: 17px; }
