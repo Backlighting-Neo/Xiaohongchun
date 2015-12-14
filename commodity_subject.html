@@ -27,7 +27,7 @@
 <div class="content" style="display: none">
     <div class="header">
         <img src="images/commodity_subject_logo.png">
-        <img src="images/commodity_subject_button.png">
+        <img class="download" src="images/commodity_subject_button.png">
     </div>
     <div class="commodity_subject_banner">
         <img src="images/pic.png">
@@ -38,7 +38,7 @@
             我是专题页内容我是专题页内容我是专题页内容我是专题页内容我是专题页内容我是专题页内容我是专题页内容我是专题页内容
             我是专题页内容我是专题页内容我是专题页内容我是专题页内容
         </p>
-        <div class="commodity_subject_list">
+        <div class="commodity_subject_list" v-for="item in data">
             <div class="commodity_subject_img">
                 <img src="images/coco.jpg">
                 <div class="commodity_subject_shopCar">
