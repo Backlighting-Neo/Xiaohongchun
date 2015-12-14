@@ -27,7 +27,7 @@ $(document).ready(function() {
 			mobile.adddownloader();// 添加上下的APP下载按钮
 			// 评论和分享按钮的APP下载绑定
 			mobile.binddownload(['.command .comment','.command .share']);
-			mobile.binddownload(['download', 'footerdownload','.comment']);
+			mobile.binddownload(['.download', '.footerdownload','.comment']);
 	});
 
 	mobile.limitless(100, function() {
