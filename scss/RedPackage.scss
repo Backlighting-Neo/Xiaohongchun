@@ -172,13 +172,14 @@ body {
 		.price {
 			width: 150px;
 			margin: 0 auto;
+			text-align: center;
 
-			&:before {
-				content: '用券价：';
-				display: inline;
-				color: #717171;
-				font-size: 19px;
-			}
+			// &:before {
+			// 	content: '用券价：';
+			// 	display: inline;
+			// 	color: #717171;
+			// 	font-size: 19px;
+			// }
 
 			span {
 				@include rmb2;

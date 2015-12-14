@@ -1,4 +1,8 @@
 $(function(){
+	var code = mobile.weChat.getCode();
+
+	var package_url = 'http://test1.xiaohongchun.com';
+
 	var item = $('.item');
 	var owl  = $('.owl');
 	var mask = $('#mask');
@@ -7,20 +11,37 @@ $(function(){
 	var button = $('#gettingButtonLong,#gettingButtonShort');
 	var button2 = $('#gettedButtonLong,#gettedButtonShort');
 	var getbtn = $('#gettingButton');
+	var token = '';
+	var telphone = '';
 	var telNo = function() {
 		return ($('#telno').val());
 	};
 	var couponId = mobile.query('couponId');
-	if(couponId == '' || !$.isNumeric(couponId)){
+	if(couponId == ''){
 		location.href = 'http://www.xiaohongchun.com';
 	}
 	var inapp = mobile.query('debug')=='1'?true:mobile.inApp();
 	
+	if(!inapp && code=='Not in Wechat'){
+		alert('请在APP内或微信中打开');
+		location.href = 'http://www.xiaohongchun.com';
+		return;
+	}
+
 	var randomColor = function (){
 		var border_color = ['764c4e', 'ff656c', 'fbc400'];
     var id =  Math.floor(Math.random() * (border_color.length+1));
     return ('#'+border_color[id]);
 	}
+
+	var ajax_goods = $.getJSON(package_url+'/goods/tags/banners');
+	ajax_goods.done(function(json) {
+		var goods_vue = new Vue({
+			el: '.owl',
+			data: json
+		})
+		mobile.avoidEmptyRequest();
+	})
 
 	for (var i = item.length - 1; i >= 0; i--) {
 		item[i].style['border-color'] = randomColor();
@@ -41,7 +62,7 @@ $(function(){
 			button.on('click', function() {
 				if(inapp){
 					// TODO 修改截获地址
-					$('body').append('<script src="http://www.xiaohongchun.com/index/params?getCoupon={CouponID}"></script>');
+					$('body').append('<script src="http://www.xiaohongchun.com/index/params?getCoupon='+couponId+'"></script>');
 				}
 				else {
 					mask.css('display','')
@@ -49,6 +70,12 @@ $(function(){
 						mask.css('opacity','1');
 					},0);
 				}
+			})
+			$('.editTelNo').click(function() {
+				mask.css('display','')
+				setTimeout(function() {
+					mask.css('opacity','1');
+				},0);
 			})
 		},
 		getted: function(telNo) {
@@ -108,6 +135,21 @@ $(function(){
 	}
 	else {
 		render.unget();
+		if(code!='Not in Wechat'){
+			var ajax_gettoken = $.getJSON(package_url+'/oauth/weixin/'+code+'/telphone');
+			ajax_gettoken.done(function(json) {
+				if(json.code > 0){
+					alert(json.msg);
+					return;
+				}
+				token = json.token;
+				telphone = json.telphone || '';
+				if(telphone != '') {
+					//TODO 已有手机号领取
+					render.getted(telphone);
+				}
+			})
+		}
 	}
 
 	getbtn.click(function() {
@@ -116,7 +158,12 @@ $(function(){
 			$('#telno').val('');
 			return;
 		}
-		// TODO ajax 向手机号中注入红包，并将openID和TelNo绑定
+		
+		var ajax_editTelephone = $.getJSON(package_url+'/oauth/weixin/'+token+'/telphone/'+telNo());
+		ajax_editTelephone.done(function(json) {
+			var ajax_getPackage = $.getJSON(package_url+'/oauth/weixin/'+token+'/coupons_sys/'+couponId);
+		})
+
 		popup.hide();
 		success.show(function() {
 			mask.on('click', function() {
