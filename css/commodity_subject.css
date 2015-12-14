@@ -5,7 +5,6 @@ img {
 html, body, p, a, ol, ul, dd {
     margin: 0;
     padding: 0; }
-
 ol, ul {
     list-style: none; }
 
@@ -15,15 +14,15 @@ ol, ul {
 .ding {
     height: 1000px; }
 
-body {
-    font-size: 25px;
+body,html {
+    font-size: 18px;
     font-family: "Microsoft Yahei"; }
 
 .click {
     cursor: pointer; }
 
 body {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     width: 640px; }
 
 .store-list-title {
@@ -204,5 +203,69 @@ body {
     top: 180px;
     }
 .header{
-
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.header img{
+    display: block;
+    float: left;
+}
+.header img:first-child{
+    width: 46%;
+    margin: 26px 0 26px 4%;
+}
+.header img:nth-child(2){
+    width: 36%;
+    margin: 26px 0 26px 10%;
+}
+.commodity_subject_banner{
+    width: 100%;
+}
+.commodity_subject_banner img{
+    width: 100%;
+}
+.commodity_subject_content{
+    width: 90%;
+    margin: 40px 0 0 5%;
+    text-align: justify;
+}
+.commodity_subject_content content{
+    font-size: 0.9rem;
+    color: #3e3e3e;
+    width: 100%;
+}
+.commodity_subject_list{
+    border-top: 1px solid #cccccc;
+    /*margin: 26px 0 0 0;*/
+    padding: 28px 0 ;
+}
+.commodity_subject_list:last-child{
+    margin-bottom: 100px;
+}
+/*.commodity_subject_list:first-child{*/
+    /*margin: 26px 0 0 0;*/
+/*}*/
+.commodity_subject_img{
+    width: 100%;
+    position: relative;
+}
+.commodity_subject_img img{
+    width: 100%;
+}
+.commodity_subject_shopCar img{
+    width: 16%;
+    position: absolute;
+    bottom:3%;
+    right: 3%;
+}
+.product_title{
+    color: #cc2041;
+}
+.product_cash{
+    color:#ff002a;
+}
+.product_info{
+    color:#373737;
+    font-size: 0.9rem;
+    line-height: 1.8rem;
 }

@@ -6,7 +6,6 @@ html, body, p, a, ol, ul, dd {
   margin: 0;
   padding: 0;
 }
-
 ol, ul {
   list-style: none;
 }
@@ -15,7 +14,7 @@ ol, ul {
   clear: both;
 }
 
-body {
+body,html{
   font-size: 18px;
   font-family: "Microsoft Yahei";
 }
