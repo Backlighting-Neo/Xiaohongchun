@@ -63,7 +63,10 @@ $(function(){
 			button.on('click', function() {
 				if(inapp){
 					// TODO 修改截获地址
-					$('body').append('<script src="http://www.xiaohongchun.com/index/params?getCoupon='+couponId+'"></script>');
+					var hm = document.createElement("script");
+					hm.src = 'http://www.xiaohongchun.com/index/params?getCoupon='+couponId;
+					var s = document.getElementsByTagName("script")[0];
+					s.parentNode.insertBefore(hm, s);
 				}
 				else {
 					mask.css('display','')
@@ -95,15 +98,13 @@ $(function(){
 
 	// TODO ajax here 判断是否已领过 传入code
 	
-	// render.getted();
-
+	render.unget();
   var appgeted = function() {
 		var hashQuery = function(item){
 			var svalue = location.hash.match(new RegExp("[\#\&]" + item + "=([^\&]*)(\&?)","i"));
 			return svalue ? svalue[1] : svalue;
 		}
-		console.log(hashQuery('code'));
-		if(hashQuery('code')==''){
+		if(hashQuery('code')==null){
 			return;
 		}
 		if(hashQuery('code')==0){
@@ -173,5 +174,12 @@ $(function(){
 			})
 			render.getted(telNo());
 		});
+	})
+
+	mobile.weChat.bindWeChatShare({
+		title: document.title,
+		desc: '全场通用，仅限新人。护肤美妆保健品，真人视频分享，大家说好才是真的好！',
+		link: 'http://' + location.host + location.pathname + '?couponId=' + couponId,
+		imgUrl: 'images/weChatIcon_RedPackage118.jpg'
 	})
 })
