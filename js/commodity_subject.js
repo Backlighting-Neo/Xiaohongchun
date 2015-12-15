@@ -25,31 +25,31 @@
             $('.loading').remove();
             $('.content').show();
 
-            var loadingblock = false;
-            mobile.limitless(100, function() {
-                if(!loadingblock) {
-                    loadingblock = true;
-
-                    var ajax_more = $.getJSON(baseurl+'/goods?g_id='+lastid);
-                    ajax_more.done(function(json) {
-                        if(json.data.length == 0){
-                            $('.store-list-info').html('没有更多商品了');
-                            return;
-                        }
-                        for (var i = 0; i< json.data.length; i++) {
-                            pagedata.data.push(json.data[i]);
-                        };
-                        lastid = json.data[json.data.length-1].g_id;
-                        setTimeout(mobile.avoidEmptyRequest,100);
-                        // mobile.avoidEmptyRequest();
-                        loadingblock = false;
-                    })
-                }
-                else {
-                    return;
-                }
-            })
-        })
+            //var loadingblock = false;
+            //mobile.limitless(100, function() {
+            //    if(!loadingblock) {
+            //        loadingblock = true;
+            //
+            //        var ajax_more = $.getJSON(baseurl+'/goods?g_id='+lastid);
+            //        ajax_more.done(function(json) {
+            //            if(json.data.length == 0){
+            //                $('.store-list-info').html('没有更多商品了');
+            //                return;
+            //            }
+            //            for (var i = 0; i< json.data.length; i++) {
+            //                pagedata.data.push(json.data[i]);
+            //            };
+            //            lastid = json.data[json.data.length-1].g_id;
+            //            setTimeout(mobile.avoidEmptyRequest,100);
+            //            // mobile.avoidEmptyRequest();
+            //            loadingblock = false;
+            //        })
+            //    }
+            //    else {
+            //        return;
+            //    }
+            //})
+        });
 
         mobile.weChat.bindWeChatShare({
             title: '小红唇商城-美妆达人视频同款',
