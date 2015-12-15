@@ -27,7 +27,7 @@
 
   <div class="content" style="display: none">
     <img src="images/weChatGift_backGround_1.jpg" width="640px">
-    <img id="img" src="images/weChatGift_backGround_2.jpg" width="640px">
+    <div class="giftSize"><span>?</span></div>
 
     <div class="getButton1">
       <img id="img_gB1" src="images/weChatGift_RedText.png"> 
@@ -39,11 +39,11 @@
 
     <div class="owl_outer">
       <div class="owl">
-        <div class="item">
-          <div class="description">韩国女性最爱的一款气垫BB雪花秀,雪花秀雪花秀秀秀秀秀雪花秀。</div>
-          <img class="goodsImage" src="images/avatar.png">
-          <div class="title">雪雪花秀雪花秀顶级雪花秀，雪花，保湿雪花秀亮白雪花秀</div>
-          <div class="price"><span>99</span></div>
+        <div class="item" v-for="item in data">
+          <div class="description">{{item.g_desc.content}}</div>
+          <img class="goodsImage" data-src="{{item.tb_image}}" onclick="location.href='{{item.tb_url}}'">
+          <div class="title">{{item.g_name}}</div>
+          <div class="price"><span>{{item.g_price_shop}}</span></div>
         </div>
       </div>
     </div>
@@ -64,6 +64,7 @@
     </div>
   </div>
 
+  <script type="text/javascript" src="lib/vue.min.js"></script>
 	<script type="text/javascript" src="lib/mobile.js"></script>
   <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/weChatGift.js"></script>

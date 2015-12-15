@@ -12,7 +12,16 @@ $(function() {
 		return ($('#telno').val());
 	};
 
+	var package_url = 'http://test1.xiaohongchun.com';
 
+	var ajax_goods = $.getJSON(package_url+'/goods/tags/banners');
+	ajax_goods.done(function(json) {
+		var goods_vue = new Vue({
+			el: '.owl',
+			data: json
+		})
+		mobile.avoidEmptyRequest();
+	})
 	
 	var randomColor = function (){
 		var border_color = ['764c4e', 'ff656c', 'fbc400'];

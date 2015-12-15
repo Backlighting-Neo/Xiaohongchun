@@ -15,6 +15,24 @@ body {
 	}
 }
 
+.giftSize {
+	width: 640px;
+	height: 426px;
+	background: url(../images/weChatGift_backGround_2.jpg) round;
+	position: relative;
+
+	span {
+		position: absolute;
+		color: #600100;
+		font-size: 65px;
+		left: 310px;
+		top: 220px;
+		width: 100px;
+		text-align: center;
+		font-weight: bold;
+	}
+}
+
 .getButton1 {
 	@extend %Button;
 	background-color: #ffd74c;
