@@ -2,7 +2,7 @@
         //var appid = 'wx3d7f899c6405a785';
         // AppId
         var fileName = mobile.query('file');
-        $.getJSON(goods + fileName,function(res){
+        $.getJSON(goods + '/' + fileName,function(res){
 
             var pagedata = {
                 goods: res[0]['goods']
