@@ -1,5 +1,6 @@
 $(function(){
 	var code = mobile.weChat.getCode();
+	if(code == 'redirect'){return};
 
 	var package_url = 'http://test1.xiaohongchun.com';
 
