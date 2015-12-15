@@ -1,0 +1,14 @@
+[
+  {
+    "headerImg": "http://static.xiaohongchun.com/Activity/images/Activity20151202_05.jpg",
+    "desc": "当前描述当前描述当前描述当前描述当前描述当前描述当前描述当前描述",
+    "goods": [{
+      "pid":22,
+      "title":"这是一款很热的产品",
+      "price":234,
+      "sellingPiont":"商品卖点",
+      "pdesc":"这是商品描述",
+      "pimg":"http://static.xiaohongchun.com/event/image/1_header_image_src_1447328651000.png"
+    }]
+  }
+]
