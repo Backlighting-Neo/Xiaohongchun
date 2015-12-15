@@ -22,7 +22,7 @@
                 var cursor = 0;
 
                 for(var i = 0 ; i< goodsLj ; i++){
-                    
+
                     var gid = data['data'][i]['g_id'];
 
 
