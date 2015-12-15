@@ -38,17 +38,17 @@
             我是专题页内容我是专题页内容我是专题页内容我是专题页内容我是专题页内容我是专题页内容我是专题页内容我是专题页内容
             我是专题页内容我是专题页内容我是专题页内容我是专题页内容
         </p>
-        <div class="commodity_subject_list" v-for="item in data">
+        <div class="commodity_subject_list" v-for="item in goods">
             <div class="commodity_subject_img">
-                <img src="images/coco.jpg">
+                <img src={{item.pimg}}>
                 <div class="commodity_subject_shopCar">
                     <img src="images/shopCar.png">
                 </div>
             </div>
-            <h4 class="product_title">商品标题</h4>
-            <h3>商品卖点商品卖点</h3>
-            <h4 class="product_cash">¥ 234元</h4>
-            <p class="product_info">商品详情商品详情商品详情，商品详情商品详情商品详情商品详情商品详情商品详情商品详情，商品详情商品详情商品详情商品详情商品详情商品详情商品详情。</p>
+            <h4 class="product_title">{{item.title}}</h4>
+            <h3>{{item.sellingPiont}}</h3>
+            <h4 class="product_cash">¥ {{item.price}}</h4>
+            <p class="product_info">{{item.pdesc}}</p>
         </div>
     </div>
 
