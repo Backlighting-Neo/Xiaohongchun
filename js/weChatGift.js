@@ -14,6 +14,8 @@ $(function() {
 
 	var package_url = 'http://test1.xiaohongchun.com';
 
+	var cs_code = mobile.query('cs_code');
+
 	var ajax_goods = $.getJSON(package_url+'/goods/tags/banners');
 	ajax_goods.done(function(json) {
 		var goods_vue = new Vue({
