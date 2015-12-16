@@ -11,49 +11,47 @@
     <title>商品列表 - 小红唇</title>
     <link rel="stylesheet" type="text/css" href="css/mobile.css">
     <link rel="stylesheet" type="text/css" href="css/commodity_subject.css">
-
 </head>
 
 <body>
-<div class="loading">
-    <div class="title">小红唇</div>
-    <div class="subtitle">你的变美频道</div>
-    <div class="sharp1"></div>
-    <div class="sharp2"></div>
-    <div class="sharp3"></div>
-    <div class="sharp4"></div>
-</div>
+    <div class="loading">
+        <div class="title">小红唇</div>
+        <div class="subtitle">你的变美频道</div>
+        <div class="sharp1"></div>
+        <div class="sharp2"></div>
+        <div class="sharp3"></div>
+        <div class="sharp4"></div>
+    </div>
 
-<div class="content" style="display: none">
-    <div class="header">
-        <img src="images/commodity_subject_logo.png">
-        <img class="download" src="images/commodity_subject_button.png">
-    </div>
-    <div class="commodity_subject_banner">
-        <img data-src={{headerImg}}>
-    </div>
-    <div class="commodity_subject_content">
-        <p class="content" style="margin-bottom: 26px;">
-            {{desc}}
-        </p>
-        <div class="commodity_subject_list" v-for="item in goods">
-            <a href="http://static.xiaohongchun.com/store/goods.html?pid={{item.g_id}}">
-                <div class="commodity_subject_img">
-                    <img data-src={{item.g_image}}>
-                    <div class="commodity_subject_shopCar">
-                        <img src="images/shopCar.png">
-                    </div>
-                </div>
-            </a>
-            <h4 class="product_title">{{item.g_name}}</h4>
-            <h3>{{item.sellingPiont}}</h3>
-            <h4 class="product_cash">¥ {{item.g_price_shop}}</h4>
-            <p class="product_info">{{item.pdesc}}</p>
+    <div class="content" style="display: none">
+        <div class="header">
+            <img src="images/commodity_subject_logo.png">
+            <img class="download" src="images/commodity_subject_button.png">
         </div>
+        <div class="commodity_subject_banner">
+            <img data-src={{headerImg}}>
+        </div>
+        <div class="commodity_subject_content">
+            <p class="content" style="margin-bottom: 26px;">
+                {{desc}}
+            </p>
+            <div class="commodity_subject_list" v-for="item in goods">
+                <a href="http://www.xiaohongchun.com/index/params?goods={{item.g_id}}">
+                    <div class="commodity_subject_img">
+                        <img data-src={{item.g_image}}>
+                        <div class="commodity_subject_shopCar">
+                            <img src="images/shopCar.png">
+                        </div>
+                    </div>
+                </a>
+                <h4 class="product_title">{{item.g_name}}</h4>
+                <h3>{{item.sellingPiont}}</h3>
+                <h4 class="product_cash">¥ {{item.g_price_shop}}</h4>
+                <p class="product_info">{{item.pdesc}}</p>
+            </div>
+        </div>
+
     </div>
-
-</div>
-
 <script type="text/javascript" src="assets/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="js/store-debug.js"></script>
 <script type="text/javascript" src="lib/mobile.js"></script>
