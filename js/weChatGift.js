@@ -16,6 +16,15 @@ $(function() {
 
 	var cs_code = mobile.query('cs_code');
 
+	var code = weChat.getCode();
+	if(code == 'Not in Wechat') {
+		alert('请在微信浏览器中打开');
+		//TODO 
+		location.href = 'http://www.xiaohongchun.com';
+		return;
+	}
+
+
 	var ajax_goods = $.getJSON(package_url+'/goods/tags/banners');
 	ajax_goods.done(function(json) {
 		var goods_vue = new Vue({
