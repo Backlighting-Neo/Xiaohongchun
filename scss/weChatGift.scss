@@ -18,7 +18,9 @@ body {
 .giftSize {
 	width: 640px;
 	height: 426px;
-	background: url(../images/weChatGift_backGround_2.jpg) round;
+	background: url(../images/weChatGift_backGround_2.jpg);
+	background-size: 100% 100%;
+	// -webkit-background: url(../images/weChatGift_backGround_2.jpg) round;
 	position: relative;
 
 	span {
@@ -26,7 +28,7 @@ body {
 		color: #600100;
 		font-size: 65px;
 		left: 310px;
-		top: 220px;
+		top: 230px;
 		width: 100px;
 		text-align: center;
 		font-weight: bold;
@@ -69,7 +71,8 @@ body {
 	width: 560px;
 	height: 358px;
 	margin: 60px auto;
-	background: url(../images/weChatGift_rules.png) round;
+	background: url(../images/weChatGift_rules.png);
+	background-size: 100% 100%;
 }
 
 .owl_outer {
@@ -185,6 +188,7 @@ body {
 		background: url(../images/weChatGift_Popup.png);
 
 		.phoneNo {
+			display: inline-block;
 			width: 410px;
 			height: 94px;
 			line-height: 94px;
@@ -193,7 +197,8 @@ body {
 			border-radius: 5px;
 			border: 4px dotted #6e0006;
 			text-align: center;
-			margin: 80px 0 0 50px;
+			margin: 80px 0 0 54px;
+	    box-sizing: border-box;
 		}
 
 		.getGift {
@@ -201,8 +206,9 @@ body {
 			height: 94px;
 			background-color: #ffd74c;
 			border:4px dotted #6e0006;
-			margin: 20px 0 0 50px;
+			margin: 20px 0 0 54px;
 			border-radius: 5px;
+			box-sizing: border-box;
 
 			img {
 				margin: 25px 0 0 108px;

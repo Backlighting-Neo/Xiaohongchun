@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"pack",
+				"package_url〔variable〕"
+			],
+			[
+				"getbut",
+				"getButton2"
+			],
+			[
+				"getbu",
+				"getButton2"
+			],
+			[
 				"ajax_",
 				"ajax_goods"
 			],
@@ -388,11 +400,19 @@
 	"buffers":
 	[
 		{
-			"file": "/E/work/emergency/NovAwards.html",
+			"file": "TempPay.html",
 			"settings":
 			{
-				"buffer_size": 4817,
-				"line_ending": "Unix"
+				"buffer_size": 993,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/tempPay.js",
+			"settings":
+			{
+				"buffer_size": 4476,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -403,10 +423,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 185.0,
-		"last_filter": "install",
+		"height": 213.0,
+		"last_filter": "sshtml",
 		"selected_items":
 		[
+			[
+				"sshtml",
+				"Set Syntax: HTML"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -426,10 +450,6 @@
 			[
 				"ssscss",
 				"Set Syntax: SCSS"
-			],
-			[
-				"sshtml",
-				"Set Syntax: HTML"
 			],
 			[
 				"js",
@@ -469,31 +489,59 @@
 	],
 	"file_history":
 	[
-		"/E/work/source/RedPackage.html",
-		"/E/work/source/scss/RedPackage.scss",
+		"/E/work/source/scss/weChatGift.scss",
+		"/E/work/upload/store/js/weChatGift.js",
+		"/E/work/source/js/weChatGift.js",
+		"/E/work/source/Activity20151202.html",
 		"/E/work/source/js/RedPackage.js",
-		"/E/work/source/js/channelshare.js",
-		"/E/work/source/commodity_subject.html",
-		"/E/work/emergency/NovAwards.html",
+		"/E/work/source/weChatGift.html",
+		"/E/work/upload/store/TempPay.html",
+		"/E/work/upload/store/js/tempPay.js",
+		"/E/work/publish/weChatGift/js/weChatGift.js",
 		"/E/work/source/lib/mobile.js",
-		"/E/work/server/qiniu-uptoken/uptoken.js",
-		"/E/work/source/store-list.html",
-		"/E/work/xhc_api/tpl/publish_rank.tpl",
-		"/E/work/publish/RedPackage/gift118.html",
+		"/E/work/publish/weChatGift/w.html",
+		"/E/work/source/RedPackage.html",
+		"/E/work/source/product_detail.html",
+		"/E/work/publish/product_detail/goods.html",
+		"/C/Users/xhc/Desktop/不要删除FETestEnv",
 		"/E/work/source/js/store-debug.js",
+		"/C/Users/xhc/Documents/Tencent Files/398413222/FileRecv/mobile/routes/order.js",
+		"/C/Users/xhc/Documents/Tencent Files/398413222/FileRecv/mobile/views/layout.hbs",
+		"/C/Users/xhc/Documents/Tencent Files/398413222/FileRecv/mobile/views/index.hbs",
+		"/E/work/source/gulpfile.js",
+		"/E/work/publish/commodity_subject/commodity_subject.html",
+		"/E/work/source/store-list.html",
+		"/E/work/source/commodity_subject.html",
+		"/E/work/source/.gitignore",
+		"/E/work/source/scss/commodity_subject.scss",
+		"/E/work/source/scss/common.scss",
+		"/E/work/source/js/commodity_subject.js",
+		"/E/work/source/scss/store-list.scss",
+		"/E/work/source/css/commodity_subject.css",
+		"/E/backlighting-neo.github.com/.deploy_git/fancybox/helpers/jquery.fancybox-buttons.css",
+		"/E/work/source/doc/App内打开118Html页面流程.txt",
+		"/E/work/publish/RedPackage/gift118.html",
+		"/E/work/upload/store/gift118.html",
+		"/E/work/upload/event/NovAwards.html",
+		"/E/work/emergency/NovAwards.html",
+		"/E/work/publish/commodity_subject/js/commodity_subject.js",
+		"/E/work/source/config/subject_20151215.json",
+		"/E/work/source/package.json",
+		"/C/Users/xhc/.qrsbox/qrsbox.conf",
+		"/E/work/source/scss/RedPackage.scss",
+		"/E/work/source/js/channelshare.js",
+		"/E/work/server/qiniu-uptoken/uptoken.js",
+		"/E/work/xhc_api/tpl/publish_rank.tpl",
 		"/E/work/source/js/tempPay.js",
 		"/E/work/source/template/test6.html",
 		"/E/work/xhc_api/tpl/publish_rank_result.tpl",
 		"/E/work/xhc_api/tpl/static_focus.tpl",
 		"/E/work/source/css/AwardsTop30.css",
 		"/E/work/source/scss/AwardsTop30.scss",
-		"/E/work/source/gulpfile.js",
-		"/E/work/source/Activity20151202.html",
 		"/E/work/source/video-detail.html",
 		"/E/work/source/js/video-detail.js",
 		"/E/work/source/TempPay.html",
 		"/E/work/source/doc/视频专题页面方案",
-		"/E/work/source/doc/App内打开118Html页面流程.txt",
 		"/E/work/publish/TempPay/js/tempPay.js",
 		"/E/work/publish/TempPay/TempPay.html",
 		"/E/work/source/js/tempPay_Alipay.js",
@@ -523,7 +571,6 @@
 		"/E/blog/themes/landscape/layout/_partial/head.ejs",
 		"/E/blog/themes/landscape/layout/_partial/after-footer.ejs",
 		"/E/work/source/scss/TempPay.scss",
-		"/E/work/source/scss/store-list.scss",
 		"/E/work/server/weixin-interface/index.js",
 		"/E/download/微信支付js文档/公众账号支付DEMO/PHP版本/index.php",
 		"/E/work/downloads/JSSDK/sample/node/sign.js",
@@ -537,7 +584,6 @@
 		"/E/work/publish/video-detail/video.html",
 		"/E/work/publish/video-detail/index.html",
 		"/E/work/publish/video-detail/css/video-detail.css",
-		"/C/Users/xhc/.qrsbox/qrsbox.conf",
 		"/E/work/source/tuCaoAwards.html",
 		"/E/work/source/template/config.json",
 		"/E/work/source/weixin-test.html",
@@ -548,13 +594,9 @@
 		"/E/work/source/channelshare.html",
 		"/E/work/source/scss/video-detail.scss",
 		"/E/work/publish/video-detail/js/video-detail.js",
-		"/E/work/source/js/weChatGift.js",
-		"/E/work/source/scss/weChatGift.scss",
-		"/E/work/source/weChatGift.html",
 		"/E/work/source/scss/loading.scss",
 		"/E/work/source/loading.html",
 		"/E/work/source/js/product_detail.jsx",
-		"/E/work/source/product_detail.html",
 		"/E/work/source/css/product_detail.css",
 		"/E/work/source/css/loading.css",
 		"/E/work/publish/store-list/list.html",
@@ -562,7 +604,6 @@
 		"/E/work/source/css/weChatGift.css",
 		"/E/work/source/scss/channelshare.scss",
 		"/E/work/source/css/channelshare.css",
-		"/E/work/source/scss/common.scss",
 		"/E/work/source/css/test3.css",
 		"/E/work/source/category.txt",
 		"/E/work/source/download_direct.html",
@@ -575,28 +616,7 @@
 		"/E/work/source/template/events_tucao.html",
 		"/E/work/publish/Activity20151202/Activity20151202.html",
 		"/E/work/vsftpd.conf",
-		"/E/work/publish/lib/mobile.js",
-		"/E/work/xhc_api/task/publish_rank.js",
-		"/E/work/xhc_api/store/qiniu.js",
-		"/E/work/xhc_api/task/upload_task.js",
-		"/E/work/source/js/mobile.js",
-		"/E/work/source/js/zhuye150929.js",
-		"/E/work/source/images/GettedButtonLong.png",
-		"/E/work/source/newBanner.html",
-		"/E/work/source/huodong150923.html",
-		"/E/work/server/server/weixin-interface/test.js",
-		"/E/work/source/css/shake.css",
-		"/E/work/source/test3.html",
-		"/E/work/publish/channelshare/index.html",
-		"/E/work/publish/store/js/store-list.js",
-		"/E/work/source/js/fake-owl.js",
-		"/E/work/source/js/owl.carousel.min.js",
-		"/E/work/publish/product_detail/goods.html",
-		"/E/work/publish/store/list.html",
-		"/E/work/source/store-question.html",
-		"/E/work/server/weixin-interface/test.js",
-		"/E/work/publish/store/goods.html",
-		"/E/work/publish/product_detail/js/product_detail.js"
+		"/E/work/publish/lib/mobile.js"
 	],
 	"find":
 	{
@@ -615,6 +635,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tempPay.js?v=1449824761:formatted:45",
+			"alert",
+			"package_url+",
+			"couponId",
+			"alert",
+			"code",
+			"alert",
+			"小主",
 			"</span>",
 			"<li></li>",
 			"<br></span>",
@@ -734,20 +762,12 @@
 			"share",
 			"ProductSectionPulldown",
 			"className=\"icon",
-			"小红唇",
-			"小红唇商城",
-			"：",
-			"小红唇种草机",
-			"小红唇种草级",
-			"product",
-			"video-detail-product",
-			"video/",
-			"<img src"
+			"小红唇"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
 			"<div class=\"username\">Trunk测试</div>",
@@ -789,19 +809,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/E/work/emergency/NovAwards.html",
+					"file": "TempPay.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4817,
+						"buffer_size": 993,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1791,
-								1791
+								726,
+								726
 							]
 						],
 						"settings":
@@ -814,7 +834,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3058.0,
+						"translation.y": 396.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -823,8 +843,42 @@
 			]
 		},
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 1,
+					"file": "js/tempPay.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4476,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4476,
+								4476
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3762.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -884,12 +938,120 @@
 		"selected_items":
 		[
 			[
-				"comm",
-				"source\\commodity_subject.html"
+				"temppayhtml",
+				"source\\TempPay.html"
+			],
+			[
+				"temppayjs",
+				"source\\js\\tempPay.js"
+			],
+			[
+				"redpacjs",
+				"source\\js\\RedPackage.js"
 			],
 			[
 				"mobilejs",
 				"source\\lib\\mobile.js"
+			],
+			[
+				"wechatgiftscss",
+				"source\\scss\\weChatGift.scss"
+			],
+			[
+				"redpackjs",
+				"source\\js\\RedPackage.js"
+			],
+			[
+				"activ",
+				"source\\Activity20151202.html"
+			],
+			[
+				"prode",
+				"source\\product_detail.html"
+			],
+			[
+				"redpackagehtml",
+				"source\\RedPackage.html"
+			],
+			[
+				"redpackagejs",
+				"source\\js\\RedPackage.js"
+			],
+			[
+				"storedebug",
+				"source\\js\\store-debug.js"
+			],
+			[
+				"gulpfile",
+				"source\\gulpfile.js"
+			],
+			[
+				"mobile",
+				"source\\lib\\mobile.js"
+			],
+			[
+				"wechat",
+				"source\\weChatGift.html"
+			],
+			[
+				"storelist",
+				"source\\store-list.html"
+			],
+			[
+				"commonscss",
+				"source\\scss\\common.scss"
+			],
+			[
+				"comoonscss",
+				"backlighting-neo.github.com\\.deploy_git\\fancybox\\helpers\\jquery.fancybox-buttons.css"
+			],
+			[
+				"comcss",
+				"source\\css\\commodity_subject.css"
+			],
+			[
+				"storelistscss",
+				"source\\scss\\store-list.scss"
+			],
+			[
+				"comjs",
+				"source\\js\\commodity_subject.js"
+			],
+			[
+				"com",
+				"source\\commodity_subject.html"
+			],
+			[
+				"storeebug",
+				"source\\js\\store-debug.js"
+			],
+			[
+				"txt",
+				"source\\doc\\App内打开118Html页面流程.txt"
+			],
+			[
+				"wechatscss",
+				"source\\scss\\weChatGift.scss"
+			],
+			[
+				"pack",
+				"source\\package.json"
+			],
+			[
+				"packag",
+				"source\\package.json"
+			],
+			[
+				"redpack",
+				"source\\RedPackage.html"
+			],
+			[
+				"wechatjs",
+				"source\\js\\weChatGift.js"
+			],
+			[
+				"comm",
+				"source\\commodity_subject.html"
 			],
 			[
 				"channelsharejs",
@@ -898,10 +1060,6 @@
 			[
 				"serverqiniu",
 				"server\\qiniu-uptoken\\uptoken.js"
-			],
-			[
-				"storelist",
-				"source\\store-list.html"
 			],
 			[
 				"redpackscss",
@@ -914,18 +1072,6 @@
 			[
 				"ranktpl",
 				"tpl\\publish_rank.tpl"
-			],
-			[
-				"temppayjs",
-				"source\\js\\tempPay.js"
-			],
-			[
-				"storedebug",
-				"source\\js\\store-debug.js"
-			],
-			[
-				"redpackagejs",
-				"source\\js\\RedPackage.js"
 			],
 			[
 				"redpackahtml",
@@ -960,10 +1106,6 @@
 				"source\\Activity20151202.html"
 			],
 			[
-				"mobile",
-				"source\\lib\\mobile.js"
-			],
-			[
 				"videodet",
 				"source\\video-detail.html"
 			],
@@ -974,10 +1116,6 @@
 			[
 				"redpacka",
 				"source\\RedPackage.html"
-			],
-			[
-				"txt",
-				"source\\doc\\App内打开118Html页面流程.txt"
 			],
 			[
 				"temppay",
@@ -1022,10 +1160,6 @@
 			[
 				"redpahtml",
 				"source\\RedPackage.html"
-			],
-			[
-				"redpacjs",
-				"source\\js\\RedPackage.js"
 			],
 			[
 				"abchtml",
@@ -1080,16 +1214,8 @@
 				"server\\weixin-interface\\index.js"
 			],
 			[
-				"gulpfile",
-				"source\\gulpfile.js"
-			],
-			[
 				"testhtml",
 				"source\\test.html"
-			],
-			[
-				"storelistscss",
-				"source\\scss\\store-list.scss"
 			],
 			[
 				"store-list",
@@ -1212,24 +1338,8 @@
 				"source\\loading.html"
 			],
 			[
-				"redpackjs",
-				"source\\js\\RedPackage.js"
-			],
-			[
-				"wechatjs",
-				"source\\js\\weChatGift.js"
-			],
-			[
-				"wechat",
-				"source\\weChatGift.html"
-			],
-			[
 				"repackjs",
 				"source\\js\\RedPackage.js"
-			],
-			[
-				"wechatscss",
-				"source\\scss\\weChatGift.scss"
 			],
 			[
 				"videojs",
@@ -1258,10 +1368,6 @@
 			[
 				"productdetailcss",
 				"source\\css\\product_detail.css"
-			],
-			[
-				"prode",
-				"source\\product_detail.html"
 			],
 			[
 				"wechatgiftcss",
@@ -1336,64 +1442,12 @@
 				"source\\js\\weixin-test.js"
 			],
 			[
-				"commonscss",
-				"source\\scss\\common.scss"
-			],
-			[
 				"prodetailcss",
 				"source\\css\\product_detail.css"
 			],
 			[
 				"newbanner",
 				"source\\newBanner.html"
-			],
-			[
-				"huodong",
-				"source\\huodong150923.html"
-			],
-			[
-				"weixintest",
-				"source\\weixin-test.html"
-			],
-			[
-				"testjs",
-				"server\\server\\weixin-interface\\test.js"
-			],
-			[
-				"prod",
-				"source\\product_detail.html"
-			],
-			[
-				"shake",
-				"source\\css\\shake.css"
-			],
-			[
-				"css",
-				"source\\css\\test3.css"
-			],
-			[
-				"shakecss",
-				"source\\css\\shake.css"
-			],
-			[
-				"fake",
-				"source\\js\\fake-owl.js"
-			],
-			[
-				"owljs",
-				"source\\js\\owl.carousel.min.js"
-			],
-			[
-				"produjsx",
-				"source\\js\\product_detail.jsx"
-			],
-			[
-				"storelisthtml",
-				"source\\store-list.html"
-			],
-			[
-				"weixinte",
-				"source\\weixin-test.html"
 			]
 		],
 		"width": 0.0

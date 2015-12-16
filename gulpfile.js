@@ -14,7 +14,8 @@ var p = require('gulp-load-plugins')({
     'gulp-util': 'util',
     'gulp-replace': 'replace',
     'gulp-clean': 'clean',
-    'gulp-sass': 'sass'
+    'gulp-sass': 'sass',
+    'gulp-ftp': 'ftp'
   }
 });
 var colors = p.util.colors;
@@ -330,6 +331,19 @@ gulp.task('watch', ['scan'], function() {
     }   
   });
 });
+
+gulp.task('deploy', function() {
+  //TODO 部署到测试环境
+
+  return gulp.src('src/*')
+    .pipe(ftp({
+      host: '192.168.2.200',
+      user: 'ftpuser',
+      pass: 'xiaohongchunftp',
+      remotePath: 'FETestEnv/'
+    }))
+    .pipe(gutil.noop());
+})
 
 gulp.task('scsswatch', ['scan'], function() {
   gulp.watch(config.scss.src, ['scss-complie']);

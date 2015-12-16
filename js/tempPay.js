@@ -18,13 +18,13 @@ $(function() {
   }
 
   var data = {
-    '99': {
-      price: 99,
+    '129': {
+      price: 129,
       title: '【温和到孕妈妈都能用】Papa recipe春雨 蜂胶补水舒缓面膜 10片/盒',
       img: 'http://i.xiaohongchun.com/Fgt-hWmpZBNcl2w5xgLwUwhdCWwW-optimize'
     },
-    '49': {
-      price: 49,
+    '99': {
+      price: 99,
       title: '【入门级高能面霜】The Face Shop菲诗小铺 大米调理保湿霜 45g',
       img: 'http://i.xiaohongchun.com/FlI9-Ljp_enyiVybXhDAMv4B20Po-optimize'
     }
@@ -40,12 +40,12 @@ $(function() {
     var option = location.search.replace('?','');
   }
 
-  if(option!='49' && option!='99'){
-    option = '49';
+  if(option!='99' && option!='129'){
+    option = '99';
   }
   data = data[option];
 
-  if(option!='49'){
+  if(option!='99'){
     $('img').attr('src',data.img);
     $('.price').html('¥ '+data.price);
     $('.goods_title').html(data.title);
@@ -54,42 +54,42 @@ $(function() {
   if(alipay && alipay=='T') {return}
 
   if(navigator.userAgent.indexOf('MicroMessenger') > -1) {
-    $('.pay').html('请在浏览器中打开');
-    // var onBridgeReady = function() {
-    //   $('.pay').click(function() {
-    //     $('.pay').html('请稍候……');
-    //     var pay_ajax = $.getJSON('http://test1.xiaohongchun.com/wxpay/'+code+'/'+data.price*100);
-    //     $.when(pay_ajax).done(function(json) {
-    //       if(json.code>0){
-    //         alert(json.msg);
-    //         return;
-    //       }
-    //       WeixinJSBridge.invoke(
-    //         'getBrandWCPayRequest', {
-    //           "appId": appid,
-    //           "timeStamp": json.data.timestamp+'',
-    //           "nonceStr": json.data.noncestr,
-    //           "package": "prepay_id=" + json.data.prepayid,
-    //           "signType": "MD5",
-    //           "paySign": json.data.sign
-    //         },
-    //         function(res) {
-    //           if (res.err_msg == "get_brand_wcpay_request:ok") {
-    //             $('.pay').html('支付成功');
-    //             $('.pay').off('click');
-    //           } 
-    //           else {
-    //             $('.pay').html('支付失败，点击刷新');
-    //             $('.pay').off('click');
-    //             $('.pay').on('click', function() {
-    //               location.href = 'http://static.xiaohongchun.com/store/TempPay.html?'+option
-    //             })
-    //           }
-    //         }
-    //       );
-    //     })
-    //   })
-    // }
+    $('.pay').html('微信支付');
+    var onBridgeReady = function() {
+      $('.pay').click(function() {
+        $('.pay').html('请稍候……');
+        var pay_ajax = $.getJSON('http://test1.xiaohongchun.com/wxpay/'+code+'/'+data.price*100);
+        $.when(pay_ajax).done(function(json) {
+          if(json.code>0){
+            alert(json.msg);
+            return;
+          }
+          WeixinJSBridge.invoke(
+            'getBrandWCPayRequest', {
+              "appId": appid,
+              "timeStamp": json.data.timestamp+'',
+              "nonceStr": json.data.noncestr,
+              "package": "prepay_id=" + json.data.prepayid,
+              "signType": "MD5",
+              "paySign": json.data.sign
+            },
+            function(res) {
+              if (res.err_msg == "get_brand_wcpay_request:ok") {
+                $('.pay').html('支付成功');
+                $('.pay').off('click');
+              } 
+              else {
+                $('.pay').html('支付失败，点击刷新');
+                $('.pay').off('click');
+                $('.pay').on('click', function() {
+                  location.href = 'http://static.xiaohongchun.com/store/TempPay.html?'+option
+                })
+              }
+            }
+          );
+        })
+      })
+    }
   }
   else {
     $('.pay').html('支付宝支付');
@@ -97,6 +97,7 @@ $(function() {
     $('.pay').click(function() {
       $('.pay').html('请稍候……');
       var surl = 'http://'+location.hostname+location.pathname;
+      data.title = '小红唇';
       var alipay_option = $.getJSON('http://test1.xiaohongchun.com/alipay/'+data.price+'?return_url='+surl+'&title='+data.title);
 
       alipay_option.done(function(json) {
