@@ -4,7 +4,7 @@ var ProductDetail = React.createClass({
 			"brief": {},
 			"rolling": [],
 			"usingusers": [],
-			"big_img": "",
+			"big_img": [],
 			"text": [],
 			"text_card": [],
 			"isdisplay": 'none'
@@ -67,7 +67,7 @@ var ProductDetail = React.createClass({
 			features_2: setting.txts
 		};
 		json.rolling = [];
-		json.big_img = '';
+		json.big_img = [];
 		detail.g_gallery.forEach(function(item) {
 			switch(item.gg_type){
 				case 2:
@@ -84,7 +84,7 @@ var ProductDetail = React.createClass({
 					});
 					break;
 				case 3:
-					json.big_img = item.gg_image;
+					json.big_img.push(item.gg_image);
 			}
 		})
 		
@@ -125,7 +125,7 @@ var ProductDetail = React.createClass({
 			}
 		});
 
-		mobile.binddownload(['download','footerdownloader']);
+		mobile.binddownload(['.download','.footerdownloader']);
 	},
 	render: function() {
 		return (
@@ -144,8 +144,10 @@ var ProductDetail = React.createClass({
 					this.state.usingusers.length>0?<ProductUsingUser item={this.state.usingusers}/>:''
 				}
 				{
-					this.state.big_img?(<ProductSectionWithoutTitle><img src={this.state.big_img} /></ProductSectionWithoutTitle>):undefined
-						
+					this.state.big_img.map(function(item, index) {
+						return(
+							<ProductSectionWithoutTitle><img src={item} /></ProductSectionWithoutTitle>)
+					})
 				}
 				{
 					this.state.text.map(function(item, index) {
