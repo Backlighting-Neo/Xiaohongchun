@@ -13,7 +13,7 @@ body {
 
 .section2 {
 	height: 522px;
-	background-image: url(../images/RedPackage_Background_03.jpg);
+	background-image: url(../images/RedPackage_Background_03.png);
 	position: relative;
 	overflow: hidden;
 
@@ -83,14 +83,18 @@ body {
 }
 
 .section5 {
-	height: 501px;
-	background-image: url(../images/RedPackage_Background_06.jpg);
+	height: 567px;
+	background-color: #3f1517;
+
+	img {
+		margin: 0 auto;
+	}
 }
 
-.section6 {
-	height: 66px;
-	background-color: #3f1517;
-}
+// .section6 {
+// 	height: 66px;
+// 	background-color: #3f1517;
+// }
 
 .owl_outer {
 	position: absolute;
@@ -136,6 +140,7 @@ body {
 			display: block;
 			position: absolute;
 			transform: rotate(180deg);
+			-webkit-transform: rotate(180deg);
 			width: 20px;
 			height: 19px;
 			top: 109px;
@@ -150,7 +155,7 @@ body {
 			line-height: 28px;
 			font-size: 22px;
 			color: #717171;
-			overflow: hidden;
+			@include multiline-overflow(3);
 		}
 
 		.goodsImage {
@@ -237,5 +242,11 @@ body {
 		margin-top: 50px;
 		display: none;
 		background-image: url(../images/RedPackage_Success.png);
+
+		img {
+			margin-left: 550px;
+	    padding-top: 120px;
+	    width: 57px;
+		}
 	}
 }

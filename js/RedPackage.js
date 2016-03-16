@@ -1,8 +1,8 @@
 $(function(){
-	var code = mobile.weChat.getCode();
+	var code = mobile.weChat.getCode('snsapi_userinfo');
 	if(code == 'redirect'){return};
 
-	var package_url = 'http://test1.xiaohongchun.com';
+	var package_url = 'http://napi.xiaohongchun.com';
 
 	var item = $('.item');
 	var owl  = $('.owl');
@@ -39,28 +39,29 @@ $(function(){
 	ajax_goods.done(function(json) {
 		var goods_vue = new Vue({
 			el: '.owl',
-			data: json
+			data: json,
+			ready: function() {
+				mobile.avoidEmptyRequest();
+				owl
+				.prepend('<div class="item_first"></div>')
+				.owlCarousel({
+			    pagination: false,
+			    allowimperfect: true,
+			    customWidth: 890
+				});
+				var item = $('.item');
+				for (var i = item.length - 1; i >= 0; i--) {
+					item[i].style['border-color'] = randomColor();
+				};
+			}
 		})
-		mobile.avoidEmptyRequest();
 	})
-
-	for (var i = item.length - 1; i >= 0; i--) {
-		item[i].style['border-color'] = randomColor();
-	};
-
-	owl
-	.prepend('<div class="item_first"></div>')
-	.owlCarousel({
-    pagination: false,
-    allowimperfect: true,
-    customWidth: 890
-	});
 
 	var render = {
 		unget: function() {
 			button.show();
 			button2.hide();
-			button.on('click', function() {
+			button.on('touchstart', function() {
 				if(inapp){
 					// TODO 修改截获地址
 					var hm = document.createElement("script");
@@ -75,7 +76,7 @@ $(function(){
 					},0);
 				}
 			})
-			$('.editTelNo').click(function() {
+			$('.editTelNo').on('touchstart',function() {
 				mask.css('display','')
 				setTimeout(function() {
 					mask.css('opacity','1');
@@ -85,14 +86,24 @@ $(function(){
 		getted: function(telNo) {
 			button2.show();
 			button.hide();
-			button.off('click');
+			button.off('touchstart');
 			if(inapp) {
 				$('.getsuccess').html('红包已放至您当前登录账户');
 			}
 			else {
 				$('.telNo').html(telNo);
+				sessionStorage.weChatCode_Gift118_token = token;
+				sessionStorage.weChatCode_Gift118_telphone = telNo;
 			}
 			$('.getsuccess').show();
+			if(inapp){
+				$('#gettedButtonLong').on('touchstart',function() {
+					location.href = 'http://www.xiaohongchun.com/index/params?goods=0';
+				})
+			}
+			else {
+				mobile.binddownload(['#gettedButtonLong']);
+			}
 		}
 	}
 
@@ -114,8 +125,8 @@ $(function(){
 				mask.css('opacity','1');
 			},0);
 			success.show(function() {
-				mask.on('click', function() {
-					mask.off('click');
+				mask.on('touchstart', function() {
+					mask.off('touchstart');
 					mask.css('display','none').css('opacity','0');;
 				})
 				render.getted();
@@ -138,23 +149,39 @@ $(function(){
 	else {
 		render.unget();
 		if(code!='Not in Wechat'){
-			var ajax_gettoken = $.getJSON(package_url+'/oauth/weixin/'+code+'/telphone');
-			ajax_gettoken.done(function(json) {
+			var handler = function(json){
 				if(json.code > 0){
 					alert(json.msg);
+					sessionStorage.removeItem('token');
+					sessionStorage.removeItem('telphone');
 					return;
 				}
-				token = json.token;
-				telphone = json.telphone || '';
-				if(telphone != '') {
-					//TODO 已有手机号领取
-					render.getted(telphone);
+				else {
+					token = json.token;
+					telphone = json.telphone || '';
+					sessionStorage.weChatCode_Gift118_token = token;
+					sessionStorage.weChatCode_Gift118_telphone = telphone;
+					if(telphone != '') {
+						//TODO 已有手机号领取
+						render.getted(telphone);
+					}
 				}
-			})
+			}
+
+			if(sessionStorage.weChatCode_Gift118_token){
+				handler({
+					code: 0,
+					token: sessionStorage.weChatCode_Gift118_token,
+					telphone: sessionStorage.weChatCode_Gift118_telphone
+				})
+			}
+			else{
+				$.getJSON(package_url+'/oauth/weixin/'+code+'/telphone', handler);
+			}
 		}
 	}
 
-	getbtn.click(function() {
+	getbtn.on('touchstart', function() {
 		if(!/^[1][358][0-9]{9}$/.test(telNo())){
 			alert('输入的手机号格式不对哦~');
 			$('#telno').val('');
@@ -168,18 +195,29 @@ $(function(){
 
 		popup.hide();
 		success.show(function() {
-			mask.on('click', function() {
-				mask.off('click');
-				mask.css('display','none').css('opacity','0');;
-			})
-			render.getted(telNo());
+			var closePopup = function() {
+				success.hide();
+				popup.show();
+				telephone = telNo();
+				$('#telno').val('');
+				mask.off('touchstart');
+				mask.css('display','none').css('opacity','0');
+				render.getted(telephone);
+			}
+			mask.on('touchstart', closePopup)
+			$('#closeButton').on('touchstart', closePopup)
 		});
 	})
 
+	var smallimage = 'images/weChatIcon_RedPackage118.jpg';
+	var content = '天天有特价化妆品，便宜有好货，真人视频分享，小红唇只卖口碑王';
+
 	mobile.weChat.bindWeChatShare({
 		title: document.title,
-		desc: '全场通用，仅限新人。护肤美妆保健品，真人视频分享，大家说好才是真的好！',
+		desc: content,
 		link: 'http://' + location.host + location.pathname + '?couponId=' + couponId,
-		imgUrl: 'images/weChatIcon_RedPackage118.jpg'
+		imgUrl: smallimage
 	})
+
+	mobile.appendAppShare(smallimage,content);
 })

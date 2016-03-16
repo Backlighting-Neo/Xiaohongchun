@@ -4,6 +4,330 @@
 		"selected_items":
 		[
 			[
+				"View",
+				"ViewInSuccess"
+			],
+			[
+				"view",
+				"viewInputPhone"
+			],
+			[
+				"com",
+				"component"
+			],
+			[
+				"bored",
+				"border-radius"
+			],
+			[
+				"handle",
+				"handleGettingSuccess"
+			],
+			[
+				"handl",
+				"handleGettingGiftButton"
+			],
+			[
+				"get",
+				"getElementsByTagName〔function〕"
+			],
+			[
+				"border-bott",
+				"border-bottom"
+			],
+			[
+				"crea",
+				"createStyleSheet"
+			],
+			[
+				"set",
+				"setViewPortWidth"
+			],
+			[
+				"device",
+				"deviceWidth〔variable〕"
+			],
+			[
+				"fetch",
+				"fetchData"
+			],
+			[
+				"sty",
+				"styles〔variable〕"
+			],
+			[
+				"change",
+				"changeTab"
+			],
+			[
+				"tg",
+				"tg_name"
+			],
+			[
+				"Com",
+				"Component〔variable〕"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"back",
+				"backgroundColor〔variable〕"
+			],
+			[
+				"MD",
+				"MD5List"
+			],
+			[
+				"reque",
+				"require〔function〕"
+			],
+			[
+				"fill_",
+				"fill_phone_number.html"
+			],
+			[
+				"return",
+				"return_url"
+			],
+			[
+				"retu",
+				"return_url〔variable〕"
+			],
+			[
+				"payme",
+				"payMethodCode"
+			],
+			[
+				"red",
+				"redirectURL〔variable〕"
+			],
+			[
+				"redire",
+				"redirectURL"
+			],
+			[
+				"phone",
+				"phoneToken"
+			],
+			[
+				"pho",
+				"phoneToken"
+			],
+			[
+				"fun",
+				"function〔keyword〕"
+			],
+			[
+				"c",
+				"channel_icon_likes.svg"
+			],
+			[
+				"chann",
+				"channel_icon_watch.svg"
+			],
+			[
+				"cha",
+				"channel_like.svg"
+			],
+			[
+				"channl",
+				"channel_playCount.svg"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"mar",
+				"margin-top: 〔property〕"
+			],
+			[
+				"token",
+				"tokenJson"
+			],
+			[
+				"post",
+				"postPromise"
+			],
+			[
+				"owl",
+				"owl.theme.product.min.css"
+			],
+			[
+				"expre",
+				"expires"
+			],
+			[
+				"sub",
+				"subOrderId"
+			],
+			[
+				"order",
+				"orderTrace.js"
+			],
+			[
+				"ship",
+				"ship_corp"
+			],
+			[
+				"subOrder",
+				"subOrderItem"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"fsi",
+				"font-size"
+			],
+			[
+				"stat",
+				"status"
+			],
+			[
+				"more",
+				"moreLock"
+			],
+			[
+				"isN",
+				"isNoMoreOrder"
+			],
+			[
+				"orde",
+				"orderId"
+			],
+			[
+				"bore",
+				"border"
+			],
+			[
+				"coupo",
+				"couponIndex"
+			],
+			[
+				"coupon",
+				"couponData"
+			],
+			[
+				"gets",
+				"getJSON〔function〕"
+			],
+			[
+				"in",
+				"invalid_json"
+			],
+			[
+				"valid",
+				"valid_json〔argument〕"
+			],
+			[
+				"inval",
+				"invalid_ajax"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"undf",
+				"undefined"
+			],
+			[
+				"topic",
+				"topic_id"
+			],
+			[
+				"bac",
+				"background-position"
+			],
+			[
+				"ba",
+				"background-size"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"tags",
+				"tags_id"
+			],
+			[
+				"download",
+				"downloadTop_1"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"content",
+				"contentCenter"
+			],
+			[
+				"bind",
+				"binddownload"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"clear",
+				"clearInterval〔function〕"
+			],
+			[
+				"rec",
+				"recommend_videos"
+			],
+			[
+				"微信",
+				"微信分享文案"
+			],
+			[
+				"Imag",
+				"ImageNum"
+			],
+			[
+				"for",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"inqu",
+				"inquirerConfirmPromise"
+			],
+			[
+				"inq",
+				"inquirerInputPromise"
+			],
+			[
+				"shell",
+				"shellPromise"
+			],
+			[
+				"publish",
+				"publish_css"
+			],
+			[
+				"req",
+				"require〔function〕"
+			],
+			[
+				"packa",
+				"package_url〔variable〕"
+			],
+			[
 				"pack",
 				"package_url〔variable〕"
 			],
@@ -46,14 +370,6 @@
 			[
 				"we",
 				"weChatGift_RedText"
-			],
-			[
-				"owl",
-				"owl.theme.css"
-			],
-			[
-				"stat",
-				"state	React: this.state."
 			],
 			[
 				"imp",
@@ -180,10 +496,6 @@
 				"createNonceStr〔function〕"
 			],
 			[
-				"crea",
-				"createNonceStr〔function〕"
-			],
-			[
 				"prepa",
 				"prepayid"
 			],
@@ -202,216 +514,16 @@
 			[
 				"toggle",
 				"toggleClass〔function〕"
-			],
-			[
-				"back",
-				"background"
-			],
-			[
-				"inline",
-				"inline-block"
-			],
-			[
-				"di",
-				"display"
-			],
-			[
-				"mh",
-				"max-height"
-			],
-			[
-				"attr",
-				"attr	.attr() - single"
-			],
-			[
-				"data",
-				"dataType"
-			],
-			[
-				"bodr",
-				"border-radius"
-			],
-			[
-				"gg",
-				"gg_type"
-			],
-			[
-				"video",
-				"video_url"
-			],
-			[
-				"for",
-				"forEach"
-			],
-			[
-				"product",
-				"product_name"
-			],
-			[
-				"us",
-				"usingusers"
-			],
-			[
-				"fe",
-				"features_2"
-			],
-			[
-				"set",
-				"setting〔variable〕"
-			],
-			[
-				"get",
-				"getJSON〔function〕"
-			],
-			[
-				"h",
-				"height	Attr"
-			],
-			[
-				"jq",
-				"jquery-2.1.4.min.js"
-			],
-			[
-				"min",
-				"min-width"
-			],
-			[
-				"show",
-				"showQuestion"
-			],
-			[
-				"st",
-				"store-help.css"
-			],
-			[
-				"store",
-				"store-list.css"
-			],
-			[
-				"cat",
-				"catgory〔variable〕"
-			],
-			[
-				"tec",
-				"tencent_json"
-			],
-			[
-				"tencent",
-				"tencent_json"
-			],
-			[
-				"tenc",
-				"tencent_return〔argument〕"
-			],
-			[
-				"clas",
-				"className〔variable〕"
-			],
-			[
-				"mar",
-				"margin"
-			],
-			[
-				"bor",
-				"border-radius"
-			],
-			[
-				"u_",
-				"u_url"
-			],
-			[
-				"api_",
-				"api_content"
-			],
-			[
-				"font",
-				"font-size"
-			],
-			[
-				"margin",
-				"margin-top"
-			],
-			[
-				"rep",
-				"repeat-y"
-			],
-			[
-				"api",
-				"apiname"
-			],
-			[
-				"getJ",
-				"getjson	$.getjson()"
-			],
-			[
-				"mock",
-				"mock-min.js"
-			],
-			[
-				"fun",
-				"fun	Function"
-			],
-			[
-				"fl",
-				"fl-n	float: none;"
-			],
-			[
-				"list-s",
-				"list-style"
-			],
-			[
-				"Awards",
-				"AwardsTop30_03"
-			],
-			[
-				"fonts",
-				"font-size"
-			],
-			[
-				"jque",
-				"jquery.min.js"
-			],
-			[
-				"wi",
-				"width"
-			],
-			[
-				"bac",
-				"glass_background"
-			],
-			[
-				"border-r",
-				"border-radius"
-			],
-			[
-				"class",
-				"class=〔attribute〕"
-			],
-			[
-				"bo",
-				"border"
-			],
-			[
-				"borderr",
-				"border-radius"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "TempPay.html",
+			"file": "/E/work/study/flux/extremely-simple-flux-demo/index.jsx",
 			"settings":
 			{
-				"buffer_size": 993,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/tempPay.js",
-			"settings":
-			{
-				"buffer_size": 4476,
+				"buffer_size": 219,
 				"line_ending": "Windows"
 			}
 		}
@@ -423,14 +535,10 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 213.0,
-		"last_filter": "sshtml",
+		"height": 185.0,
+		"last_filter": "install",
 		"selected_items":
 		[
-			[
-				"sshtml",
-				"Set Syntax: HTML"
-			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -440,8 +548,44 @@
 				"Set Syntax: JavaScript (Babel)"
 			],
 			[
+				"map",
+				"View: Toggle Minimap"
+			],
+			[
+				"ssoc",
+				"Set Syntax: Objective-C"
+			],
+			[
+				"ssjava",
+				"Set Syntax: Java"
+			],
+			[
+				"ssjave",
+				"Set Syntax: Java Properties"
+			],
+			[
 				"ssjson",
 				"Set Syntax: JSON"
+			],
+			[
+				"sstext",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"sshtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"ssmd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"ssmarkdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"ssks",
+				"Set Syntax: Haskell"
 			],
 			[
 				"sscss",
@@ -485,148 +629,160 @@
 	},
 	"expanded_folders":
 	[
-		"/E/backlighting-neo.github.com"
+		"/E/work/source",
+		"/E/work/tools",
+		"/E/work/tools/videoCache",
+		"/E/work/tools/videoCache/js"
 	],
 	"file_history":
 	[
-		"/E/work/source/scss/weChatGift.scss",
-		"/E/work/upload/store/js/weChatGift.js",
-		"/E/work/source/js/weChatGift.js",
-		"/E/work/source/Activity20151202.html",
-		"/E/work/source/js/RedPackage.js",
-		"/E/work/source/weChatGift.html",
-		"/E/work/upload/store/TempPay.html",
-		"/E/work/upload/store/js/tempPay.js",
-		"/E/work/publish/weChatGift/js/weChatGift.js",
-		"/E/work/source/lib/mobile.js",
-		"/E/work/publish/weChatGift/w.html",
-		"/E/work/source/RedPackage.html",
-		"/E/work/source/product_detail.html",
-		"/E/work/publish/product_detail/goods.html",
-		"/C/Users/xhc/Desktop/不要删除FETestEnv",
-		"/E/work/source/js/store-debug.js",
-		"/C/Users/xhc/Documents/Tencent Files/398413222/FileRecv/mobile/routes/order.js",
-		"/C/Users/xhc/Documents/Tencent Files/398413222/FileRecv/mobile/views/layout.hbs",
-		"/C/Users/xhc/Documents/Tencent Files/398413222/FileRecv/mobile/views/index.hbs",
-		"/E/work/source/gulpfile.js",
-		"/E/work/publish/commodity_subject/commodity_subject.html",
-		"/E/work/source/store-list.html",
-		"/E/work/source/commodity_subject.html",
-		"/E/work/source/.gitignore",
-		"/E/work/source/scss/commodity_subject.scss",
-		"/E/work/source/scss/common.scss",
-		"/E/work/source/js/commodity_subject.js",
-		"/E/work/source/scss/store-list.scss",
-		"/E/work/source/css/commodity_subject.css",
-		"/E/backlighting-neo.github.com/.deploy_git/fancybox/helpers/jquery.fancybox-buttons.css",
-		"/E/work/source/doc/App内打开118Html页面流程.txt",
-		"/E/work/publish/RedPackage/gift118.html",
-		"/E/work/upload/store/gift118.html",
-		"/E/work/upload/event/NovAwards.html",
-		"/E/work/emergency/NovAwards.html",
-		"/E/work/publish/commodity_subject/js/commodity_subject.js",
-		"/E/work/source/config/subject_20151215.json",
-		"/E/work/source/package.json",
-		"/C/Users/xhc/.qrsbox/qrsbox.conf",
-		"/E/work/source/scss/RedPackage.scss",
-		"/E/work/source/js/channelshare.js",
-		"/E/work/server/qiniu-uptoken/uptoken.js",
-		"/E/work/xhc_api/tpl/publish_rank.tpl",
-		"/E/work/source/js/tempPay.js",
-		"/E/work/source/template/test6.html",
-		"/E/work/xhc_api/tpl/publish_rank_result.tpl",
-		"/E/work/xhc_api/tpl/static_focus.tpl",
-		"/E/work/source/css/AwardsTop30.css",
-		"/E/work/source/scss/AwardsTop30.scss",
-		"/E/work/source/video-detail.html",
-		"/E/work/source/js/video-detail.js",
-		"/E/work/source/TempPay.html",
-		"/E/work/source/doc/视频专题页面方案",
-		"/E/work/publish/TempPay/js/tempPay.js",
-		"/E/work/publish/TempPay/TempPay.html",
-		"/E/work/source/js/tempPay_Alipay.js",
-		"/C/Users/xhc/AppData/Roaming/Sublime Text 3/Packages/User/View In Browser.sublime-settings",
-		"/C/Users/xhc/AppData/Roaming/Sublime Text 3/Packages/View In Browser/View In Browser.sublime-settings",
-		"/E/work/source/TempPay_Alipay.html",
-		"/E/work/source/uatest.html",
-		"/E/download/手机网站支付接口-alipay.wap.create.direct.pay.by.user(20151015)/alipay.wap.create.direct.pay.by.user-ASP-UTF-8/class/alipay_submit.asp",
-		"/E/download/手机网站支付接口-alipay.wap.create.direct.pay.by.user(20151015)/alipay.wap.create.direct.pay.by.user-ASP-UTF-8/alipayapi.asp",
-		"/C/inetpub/wwwroot/alipayapi.asp",
-		"/E/work/source/hashTest.html",
-		"/E/work/source/js/weixin-test.js",
+		"/E/work/newFE/test/httpsMixContentTest.html",
+		"/E/work/newFE/channel/index2.html",
 		"/E/work/source/abc.html",
-		"/E/work/source/Activity20151210_emptyBottle.html",
-		"/E/backlighting-neo.github.com/source/_posts/hello-world.md",
+		"/E/work/files/SSL/提供给七牛的小红唇HTTPS证书/readme.txt",
+		"/E/work/newFE/jwplayer/player.html",
+		"/E/work/files/SSL/证书/_xiaohongchun_com.key",
+		"/E/work/files/SSL/证书/__xiaohongchun_com.crt",
+		"/E/work/newFE/lib/mobile.js",
+		"/E/work/newFE/crossdomain.xml",
+		"/E/work/newFE/jwplayer/js/swfobject.js",
+		"/E/work/source/jwplayer/js/swfobject.js",
+		"/E/work/doc/Seafile.md",
+		"/E/work/newFE/store/giftny.html",
+		"/E/temp/cs.css",
+		"/E/temp/xhc.html",
+		"/E/work/reactNative/AwesomeProject/package.json",
+		"/E/work/newFE/store/js/giftny2.js",
+		"/E/work/newFE/store/gift118.html",
+		"/E/work/newFE/store/scss/giftny.scss",
+		"/E/work/newFE/README.md",
+		"/E/work/newFE/store/js/gift118.js",
+		"/E/work/newFE/video/video.html",
+		"/E/work/newFE/video/js/video.js",
+		"/E/work/newFE/store/js/giftny.js",
+		"/E/work/newFE/store/css/giftny.css",
+		"/E/work/newFE/store/scss/index.scss",
+		"/E/work/newFE/gulpfile.js",
+		"/E/work/source/scss/RedPackage.scss",
+		"/E/work/source/RedPackage.html",
+		"/E/work/source/js/RedPackage.js",
 		"/E/backlighting-neo.github.com/themes/yilia/_config.yml",
-		"/E/backlighting-neo.github.com/_config.yml",
-		"/E/backlighting-neo.github.com/db.json",
-		"/E/console.pub",
-		"/C/Users/xhc/.ssh/id_rsa.pub",
-		"/E/blog/_config.yml",
-		"/E/blog/scaffolds/post.md",
-		"/E/blog/source/_posts/weChatPaymentProblem.md",
-		"/E/work/source/<Unsaved>",
+		"/E/backlighting-neo.github.com/themes/yilia/layout/_partial/archive.ejs",
+		"/E/backlighting-neo.github.com/themes/yilia/layout/index.ejs",
+		"/E/work/tools/videoCache/css/index.css",
+		"/E/work/tools/videoCache/index.html",
+		"/E/work/tools/videoCache/js/index.js",
+		"/F/d.sh",
+		"/E/work/tools/videoCache/css/PageConstructor.css",
 		"/E/work/source/app_empty.html",
-		"/E/blog/.gitignore",
-		"/E/blog/themes/landscape/layout/_partial/head.ejs",
-		"/E/blog/themes/landscape/layout/_partial/after-footer.ejs",
-		"/E/work/source/scss/TempPay.scss",
+		"/E/work/newFE/live/js/live.js",
+		"/E/work/newFE/live/scss/live.scss",
+		"/E/work/newFE/store/js/index.js",
+		"/E/work/newFE/live/live.html",
+		"/E/work/newFE/store/js/orderList.js",
+		"/C/Users/xhc/Documents/Tencent Files/398413222/FileRecv/12.1.1 直播 h5 -assets/download.svg",
+		"/E/work/newFE/store/js/goods.js",
+		"/E/work/newFE/store/css/index.css",
+		"/E/work/doc/store_doc/视频频道.md",
+		"/D/Program Files/Cmder/vendor/init.bat",
+		"/E/work/xhc_api/tpl/static_focus.tpl",
+		"/E/temp/index.html",
+		"/E/work/newFE/channel/js/index2.js",
+		"/E/work/xhc_api/tpl/publish_rank_result.tpl",
+		"/E/work/xhc_api/tpl/publish_rank.tpl",
+		"/E/work/source/js/weixin-test.js",
+		"/E/work/newFE/test/weixin.html",
+		"/E/work/newFE/test/js/weixin.js",
+		"/E/work/newFE/active/hairStyle.html",
+		"/E/work/source/js/test.js",
+		"/E/work/newFE/rank/Top30Readme.txt",
+		"/E/backlighting-neo.github.com/node_modules/hexo-admin/deploy.js",
+		"/E/backlighting-neo.github.com/source/_drafts/ES6中箭头函数的一些问题.md",
+		"/E/work/newFE/channel/scss/index2.scss",
+		"/E/backlighting-neo.github.com/_config.yml",
+		"/E/work/doc/store_doc/登录注册.md",
+		"/E/work/files/js/code/js.js",
+		"/E/work/server/weixin-motion/index.js",
+		"/E/work/files/防刷.txt",
+		"/E/work/files/js/code/oc.m",
+		"/E/work/files/js/code/java.java",
+		"/E/work/reactNative/AwesomeProject/index.android.js",
+		"/E/work/study/redux/simplest-redux-example/index.js",
+		"/E/work/study/redux/simplest-redux-example/package.json",
+		"/C/Users/xhc/AppData/Roaming/Sublime Text 3/Packages/HTMLPrettify/HTMLPrettify.sublime-settings",
+		"/E/work/server/mind/index.js",
+		"/E/work/study/redux/simplest-redux-example/index.html",
+		"/E/work/study/redux/simplest-redux-example/bundle.js",
+		"/E/work/reactNative/redux-example/public/app/configureStore.js",
+		"/E/work/reactNative/redux-example/public/app/index.js",
+		"/E/work/server/weixin-motion/node_modules/http-proxy/lib/http-proxy/index.js",
+		"/E/work/server/weixin-motion/node_modules/http-proxy/lib/http-proxy.js",
+		"/E/work/server/weixin-motion/node_modules/http-proxy/index.js",
+		"/E/work/reactMix/reactnative/index.android.js",
+		"/E/work/reactMix/reactnative/index.js",
+		"/E/work/server/staticPage/index.js",
 		"/E/work/server/weixin-interface/index.js",
-		"/E/download/微信支付js文档/公众账号支付DEMO/PHP版本/index.php",
-		"/E/work/downloads/JSSDK/sample/node/sign.js",
-		"/E/work/source/test.html",
-		"/E/work/source/css/TempPay.css",
-		"/E/work/source/doc/App内打开118Html页面流程",
-		"/E/work/source/css/RedPackage.css",
-		"/E/work/source/AwardsTop30.html",
-		"/E/work/source/js/store-list.js",
-		"/E/work/publish/video-detail/js/mobile.js",
-		"/E/work/publish/video-detail/video.html",
-		"/E/work/publish/video-detail/index.html",
-		"/E/work/publish/video-detail/css/video-detail.css",
-		"/E/work/source/tuCaoAwards.html",
-		"/E/work/source/template/config.json",
-		"/E/work/source/weixin-test.html",
-		"/E/work/source/weixinurltest.html",
-		"/C/Users/xhc/AppData/Roaming/Sublime Text 3/Settings/SideBarEnhancements.json",
-		"/E/work/publish/AwardsTop30/js/mobile.js",
-		"/E/work/publish/AwardsTop30/css/AwardsTop30.css",
-		"/E/work/source/channelshare.html",
-		"/E/work/source/scss/video-detail.scss",
-		"/E/work/publish/video-detail/js/video-detail.js",
-		"/E/work/source/scss/loading.scss",
-		"/E/work/source/loading.html",
+		"/E/work/newFE/store/help.html",
+		"/E/work/newFE/store/js/helpH5.js",
+		"/E/work/newFE/store/helpH5.html",
+		"/E/work/newFE/store/js/help.js",
+		"/E/work/source/js/store-question.js",
+		"/E/work/reactNative/AwesomeProject/index.ios.js",
+		"/E/work/test/flex.html",
+		"/E/work/reactNative/redux-example/index.html",
 		"/E/work/source/js/product_detail.jsx",
-		"/E/work/source/css/product_detail.css",
-		"/E/work/source/css/loading.css",
-		"/E/work/publish/store-list/list.html",
-		"/E/work/source/assets/jquery-2.1.4.min.js",
-		"/E/work/source/css/weChatGift.css",
-		"/E/work/source/scss/channelshare.scss",
-		"/E/work/source/css/channelshare.css",
-		"/E/work/source/css/test3.css",
-		"/E/work/source/category.txt",
-		"/E/work/source/download_direct.html",
-		"/E/work/source/PageConstructor-index.html",
-		"/E/work/source/PageConstructor.html",
-		"/E/work/source/product_detail-origin.html",
-		"/E/work/source/tucao_fix.html",
-		"/E/work/source/video-test.html",
+		"/E/work/reactNative/redux-example/package.json",
+		"/E/work/test/css/flex.css",
+		"/E/work/reactNative/AwesomeProject/node_modules/react-native/Libraries/Fetch/fetch.js",
+		"/E/work/reactNative/AwesomeProject/node_modules/react-native/Libraries/CameraRoll/CameraRoll.js",
+		"/E/work/reactNative/AwesomeProject/node_modules/react-native/Libraries/Components/ToolbarAndroid/ToolbarAndroid.android.js",
+		"/C/Users/xhc/AppData/Roaming/Sublime Text 3/Packages/User/reg_replace.sublime-settings",
 		"/C/Users/xhc/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/E/work/source/template/events_tucao.html",
-		"/E/work/publish/Activity20151202/Activity20151202.html",
-		"/E/work/vsftpd.conf",
-		"/E/work/publish/lib/mobile.js"
+		"/C/Users/xhc/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/E/work/reactNative/AwesomeProject/node_modules/react-native/Libraries/Image/Image.android.js",
+		"/E/work/reactNative/AwesomeProject/node_modules/react-native/local-cli/cli.js",
+		"/E/work/newFE/lib/jquery-2.2.0.min.js",
+		"/E/work/server/xhc_shop_app/store/video.js",
+		"/E/work/server/weixin-motion/node_modules/imageinfo/index.js",
+		"/E/work/server/weixin-motion/0.gif",
+		"/E/work/server/imageReader/index.js",
+		"/E/work/server/weixin-motion/16.gif",
+		"/E/work/server/weixin-motion/res.json",
+		"/E/work/server/dispacthCity/index.js",
+		"/E/download/tieqiao",
+		"/E/work/newFE/lib/common.js",
+		"/E/work/newFE/staticPage/25D363ED218E411AAA6BFA8974424FE8_1452759672824.html",
+		"/E/work/newFE/staticPage/3FE74ACBD30538743D4103CD64E21C10_1452759618462.html",
+		"/E/work/newFE/staticPage/508CF960A9774F99D1E3202720776C76_1452759575460.html",
+		"/E/work/newFE/staticPage/603DE5681541F3BD91E8089ACF536568_1452759035346.html",
+		"/E/work/newFE/staticPage/81C0237E1631054CA7DB0BD805D0D7C9_1452759745336.html",
+		"/E/work/newFE/staticPage/8FA30CF1338BCFD11706A5872FE9AC19_1452759811601.html",
+		"/E/work/newFE/staticPage/D17DDC0DD7456280BA840BE5D01F9E1B_1452759775653.html",
+		"/E/work/newFE/staticPage/D2010F45230CBC6ECB6D376FEAF32D31_1452759251427.html",
+		"/E/work/newFE/staticPage/E43CD5123A146D3137121167107AD464_1452759697976.html",
+		"/E/work/newFE/staticPage/E9EC66A30AC7A50196D4724B238EBB75_1452759839258.html",
+		"/E/work/newFE/store/orderList.html",
+		"/E/work/newFE/login/js/phoneLogin.js",
+		"/E/work/test/gif.html"
 	],
 	"find":
 	{
-		"height": 51.0
+		"height": 50.0
 	},
 	"find_in_files":
 	{
 		"height": 138.0,
 		"where_history":
 		[
+			"E:\\work\\newFE\\staticPage",
+			"E:\\work\\newFE\\static",
+			"E:\\work\\newFE\\store",
+			"E:\\work\\newFE",
+			"E:\\work\\emergency\\sP",
+			"E:\\work\\newFE\\store",
+			"E:\\work\\newFE\\video",
+			"E:\\work\\newFE\\lib",
+			"E:\\work\\newFE",
 			""
 		]
 	},
@@ -635,141 +791,153 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"tempPay.js?v=1449824761:formatted:45",
-			"alert",
-			"package_url+",
-			"couponId",
-			"alert",
-			"code",
-			"alert",
-			"小主",
-			"</span>",
-			"<li></li>",
-			"<br></span>",
-			"<span style=\"font-family:微软雅黑, Microsoft YaHei;font-size:16px\">",
-			"telphone",
-			"{{",
-			"alert",
-			"?v=1448866809",
-			"depend",
-			"inapp",
-			"query",
-			"10px",
-			",",
-			"alert",
-			":",
-			"json.",
-			"replace",
-			"49",
-			"临时支付",
-			"70",
-			"100",
-			"2",
+			"100%",
+			"http://192.168.2.201:8081/9988.mp4_",
+			"URL",
+			"url",
+			"_",
+			"margin-",
+			"index.html",
 			"button",
-			"alert",
-			"css",
-			"location.",
-			"binddownload",
-			"publish",
-			"store",
-			"rank",
-			"alt=\"\"",
-			"button",
-			"lib",
+			"596",
+			"hashQuery('errmsg')",
+			"hashQuery('code')",
+			"Gift118",
+			"?v=1450926456",
+			"cacheURL",
+			"100px",
+			"8",
+			"-O",
+			"10",
+			"80%",
 			"video",
-			"<div class=\"username\">.*?</div>",
-			"store",
-			"video",
-			"\",",
-			"\"weixin",
-			"\"",
-			"\"weixin",
-			"\"\"",
-			"1",
-			"user",
-			"110",
-			"store",
-			".hotchannelol ",
-			".command ",
-			".channeldetail .share ",
-			".channeldetail",
-			"ellipse",
-			"text",
-			"-webkit-",
-			"ease-in-out",
-			"-timing-function",
-			"js/mobile.js",
-			"mobile.js",
-			"js/mobile.js",
-			"smallimage",
-			"data-",
-			"src",
-			"}",
-			"{",
-			"}",
-			"{",
-			"play",
-			"video",
-			"data-video",
-			"img",
-			"Things",
-			"\n    ",
-			"4px",
-			"6",
-			"0",
-			"1448862303",
-			"channel",
-			"480",
-			"570",
-			"store",
-			"ease-out",
-			"-webkit-",
-			"-webkit",
-			"webkit-",
-			"-webkit-",
-			"397",
-			"ty",
-			"ellipse",
-			"ty",
-			"0);",
-			"1)",
-			",0.3373",
-			"rgb",
-			");",
-			"ty",
-			"video",
-			"store",
+			"eeeeee",
+			"222222",
+			"margin: 10px;",
+			"10px auto",
+			"pid",
+			" :",
+			"=",
+			": \"",
+			"15133",
+			"0.",
+			"styles",
+			"sign",
+			"MD5List",
+			"this.props.tgid",
+			"\n<br>",
+			"<br><br>",
 			"\n",
-			"        ",
-			"success",
-			"focus",
-			"store",
-			"9999999999 // 10个9",
-			"//",
-			"video",
-			"store",
-			"class",
-			"ProductUsingUser",
-			"moment",
-			"js",
-			"video",
-			"store",
-			"down",
-			"6",
-			"then",
+			"•	",
+			" ",
 			"function",
-			"!err",
-			"share",
-			"ProductSectionPulldown",
-			"className=\"icon",
-			"小红唇"
+			"()=>",
+			"createClass",
+			"extends Component",
+			"class",
+			" ",
+			"that",
+			"onClick",
+			"this",
+			"ProductSectionWithoutTitle",
+			"ActivityIndicatorIOS",
+			"center",
+			"html",
+			"when",
+			"text",
+			"html",
+			"json",
+			"text",
+			"json",
+			"text",
+			".replace('Jasmine (\"⌒∇⌒\")','去死吧')",
+			"json",
+			"text",
+			"html",
+			"\"",
+			"checkSig",
+			"requestPr",
+			"requestPromise",
+			"addShopCar",
+			"default",
+			"<div class=\"m-pager m-pager-dtl box\">([\\s\\S]*)</div>",
+			"<div class=\"m-pager m-pager-dtl box\">\n					<a class=\"prev\" href=\"http://xiaohongchun16.lofter.com/post/1dbbba27_9a1c052\" id=\"__prev_permalink__\">&lt; &#x4E0A;&#x4E00;&#x7BC7;</a>\n					<a class=\"next\" href=\"http://xiaohongchun16.lofter.com/post/1dbbba27_9a1c02e\" id=\"__next_permalink__\">&#x4E0B;&#x4E00;&#x7BC7; &gt;</a>\n				</div>",
+			"<div class=\"m-pager m-pager-dtl box\">([\\s\\S]*)</div>",
+			"<div class=\"m-pager m-pager-dtl box\">[.\\n]?</div>",
+			"<div class=\"m-pager m-pager-dtl box\">[.\\n]*?</div>",
+			"<div class=\"m-pager m-pager-dtl box\">[.\\n]*</div>",
+			"<div class=\"m-pager m-pager-dtl box\">[.\\n]</div>",
+			"<div class=\"m-pager m-pager-dtl box\">\\n*</div>",
+			"<div class=\"m-pager m-pager-dtl box\">.*?</div>",
+			"setAjaxHeader",
+			"150px",
+			"400px",
+			"rename",
+			"WeixinJSBridge",
+			"cacheHandler",
+			"detail_cache.push",
+			"detail_cache",
+			"50",
+			"200px",
+			"58",
+			"user-",
+			"-58px",
+			"lib",
+			"http://lofter.ph.126.net/TPx8jS8tHqBxEjdeSqUJUA==/5629531420050329807.js",
+			"http://lofter.ph.126.net/WixTvrpVJaNBoxTepYE5_Q==/5629542415166606618.js",
+			"http://lofter.ph.126.net/w_SD7NyHwj1cMtsx_dDfsw==/5629542415166606617.js",
+			"http://lofter.ph.126.net/w_SD7NyHwj1cMtsx_dDfsw==/5629",
+			"http://lofter.ph.126.net/w_SD7NyHwj1cMtsx_dDfsw==/56295424",
+			"http://lofter.ph.126.net/.*?/56295424",
+			"body{background-image:url(http://img.ph.126.net/XQ8SPCtw54KcBEFtIPA6Ag==/5629516026887562341.jpg);}",
+			"http://lofter.ph.126.net/B8pkUAkV3XWNLtGtkiJRhw==/5629525922492190976.css",
+			"<meta name=\"image:&#x80CC;&#x666F;\" content=\"http://img.ph.126.net/XQ8SPCtw54KcBEFtIPA6Ag==/5629516026887562341.jpg\"> ",
+			"http://l.bst.126.net/rsc/js/pagelayer/pagelayer.js?0011",
+			"http://l.bst.126.net/rsc/js/pagelayer/pagelayer.css?0011",
+			"<body class=\"p-detailpage\"",
+			"html",
+			"老",
+			"自动生成",
+			"convertURL",
+			"||\n			 hostname == '192.168.2.221'",
+			"connect",
+			"alert",
+			"setAjaxHeader",
+			"fetest",
+			"alert",
+			"button",
+			"45px",
+			"10px",
+			"0",
+			"span",
+			"weChat.setToken",
+			"publish_js",
+			"div",
+			"20",
+			"4",
+			"9",
+			"ajaxsetup",
+			"onerror",
+			"textarea"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"",
+			"5629531420050329807.js",
+			"5629542415166606618.js",
+			"5629542415166606617.js",
+			"",
+			"static.css",
+			"pagelayer.js",
+			"pagelayer.css",
+			"<body class=\"p-detailpage\" style=\"background-image: url(5629516026887562341.jpg);\"",
+			"needToken",
+			"fe3657",
+			"'touchstart'",
 			"<div class=\"username\">Trunk测试</div>",
 			"lib/mobile.js"
 		],
@@ -799,6 +967,18 @@
 		},
 		{
 			"path": "E:\\backlighting-neo.github.com"
+		},
+		{
+			"path": "E:\\work\\newFE"
+		},
+		{
+			"path": "E:\\work\\doc"
+		},
+		{
+			"path": "E:\\work\\test"
+		},
+		{
+			"path": "E:\\work\\tools"
 		}
 	],
 	"groups":
@@ -809,74 +989,31 @@
 			[
 				{
 					"buffer": 0,
-					"file": "TempPay.html",
+					"file": "/E/work/study/flux/extremely-simple-flux-demo/index.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 993,
+						"buffer_size": 219,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								726,
-								726
+								29,
+								29
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 396.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 1,
-					"file": "js/tempPay.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4476,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4476,
-								4476
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3762.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -884,7 +1021,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 41.0
+		"height": 40.0
 	},
 	"input":
 	{
@@ -899,18 +1036,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -928,7 +1058,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 78.0
+		"height": 76.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -938,516 +1068,516 @@
 		"selected_items":
 		[
 			[
-				"temppayhtml",
-				"source\\TempPay.html"
+				"m",
+				"newFE\\lib\\mobile.js"
 			],
 			[
-				"temppayjs",
-				"source\\js\\tempPay.js"
-			],
-			[
-				"redpacjs",
-				"source\\js\\RedPackage.js"
+				"swfob",
+				"source\\jwplayer\\js\\swfobject.js"
 			],
 			[
 				"mobilejs",
-				"source\\lib\\mobile.js"
+				"newFE\\lib\\mobile.js"
 			],
 			[
-				"wechatgiftscss",
-				"source\\scss\\weChatGift.scss"
-			],
-			[
-				"redpackjs",
-				"source\\js\\RedPackage.js"
-			],
-			[
-				"activ",
-				"source\\Activity20151202.html"
-			],
-			[
-				"prode",
-				"source\\product_detail.html"
-			],
-			[
-				"redpackagehtml",
-				"source\\RedPackage.html"
-			],
-			[
-				"redpackagejs",
-				"source\\js\\RedPackage.js"
-			],
-			[
-				"storedebug",
-				"source\\js\\store-debug.js"
-			],
-			[
-				"gulpfile",
-				"source\\gulpfile.js"
-			],
-			[
-				"mobile",
-				"source\\lib\\mobile.js"
-			],
-			[
-				"wechat",
-				"source\\weChatGift.html"
-			],
-			[
-				"storelist",
-				"source\\store-list.html"
-			],
-			[
-				"commonscss",
-				"source\\scss\\common.scss"
-			],
-			[
-				"comoonscss",
-				"backlighting-neo.github.com\\.deploy_git\\fancybox\\helpers\\jquery.fancybox-buttons.css"
-			],
-			[
-				"comcss",
-				"source\\css\\commodity_subject.css"
-			],
-			[
-				"storelistscss",
-				"source\\scss\\store-list.scss"
-			],
-			[
-				"comjs",
-				"source\\js\\commodity_subject.js"
-			],
-			[
-				"com",
-				"source\\commodity_subject.html"
-			],
-			[
-				"storeebug",
-				"source\\js\\store-debug.js"
-			],
-			[
-				"txt",
-				"source\\doc\\App内打开118Html页面流程.txt"
-			],
-			[
-				"wechatscss",
-				"source\\scss\\weChatGift.scss"
-			],
-			[
-				"pack",
-				"source\\package.json"
-			],
-			[
-				"packag",
-				"source\\package.json"
-			],
-			[
-				"redpack",
-				"source\\RedPackage.html"
-			],
-			[
-				"wechatjs",
-				"source\\js\\weChatGift.js"
-			],
-			[
-				"comm",
-				"source\\commodity_subject.html"
-			],
-			[
-				"channelsharejs",
-				"source\\js\\channelshare.js"
-			],
-			[
-				"serverqiniu",
-				"server\\qiniu-uptoken\\uptoken.js"
-			],
-			[
-				"redpackscss",
-				"source\\scss\\RedPackage.scss"
-			],
-			[
-				"storedebug.js",
-				"source\\js\\store-debug.js"
-			],
-			[
-				"ranktpl",
-				"tpl\\publish_rank.tpl"
-			],
-			[
-				"redpackahtml",
-				"source\\RedPackage.html"
-			],
-			[
-				"test6",
-				"source\\template\\test6.html"
-			],
-			[
-				"tpl",
-				"tpl\\static_focus.tpl"
-			],
-			[
-				"awarcss",
-				"source\\css\\AwardsTop30.css"
-			],
-			[
-				"scss",
-				"source\\scss\\AwardsTop30.scss"
-			],
-			[
-				"gulpf",
-				"source\\gulpfile.js"
-			],
-			[
-				"gulp",
-				"source\\gulpfile.js"
-			],
-			[
-				"acti",
-				"source\\Activity20151202.html"
-			],
-			[
-				"videodet",
-				"source\\video-detail.html"
-			],
-			[
-				"videodejs",
-				"source\\js\\video-detail.js"
-			],
-			[
-				"redpacka",
-				"source\\RedPackage.html"
-			],
-			[
-				"temppay",
-				"source\\TempPay.html"
-			],
-			[
-				"temppayalipayjs",
-				"source\\js\\tempPay_Alipay.js"
-			],
-			[
-				"temppal",
-				"source\\js\\tempPay_Alipay.js"
-			],
-			[
-				"temppaal",
-				"source\\js\\tempPay_Alipay.js"
-			],
-			[
-				"temppayalip",
-				"source\\TempPay_Alipay.html"
-			],
-			[
-				"uatest",
-				"source\\uatest.html"
-			],
-			[
-				"weixintestjs",
-				"source\\js\\weixin-test.js"
-			],
-			[
-				"mobiljs",
-				"source\\lib\\mobile.js"
-			],
-			[
-				"resulttpl",
-				"tpl\\publish_rank_result.tpl"
-			],
-			[
-				"hashtest",
-				"source\\hashTest.html"
-			],
-			[
-				"redpahtml",
-				"source\\RedPackage.html"
-			],
-			[
-				"abchtml",
-				"source\\abc.html"
-			],
-			[
-				"focu",
-				"tpl\\static_focus.tpl"
-			],
-			[
-				"hell",
-				"backlighting-neo.github.com\\source\\_posts\\hello-world.md"
-			],
-			[
-				"configyml",
-				"backlighting-neo.github.com\\themes\\yilia\\_config.yml"
-			],
-			[
-				"activi",
-				"source\\Activity20151202.html"
-			],
-			[
-				"empty",
-				"source\\app_empty.html"
-			],
-			[
-				"publishrank",
-				"tpl\\publish_rank_result.tpl"
-			],
-			[
-				"wechatpro",
-				"blog\\source\\_posts\\weChatPaymentProblem.md"
-			],
-			[
-				"e",
-				"source\\app_empty.html"
-			],
-			[
-				"after-footer.ejs",
-				"blog\\themes\\landscape\\layout\\_partial\\after-footer.ejs"
-			],
-			[
-				"head.ejs",
-				"blog\\themes\\landscape\\layout\\_partial\\head.ejs"
-			],
-			[
-				"tempay.js",
-				"source\\js\\tempPay.js"
-			],
-			[
-				"weixininterface",
-				"server\\weixin-interface\\index.js"
-			],
-			[
-				"testhtml",
-				"source\\test.html"
-			],
-			[
-				"store-list",
-				"source\\store-list.html"
+				"newfe",
+				"newFE\\channel\\index2.html"
 			],
 			[
 				"",
-				"source\\Activity20151202.html"
+				"source\\abc.html"
 			],
 			[
-				"redpackage",
-				"source\\RedPackage.html"
+				"gift118html",
+				"newFE\\store\\gift118.html"
 			],
 			[
-				"appempty",
-				"source\\app_empty.html"
+				"gift118js",
+				"newFE\\store\\js\\gift118.js"
 			],
 			[
-				"mobil",
-				"source\\lib\\mobile.js"
+				"videohtml",
+				"newFE\\video\\video.html"
 			],
 			[
-				"app",
-				"source\\doc\\App内打开118Html页面流程"
+				"videojs",
+				"newFE\\video\\js\\video.js"
 			],
 			[
-				"rdpac",
-				"source\\css\\RedPackage.css"
+				"mobile",
+				"newFE\\lib\\mobile.js"
+			],
+			[
+				"readmemd",
+				"newFE\\README.md"
+			],
+			[
+				"videohtm",
+				"newFE\\video\\video.html"
+			],
+			[
+				"giftnycss",
+				"newFE\\store\\css\\giftny.css"
+			],
+			[
+				"indexscss",
+				"newFE\\store\\scss\\index.scss"
+			],
+			[
+				"storeindexjs",
+				"newFE\\store\\js\\index.js"
+			],
+			[
+				"gulpfilej",
+				"newFE\\gulpfile.js"
+			],
+			[
+				"giftnyjs",
+				"newFE\\store\\js\\giftny.js"
+			],
+			[
+				"giftn",
+				"newFE\\store\\giftny.html"
+			],
+			[
+				"giftjs",
+				"newFE\\store\\js\\gift118.js"
+			],
+			[
+				"gift118",
+				"newFE\\store\\gift118.html"
+			],
+			[
+				"redpacscss",
+				"source\\scss\\RedPackage.scss"
 			],
 			[
 				"redpac",
 				"source\\RedPackage.html"
 			],
 			[
-				"storelsit",
-				"source\\store-list.html"
-			],
-			[
-				"videodeta",
-				"source\\video-detail.html"
-			],
-			[
-				"videodetailjs",
-				"source\\js\\video-detail.js"
-			],
-			[
-				"storelistjs",
-				"source\\js\\store-list.js"
-			],
-			[
-				"gulpfilejs",
-				"source\\gulpfile.js"
-			],
-			[
-				"boxconf",
-				".qrsbox\\qrsbox.conf"
-			],
-			[
-				"conf",
-				"source\\template\\config.json"
-			],
-			[
-				"awa",
-				"source\\AwardsTop30.html"
-			],
-			[
-				"weixintesthtml",
-				"source\\weixin-test.html"
-			],
-			[
-				"weixin",
-				"source\\weixinurltest.html"
-			],
-			[
-				"videodetail",
-				"source\\video-detail.html"
-			],
-			[
-				"award",
-				"source\\AwardsTop30.html"
-			],
-			[
-				"act",
-				"source\\Activity20151202.html"
-			],
-			[
-				"rankresul",
-				"tpl\\publish_rank_result.tpl"
-			],
-			[
-				"channelshare",
-				"source\\channelshare.html"
-			],
-			[
-				"gulpfiles",
-				"source\\gulpfile.js"
-			],
-			[
-				"videodetascss",
-				"source\\scss\\video-detail.scss"
-			],
-			[
-				"videodetahtml",
-				"source\\video-detail.html"
-			],
-			[
-				"emptyhtml",
-				"source\\app_empty.html"
-			],
-			[
-				"videodscss",
-				"source\\scss\\video-detail.scss"
-			],
-			[
-				"loadingscss",
-				"source\\scss\\loading.scss"
-			],
-			[
-				"loading",
-				"source\\loading.html"
-			],
-			[
-				"repackjs",
+				"redpacjs",
 				"source\\js\\RedPackage.js"
 			],
 			[
-				"videojs",
-				"source\\js\\video-detail.js"
+				"toolsvideocachepage",
+				"tools\\videoCache\\css\\PageConstructor.css"
 			],
 			[
-				"videodetscss",
-				"source\\scss\\video-detail.scss"
+				"appemp",
+				"source\\app_empty.html"
 			],
 			[
-				"videode",
-				"source\\video-detail.html"
+				"orderlistjs",
+				"newFE\\store\\js\\orderList.js"
 			],
 			[
-				"121",
-				"source\\Activity20151202.html"
+				"goodsjs",
+				"newFE\\store\\js\\goods.js"
 			],
 			[
-				"produdetajs",
-				"source\\js\\product_detail.jsx"
+				"abchtml",
+				"source\\abc.html"
 			],
 			[
-				"loadingcss",
-				"source\\css\\loading.css"
+				"focustpl",
+				"tpl\\static_focus.tpl"
 			],
 			[
-				"productdetailcss",
-				"source\\css\\product_detail.css"
+				"index2html",
+				"newFE\\channel\\index2.html"
 			],
 			[
-				"wechatgiftcss",
-				"source\\css\\weChatGift.css"
+				"频道",
+				"doc\\store_doc\\视频频道.md"
 			],
 			[
-				"channel",
-				"source\\channelshare.html"
+				"index2js",
+				"newFE\\channel\\js\\index2.js"
 			],
 			[
-				"channelsharescs",
-				"source\\scss\\channelshare.scss"
+				"rankresulttpl",
+				"tpl\\publish_rank_result.tpl"
 			],
 			[
-				"channelsharecss",
-				"source\\css\\channelshare.css"
+				"ranktpl",
+				"tpl\\publish_rank.tpl"
 			],
 			[
-				"common",
-				"source\\scss\\common.scss"
+				"active/",
+				"newFE\\active\\hairStyle.html"
 			],
 			[
-				"test3.css",
-				"source\\css\\test3.css"
+				"weixintestjs",
+				"source\\js\\weixin-test.js"
 			],
 			[
-				"channelsharehtml",
-				"source\\channelshare.html"
+				"testjs",
+				"source\\js\\test.js"
 			],
 			[
-				"ac",
-				"source\\Activity20151202.html"
+				"gulpfile",
+				"newFE\\gulpfile.js"
 			],
 			[
-				"produ",
-				"source\\product_detail.html"
+				"rankres",
+				"tpl\\publish_rank_result.tpl"
 			],
 			[
 				"rank",
 				"tpl\\publish_rank.tpl"
 			],
 			[
-				"top30",
-				"source\\AwardsTop30.html"
+				"index2scss",
+				"newFE\\channel\\scss\\index2.scss"
 			],
 			[
-				"debugs",
-				"source\\js\\store-debug.js"
+				"登录",
+				"doc\\store_doc\\登录注册.md"
 			],
 			[
-				"zhuye",
-				"source\\js\\zhuye150929.js"
+				"weixinmotionjs",
+				"server\\weixin-motion\\index.js"
 			],
 			[
-				"channelsh",
-				"source\\js\\channelshare.js"
+				"weixinindex",
+				"server\\weixin-motion\\index.js"
 			],
 			[
-				"getted",
-				"source\\images\\GettedButtonLong.png"
+				"indexjs",
+				"server\\staticPage\\index.js"
 			],
 			[
-				"abc",
-				"source\\abc.html"
+				"weixininterface/",
+				"server\\weixin-interface\\index.js"
 			],
 			[
-				"newban",
-				"source\\newBanner.html"
+				"gulpfilejs",
+				"newFE\\gulpfile.js"
 			],
 			[
-				"weixinjs",
-				"source\\js\\weixin-test.js"
+				"helph5js",
+				"newFE\\store\\js\\helpH5.js"
 			],
 			[
-				"prodetailcss",
-				"source\\css\\product_detail.css"
+				"helpjs",
+				"newFE\\store\\js\\help.js"
 			],
 			[
-				"newbanner",
-				"source\\newBanner.html"
+				"help",
+				"newFE\\store\\help.html"
+			],
+			[
+				"helphtml",
+				"newFE\\store\\helpH5.html"
+			],
+			[
+				"questionjs",
+				"source\\js\\store-question.js"
+			],
+			[
+				"prodetjsx",
+				"source\\js\\product_detail.jsx"
+			],
+			[
+				"flexcss",
+				"test\\css\\flex.css"
+			],
+			[
+				"flex",
+				"test\\flex.html"
+			],
+			[
+				"productjsx",
+				"source\\js\\product_detail.jsx"
+			],
+			[
+				"jquery.2",
+				"newFE\\lib\\jquery-2.2.0.min.js"
+			],
+			[
+				"weixinindexjs",
+				"server\\weixin-interface\\index.js"
+			],
+			[
+				"commonjs",
+				"newFE\\lib\\common.js"
+			],
+			[
+				"gulpfil",
+				"newFE\\gulpfile.js"
+			],
+			[
+				"static",
+				"newFE\\staticPage\\508CF960A9774F99D1E3202720776C76_1452759575460.html"
+			],
+			[
+				"cartjs",
+				"newFE\\store\\js\\cart.js"
+			],
+			[
+				"phoneloginjs",
+				"newFE\\login\\js\\phoneLogin.js"
+			],
+			[
+				"jsx",
+				"source\\js\\product_detail.jsx"
+			],
+			[
+				"orderlist",
+				"newFE\\store\\orderList.html"
+			],
+			[
+				"flexhtml",
+				"test\\flex.html"
+			],
+			[
+				"test",
+				"source\\test.html"
+			],
+			[
+				"indexhtml",
+				"newFE\\store\\index.html"
+			],
+			[
+				"listhtml",
+				"newFE\\store\\list.html"
+			],
+			[
+				"orderlishtml",
+				"newFE\\store\\orderList.html"
+			],
+			[
+				"a_",
+				"newFE\\login\\js\\a_babel.js"
+			],
+			[
+				"fillmoreinfojs",
+				"newFE\\login\\js\\fillMoreInfo.js"
+			],
+			[
+				"index2",
+				"newFE\\channel\\index2.html"
+			],
+			[
+				"index2.scss",
+				"newFE\\channel\\scss\\index2.scss"
+			],
+			[
+				"orderdetailjs",
+				"newFE\\store\\js\\orderDetail.js"
+			],
+			[
+				"subjectscss",
+				"newFE\\store\\scss\\subject.scss"
+			],
+			[
+				"subjecthtml",
+				"newFE\\store\\subject.html"
+			],
+			[
+				"indexcss",
+				"newFE\\store\\css\\index.css"
+			],
+			[
+				"commonscss",
+				"newFE\\lib\\scss\\_common.scss"
+			],
+			[
+				"helpscss",
+				"newFE\\store\\scss\\help.scss"
+			],
+			[
+				"goods",
+				"newFE\\store\\goods.html"
+			],
+			[
+				"orderlisthtml",
+				"newFE\\store\\orderList.html"
+			],
+			[
+				"fill",
+				"newFE\\login\\fill_password.html"
+			],
+			[
+				"phoneloginhtml",
+				"newFE\\login\\phoneLogin.html"
+			],
+			[
+				"fillmoreinfoscss",
+				"newFE\\login\\scss\\fillMoreInfo.scss"
+			],
+			[
+				"phonelogi",
+				"newFE\\login\\phoneLogin.html"
+			],
+			[
+				"fillphonescss",
+				"newFE\\login\\scss\\fill_phone_number.scss"
+			],
+			[
+				"fillmreinfo",
+				"newFE\\login\\scss\\fillMoreInfo.scss"
+			],
+			[
+				"fillphonecss",
+				"newFE\\login\\scss\\fill_phone_number.scss"
+			],
+			[
+				"orderdetajs",
+				"newFE\\store\\js\\orderDetail.js"
+			],
+			[
+				"zhengli",
+				"newFE\\active\\zhengLi.html"
+			],
+			[
+				"phonelogin",
+				"newFE\\login\\js\\phoneLogin.js"
+			],
+			[
+				"agreem",
+				"newFE\\store\\agreement.html"
+			],
+			[
+				"checkorder",
+				"newFE\\store\\checkOrderStatus.html"
+			],
+			[
+				"phoneloginscss",
+				"newFE\\login\\scss\\phoneLogin.scss"
+			],
+			[
+				"phonelong",
+				"newFE\\login\\phoneLogin.html"
+			],
+			[
+				"templatehtml",
+				"newFE\\active\\template.html"
+			],
+			[
+				"apemp",
+				"source\\app_empty.html"
+			],
+			[
+				"ajaxjs",
+				"source\\js\\ajax.js"
+			],
+			[
+				"confrimorderhtml",
+				"newFE\\store\\confirm_order.html"
+			],
+			[
+				"confrimorderjs",
+				"newFE\\store\\js\\confirm_order.js"
+			],
+			[
+				"phonelojs",
+				"newFE\\login\\js\\phoneLogin.js"
+			],
+			[
+				"carthtml",
+				"newFE\\store\\cart.html"
+			],
+			[
+				"loginhtml",
+				"newFE\\login\\phoneLogin.html"
+			],
+			[
+				"loginjs",
+				"newFE\\login\\js\\phoneLogin.js"
+			],
+			[
+				"loginscss",
+				"newFE\\login\\scss\\phoneLogin.scss"
+			],
+			[
+				"temppayjs",
+				"source\\js\\tempPay.js"
+			],
+			[
+				"writeaddress",
+				"newFE\\store\\write_address.html"
+			],
+			[
+				"weibojs",
+				"newFE\\fe_test\\js\\weibo.js"
+			],
+			[
+				"weixin",
+				"source\\weixin-test.html"
+			],
+			[
+				"channelindex",
+				"newFE\\channel\\index.html"
+			],
+			[
+				"channelshare",
+				"source\\channelshare.html"
+			],
+			[
+				"redirect",
+				"newFE\\weixinOauth\\redirect.html"
+			],
+			[
+				"orderlistscss",
+				"newFE\\store\\scss\\orderList.scss"
+			],
+			[
+				"storeindex",
+				"newFE\\store\\index.html"
+			],
+			[
+				"idnexhtml",
+				"backlighting-neo.github.com\\.deploy_git\\index.html"
+			],
+			[
+				"cartcss",
+				"newFE\\store\\css\\cart.css"
+			],
+			[
+				"orderdecss",
+				"newFE\\store\\css\\orderDetail.css"
+			],
+			[
+				"orderdeta",
+				"newFE\\store\\orderDetail.html"
+			],
+			[
+				"subjechtml",
+				"newFE\\store\\subject.html"
+			],
+			[
+				"subjectjs",
+				"newFE\\store\\js\\subject.js"
+			],
+			[
+				"myhtml",
+				"newFE\\store\\my.html"
+			],
+			[
+				"gulpfils",
+				"source\\gulpfile.js"
+			],
+			[
+				"mobiljs",
+				"source\\lib\\mobile.js"
+			],
+			[
+				"confirmorder",
+				"newFE\\store\\confirm_order.html"
+			],
+			[
+				"orderdejs",
+				"newFE\\store\\js\\orderDetail.js"
+			],
+			[
+				"publishrank",
+				"tpl\\publish_rank_result.tpl"
+			],
+			[
+				"goodjs",
+				"newFE\\store\\js\\goods.js"
 			]
 		],
 		"width": 0.0
@@ -1470,7 +1600,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -1478,7 +1608,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": false,
-	"side_bar_width": 392.0,
+	"side_bar_width": 313.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

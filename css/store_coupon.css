@@ -19,6 +19,9 @@ body {
   font-size: 25px;
   font-family: "Microsoft Yahei"; }
 
+.click {
+  cursor: pointer; }
+
 body {
   background-color: #f1f1f1; }
 

@@ -278,7 +278,7 @@
     var url = base_url.concat("/api2/index/gvideo").concat(last_videoid == -1 ? '' : ('?id=' + last_videoid));
     $.getJSON(url, function(json) {
       var gvideocreator = function(p) {
-        var domtemp = '<div class="card videocard"><img src="{cover_url}"; style="width:{img_width};height:{img_height};" class="screenshot" onclick="location.href=\'/show/{id}\'"><div class="textwrapper"><div class="playcount">{plays}</div><div class="commentcount">{comments}</div><div class="clearfix"></div><div class="videotitle">{title}</div><div class="videodescription">{desc}</div></div><div class="user" onclick="location.href=\'/u/{user_id}\'"><img src="{icon_url}"; class="avatar"><span class="username">{nick}</span><div class="clearfix"></div></div></div>'
+        var domtemp = '<div class="card videocard"><img src="{cover_url}"; style="width:{img_width};height:{img_height};" class="screenshot" onclick="location.href=\'../video/video.html?vid={id}\'"><div class="textwrapper"><div class="playcount">{plays}</div><div class="commentcount">{comments}</div><div class="clearfix"></div><div class="videotitle">{title}</div><div class="videodescription">{desc}</div></div><div class="user" onclick="location.href=\'/u/{user_id}\'"><img src="{icon_url}"; class="avatar"><span class="username">{nick}</span><div class="clearfix"></div></div></div>'
         last_videoid = p.id;
         p.desc = p.desc.length > 44 ? p.desc.substring(0, 44).concat('··') : p.desc;
         if (p.cover_wh_ratios == 1) {

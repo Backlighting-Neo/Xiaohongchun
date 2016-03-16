@@ -218,6 +218,7 @@ gulp.task("clean", function() {
 })
 
 gulp.task("index",['scan', 'clean'], function() {
+  var version = moment().unix();
   return gulp.src(config.index.src)
     // .pipe(p.rename("index.html"))
     .pipe(p.replace(
@@ -225,8 +226,9 @@ gulp.task("index",['scan', 'clean'], function() {
   		'<!-- \n 要使用未编译的JSX，请包含下面的js文件 \n <script type="text/javascript" src="build/JSXTransformer.js"></script> \n -->'
   	))
     .pipe(p.replace('src="lib/','src="../lib/'))
-    .pipe(p.replace('.js">',`.js?v=${moment().unix()}">`))
-    .pipe(p.replace('.css">',`.css?v=${moment().unix()}">`))
+    .pipe(p.replace('.js">',`.js?v=${version}">`))
+    .pipe(p.replace(`lib/assets/jquery-2.1.4.min.js?v=${version}`,'lib/assets/jquery-2.1.4.min.js'))
+    .pipe(p.replace('.css">',`.css?v=${version}">`))
   	.pipe(p.replace('build/','js/'))
   	.pipe(p.replace('text/jsx','text/javascript'))
   	.pipe(p.replace('.jsx','.js'))

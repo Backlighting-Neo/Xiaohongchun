@@ -133,7 +133,7 @@ body {
 			line-height: 28px;
 			font-size: 22px;
 			color: #717171;
-			overflow: hidden;
+			@include multiline-overflow(3);
 		}
 
 		.goodsImage {
@@ -186,6 +186,8 @@ body {
 		width: 513px;
 		height: 458px;
 		background: url(../images/weChatGift_Popup.png);
+		box-sizing: border-box;
+    background-size: contain;
 
 		.phoneNo {
 			display: inline-block;

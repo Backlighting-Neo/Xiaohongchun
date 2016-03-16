@@ -12,35 +12,38 @@
     margin: 0;
     padding: 0;
     overflow-y: hidden;
-    background-color: #f2f2f2;
+    background-color: white;
   }
   
   img {
     width: 100%;
     vertical-align: bottom;
+/*  2016.02.03 去掉四小图阴影
     box-shadow: 0 5px 5px #ededed;
-    -webkit-box-shadow: 0 5px 5px #ededed;
+    -webkit-box-shadow: 0 5px 5px #ededed;*/
   }
   
-  .owl-controls {
-    position: absolute;
-    bottom: 0;
+  .owl-theme .owl-controls {
+    margin-top: 0;
     text-align: center;
     width: 100%;
   }
-  
-  .owl-theme .owl-controls .owl-page.active span,
-  .owl-theme .owl-controls.clickable .owl-page:hover span {
-    background: white;
+  .owl-theme .owl-controls .owl-page span {
+    background-color: #d7d7d7;
   }
+
+  .owl-theme .owl-controls .owl-page.active span {
+    background-color: #ff365c;
+  }
+  
   </style>
 </head>
 
 <body>
   <div class="owl">
     <div>
-      <a href="xhc://xiaohongchun/params?html=http%3A%2F%2F192.168.2.100%2Ftest.html">
-        <img class="focus" src="images/fEtest.png">
+      <a href="xhc://xiaohongchun/params?html=http%3A%2F%2Fstatic.xiaohongchun.com%2Fstore%2Fgift118.html%3FcouponId%3D0123456789">
+        <img class="focus" src="images/dong.gif" >
       </a>
     </div>
     <div>
@@ -112,9 +115,17 @@
     var owl2 = $('.owl2');
 
     // 焦点图滚动
-    $(".owl").owlCarousel({
-      autoPlay: false,
-      singleItem: true
+    var owl1 = $(".owl").owlCarousel({
+      autoPlay: 5000,
+      singleItem: true,
+
+      afterMove: function() {
+        $('.owl img').each(function(index, item) {
+          if(item.src.indexOf('.gif')>-1){
+            item.src = item.src.replace(/\?.*?$/,'') + '?r=' + Math.round(Math.random()*10000);
+          }
+        })
+      }
     });
 
     var ios = function() {
@@ -125,12 +136,14 @@
         return Math.round(size/750*screenwidth);
       }
 
-      document.write('<style>.owl-theme .owl-controls .owl-page span {width: '+conPx(12)+'px;height: '+conPx(12)+'px;margin: '+conPx(8)+'px '+conPx(4)+'px;opacity: 1;background: transparent;border: 1px solid white;}</style>');
+      document.write('<style>.owl-theme .owl-controls .owl-page span {width: '+conPx(12)+'px;height: '+conPx(12)+'px;margin: '+conPx(8)+'px '+conPx(4)+'px;opacity: 1; border: 1px solid white;}</style>');
 
       $('meta').attr('content', 'width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0')
-      var paddingtop = Math.round(0.05 * screenwidth);
+      var paddingtop = Math.round(0.02135 * screenwidth);
       var paddingleft = Math.round(0.023 * screenwidth);
-      owl2.width(screenwidth-10).css('padding',paddingtop + 'px '+paddingleft+'px 0 '+paddingleft+'px');
+      // owl2.width(screenwidth-10).css('padding',paddingtop + 'px '+paddingleft+'px 0 '+paddingleft+'px');
+      owl2.width(screenwidth-10).css('padding',paddingtop + 'px 0 0 '+paddingleft+'px');
+
       if (button.length > 3) {
         owl2.owlCarousel({
           items: 4,
@@ -166,11 +179,11 @@
     }
 
     var android = function() {
-      document.write('<style>.owl-theme .owl-controls .owl-page span {width: 12px;height: 12px;margin: 8px 4px;opacity: 1;background: transparent;border: 1px solid white;}</style>');
+      document.write('<style>.owl-theme .owl-controls .owl-page span {width: 12px;height: 12px;margin: 8px 4px;opacity: 1;border: 1px solid white;}</style>');
       $('meta').attr('content','width=750');
       
       focus.height(300);
-      owl2.css('margin','40px 5px 0 5px').width(740);
+      owl2.css('margin','20px 5px 0 5px').width(740);
       button.width(168).height(178);
 
       if (button.length > 3) {
@@ -195,7 +208,7 @@
     }
     
     if(navigator.userAgent.indexOf('Android') > -1) {
-      // 安卓设备处理，按照viewport进行
+      // 安卓设备处理，按照指定宽度的viewport进行
       android();
     }
     else {
@@ -203,14 +216,6 @@
       ios();
     }
 
-
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?c431a03831df8d00747aa6a0c0d5c17d";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
   </script>
 </body>
 

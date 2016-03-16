@@ -8,8 +8,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no">
   <meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
-  <title>领小红唇118元新人红包！</title>
-  <link rel="stylesheet" type="text/css" href="css/RedPackage.css">
+  <title>小红唇118元现金红包！化妆品特卖啦！</title>
+  <link rel="stylesheet" type="text/css" href="css/gift118.css">
   <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
   <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
 
@@ -29,14 +29,15 @@
 		<div id="gettingButtonLong" style="display: none"></div>
 		<div id="gettedButtonLong" style="display: none"></div>
 	</div>
-	<div class="section5"></div>
-	<div class="section6"></div>
+	<div class="section5">
+		<img src="images/RedPackage_Background_06.png">
+	</div>
 
 	<div class="owl_outer">
 		<div class="owl">
 			<div class="item" v-for="item in data">
 				<div class="description">{{item.g_desc.content}}</div>
-				<img class="goodsImage" data-src="{{item.tb_image}}" onclick="location.href='{{item.tb_url}}'">
+				<img class="goodsImage click" data-src="{{item.tb_image}}" onclick="location.href='http://www.xiaohongchun.com/index/params?goods={{item.g_id}}'">
 				<div class="title">{{item.g_name}}</div>
 				<div class="price"><span>{{item.g_price_shop}}</span></div>
 			</div>
@@ -50,15 +51,17 @@
 			</div>
 			<div class="gettingButton" id="gettingButton"></div>
 		</div>
-		<div class="success"></div>
+		<div class="success">
+			<img src="images/RedPackage_CloseButton.png" id="closeButton">
+		</div>
 	</div>
 
 	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-	<script type="text/javascript" src="lib/assets/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="lib/vue.min.js"></script>
-	<script type="text/javascript" src="lib/mobile.js"></script>
-	<script type="text/javascript" src="lib/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="js/RedPackage.js"></script>
+	<script type="text/javascript" src="../lib/assets/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../lib/vue.min.js"></script>
+	<script type="text/javascript" src="../lib/mobile.js"></script>
+	<script type="text/javascript" src="../lib/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/gift118.js"></script>
 </body>
 
 </html>

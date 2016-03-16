@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=640, target-densitydpi=285, user-scalable=0">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=640, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no">
   <meta name="description" content="小红唇是小白学化妆神器，让你10秒学会化妆，最快速度找到适合你的化妆品">
-  <title>小红唇每天一款特价护肤品，快来领券更实惠！</title>
+  <title>小红唇天天有特价化妆品，领券买更实惠！</title>
   <link rel="stylesheet" type="text/css" href="css/weChatGift.css">
   <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
   <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
@@ -41,7 +41,7 @@
       <div class="owl">
         <div class="item" v-for="item in data">
           <div class="description">{{item.g_desc.content}}</div>
-          <img class="goodsImage" data-src="{{item.tb_image}}" onclick="location.href='{{item.tb_url}}'">
+          <img class="goodsImage" data-src="{{item.tb_image}}" onclick="location.href='http://static.xiaohongchun.com/store/goods.html?pid={{item.g_id}}'">
           <div class="title">{{item.g_name}}</div>
           <div class="price"><span>{{item.g_price_shop}}</span></div>
         </div>
@@ -56,7 +56,7 @@
 
     <div class="mask" style="display: none">
       <div class="popup">
-        <input class="phoneNo" id="telno" placeholder="输入手机号"></input>
+        <input class="phoneNo" id="telno" placeholder="输入手机号" type="tel"></input>
         <div class="getGift">
           <img src="images/weChatGift_RedText.png">
         </div>

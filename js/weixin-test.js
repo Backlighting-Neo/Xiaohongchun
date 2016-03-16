@@ -1,6 +1,9 @@
 (function() {
   var debug = mobile.query('debug');
   debug = debug ? debug : 1;
+  var tokenOption = mobile.query('token');
+
+
   // 调试指令
   document.write('<style>body {font-size: 35px; padding: 20px; word-break: break-all;} .key {color: blue; margin-right:30px; font-weight: bold;}</style>');
   document.write('<div id="content"></div>');
@@ -9,6 +12,9 @@
     var type = 'document'; // document
     value = value ? value : '';
     if (debug > 0) {
+      $.get('http://192.168.2.221:1678/log/'+key+'/'+value);
+      $.get('http://192.168.2.150:1678/log/'+key+'/'+value);
+
       switch (type) {
         case 'console':
           console.log("%c" + key + "    %c" + value, "color: blue; font-size: x-large", "color: #000; font-size: x-large");
@@ -31,19 +37,22 @@
     var code = mobile.query('code');
     code = code ? code : 'debugCode';
     // 临时凭票
-    var state = '';
+    var state = tokenOption;
     // 状态码
     var prepayid = 'u802345jgfjsdfgsdg888';
     // 微信预订单编号
+
 
     var url = {};
     url.getAccessToken = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + appid + '&redirect_uri=' + encodeURIComponent(redirect_url) + '&response_type=code&scope=' + scope + '&state=' + state + '#wechat_redirect';
 
     if (code.length < 32 && debug < 2) {
+
       location.href = url.getAccessToken;
       return;
     }
 
+    tokenOption = mobile.query('state');
     log('code', code);
     log('prePayId', prepayid);
 
@@ -99,6 +108,8 @@
 
 
     var onBridgeReady = function() {
+
+
       log('WeixinReady', 'Ready');
 
       $.when(sign_ajax).done(function(json) {
@@ -141,7 +152,7 @@
       var appid = 'wx3d7f899c6405a785';
       var redirect_url = "http://static.xiaohongchun.com/store/test.html";
       var scope = 'snsapi_userinfo';
-      var state = '';
+      var state = mobile.query('token');
       var weChatUrl = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + appid + '&redirect_uri=' + encodeURIComponent(redirect_url) + '&response_type=code&scope=' + scope + '&state=' + state + '#wechat_redirect';
 
       var loginPromise = $.Deferred();
@@ -178,7 +189,20 @@
         //     loginPromise.reject('tokenGetError');
         //   }
         // })
-        log('code',code);
+        log('微信登录凭票',code);
+        tokenOption = mobile.query('state');
+        if(tokenOption == 'REAL'){
+          tokenOption = 'napi';
+        }
+        else{
+          tokenOption = 'test1';
+        }
+        var ajax_token = $.getJSON('http://'+tokenOption+'.xiaohongchun.com/oauth/weixin/'+code);
+        ajax_token.done(function(json) {
+          log('以下是来自'+tokenOption+'服务器的Token','');
+          log('小红唇Token', json.data.token);
+        })
+
         loginPromise.resolve(code);
       }
 

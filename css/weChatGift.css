@@ -126,7 +126,11 @@ body {
       line-height: 28px;
       font-size: 22px;
       color: #717171;
-      overflow: hidden; }
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical; }
     .owl_outer .item .goodsImage {
       width: 240px;
       height: 240px;
@@ -166,7 +170,9 @@ body {
     margin: 400px auto 0 auto;
     width: 513px;
     height: 458px;
-    background: url(../images/weChatGift_Popup.png); }
+    background: url(../images/weChatGift_Popup.png);
+    box-sizing: border-box;
+    background-size: contain; }
     .mask .popup .phoneNo {
       display: inline-block;
       width: 410px;

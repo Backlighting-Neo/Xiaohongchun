@@ -79,6 +79,14 @@ body {
 	}
 }
 
+@mixin multiline-overflow($line) {
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: #{$line};
+	-webkit-box-orient: vertical;
+}
+
 @mixin triangle($direction, $width, $height, $color) {
 	@if $direction == up {
 		$border_bottom: bottom;
